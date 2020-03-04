@@ -1,0 +1,54 @@
+# Fields
+
+A Azion disponibiliza um amplo conjunto de variáveis relacionadas aos acessos aos seus conteúdos e aplicações. Você pode alimentar suas plataformas de big data e stream processing, selecionando templates criados e mantidos pela Azion, os quais possuem uma coleção de variáveis disponíveis; ou customizar seu próprio Data Set no produto [Data Streaming]({%tl documentation_products_data_streaming %}).
+
+| Variável | Fonte dos dados | Descrição |
+|----------|-----------------|-----------|
+| $blocked                              | WAF                    | Informa se o WAF bloqueou ou não a ação; 0 quando não bloqueado e 1 quando bloqueado Quando em "Learning Mode", não será bloqueado, independente do retorno                       |
+| $bytes\_sent                          | Edge Applications      | Bytes enviados para o usuário, incluindo cabeçalho e corpo                                                                                                                          |
+| $client                               | Edge Applications, WAF | Identificador único de cliente Azion                                                                                                                                                |
+| $configuration                        | Edge Applications, WAF | Identificador único de configuração Azion                                                                                                                                           |
+| $country                              | Edge Applications, WAF | Nome do país do cliente remoto, por exemplo "Russian Federation", "United States" Detecção por geolocalização de endereço IP                                                      |
+| $headers                              | WAF                    | Cabeçalhos da requisição analisados pelo WAF                                                                                                                                        |
+| $host                                 | Edge Applications, WAF | Informação de Host enviada na linha de requisição; ou campo Host do cabeçalho HTTP                                                                                                  |
+| $http\_referrer                       | Edge Applications      | Informação da última página a qual o usuário estava, antes de realizar a requisição                                                                                                 |
+| $http\_user\_agent                    | Edge Applications      | A identificação da aplicação que realizou a requisição, por exemplo: Mozilla/50 \(Windows NT 100; Win64; x64\)                                                                  |
+| $remote\_addr                         | Edge Applications, WAF | Endereço IP da requisição                                                                                                                                                           |
+| $remote\_port                         | Edge Applications      | Porta remota da requisição                                                                                                                                                          |
+| $request\_length                      | Edge Applications      | Tamanho da requisição, incluindo a linha de request, cabeçalhos e corpo                                                                                                             |
+| $request\_method                      | Edge Applications      | Método da requisição; usualmente "GET" ou "POST"                                                                                                                                    |
+| $request\_time                        | Edge Applications      | Tempo de processamento da requisição com resolução de milisegundos;                                                                                                                   |
+| $request\_uri                         | Edge Applications      | URI da requisição realizada pelo usuário, sem a informação do Host e Protocolo                                                                                                      |
+| $requestPath                          | Edge Applications, WAF | A URI da requisição sem a informação da Query String, Host e Protocol                                                                                                               |
+| $requestQuery                         | Edge Applications, WAF | Somente os parâmetros da URI da requisição                                                                                                                                          |
+| $scheme                               | Edge Applications      | Esquema da requisição: "http" ou "https                                                                                                                                             |
+| $sent\_http\_content\_type            | Edge Applications      | Cabeçalho "Content\-Type" enviado na resposta da origem                                                                                                                             |
+| $sent\_http\_x\_original\_image\_size | Edge Applications      | Cabeçalho "X\-Original\-Image\-Size" enviado na resposta da origem \(utilizado pela IMS para informar tamanho da imagem original\)                                                  |
+| $server\_protocol                     | Edge Applications, WAF | O protocolo da conexão estabelecida, usualmente "HTTP/11" ou "HTTP/20"                                                                                                          |
+| $ssl\_cipher                          | Edge Applications      | String de cifra utilizada para estabelecimento de conexão SSL                                                                                                                       |
+| $ssl\_protocol                        | Edge Applications      | O protocolo de uma conexão SSL estabelecida, por exemplo "TLS v12"                                                                                                                |
+| $state                                | Edge Applications      | Nome do estado do cliente remoto, por exemplo "RS", "SP" Detecção por geolocalização de endereço IP                                                                               |
+| $status                               | Edge Applications      | O código do status da requisição, por exemplo: 200                                                                                                                                  |
+| $tcpinfo\_rtt                         | Edge Applications      | Tempo em microsegundos do RTT medido pela Edge para o usuário                                                                                                                       |
+| $time                                 | Edge Applications, WAF | Timestamp do início da requisição                                                                                                                                                   |
+| $upstream\_bytes\_received            | Edge Applications      | Quantidade de bytes recebidos pela Edge da origem, caso o conteúdo não esteja em cache                                                                                              |
+| $upstream\_cache\_status              | Edge Applications      | Status de cache da Edge Pode assumir os valores "MISS", "BYPASS", "EXPIRED", "STALE", "UPDATING", "REVALIDATED" ou "HIT"                                                          |
+| $upstream\_connect\_time              | Edge Applications      | Tempo em milisegundos para a Edge estabelecer uma conexão com a origem \("0" em caso de KeepAlive e "\-" em caso de cache\)                                                         |
+| $upstream\_response\_time             | Edge Applications      | Tempo em milisegundos para a Edge receber toda a resposta da origem, incluindo cabeçalhos e corpo \("\-" em caso de cache\)                                                         |
+| $upstream\_status                     | Edge Applications      | HTTP Status Code da origem \("\-" em caso de cache\)                                                                                                                                |
+| $version                              | Edge Applications, WAF | A versão do Azion Log utilizada                                                                                                                                                     |
+| $waf\_args                            | WAF                    | Os argumentos da requisição                                                                                                                                                         |
+| $waf\_attack\_action                  | Edge Applications, WAF | Informa a ação do WAF perante a ação \($BLOCK, $PASS, $LEARNING\_BLOCK, $LEARNING\_PASS\)                                                                                           |
+| $waf\_attack\_family                  | Edge Applications, WAF | Informa a classificação da infração de WAF detectada na requisição \(SQL, XSS, TRAVERSAL, entre outros\)                                                                            |
+| $waf\_learning                        | WAF                    | Informa se o WAF está em modo learning, usualmente 0 ou 1                                                                                                                           |
+| $waf\_match                           | WAF                    | Lista de infrações encontradas na request, é formada por elementos chave\-valor; a chave é referente ao tipo de infração detectada; o valor apresenta a string que gerou a infração |
+| $waf\_score                           | WAF                    | Informa a pontuação que será incrementada em caso de match                                                                                                                          |
+| $waf\_server                          | WAF                    | Hostname utilizado na requisição                                                                                                                                                    |
+| $waf\_uri                             | WAF                    | URI utilizada na requisição                                                                                                                                                         |
+
+
+---
+
+Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+
+[Clique aqui](#) para editar esta página no GitHub.
