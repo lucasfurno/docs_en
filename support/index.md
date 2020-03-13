@@ -1,179 +1,171 @@
 # Support
 
-Na Azion você é atendido por um time de engenheiros especialistas em performance, segurança, alta disponibilidade e escalabilidade de conteúdos, aplicações web e APIs, especialmente em ambientes de missão crítica.
+At Azion you are served by a team of engineers who are specialized in performance, security, high availability and scalability of content, web applications and APIs, especially in mission critical environments.
 
-Se você é novo na Azion ou se está aumentando seu uso, queremos fornecer os recursos certos para apoiar seu sucesso. O Azion Support oferece uma combinação única de ferramentas e conhecimentos para ajudá-lo a fazer coisas incríveis com a Azion.
+If you are new to Azion or if you are increasing your usage, we want to provide you with the right resources to support your success. Azion Support offers a unique combination of tools and expertise to help you do amazing things with Azion.
 
-> 1. [Planos de Suporte](#planos-de-suporte)
-> 2. [Tempo de Resposta](#tempo-de-resposta)
-> 3. [Canais de Atendimento](#canais-de-atendimento)
-> 4. [Escopo de Trabalho](#escopo-de-trabalho)
+> 1. [Support Plans](#1-support-plans)
+> 2. [Response Time](#2-response-time)
+> 3. [Service Channels](#3-service-channels)
+> 4. [Work Scope](#4-work-scope)
 
 ---
 
-## 1. Planos de Suporte {#planos-de-suporte}
+## 1. **Support Plans**
 
-Todos os clientes recebem o plano de Suporte Developer por padrão, sem custo. Para serviços adicionais, oferecemos planos que se encaixam nas mais diversas necessidades.
-
-
-| Desenvolvedores | Ambiente de produção | Negócios de missão crítica |
-|-----------------|----------------------|----------------------------|
-| Desenvolvedores que se sentem confortáveis em explorar o potencial de nossa plataforma com autonomia. | Empresas que utilizam a Azion em ambiente de produção e necessitam de ajuda para extrair o máximo da Azion. | A presença online é crítica e performance, segurança, disponibilidade e escalabilidade do serviço impactam diretamente no resultado do negócio. |
-| Plano recomendado: [Developer](#plano-developer) | Plano recomendado: [Enterprise](#plano-enterprise) | Plano recomendado: [Mission Critical](#plano-mission-critical) |
+All customers receive the Developer Support plan by default at no cost. For additional services, we offer plans that fit the most diverse needs.
 
 
-### Plano Developer {#plano-developer}
+| Developers                                                   | Production environment                                       | Mission critical business                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Developers who feel comfortable autonomously exploring the potential of our platform. | Companies that use Azion in a production environment and need help to get the most out of Azion. | Online presence is critical and service performance, security, availability and scalability directly impact the business results. |
+| Recommended plan: [Developer](#developer-plan)               | Recommended plan: [Enterprise](#enterprise-plan)             | Recommended plan: [Mission Critical](#mission-critical-plan) |
 
-É a modalidade mais básica de suporte da Azion, inclusa em todos os contratos sem custos adicionais, recomendada para desenvolvedores ou empresas que não estejam utilizando a Azion em serviços críticos ou que possuam o conhecimento necessário para extrair o máximo da plataforma sozinhos.
 
-*   Acesso ao Customer Service para problemas relacionados a conta (cobrança e acesso).
-*   Acesso a documentação e whitepapers.
-*   Acesso a relatórios e notificação de incidentes.
-*   Reporte de bugs.
+### Developer Plan
 
-O atendimento acontece de segunda a sexta-feira, em horário comercial (8×5).
+It is the most basic form of support from Azion, it is included in all contracts at no additional cost, it is recommended for developers or companies that are not using Azion in critical services or who have the necessary knowledge to get the most out of the platform on their own.
 
-Esta modalidade não disponibiliza Technical Support e não possui canal de atendimento por telefone.
+* Access to Customer Service for account related issues (billing and access).
+* Access to documentation and whitepapers.
+* Access to incident reports and notification.
+* Bug reporting.
 
-### Plano Enterprise {#plano-enterprise}
+The service is available from Monday to Friday, during business hours (8am to 5pm).
 
-É a modalidade de suporte mais utilizada por empresas de pequeno e médio porte, que utilizam a Azion em serviços sem impacto direto no resultado do negócio.
+This modality does not provide Technical Support and does not have a telephone service channel.
 
-Você irá encontrar todas as características do [Plano Developer](#plano-developer) e mais:
+### Enterprise Plan
 
-*   Acesso a Engenheiros de Suporte 24×7 por ticket e telefone.
-*   Tempo de resposta de até 1 hora para _Production System Down_.
-*   Tickets ilimitados, sem limite de usuários.
-*   Acesso a serviços avançados mediante taxa adicional: _Best Practices Review_, _Go Live Support_, _Training_, _Custom Configurations_.
+It is the type of support that is most used by small and medium sized companies, which use Azion in services that do not have a direct impact on the business result.
 
-### Plano Mission Critical {#plano-mission-critical}
+You can find all the features of the [Developer Plan](#developer-plan) and more at:
 
-É a modalidade de suporte recomendada para empresas de médio e grande porte, que utilizam a Azion em sistemas de missão crítica, com impacto direto no resultado do negócio.
+* 24x7 Access to Support Engineers via ticket and phone.
+* Response time of up to 1 hour for Production System Down.
+* Unlimited tickets, with no user limit.
+* Access to advanced services subject to an additional fee: Best Practices Review, Go Live Support, Training, Custom Configurations.
 
-Você irá encontrar todas as características do [Plano Enterprise](#plano-enterprise) e mais:
+### Mission Critical Plan
 
-*   Acesso a Engenheiros de Research & Development, 8×5, por ticket e telefone.
-*   Tempo de resposta de até 15 minutos para _Business-Critical System Down_.
-*   Acesso ao _Go Live Support_ para o lançamento de aplicações, migrações e eventos ao vivo.
-*   Acesso ao _Training_ para capacitação do time.
-*   Acesso ao _Custom Configurations_ para configurações complexas.
-*   Acesso ao _Best Practices Review_ para a redução de custo e melhoras na arquitetura, disponibilidade, performance e segurança.
-*   Acesso ao _Security Response Team (SRT)_ mediante contratação do [Azion Managed DDoS Protection Unlimited]({% tl documentation_products_ddos_protection %}).
-*   Acesso ao [Slack](http://www.slack.com/) Channel da Azion (mediante taxa adicional). Um canal ágil para resolução de problemas e contato com nosso time de Engenheiros de Suporte.
+It is the recommended support modality for medium and large companies, which use Azion in mission critical systems, which have a direct impact on the business result.
+You can find all the features of the [Enterprise Plan](#enterprise-plan) and more at:
 
-**Comparativo de Planos**
+* 24x7 Access to Research & Development Engineers, 8am to 5pm, via ticket and telephone.
+* Response time of up to 15 minutes for _Business-Critical System Down_.
+* Access to Go Live Support for launching applications, migrations and live events.
+* Access to Training for team training.
+* Access to Custom Configurations for complex configurations.
+* Access to Best Practices Review for cost reduction and improvements in architecture, availability, performance and security.
+* Access to the Security Response Team (SRT) when contracting Azion Managed DDoS Protection Unlimited.
+* Access to Azion's [Slack](http://www.slack.com/) Channel (for an additional fee). An agile channel for solving problems and contacting our team of Support Engineers.
+
+**Plan Comparisons**
 
 | | Developer | Enterprise | Mission Critical |
 |--|-----------|------------|------------------|
-| Customer Services e documentação | Acesso 24×7 ao Customer Service, documentação, whitepapers e reporte de bugs | Acesso 24×7 ao Customer Service, documentação, whitepapers e reporte de bugs e incidentes | Acesso 24×7 ao Customer Service, documentação, whitepapers e reporte de bugs e incidentes |
-| Health Status and Notifications | Acesso ao Status Page Dashboard | Acesso ao Status Page Dashboard | Acesso ao Status Page Dashboard |
-| Technical Support | | Acesso 24×7 a Engenheiros de Suporte via ticket e telefone | Acesso 24×7 a Engenheiros de Suporte, 8×5 a Engenheiros de R&D via ticket e telefone e Acesso ao Slack Channel da Azion (mediante taxa adicional) |
-| Quem pode abrir casos | | Contatos ilimitados/casos ilimitados | Contatos ilimitados/casos ilimitados |
-| Severidade dos casos/Tempos de resposta | | General guidance: < 24 horas (horário comercial*) System impaired: < 12 horas Production system impaired: < 4 horas Production system down: < 1 hora | General guidance: < 24 horas (horário comercial*) |
-| | | | System impaired: < 12 horas |
-| | | | Production system impaired: < 4 horas |
-| | | | Production system down: < 1 hora |
-| | | | Business-critical system down: < 15 minutos |
-| Go Live Support | | Acesso a Engenheiros de Suporte (mediante taxa adicional) | Acesso a Engenheiros de Suporte (inclusos até 3 eventos Go Live por ano) |
-| Training | | Acesso ao Azion Day (mediante taxa adicional) | Acesso ao Azion Day (inclusos 2 Azion Days por ano) |
-| Custom Configurations | | Acesso a criação de configurações customizadas (mediante taxa adicional) | Acesso a criação de configurações customizadas (inclusos até 5 sites) |
-| Best Practices Review | | Designação de um Trusted Advisor (mediante taxa adicional) | Designação de um Trusted Advisor (inclusos até 5 reviews por ano) |
-| Security Response Team (SRT) | | | Acesso ao SRT (requer contratação do Azion Managed DDoS Protection Unlimited) |
-| Modelo de contratação | Incluso | On Demand / Reserved Capacity | Reserved Capacity (mínimo de 12 meses) |
+| Customer Services and documentation | 24×7 access to Customer Service, documentation, whitepapers and bug reporting | 24×7 access to Customer Service, documentation, whitepapers and bug reporting and incidents | 24×7 access to Customer Service, documentation, whitepapers and bug reporting and incidents |
+| Health Status and Notifications | Access to Status Page Dashboard                              | Access to Status Page Dashboard                              | Access to Status Page Dashboard                              |
+| Technical Support | | 24×7 access to Support Engineers via ticket and phone        | 24×7 access to Support Engineers, 8am to 5pm for R&D Engineers via ticket and phone and Access to Azion's Slack Channel (for an additional fee) |
+| Who can open cases                  | | Unlimited contacts/unlimited cases                           | Unlimited contacts/unlimited cases                           |
+| Severity of cases/Response times    | | *General guidance:* < 24 hours (business hours*)<br />*System impaired:* < 12 hours<br />*Production system impaired:* < 4 hours<br />*Production system down:* < 1 hour | *General guidance:* < 24 hours (business hours*)<br />*System impaired:* < 12 hours<br />*Production system impaired:* < 4 hours<br />*Production system down:* < 1 hour<br />*Business-critical system down:* < 15 minutes |
+| Go Live Support | | Access to Support Engineers (for an additional fee)          | Access to Support Engineers (including up to 3 Go Live events per year) |
+| Training | | Access to Azion Day (for an additional fee)                  | Access to Azion Day (including 2 Azion Days per year)        |
+| Custom Configurations | | Access to creating custom configurations (for an additional fee) | Access to creating custom configurations (including up to 5 sites) |
+| Best Practices Review | | Designation of a Trusted Advisor (for an additional fee)     | Designation of a Trusted Advisor (including up to 5 reviews per year) |
+| Security Response Team (SRT) | | | Access to SRT (requires the contracting of [Azion Managed DDoS Protection Unlimited](https://www.azion.com/pt-br/docs/produtos/ddos-protection/)) |
+| Contracting model                   | Included | On Demand / Reserved Capacity | Reserved Capacity (minimum of 12 months) |
 
 
 
-* Horário comercial é geralmente definido como das 9:00 AM às 6:00 PM, no país em que a Azion foi contratada, excluindo feriados e fins de semana. Esses horários podem variar em países com múltiplos fusos horários.
+* Business hours are generally defined as 9:00am to 6:00pm, in the country where Azion was contracted, excluding holidays and weekends. These times may vary in countries with multiple time zones.
 
 ---
 
-## 2. Tempo de Resposta {#tempo-de-resposta}
+## 2. **Response Time**
 
-O tempo de resposta depende da modalidade de suporte contratada e da severidade do ticket aberto. É contabilizado o tempo transcorrido entre a abertura do ticket e o início do tratamento pela Azion.
+The response time depends on the type of support contracted and the severity of the open ticket. The time elapsed between the opening of the ticket and the start of actions taken by Azion is counted.
 
-Severidade do Ticket
+**Ticket Severity**
 
-Nosso objetivo é fornecer um nível adequado de urgência para cada caso com base no impacto para o seu negócio. A abertura de tickets com o nível de severidade correto nos ajudará a colocá-lo em contato com os profissionais de suporte adequados dentro dos tempos de resposta desejados.
+Our goal is to provide an appropriate level of urgency to each case based on the impact on your business. Opening tickets with the correct severity level will help us get you in touch with the appropriate support professionals and within the desired response times.
 
-Para entender como a Azion considera a severidade dos tickets, consulte a tabela:
+To understand how Azion regards the severity of tickets, please see the table:
 
-| Severidade do Ticket | Definição |
+| Ticket Severity               | Definition |
 |----------------------|-----------|
-| General Guidance | Você tem uma dúvida ou deseja solicitar uma funcionalidade. |
-| System impaired | Funções não críticas de sua aplicação estão se comportando de forma anormal ou você tem alguma dúvida urgente sobre desenvolvimento utilizando produtos Azion. |
-| Production system impaired | Funções importantes para a sua aplicação estão comprometidas ou degradadas. |
-| Production system down | Você não tem como contornar o problema e seu negócio está significativamente impactado. Funções importantes de sua aplicação estão indisponíveis. |
-| Business-critical system down | Você não tem como contornar o problema e seu negócio está em risco. Funções críticas de sua aplicação estão indisponíveis. |
+| General Guidance | You have a question or want to request a feature.            |
+| System impaired | Non-critical functions of your application are behaving abnormally or you have an urgent development question using Azion products. |
+| Production system impaired | Important functions for your application are compromised or degraded. |
+| Production system down | You have no way around the problem and your business is significantly impacted. Important functions of your application are unavailable. |
+| Business-critical system down | You have no way around the problem and your business is at risk. Critical functions of your application are unavailable. |
 
+**Resolved Cases**
 
-**Casos Resolvidos**
+As soon as we respond to your ticket, we will work with you to identify and resolve the issue. We will consider the case resolved if:
 
-Assim que respondermos ao seu ticket, trabalharemos com você para identificar e resolver o problema. Nós consideraremos o caso resolvido se:
-
-*   Você concorda que seu problema foi corrigido ou sua dúvida respondida.
-*   Você concorda que a origem do problema não está na Azion.
-*   Você não respondeu a uma consulta ou solicitação nossa durante quatro (4) dias consecutivos.
-
----
-
-## 3. Canais de Atendimento {#canais-de-atendimento}
-
-Todos os clientes dispõe de canais para atendimento de acordo com o plano contratado e podem abrir tickets online.
-
-Nosso Suporte Developer oferece atendimento via ticket referente a cobrança e a conta, em horário comercial. Já os clientes com suporte Enterprise ou Mission Critical têm acesso ao suporte 24×7 via ticket e telefone.
-
-A abertura do ticket online por um dos contatos previamente autorizados pelo cliente e configurados na ferramenta é indispensável para garantir a autenticação e autorização do cliente.
-
-*   [Portal do Suporte](https://tickets.azion.com/), para todas as modalidades de suporte.
-*   Telefone [+55 51 3083 8111](tel:+555130838111), apenas para as modalidades de suporte [Enterprise](#plano-enterprise) e [Mission Critical](#plano-mission-critical).
-*   Acesso ao [Slack](http://www.slack.com/) Channel da Azion (mediante taxa adicional), apenas para a modalidade Mission Critical.
+*   You agree that your problem has been fixed or your question has been answered.
+*   You agree that the source of the problem is not with Azion.
+*   You have not responded to an inquiry or request from us for four (4) consecutive days.
 
 ---
 
-## 4. Escopo de Trabalho {#escopo-de-trabalho}
+## 3. **Service Channels**
+
+All customers have service channels according to their contracted plan and can open tickets online.
+
+Our Developer Support offers services via ticket related to billing and accounts, during business hours. Customers with Enterprise or Mission Critical support have access to 24×7 support via ticket and telephone.
+
+The opening of an online ticket by one of the contacts previously authorized by the customer and configured in the tool is essential to guarantee the authentication and authorization of the customer.
+
+*   [Support Portal](https://tickets.azion.com/), for all support modalities.
+*   Telephone [+55 51 3083 8111](tel:+555130838111), only for the [Enterprise](#enterprise-plan) e [Mission Critical](#mission-critical-plan).
+*   Access to Azion's [Slack ](http://www.slack.com/)Channel (for an additional fee), only for Mission Critical modality.
+
+---
+
+## 4. **Working Scope**
 
 **Technical Support**
 
-Nossos níveis de suporte técnico cobrem questões de desenvolvimento e produção para produtos e serviços Azion, conjuntamente com outras componentes chave:
+Our technical support levels cover development and production issues for Azion products and services, along with other key components:
 
-*   Questões “_how to_” sobre serviços e funcionalidades da Azion.
-*   Solução de problemas no uso de produtos Azion, conjuntamente com recursos do cliente.
-*   Solução de problemas com a plataforma Azion.
+*   “*How-to*” questions about Azion services and features.
+*   Troubleshooting for the use of Azion products, together with customer resources.
+*   Troubleshooting for the Azion platform.
 
-Azion Technical Support não inclui:
+Azion Technical Support does not include:
 
-*   O acesso e modificação da infraestrutura do cliente, externos à rede da Azion.
-*   O desenvolvimento, modificações e depuração das aplicações do cliente.
-*   A homologação e modificação da infraestrutura do cliente, mesmo quando solicitadas ou recomendadas pela Azion para viabilizar a integração ou solução de algum problema.
-*   A busca de solução para os problemas na infraestrutura do cliente ou de seus fornecedores, que impactem no uso dos serviços da Azion.
-*   O atendimento a Best Practices Review, Go Live Support, Training, Custom Configurations e Security Response Team.
+*   Access and modification of the customer's infrastructure, that which is external to the Azion network.
+*   The development, modification and debugging of the client’s applications.
+*   The homologation and modification of the customer's infrastructure, even when requested or recommended by Azion to enable its integration or for the solution of any problem.
+*   The search for a solution to problems in the customer's infrastructure or its suppliers, which impact the use of Azion's services.
+*   Attending to Best Practices Review, Go Live Support, Training, Custom Configurations and Security Response Team.
 
 **Health Status and Notifications**
 
-Health Status and Notification dá a você a visão do status dos serviços Azion que atendem às suas aplicações, permitindo-lhe identificar rapidamente quando a Azion está enfrentando problemas que podem impactá-lo. O dashboard exibe cronologicamente informações relevantes que lhe permitem gerenciar eventos em andamento, além de prover notificações proativas para apoiá-lo no planejamento de atividades agendadas. Com alertas disparados automaticamente por mudança de status dos recursos da Azion, você terá a visibilidade e guia para apoiá-lo a diagnosticar rapidamente e resolver problemas. Confira em [Azion Status Page](http://status.azion.com/).
+Health Status and Notification provides you with insight into the status of the Azion services that suit your applications, allowing you to quickly identify when Azion is experiencing issues that can impact you. The dashboard displays relevant information chronologically which allows you to manage events in progress, in addition to providing proactive notifications to support you in planning scheduled activities. With alerts triggered automatically by changing the status of Azion resources, you will have the visibility and guidance to help you quickly diagnose and resolve problems. Check it out on the [Azion Status Page](http://status.azion.com/).
 
 **Best Practices Review**
 
-Azion Trusted Advisors baseiam-se nas melhores práticas aprendidas com o histórico de operar e servir milhares de casos de uso. O Trusted Advisor analisa seu ambiente na Azion e lhe informa sobre oportunidades para economizar dinheiro, melhorar a arquitetura do sistema, disponibilidade e performance, ou ajudar a mitigar vulnerabilidades de segurança. Solicite a análise pelo Portal de Suporte, informando o site que você deseja que seja revisado e o objetivo pretendido: otimização com foco em economia de seus custos, em performance, em disponibilidade ou em segurança.
+The Azion Trusted Advisors base themselves on the best practices learned from their history of operating and serving thousands of use cases. The Trusted Advisor analyzes your environment at Azion and then informs you of opportunities to save money, improve system architecture, availability and performance, or to help mitigate security vulnerabilities. You can request an analysis through the Support Portal, informing the website you want to be reviewed and the intended objective: optimization with a focus on cost savings, performance, availability or security.
 
 **Go Live Support**
 
-Ideal para lançamento de aplicações, migrações de infraestrutura e eventos ao vivo, nosso Go Live Support oferece orientação e suporte em tempo real para os momentos mais relevantes para seu negócio. Os especialistas da Azion conduzem um envolvimento altamente focado para fornecer orientações de arquitetura e operação, bem como suporte em tempo real, com duração de até 6h de acompanhamento, em qualquer horário, para seu evento planejado. Agende pelo Portal de Suporte, com 72h de antecedência, o Go Live Support para seu evento.
+Ideal for launching applications, infrastructure migrations and live events, our Go Live Support offers real-time guidance and support for the most relevant moments for your business. Azion specialists conduct a highly focused engagement to provide architectural and operational guidance, as well as real-time support, with up to 6 hours of follow-up, at any time, for your planned event. Go Live Support for your event can be booked through the Support Portal, 72 hours in advance.
 
 **Training**
 
-Quer você seja novo na Azion, quer seja um usuário avançado, com Azion Training você pode elaborar sua agenda de treinamentos conosco e sempre aprender ou validar conceitos úteis e técnicas de implementação usando nossos serviços, desde funcionalidades introdutórias até as mais avançadas.
+Whether you are new to Azion or an advanced user, with Azion Training you can design your training schedule with us and always learn or validate useful concepts and implementation techniques using our services, from introductory features to the most advanced ones.
 
 **Custom Configurations**
 
-Azion Custom Configurations fornece o suporte técnico que você precisa para implantar configurações complexas, não suportadas na interface do Real-Time Manager ou APIs, para que você possa explorar todo o poder da plataforma Azion.
+Azion Custom Configurations provides the technical support you need to deploy complex configurations, those not supported in the Real-Time Manager interface or APIs, so you can harness the full power of the Azion platform.
 
 **Security Response Team (SRT)**
 
-Com Azion Managed DDoS Protection Unlimited você tem acesso 24×7 ao Security Response Team (SRT), que pode ser acionado durante ou após um ataque DDoS. O SRT ajudará na triagem de incidentes, identificando a causa raiz e aplicando mitigações para você. Você também poderá engajar o SRT para qualquer análise pós-ataque.
+With Azion Managed DDoS Protection Unlimited you have 24×7 access to the Security Response Team (SRT), which can be triggered during or after a DDoS attack. The SRT will assist in tracing incidents, identifying the root cause and applying mitigations for you. You can also engage the SRT for any post-attack analysis.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
-
-[Clique aqui](#) para editar esta página no GitHub.
+Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
