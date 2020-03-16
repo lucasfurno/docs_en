@@ -9,25 +9,25 @@ The Analytics screen has some regions which enable you to filter information, su
 
 
 
-1. [Filter data interval](#1.-filter-data-interval)
+1. [Filter data interval](#1-filter-data-interval)
 
-2. [Export to CSV](#2.-export-to-csv)
+2. [Export to CSV](#2-export-to-csv)
 
-3. [How to Interpret the Graphics](#3.-how-to-interpret-the-graphics)
+3. [How to Interpret the Graphics](#3-how-to-interpret-the-graphics)
 
-4. [Data Transferred](#4.-data-transferred**)
+4. [Data Transferred](#4-data-transferred**)
 
-5. [Requests](#5.-requests)
+5. [Requests](#5-requests)
 
-6. [Status Codes](#6.-status-codes)
+6. [Status Codes](#6-status-codes)
 
-7. [HTTP Methods](#7.-http-methods)
+7. [HTTP Methods](#7-http-methods)
 
-8. [Connections](#8.-connections)
+8. [Connections](#8-connections)
 
-9. [Storage](#9.-storage-(stored-data))
+9. [Storage](#9-storage-(stored-data))
 
-10. [WAF](#10.-web-application-firewall-(waf) )
+10. [WAF](#10-web-application-firewall-(waf) )
 
     
 
