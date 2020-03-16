@@ -1,83 +1,81 @@
 # Load **Balancer**
 
-Para alcançar altos níveis de tolerância a falhas e performance é necessário garantir a disponibilidade do seu conteúdo e aplicações mesmo em caso de incidentes com seus servidores de origem. O Azion Load Balancer permite balancear o tráfego para suas origens, data centers ou provedores de cloud, evita o congestionamento de rede e a sobrecarga de seus servidores. Além disso, detecta falhas e provê múltiplos algoritmos que permitem distribuir a carga para as infraestruturas disponíveis, garantindo a melhor experiência para seus usuários e resultados para sua empresa.
+To achieve high levels of fault tolerance and performance, it is necessary to guarantee the availability of your content and applications even in the event of incidents with your original servers. Azion Load Balancer allows balancing traffic to your origins, data centers or cloud providers, avoids network congestion and overloading your servers. In addition, it detects failures and provides multiple algorithms that allow you to distribute the load to the available infrastructures, ensuring the best experience for your users and results for your company.
 
-> 1. [Funcionalidades do Load Balancer](#FuncionalidadesLoadBalancer)
-> 2. [Como configurar o Load Balancer](#ComoConfigurarLoadBalancer)
+> 1. [Load Balancer Features](#1-load-balancer-features)
+> 2. [How to set up Load Balancer](#2-how-to-set-up-load-balancer)
 
 ---
 
-## 1. Funcionalidades do Load Balancer {#FuncionalidadesLoadBalancer}
+## **1. Load Balancer Features**
 
-Com Azion Load Balancer você adiciona múltiplas origens para seu conteúdo, seleciona o método de balanceamento de carga que mais se adequa as suas necessidades e customiza timeouts e tratamento de erros.
+With Azion Load Balancer you add multiple origins to your content, select the load balancing method that best suits your needs and customize timeouts and error handling.
 
-**Método de Balanceamento**
+**Balancing Method**
 
-Você pode selecionar o método de balanceamento que define como será distribuída a carga entre suas origens:
+You can select the balancing method that defines how the load will be distributed among its origins:
 
-* **Round-Robin:** define o algoritmo de balanceamento em rodízio. Leva em consideração o volume de requisições e não o tempo que cada origem demora para responder. Cada origem receberá carga proporcionalmente ao seu peso no round-robin. Origens mais lentas poderão acumular maior número de conexões em paralelo.
-* **Least connections:** mantém o controle do número de conexões ativas com cada origem e envia a próxima requisição sempre para a origem que tiver menor número de conexões. Assim, origens mais lentas receberão menor número de requisições, enquanto origens mais rápidas poderão atender mais requisições sequencialmente.
-* **IP Hash:** mantém um controle por endereço IP do usuário e tenta, sempre quando possível, associar a mesma origem para cada IP.
+* Round-Robin: defines the balancing algorithm in rotation. It takes into account the volume of requests and not the time that each source takes to respond. Each origin will receive a load in proportion to its weight in the round robin. Slower origins may accumulate more connections in parallel.
+* Least connections: keeps track of the number of active connections with each origin and always sends the next request to the origin with the fewest connections. Thus, slower origins will receive fewer requests, while faster origins will be able to attend more requests sequentially.
+* IP Hash: maintains a control by the user's IP address and tries, whenever possible, to associate the same origin for each IP.
 
 **Host Header**
 
-O cabeçalho Host é utilizado por sua origem para identificar o _virtualhost_ e localizar seu conteúdo ou aplicação. Ao configurar uma origem no Real-Time Manager, você pode customizar a valor que deve ser enviado pela Azion no cabeçalho Host.
+The Host header is used by your origin to identify the *virtualhost* and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.
 
-Se este campo for deixado em branco, a Azion usará, por default, o mesmo endereço definido no campo Address. Deixe o campo Host Header em branco se sua origem estiver configurada para responder o _virtualhost_ pelo mesmo endereço que está configurado no DNS.
+If this field is left blank, Azion will use, by default, the same address defined in the Address field. Leave the Host Header field blank if your origin is configured to respond to *virtualhost* by the same address that is configured in DNS.
 
-Você pode preencher um valor customizado de Host Header para ser enviado para sua origem. Por exemplo, _www.azion.com_. Você deve customizar o Host Header se sua origem estiver configurada para responder um _virtualhost_ em um endereço diferente do que está configurado no DNS.
+You can fill in a custom value for Host Header to be sent to your origin. For example, *www.azion.com*. You must customize the Host Header if your origin is configured to respond to a *virtualhost* at an address other than the one configured in DNS.
 
-Ou ainda, você pode utilizar a variável _$host_ no campo Host Header, para instruir os edge servers para repassarem para sua origem o mesmo cabeçalho Host recebido de seus visitantes. Utilize essa configuração se tiver múltiplos _virtualhosts_ sendo respondidos pela mesma origem.
+Or, you can use the variable *$host* in the Host Header field, to instruct the Edge Nodes to pass on to the origin the same Host header received from your visitors. Use this set up if you multiple *virtualhosts* being replied by the same origin.
 
 **Origin Path**
 
-Caso precise que os Edge Nodes da Azion requisitem o conteúdo de sua origem em um caminho diferente da URI, você pode definir um Origin Path. A Azion fará a concatenação do Origin Path com a URI solicitada pelo usuário.
+If you need that the Edge Nodes of Azion request the content of your origin in a different URL path, you may define an Origin Path. Azion will concatenate the Origin Path with the URI requested by the user.
 
-A definição do Origin Path é opcional. Se não for definido, será utilizada apenas a URI.
+The definition of the Origin Path is optional. If it is not defined, it will only consider the URI.
 
-Por exemplo, se em sua origem todo o conteúdo fica abaixo do path _/secure_, porém esse caminho não é exibido na URL para seus usuários, você pode definir o _/secure_ como Origin Path em suas configurações de origem. O restante do caminho será preservado, de acordo com a requisição do usuário.
+For example, if in your origin the whole content is under the path */secure*, though this path is not shown in the URL for your users, you may define the */secure* as the Origin Path in your origin settings. The rest of the path will be preserved, in accordance with the user’s request.
 
 **Origin Protocol Policy**
 
-A arquitetura de entrega da Azion permite que você customize o tipo de conexão desejada dos Edge Nodes para sua origem:
+Azion’s delivery architecture allows you to customize the desired type of connection of the Edge Nodes to your origin:
 
-* **Preserve HTTP/HTTPS protocol:** irá manter o mesmo protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário ao acessar seu conteúdo na Azion para se conectar em sua origem.
-* **Enforce HTTP:** a conexão entre os Edge Nodes da Azion e sua origem será por HTTP, independente do protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário para acessar seu conteúdo na Azion. Com essa opção, você pode customizar uma porta para sua origem no campo Address diferente da porta default (80 para HTTP) se desejar.
-* **Enforce HTTPS:** a conexão entre os Edge Nodes da Azion e sua origem será por HTTPS, independente do protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário para acessar seu conteúdo na Azion. Com essa opção, você pode customizar uma porta para sua origem no campo Address diferente da porta default (443 para HTTPS) se desejar.
+* **Preserve HTTP/HTTPS protocol:** will keep the same connection protocol (HTTP or HTTPS) and ports used by your user when accessing your content on Azion to connect to your origin.
+* **Enforce HTTP:** the connection between Azion’s Edge Nodes and your origin will be through HTTP, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (80 for HTTP) if you wish.
+* Enforce HTTPS: the connection between Azion’s Edge Nodes and your origin will be through HTTPS, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (443 for HTTPS) if you wish.
 
-**Múltiplas Origens**
+**Multiple Origins**
 
-Você deve adicionar múltiplas origens para alcançar altos níveis de disponibilidade e evitar que um incidente impacte na disponibilidade de seu conteúdo e aplicações.
+You must add multiple origins to achieve high levels of availability and prevent an incident from impacting the availability of your content and applications.
 
-* **Address:** endereço IP ou hostname de sua origem. Você pode customizar a porta da origem, caso tenha definido a Origin Protocol Policy em Enforce HTTP ou Enforce HTTPS, utilizando a notação _host:port_.
-* **Weight:** você pode definir um peso para cada origem. Esse peso define a proporção de carga que a origem irá receber. Se você definir o peso de uma origem em 3, por exemplo, ela receberá 3 vezes mais carga do que uma origem com peso definido em 1.
-* **Server Role:** se o método de balanceamento selecionado por você for Round-Robin ou Least connections, você pode definir Server Role para cada origem: Primary ou Backup. As origens Backup atuarão como origens _standby_ e só receberão carga se todas as origems Primary falharem.
-* **Active:** para retirar um servidor do balanceamento temporariamente para manutenção, você pode desativá-lo desmarcando o checkbox Active. É necessário pelo menos uma origem ativa para que o conteúdo fique disponível.
+* **Address:** IP address or hostname of your origin. You may customize your origin, if you defined the Origin Protocol Policy in Enforce HTTP or Enforce HTTPS, using the notation *host:port*.
+* **Weight:** you may define a weight for each origin. This weight defines the proportion of load that the origin will receive. If you set the weight of an origin to 3, for example, it will receive 3 times more load than an origin with a weight set to 1.
+* **Server Role:** if the balancing method you select is Round-Robin or Least connections, you can define Server Role for each origin: Primary or Backup. The Backup origins will act and *standby* origins and only receive the load if all Primary origins fails.
+* **Active:** to remove a server from balance temporarily for maintenance, you can disable it by clearing the Active checkbox. At least one active origin is required for the content to be available.
 
-**Customização de Timeouts**
+**Variation by *Errors* and *Timeouts***
 
-O Azion Load Balancer irá consultar as origens respeitando o método de balanceamento e peso atribuidos por você. Caso alguma origem retorne um erro 404 (Not Found), um erro 5xx ou demore mais do que os timeouts configurados por você para responder, as demais origens serão consultadas antes de retornar qualquer erro para seus usuários.
+Azion Load Balancer will verify the origins respecting the balancing and weight methods attributed by you. If any origin returns a 404 error (Not Found), a 5xx error or takes longer than the timeouts pre-defined by Azion to respond, the other origins will be consulted before returning any error to its users.
 
-Você pode customizar os seguintes timeouts:
+The default values for Azion Load Balancer timeouts are:
 
-* **Connection:** timeout de 60 segundos no estabelecimento da conexão com a origem.
-* **Between Bytes:** timeout de 120 segundos entre bytes em uma conexão já estabelecida.
-
----
-
-## 2. Como configurar o Load Balancer {#ComoConfigurarLoadBalancer}
-
-Para configurar o Azion Load Balancer:
-
-1.  Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Edge Application
-2.  Edite a configuração de Content Delivery desejada
-3.  Na aba Origins, adicione ou edite uma origem para seu conteúdo
-4.  Selecione Load Balancer como Origin Type e configure Method e adicione endereços
-5.  Após salvar, acesse a aba Rules Engine para editar ou adicionar regras para um ou mais _paths_
-6.  Na seção Origin Settings, selecione a configuração de origem criada por você nos passos 3 e 4
+* Connection: 60 seconds timeout in the connection establishments with the origin.
+* Between Bytes: 120 seconds timeout between bytes in a connection already established.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+## **2. How to set up Load Balancer**
 
-[Clique aqui](#) para editar esta página no GitHub.
+To set up Azion Load Balancer:
+
+1.  Access [Real-Time Manager](https://manager.azion.com/) and click the menu Edge Application.
+2.  Edit the desired Edge Application.
+3.  At the tab Origins, add or edit an origin to your content.
+4.  Select Load Balancer as Origin Type and set up Method and add addresses.
+5.  After saving, access the tab Rules Engine to edit or add rules for one of more *paths*
+6.  In the Behavior section, select Set Origin and use the origin you created in steps 3 and 4
+
+---
+
+Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
