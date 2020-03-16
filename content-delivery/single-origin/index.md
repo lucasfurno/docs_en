@@ -1,84 +1,86 @@
 # Single **Origin**
 
-Por meio do Single Origin você poderá configurar o endereço de sua origem e ajustar parâmetros.
+Through Single Origin you may set up the address of your origin and adjust parameters.
 
-> 1. [Funcionalidades do Single Origin](#funcionalidades-do-single-origin)
-> 2. [Como configurar uma Single Origin](#como-configurar-uma-single-origin)
+> 1. [Single Origin Features](#1-single-origin-features)
+> 2. [How to set up a Single Origin](#2-how-to-set-up-a-single-origin)
 
 ---
 
-## 1. Funcionalidades do Single Origin  {#funcionalidades-do-single-origin}
+## 1. **Single Origin Features**
 
-Com Single Origin você adiciona uma origem para seu conteúdo e customiza Host Header, método de conexão e timeouts.
+With Single Origin you add an origin for your content and customize Host Header, connection method and authentication credentials.
 
 **Host Header**
 
-O cabeçalho Host é utilizado por sua origem para identificar o _virtualhost_ e localizar seu conteúdo ou aplicação. Ao configurar uma origem no Real-Time Manager, você pode customizar a valor que deve ser enviado pela Azion no cabeçalho Host.
+The Host header is used by your origin to identify the *virtualhost* and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.
 
-Se este campo for deixado em branco, a Azion usará, por default, o mesmo endereço definido no campo Address. Deixe o campo Host Header em branco se sua origem estiver configurada para responder o _virtualhost_ pelo mesmo endereço que está configurado no DNS.
+If this field is left blank, Azion will use, by default, the same address defined in the Address field. Leave the Host Header field blank if your origin is configured to respond to *virtualhost* by the same address that is configured in DNS.
 
-Você pode preencher um valor customizado de Host Header para ser enviado para sua origem. Por exemplo, _www.azion.com_. Você deve customizar o Host Header se sua origem estiver configurada para responder um _virtualhost_ em um endereço diferente do que está configurado no DNS.
+You can fill in a custom value for Host Header to be sent to your origin. For example, *www.azion.com*. You must customize the Host Header if your origin is configured to respond to a *virtualhost* at an address other than the one configured in DNS.
 
-Ou ainda, você pode utilizar a variável _$host_ no campo Host Header, para instruir os edge nodes para repassarem para sua origem o mesmo cabeçalho Host recebido de seus visitantes. Utilize essa configuração se tiver múltiplos _virtualhosts_ sendo respondidos pela mesma origem.
+Or, you can use the variable *$host* in the Host Header field, to instruct the edge nodes to pass on to the origin the same Host header received from your visitors. Use this set up if you multiple *virtualhosts* being replied by the same origin.
 
 **Origin Path**
 
-Caso precise que os Edge Nodes da Azion requisitem o conteúdo de sua origem em um caminho diferente da URI, você pode definir um Origin Path. A Azion fará a concatenação do Origin Path com a URI solicitada pelo usuário.
+If you need that the Edge Nodes of Azion request the content of your origin in a different URL path, you may define an Origin Path. Azion will concatenate the Origin Path with the URI requested by the user.
 
-A definição do Origin Path é opcional. Se não for definido, será utilizada apenas a URI.
+The definition of the Origin Path is optional. If it is not defined, it will only consider the URI.
 
-Por exemplo, se em sua origem todo o conteúdo fica abaixo do path _/secure_, porém esse caminho não é exibido na URL para seus usuários, você pode definir o _/secure_ como Origin Path em suas configurações de origem. O restante do caminho será preservado, de acordo com a requisição do usuário.
+For example, if in your origin the whole content is under the path */secure*, though this path is not shown in the URL for your users, you may define the */secure* as the Origin Path in your origin settings. The rest of the path will be preserved, in accordance with the user’s request.
 
 **Origin Protocol Policy**
 
-A arquitetura de entrega da Azion permite que você customize o tipo de conexão desejada dos Edge Nodes para sua origem:
+Azion’s delivery architecture allows you to customize the desired type of connection of the Edge Nodes to your origin:
 
-* **Preserve HTTP/HTTPS protocol:** irá manter o mesmo protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário ao acessar seu conteúdo na Azion para se conectar em sua origem.
-* **Enforce HTTP:** a conexão entre os Edge Nodes da Azion e sua origem será por HTTP, independente do protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário para acessar seu conteúdo na Azion. Com essa opção, você pode customizar uma porta para sua origem no campo Address diferente da porta default (80 para HTTP) se desejar.
-* **Enforce HTTPS:** a conexão entre os Edge Nodes da Azion e sua origem será por HTTPS, independente do protocolo de conexão (HTTP ou HTTPS) e porta utilizados por seu usuário para acessar seu conteúdo na Azion. Com essa opção, você pode customizar uma porta para sua origem no campo Address diferente da porta default (443 para HTTPS) se desejar.
+* Preserve HTTP/HTTPS protocol: will keep the same connection protocol (HTTP or HTTPS) and ports used by your user when accessing your content on Azion to connect to your origin.
+
+* Enforce HTTP: the connection between Azion’s Edge Nodes and your origin will be through HTTP, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (80 for HTTP) if you wish.
+
+* Enforce HTTPS: the connection between Azion’s Edge Nodes and your origin will be through HTTPS, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (443 for HTTPS) if you wish.
+
+  
 
 **Address**
 
-Após a definição dos campos acima, adicione a origem informando o endereço IP ou hostname (FQDN – Full Qualified Domain Name) de sua origem.
+After the definition of the fields above, add an origin informing the IP address or hostname (FQDN – Full Qualified Domain Name) of your origin.
 
-Você pode também customizar a porta da origem, caso tenha definido a _Origin Protocol Policy_ em _Enforce HTTP_ ou _Enforce HTTPS_, utilizando a notação _host:port._
+You may also customize the origin port, if you defined the *Origin Protocol Policy* in the *Enforce HTTP* or *Enforce HTTPS*, using the notation *host:port.*
+
+
 
 **HMAC Authentication**
 
-Você pode incluir uma Single Origin onde sua origem se encontra em um Object Storage com acesso privado, com autenticação através de HMAC.
+You may include a Single Origin where the origin is found in an Object Storage with private access, with authentication through HMAC.
 
-Deve-se incluir nas credenciais de acesso HMAC, Region, Access Key e Secret Key fornecidos pelo seu Object Storage provider.
+<p style="background-color:#ddeef8; color:#1574ba"> When enabling HMAC Authentication, your private content will begin to be delivered to your users through Edge Application.</p>
 
-O Google Cloud Storage™ suporta buckets com tipo de local single region (us-east1 por exemplo) e multirregional e se este for seu caso, você pode configurar o valor "auto" como Region.
+You should include in the access credentials HMAC, Region, Access Key and Secret Key provided by your Object Storage provider. 
 
-A Secret Key fica protegida sendo exibida apenas para seus usuários com permissão de escrita e mantendo sua segurança de acesso.
+Google Cloud Storage™ supports buckets with local type single region (us-east1 for example) and multiregional and if this is your case, you can set the value "auto" to Region. 
+
+Secret Key is protected by being displayed only to its users with write permission and maintaining their access security.
 
 _©2020 Google LLC All rights reserved. Google Cloud Storage is a trademark of Google LLC._
 
-Ao habilitar o HMAC Authentication, o seu conteúdo privado passará a ser entregue aos seus usuários pela Edge Application.
+
 
 **Timeouts**
 
-Você pode customizar os seguintes timeouts:
-
-* **Connection:** timeout em segundos no estabelecimento da conexão do Edge Nodes com sua origem.
-* **Between Bytes:** timeout em segundos entre bytes em uma conexão já estabelecida.
+Displays timeout setting in seconds pre-defined by Azion. Timeout values cannot be customized.
 
 ---
 
-## 2. Como configurar uma Single Origin {#como-configurar-uma-single-origin}
+## 2. **How to set up a Single Origin**
 
-Para configurar uma Single Origin:
+To set up a Single Origin:
 
-1.  Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery.
-2.  Edite a configuração de Content Delivery desejada.
-3.  Na aba Origins, adicione ou edite uma origem para seu conteúdo.
-4.  Selecione _Single Origin_ como _Origin Type_ e preencha os campos solicitados.
-5.  Após salvar, acesse a aba Rules Engine para editar ou adicionar regras para um ou mais _paths_.
-6.  Na seção Origin Settings, selecione a configuração de origem criada por você nos passos 3 e 4.
+1.  **Access** [**Real-Time Manager**](https://manager.azion.com/) and click the menu **“Edge Services”** and select the option **“Edge Application”**.
+2.  Add or edit the desired **“Edge Application”** settings.
+3.  At the tab **“Origins”**, add or edit an origin to your content.
+4.  Select **“Single Origin”** as **“Origin Type"** and fill the requested fields.
+5.  After saving, access the tab “**Rules Engine”** to edit or add rules for one of more **“paths”** through the **“Behavior: Set Origin”**.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
-
-[Clique aqui](#) para editar esta página no GitHub.
+Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
