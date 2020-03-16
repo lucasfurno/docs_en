@@ -9,25 +9,25 @@ The Analytics screen has some regions which enable you to filter information, su
 
 
 
-1. Filter data interval
+1. [Filter data interval](#1.-filter-data-interval)
 
-2. Export to CSV
+2. [Export to CSV](#2.-export-to-csv)
 
-3. How to Interpret the Graphics
+3. [How to Interpret the Graphics](#3.-how-to-interpret-the-graphics)
 
-4. Data Transferred
+4. [Data Transferred](#4.-data-transferred**)
 
-5. Requests
+5. [Requests](#5.-requests)
 
-6. Status Codes
+6. [Status Codes](#6.-status-codes)
 
-7. HTTP Methods
+7. [HTTP Methods](#7.-http-methods)
 
-8. Connections
+8. [Connections](#8.-connections)
 
-9. Storage
+9. [Storage](#9.-storage-(stored-data))
 
-10. WAF
+10. [WAF](#10.-web-application-firewall-(waf) )
 
     
 
@@ -188,7 +188,7 @@ This tab presents graphs with information regarding the Cloud Storage product.
 
 ---
 
-## 10. Web Application Firewall (WAF) {#WebApplicationFirewall}
+## 10. Web Application Firewall (WAF) 
 
 For customers who have the Web Application Firewall product, there is a specific graphic to show the behavior of requests.
 
