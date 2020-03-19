@@ -1,137 +1,137 @@
 # DDoS **Protection**
 
-Azion DDoS Protection protege seu conteúdo e aplicações contra ataques do tipo Distributed Denial of Service (DDoS).
+Azion DDoS Protection protects your content and applications from Distributed Denial of Service (DDoS) attacks.
 
-Por meio de uma moderna abordagem de detecção e mitigação de ataques das camadas de rede, transporte e aplicação, reduzimos o downtime sem impactar na performance de seu serviço.
+Through a modern approach to detect and mitigate attacks from the network, transport and application layers, we reduce downtime without impacting the performance of your service.
 
 
-> 1. [Planos de DDoS Protection](#planos-de-ddos-protection)
+> 1. [DDoS Protection Plans](#planos-de-ddos-protection)
 > 2. [Standard DDoS Protection](#standard-ddos-protection) 
 > 3. [Managed DDoS Protection](#managed-ddos-protection)
-> 4. [Comparativo de Modalidades](#comparativo-de-modalidades)
+> 4. [Modalities Comparison](#comparativo-de-modalidades)
 
 ---
 
-## 1. Planos de DDoS Protection {#planos-de-ddos-protection}
+## 1. DDoS Protection Plans {#planos-de-ddos-protection}
 
-O serviço é oferecido nas modalidades Standard e Managed. Todos os clientes Azion se beneficiam da proteção contra ataques DDoS na modalidade Standard, sem a necessidade de contratar nosso serviço de [Suporte](documentation_products_support) e sem custos adicionais.
+The service is offered in Standard and Managed modalities. All Azion customers benefit from protection against DDoS attacks in the Standard modality, without the need to hire our [Support](documentation_products_support) service and without any additional costs.
 
-| Desenvolvedores  | Negócios de missão crítica |
+| Developers  | Mission critical business |
 |------------------|----------------------------|
-| Desenvolvedores e pequenas empresas, cuja presença online e disponibilidade não é crítica para os resultados do negócio. | Empresas que utilizam a Azion em ambiente de produção e missão crítica e precisam de um serviço resiliente e altamente disponível. |
-| Plano recomendado: Standard | Plano recomendado: Managed |
+| Developers and small businesses, whose online presence and availability is not critical to business results. | Companies that use Azion in a production and mission critical environment and need a resilient and highly available service. |
+| Recommended plan: Standard | Recommended plan: Managed |
 
 
 ---
 
 ## 2. Standard DDoS Protection {#standard-ddos-protection}
 
-O Azion Standard DDoS Protection protege seu conteúdo, aplicações web e APIs, quando entregues pela rede da Azion, dos ataques DDoS mais comuns das camadas de rede e transporte (layers 3 e 4), tais como ataques volumétricos, Slow Reads e SYN/ACK flood.
+The Azion Standard DDoS Protection protects your content, web applications and APIs, when delivered over the Azion network, from the most common DDoS attacks in the network and transport layers (layers 3 and 4), such as volumetric attacks, Slow Reads and SYN/ACK flood.
 
-Seu tráfego é monitorado em tempo real utilizando algoritmos de análise de anomalias e assinaturas de tráfego para rapidamente detectar e proteger a disponibilidade de seu conteúdo, com mitigação automática de ataques, sem impactar na latência de entrega.
+Your traffic is monitored in real time using anomaly analysis algorithms and traffic signatures to quickly detect and protect the availability of your content, with automatic attack mitigation, without impacting delivery latency.
 
-**Custo e benefício**
+**Cost and benefit**
 
-Ao utilizar a Azion, você se beneficia do Standard DDoS Protection, nossa proteção always-on contra ataques DDoS, sem custos adicionais e sem necessidade de configuração ou parametrização do serviço. Seu serviço estará protegido contra os ataques DDoS mais frequentes das camadas de rede e de transporte, até o limite de 5Gbps. Para proteção contra ataques de qualquer volume e para proteção de sua infraestrutura, consulte o Managed DDoS Protection.
+When using Azion, you benefit from Standard DDoS Protection, our always-on protection against DDoS attacks, at no additional cost and without the need for any configuration or parameterization of the service. Your service will be protected against the most frequent DDoS attacks on the network and transport layers, up to a limit of 5Gbps. To protect against attacks of any other volume and to protect your infrastructure, see Managed DDoS Protection.
 
-**Integração e simplicidade**
+**Integration and simplicity**
 
-Todas as técnicas de mitigação de ataques são automatizadas e construídas em toda rede de entrega de conteúdo da Azion, oferecendo-lhe a proteção necessária contra os ataques mais comuns, sem a necessidade de você ter que configurar ou parametrizar nada. Nossos POPs distribuídos e nossos centros globais de mitigação de ataques estão preparados para ataques globais de larga escala, sem que você precise fazer nada.
+All attack mitigation techniques are automated and built across Azion's content delivery network, offering you the necessary protection against the most common attacks, without you having to configure or parameterize anything. Our distributed POPs and our global attack mitigation centers are prepared for large-scale global attacks, without you having to do anything.
 
-**Mitigação always-on**
+**Always-on mitigation**
 
-Azion Standard DDoS Protection always-on monitora continuamente o fluxo de rede inspecionando o tráfego incoming e utilizando-se de Deep Packet Inspection (DPI), além de avançados algoritmos de análise do tráfego e de assinaturas, para detectar e bloquear o tráfego malicioso em tempo real, sem impacto para suas aplicações.
+Azion’s always-on Standard DDoS Protection continuously monitors network flow by inspecting incoming traffic and using Deep Packet Inspection (DPI), in addition to advanced traffic analysis and signature algorithms, to detect and block malicious traffic in time without any impact to your applications.
 
-Você também pode mitigar ataques de DDoS da camada de aplicação (layer 7) contratando os serviços [Azion WAF]({% tl documentation_products_web_application_firewall %}) e [Azion Edge Firewall]({% tl documentation_products_edge_firewall %}), que você paga conforme seu uso ou modalidade de contratação.
+You can also mitigate DDoS attacks on the application layer (layer 7) by contracting [Azion WAF]({% tl documentation_products_web_application_firewall %}) and [Azion Edge Firewall]({% tl documentation_products_edge_firewall %}), services, which you pay according to your usage or contracted modality.
 
 ---
 
 ## 3. Managed DDoS Protection {#managed-ddos-protection}
 
-Para um maior nível de proteção, além de todas as funcionalidades da modalidade Standard, o Managed DDoS Protection possui funcionalidades extras para detecção contra ataques mais sofisticados e de larga escala e integração com o Azion Edge Firewall e Azion WAF. Além disso, por meio do add-on Infrastructure Protection, você pode proteger toda a sua infraestrutura (ASN), e por meio do add-on DNS Protection, você poderá proteger o seu serviço de DNS.
+For a higher level of protection, in addition to all the features of the Standard modality, Managed DDoS Protection has extra features for detection against more sophisticated and large-scale attacks and is integrated with Azion Edge Firewall and Azion WAF. In addition, through the Infrastructure Protection add-on, you can protect your entire infrastructure (ASN), and through the DNS Protection add-on, you can protect your DNS service.
 
-O Managed DDoS Protection permite o acesso 24×7 ao Security Response Team (SRT) da Azion, mediante a contratação de Support Mission Critical, além de proteção de custos durante ataques.
+Managed DDoS Protection allows for 24×7 access to Azion's Security Response Team (SRT), upon contracting Mission Critical Support, in addition to providing cost protection during attacks.
 
-**Proteção flexível e customizável**
+**Flexible and customizable protection**
 
-Com Managed DDoS Protection, a Azion poderá aplicar regras customizadas para mitigação de sofisticados ataques das camadas de rede, transporte e aplicação. Essas regras podem ser aplicadas instantaneamente, permitindo a rápida e eficiente proteção de seu conteúdo ou aplicação.
+With Managed DDoS Protection, Azion will be able to apply customized rules to mitigate sophisticated attacks from the network, transport and application layers. These rules can be applied instantly, allowing quick and efficient protection of your content or application.
 
-Com apoio do nosso SRT, você pode escrever regras de mitigação de ataques proativamente, utilizando o Azion WAF e Edge Firewall, e aplicá-las pelo Real-Time Manager ou API sempre que necessário.
+With the support of our SRT, you can proactively write attack mitigation rules using Azion WAF and Edge Firewall, and apply them via Real-Time Manager or API whenever necessary.
 
-**Proteção ajustada à sua necessidade**
+**Protection tailored to your needs**
 
-A modalidade Managed DDoS Protection pode ser contratada por planos com volume de ataque de 20 Gbps, 50 Gbps ou Unlimited além de add-ons disponíveis.
+The Managed DDoS Protection modality can be contracted for plans with an attack volume of 20 Gbps, 50 Gbps or Unlimited in addition to available add-ons.
 
 | 20 Gbps  | 50 Gbps  | Unlimited\* |
 |----------|----------|-------------|
-| Indicado para empresas de porte médio, oferece proteção contra ataques de DDoS de até 20 Gbps. | Indicado para empresas de porte médio e grande, oferece proteção contra ataques de DDoS de até 50 Gbps. | Indicado para empresas que utilizam a Azion em sistemas de missão crítica, com impacto direto no resultado do negócio, e que desejam proteção contra qualquer volume de ataque para seu conteúdo e aplicações. |
+| Suitable for medium sized companies, it offers protection against DDoS attacks of up to 20 Gbps. | Suitable for medium and large companies, it offers protection against DDoS attacks of up to 50 Gbps. | Indicated for companies that use Azion in mission critical systems, with a direct impact on the business results, and who want protection against any attack volume for their content and applications. |
 
 
-> \* Limitado a capacidade de 4 Tbps disponível atualmente na Azion.
+> \* * Limited to the 4 Tbps the capacity currently available on Azion.
 
-**Detecção avançada**
+**Advanced detection**
 
-Azion Managed DDoS Protection oferece detecção avançada, inspecionando fluxos de rede, bem como monitorando cada camada de aplicação para seus recursos entregues pela Azion que utilizam o Azion WAF e Azion Edge Firewall. Utiliza-se de avançados algoritmos e SDN para permitir a detecção e mitigação granular de ataques DDoS. Azion Managed DDos Protection detecta ataques como HTTP floods, HTTP Slow Reads, DNS query floods, SYN/ACK Flood e muitos outros.
+Azion Managed DDoS Protection offers advanced detection, inspecting network flows, as well as monitoring each application layer for its resources delivered by Azion using Azion WAF and Azion Edge Firewall. It uses advanced algorithms and SDN to allow granular detection and mitigation of DDoS attacks. Azion Managed DDos Protection detects attacks such as HTTP floods, HTTP Slow Reads, DNS query floods, SYN/ACK Flood and many others.
 
-**Mitigação de ataques complexos**
+**Mitigation of complex attacks**
 
-Além dos benefícios da modalidade Standard, Azion Managed DDoS Protection oferece algoritmos mais sofisticados de mitigação automatizada de ataques. Utilizando-se de técnicas avançadas de roteamento, o Managed DDoS Protection oferece um nível adicional de proteção automatizada contra ataques DDoS de maior volume.
+In addition to the benefits of the Standard modality, Azion Managed DDoS Protection offers more sophisticated algorithms for automated attack mitigation. Using advanced routing techniques, Managed DDoS Protection offers an additional level of automated protection against higher volume DDoS attacks.
 
-Para ataques da camada de aplicação, você precisará do Azion WAF para criar regras avançadas para bloquear automaticamente requisições maliciosas e do Azion Edge Firewall para configurar regras proativas de blacklist ou whitelist de redes, geolocalização or rate limit, ou criar regras em standby para serem usadas em resposta a incidentes à medida que eles acontecem.
+For application layer attacks, you will need Azion WAF to create advanced rules to automatically block malicious requests and Azion Edge Firewall to configure proactive blacklist or network whitelist rules, geolocation or rate limit, or create standby rules to be used in response to incidents as they happen.
 
-**Proteção de sua infraestrutura**
+**Protection of your infrastructure**
 
-O add-on Infrastructure Protection permite que você proteja a sua própria infraestrutura (ASN) contra ataques DDoS. A mitigação de ataques DDoS contra sua infraestrutura é realizada utilizando BGP e pode ser ativada durante um ataque ou permanecer sempre ligada (always-on). Para garantir a segurança contra ataques da camada de aplicação, além do Azion WAF também sugerimos o uso do Azion Origin Shield para garantir que os acessos a sua infraestrutura sejam sempre feitos por meio da Azion.
+The Infrastructure Protection add-on allows you to protect your own infrastructure (ASN) from DDoS attacks. The mitigation of DDoS attacks against your infrastructure is performed using BGP and can be activated during an attack or it can always remain on (always-on). To ensure security against application layer attacks, in addition to Azion WAF we also suggest the use of Azion Origin Shield to ensure that access to your infrastructure is always done through Azion.
 
-**Proteção para o seu DNS**
+**Protection for your DNS**
 
-O add-on DNS Protection permite que você proteja o seu serviço de DNS contra ataques DDoS. Mantendo o seu servidor DNS Master oculto e divulgando os servidores de DNS da Azion para a internet, você contará com a Azion para garantir a continuidade de seus serviços. O serviço de DNS da Azion está distribuídos em diferentes regiões geográficas e conta com proteção contra ataques DDoS. Os servidores de DNS da Azion obtém a configuração do servidor Master do cliente, estando ele dentro da sua infraestrutura ou na nuvem. Se a sua infraestrutura já utiliza a extensão DNSSEC, você poderá contar com a proteção DDoS sem abrir mão da garantia de integridade e autenticidade de seus registros, provendo assim segurança e disponibilidade para a resolução de endereços para o seu negócio.
+The DNS Protection add-on allows you to protect your DNS service from DDoS attacks. By keeping your DNS Master server hidden and disseminating Azion's DNS servers to the internet, you will rely on Azion to ensure the continuity of your services. The Azion DNS service is distributed in different geographic regions and has protection against DDoS attacks. Azion's DNS servers obtain the configuration of the client's Master server, whether it is inside their infrastructure or in the cloud. If your infrastructure already uses the DNSSEC extension, you can count on DDoS protection without giving up the guarantee of integrity and authenticity of your records, thus providing security and availability for address resolution for your business.
 
-**Visibilidade de ataques**
+**Attack visibility**
 
-Azion Managed DDoS Protection oferece completa visibilidade de ataques de aplicação pelo Real-Time Manager ou API para visualizar o volume de ataques. Em conjunto com o SRT você terá acesso a análises e investigações post-event.
+Azion Managed DDoS Protection offers complete visibility of application attacks through the Real-Time Manager or API to be able to view the volume of attacks. In conjunction with the SRT you will have access to post-event analysis and investigations.
 
 **Security Response Team (SRT)**
 
-Caso escolha o plano de suporte Mission Critical em conjunto com Managed DDoS Protection Unlimited, você terá acesso 24×7 ao Security Response Team (SRT) da Azion, que pode ser acionado durante ou após um ataque, ou mesmo antes para apoio na construção de regras proativas.
+If you choose the Mission Critical support plan in conjunction with Managed DDoS Protection Unlimited, you will have 24×7 access to Azion's Security Response Team (SRT), which can be triggered during or after an attack, or even earlier for support in building proactive rules.
 
-Sempre que acionado, o SRT irá apoiá-lo na triagem de incidentes, identificação de causa raiz e aplicação das mitigações necessárias em seu nome.
+Whenever triggered, the SRT will assist you in tracing incidents, identifying the root cause and applying the necessary mitigations on your behalf.
 
-**Proteção de custo**
+**Cost protection**
 
-Managed DDoS Protection inclui Proteção de Custo para seus serviços Azion, uma medida de garantia contra o crescimento de seus custos com a Azion resultante de um ataque volumétrico.
+Managed DDoS Protection includes Cost Protection for its Azion services, a measure to guarantee against the increase in your costs with Azion resulting from a volumetric attack.
 
-Se a utilização de algum de seus serviços Azion se expandir em resposta a um ataque DDoS, a Azion fornecerá créditos de serviço para evitar cobranças de excedente pelos picos de uso.
+If the use of any of your Azion services expands in response to a DDoS attack, Azion will provide service credits to avoid surplus charges for peak usage.
 
 ---
 
-## 4. Comparativo de Modalidades {#comparativo-de-modalidades}
+## 4. Modalities Comparison {#comparativo-de-modalidades}
 
-| Funcionalidades | Standard | Managed |
+| Functionalities | Standard | Managed |
 |------------|----------|--------------|
-| Análise do fluxo de rede (layers 3 e 4) | Sim | Sim |
-| Detecção de ataques always-on           | Sim | Sim |
-| Mitigação de ataques DDoS mais comuns (layers 3 e 4) | Sim | Sim |
-| Volume de ataques (layers 3 e 4) | Até 5 Gbps | Até 20 Gbps |
-| | | Até 50 Gbps |
+| Network flow analysis (layers 3 and 4) | Yes | Yes |
+| Always-on detection of attacks           | Yes | Yes |
+| Mitigation of most the common DDoS attacks (layers 3 and 4) | Yes | Yes |
+| Attack volume (layers 3 and 4) | Up to 5 Gbps | Up to 20 Gbps |
+| | | Up to 50 Gbps |
 | | | Unlimited   |
-| Customização de regras para ataques mais sofisticados (layers 3 e 4) | - | Sim |
-| Proteção de custos para evitar cobrança de excedente de tráfego em caso de ataques volumétricos  | - | Sim |
-| Proteção contra ataques layer 7, tais como SQL Injection, XSS, RFI, Resource Exhaustion e outros | Sim * | Sim * |
-| Customização de regras para mitigação de ataques da camada de aplicação (layer 7) | Self-service * | Self-service ou com apoio do SRT * |
-| Notificação de ataques de camadas de rede e transporte (layers 3 e 4) | - | Sim |
-| Análise post-event de ataques de camadas de rede e transporte (layers 3 e 4) | - | Sim, mediante contratação de Support Mission Critical |
-| Acesso 24×7 ao SRT  | - | Sim, mediante contratação do volume de ataque Unlimited e Support Mission Critical |
-| Proteção para sua infraestrutura (BGP) | - | Sim, mediante contratação do add-on Infrastructure Protection |
-| Proteção para seu DNS (Slave DNS/DNSSEC) | - | Sim, mediante contratação do add-on DNS Protection |
-| Modelo de contratação | Incluso | Reserved Capacity (mínimo de 12 meses) |
+| Customization of rules for more sophisticated attacks (layers 3 and 4) | - | Yes |
+| Cost protection to avoid excess traffic charges in case of volumetric attacks  | - | Yes |
+| Protection against layer 7 attacks, such as SQL Injection, XSS, RFI, Resource Exhaustion and others | Yes * | Yes * |
+| Customization of rules to mitigate attacks from the application layer (layer 7) | Self-service * | Self-service or with SRT support * |
+| Notification of network and transport layer attacks (layers 3 and 4) | - | Yes |
+| Post-event analysis of network and transport layer attacks (layers 3 and 4) | - | Yes, upon contracting Mission Critical Support |
+| 24×7 access to the SRT  | - | Yes, upon contracting the Unlimited and Mission Critical Support attack volume |
+| Protection for your infrastructure (BGP) | - | Yes, upon contracting the Infrastructure Protection add-on |
+| Protection for your DNS (Slave DNS/DNSSEC) | - | Yes, upon contracting the DNS Protection add-on |
+| Contracting model | Included | Reserved Capacity (minimum of 12 months) |
 
 
 
-> \* Requer Azion WAF e Edge Firewall
+> \* Requires Azion WAF and Edge Firewall
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Edit this page](#) on GitHub.
