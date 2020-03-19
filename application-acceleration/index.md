@@ -1,141 +1,131 @@
 # Application **Acceleration**
 
-É o serviço de aceleração de aplicações web e APIs por meio de otimizações de protocolo e do gerenciamento dos diferentes requisitos do conteúdo dinâmico.
+This is the service of accelerating web applications and APIs through protocol optimizations and the management of the different requirements of dynamic content.
 
-Através do Application Acceleration você pode configurar regras avançadas de cache por _path_ que permitem o cache granular, a segmentação de conteúdo e políticas de cache com base em critérios como name/value de Cookies e Query Strings, além de funcionalidades como Bypass Cache, Forward Cookies e suporte a POST/PUT e outros métodos HTTP.
+Through Application Acceleration you can configure advanced cache by path rules that allow granular caching, content segmentation and cache policies based on criteria such as name/value of Cookies and Query Strings, as well as features such as Bypass Cache, Forward Cookies and support for POST/PUT and other HTTP methods.
 
-Application Acceleration estende as funcionalidades do produto Azion Content Delivery para permitir que você configure regras por _path_ para:
+Application Acceleration extends the functionality of the Azion Edge Application product to allow you to configure rules per path to:
 
-> 1. [Advanced Cache Key](#AdvancedCacheKey)
-> 2. [Bypass Cache](#BypassCache)
-> 3. [Forward Cookies](#ForwardCookies)
-> 4. [Suporte a POST/PUT e outros métodos](#SuportePOSTPUT)
+> 1. [Advanced Cache Key](#1-advanced-cache-key)
+> 2. [Bypass Cache](#2-bypass-cache)
+> 3. [Forward Cookies](#3-forward-cookies)
+> 4. [Support for POST/PUT and other methods](#4-support-for-POST/PUT-and-other-methods)
 
 ---
 
-## 1. Advanced Cache Key {#AdvancedCacheKey}
+## 1. Advanced Cache Key
 
-Você pode utilizar a Azion para entregar seu conteúdo dinâmico ou estático. Mesmo a parte dinâmica de um site muitas vezes pode ser cacheada para um perfil de usuários, agrupado de acordo com as necessidades específicas de sua aplicação, quer por cidade, perfil de navegação, quer por perfil de compras. Caso você deseje que seu conteúdo dinâmico seja cacheado nos Edge Servers da Azion, você pode definir regras avançadas de cache key baseadas em Cookies ou em Query String.
+You can use Azion to deliver your dynamic or static content. Even the dynamic part of a website can often be cached for a user profile, grouped according to the specific needs of your application, whether by city, browsing profile, or shopping profile. If you want your dynamic content to be cached on Azion's Edge Nodes, you can define advanced cache key rules based on Cookies or Query String.
 
+As a standard, Azion considers each URL as a different object in cache. Through the Advanced Cache Key, you can configure a custom cache key rule based on Cookies or Query String and, with that, define the segmentation of your content in your application.
 
-Por padrão, a Azion considera cada URL como um objeto distinto no cache. Através do Advanced Cache Key, você pode configurar uma regra customizada de cache key baseada em Cookies ou Query String e, com isso, definir a segmentação de seu conteúdo em sua aplicação.
+To use the functionality, follow these steps:
 
-Para encontrar essa funcionalidade:
-
-
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery
-2. Edite a configuração de Content Delivery desejada
-3. Na aba Cache Settings, adicione ou edite uma configuração customizada de cache
-4. Na seção Advanced Cache Key, defina sua configuração customizada de Cache by Query String e de Cache by Cookie
-5. Na aba Rules Engine, adicione ou edite uma regra para definir o comportamento para um ou mais _paths_
-6. Na seção Cache Settings, selecione a configuração customizada de cache que você definiu nos passos 3 e 4
+1. Acess [Real-Time Manager](https://manager.azion.com/)  and click the menu “Edge Services” and select “Edge Applications”.
+2. Add or edit one “Edge Application”.
+3. To enable the “Application Acceleration” module, continue in the tab “Main Settings” and select the option “Application Acceleration” in the section [Edge Application Modules].
+4. After enabling the module, access the tab “Cache Settings”.
+5. In the tab “Cache Settings”, add or edit a custom cache setting.
+6. In the “Advanced Cache Key” section, define your custom Cache by “Query String” and “Cache by Cookie” setting.
+7. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
+8. In the "Set Cache Policy" behavior, select the custom cache configuration.
 
 
 **Cache by Query String**
 
-Na Azion você define como deseja que o conteúdo seja cacheado de acordo com variações de Query String em suas URLs:
+At Azion you define how you want the content to be cached according to variations of Query String in your URLs:
 
 
-* **Content does not vary by Query String (Improves Caching):** define que a cache key deve ignorar a Query String, isto é, duas URLs distintas apenas pela variação da Query String serão consideradas como o mesmo objeto em cache, por exemplo http://seudominio.com/path?queryA e http://seudominio.com/path?queryB irão entregar o mesmo conteúdo do cache para seus usuários.
-* **Content varies by some Query String fields (Whitelist):** você pode listar quais campos da Query String devem ser considerados para diferenciar os objetos no cache da Azion. Todos os demais campos serão ignorados. Por exemplo, se você listar o campo “cidade”, as URLs http://seudominio.com/path?cidade=A&nome=X e http://seudominio.com/path?cidade=A&nome=Y serão considerados como um único objeto em cache, enquanto as URLs http://seudominio.com/path?cidade=A&nome=X e http://seudominio.com/path?cidade=B&nome=X serão considerados como objetos distintos.
-* **Content varies by Query String, except for some fields (Blacklist):** você pode listar quais campos da Query String devem ser ignorados ao diferenciar os objetos em cache. Todos os demais campos serão considerados. Por exemplo, se você listar o campo “random”, as URLs http://seudominio.com/path?cidade=A&random=123 e http://seudominio.com/path?cidade=B&random=123 serão considerados objetos distintos em cache, enquanto http://seudominio.com/path?cidade=A&random=123 e http://seudominio.com/path?cidade=A&random=456 serão considerados como o mesmo objeto em cache.
-* **Content varies by all Query String fields:** define que a cache key deve considerar todos os campos da Query String, isto é, duas URLs distintas pela variação da Query String serão consideradas como dois objetos distintos em cache, por exemplo http://seudominio.com/path?queryA e http://seudominio.com/path?queryB serão armazenados como objetos distintos no cache da Azion.
+* **Content does not vary by Query String (Improves Caching):** defines that the cache key must ignore the Query String, that is, two distinct URLs just by varying the Query String will be considered as the same cached object, for example http://seudominio.com/path?queryA e http://seudominio.com/path?queryB will deliver the same cache content to your users.
+* **Content varies by some Query String fields (Whitelist):** you can list which Query String fields should be considered to differentiate between objects in the Azion Edge Caching. All other fields will be ignored. For example, if you list the field “city”, the URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=A&nome=Y will be considered as a single object in cache, while URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=B&nome=X will be considered as different objects.
+* **Content varies by Query String, except for some fields (Blacklist):** you can list which Query String fields to ignore when differentiating cached objects. All other fields will be considered. For example, if you list the field “random”, the URLs http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=B&random=123 will be considered different object in cache, while http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=A&random=456 will be considered as the same object in cache.
+* **Content varies by all Query String fields:** defines that the cache key must consider all Query String fields, that is, two different URLs by the variation of the Query String will be considered as two different cached objects, for example http://yourdomain. com/path?queryA and http://yourdomain.com/path?queryB will be stored as separate objects in the Azion cache.
 
-
-Além disso, para aumentar a eficiência do cache, você pode ativar a funcionalidade **Query String Sort**. Com a funcionalidade Query String Sort ativada, todos os campos da query string serão ordenados, fazendo com que a posição dos campos seja irrelevante na definição da cache key. Se a posição dos campos é relevante para diferenciar o seu conteúdo, você deve deixar a funcionalidade desativada.
+Furthermore, to increase cache’s efficiency, you may enable the Query String Sort functionality. With the Query String Sort functionality enabled, all fields in the query string will be sorted, making the position of the fields irrelevant in the definition of the cache key. If the field positions are relevant to differentiate your content, you must leave the feature disabled.
 
 **Cache by Cookie**
 
-Você pode também distinguir os objetos no cache da Azion por nome/valor de cookies.
+You can also distinguish objects in the Azion cache by name/value of cookies.
 
 
-* **Content does not vary by Cookies (Improves Caching):** define que os cookies não serão levados em consideração para diferenciar objetos no cache da Azion. Apenas a URL será considerada para diferenciação dos objetos.
-* **Content varies by some Cookies (Whitelist):** você pode listar o nome dos cookies que sua aplicação utiliza para diferenciar os objetos em cache. Todos os demais cookies, serão ignorados. Como isso você pode segmentar seu conteúdo por perfis de usuários e muito mais. Esta é a opção mais recomendada se você utiliza cookies para gerenciar sessões de usuários.
-* **Content varies by Cookies, with the exception of a few (Blacklist):** você pode listar o nome dos cookies que deseja ignorar na definição da cache key e, dessa forma, todos os cookies serão considerados, com exceção dos listados.
-* **Content varies by all Cookies:** define que além da URL, todos os cookies deverão ser considerados para diferenciar objetos no cache da Azion.
+* **Content does not vary by Cookies (Improves Caching):** defines that cookies will not be taken into account to differentiate objects in the Azion cache. Only the URL will be considered for differentiating the objects.
+* **Content varies by some Cookies (Whitelist):** you can list the name of the cookies that your application uses to differentiate cached objects. All other cookies will be ignored. As a result, you can segment your content by user profiles and more. This is the most recommended option if you use cookies to manage user sessions.
+* **Content varies by Cookies, with the exception of a few (Blacklist):** you can list the name of the cookies you want to ignore in the definition of the cache key and, thus, all cookies will be considered, except for those listed.
+* **Content varies by all Cookies:** Content varies by all Cookies: defines that in addition to the URL, all cookies must be considered to differentiate objects in the Azion cache.
 
-Utilize essa funcionalidade para segmentar seu conteúdo por perfil de usuário, por sessão de navegação, por região de acesso ou conforme sua necessidade de segmentação de conteúdo.
+Use this functionality to segment your content by user profile, browsing session, access region or according to your content targeting needs.
 
 ---
 
-## 2. Bypass Cache {#BypassCache}
+## 2. Bypass Cache
 
-Você também pode utilizar a Azion para entregar seu conteúdo dinâmico e personalizado, mesmo quando parte de seu conteúdo não puder ser cacheado na infraestrutura da Azion. Na Azion você define as regras de cache por _path_. Crie uma regra de Bypass Cache para os paths de seu site que não puderem ser cacheados em nossa infraestrutura.
+You can also use Azion to deliver your dynamic and personalized content, even when some of your content cannot be cached on Azion's infrastructure. In Azion you define cache rules per path. Create a Bypass Cache rule for the paths of your website that cannot be cached in our infrastructure.
 
-Para encontrar essa funcionalidade:
-
-
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery
-2. Edite a configuração de Content Delivery desejada
-3. Na aba Cache Settings, adicione ou edite uma configuração customizada de cache
-4. Na seção Expiration Settings, selecione Bypass Cache como sua opção para CDN Cache Settings
-5. Na aba Rules Engine, adicione ou edite uma regra para definir o comportamento para um ou mais _paths_
-6. Na seção Cache Settings, selecione a configuração customizada de cache que você definiu nos passos 3 e 4
+To use the functionality, follow these steps:
 
 
-Ao utilizar Bypass Cache você estará configurando o serviço da Azion para repassar todas as requisições a um path diretamente para sua origem. Ainda assim você contará com importantes otimizações de protocolo para acelerar sua aplicação e conexão keepalive entre os Edge Servers da Azion e sua origem, sempre que possível.
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
+2. Add or edit one “Edge Application”.
+3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
+4. Select the "Bypass Cache" behavior.
+
+
+When using Bypass Cache, you will be configuring the Azion service to forward all requests to a path directly to their origin. Still, you will have important protocol optimizations to speed up your application and a keepalive connection between Azion Edge Nodes and their origin, whenever possible.
 
 **Diferença entre Bypass Cache e TTL 0 (zero)**
 
-Há uma diferença de comportamento entre Bypass Cache e cache com TTL (_time-to-live_) definido em 0 (zero) segundos. Utilizando Bypass Cache, todas as requisições http e https recebidas pelos Edge Servers da Azion serão enviadas para a sua origem, sem qualquer cache do conteúdo. Utilize Bypass Cache se você deseja entregar conteúdo distinto para cada requisição de usuário.
+There is a difference in behavior between Bypass Cache and cache with TTL (time-to-live) set to 0 (zero) seconds. Using Bypass Cache, all http and https requests received by Azion's Edge Nodes will be sent to their origin, without any content caching. Use Bypass Cache if you want to deliver distinct content for each user request.
 
-Já para TTL definido em 0 (zero) segundos, múltiplas requisições em paralelo aos Edge Servers da Azion serão enviadas como uma única requisição para sua origem, por Edge da Azion . Utilize TTL zero se o conteúdo puder ser entregue idêntico para todos os usuários que requisitarem simultaneamente, mas o conteúdo variar a cada instante de tempo. Além disso, ao utilizar TTL zero, os Edge Servers da Azion irão validar alterações do conteúdo com sua origem utilizando _If-Modified-Since_ e, caso o objeto não tenha sofrido alteração desde a última requisição, o conteúdo não precisará ser novamente transferido, podendo resultar em uma respota _304 Not Modified_, muito mais rápida.
+However, for TTL set to 0 (zero) seconds, multiple requests in parallel to Azion's Edge Nodes will be sent as a single request to their origin, by Azion's Edge. Use TTL zero if the content can be delivered identically to all users who order simultaneously, but the content varies from time to time. In addition, when using TTL sero, Azion Edge Nodes will validate changes to the content with its origin using If-Modified-Since and, if the object has not changed since the last request, the content will not need to be transferred again, and it could result in a much faster 304 Not Modified response.
 
-Essa diferença é importante para que você obtenha o máximo de otimização na entrega de seu conteúdo e redução de carga em sua origem.
+This difference is important for you to be able to obtain maximum optimization in the delivery of your content and load reduction at its origin.
 
 ---
 
-## 3. Forward Cookies {#ForwardCookies}
+## 3. Forward Cookies
 
-Se sua origem gerencia cookies de aplicação, você pode precisar da funcionalidade Forward Cookies.
+If your origin manages application cookies, you may need the Forward Cookies functionality.
 
-Por padrão, a Azion filtra o Response Header Set-Cookie enviado por sua origem. Se 
-desejar, você pode configurar a Azion para que o Set-Cookie seja repassado para seus usuários.
+By default, Azion filters the Response Header Set-Cookie sent by its origin. If you wish, you can configure Azion so that the Set-Cookie is passed on to your users.
 
-Para encontrar essa funcionalidade:
+To use the functionality, follow these steps:
 
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
+2. Add or edit one “Edge Application”.
+3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
+4. Select the "Forward Cookies" behavior.
 
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery
-2. Edite a configuração de Content Delivery desejada
-3. Na aba Rules Engine, adicione ou edite uma configuração customizada para um ou mais _paths_
-4. No campo Behavior, selecione Application Acceleration
-5. Na seção Origin Settings, ative a funcionalidade Forward Cookies definindo-a com o valor _All_, se desejar repassar o cabeçalho Set-Cookie para seus usuários. Caso deseje configurar a Azion para filtrar o cabeçalho Set-Cookie, deixe Forward Cookies configurado como _None_.
-
-
-> Ao utilizar a funcionalidade Forward Cookies você estará determinando que a Azion encaminhe para seus usuários o cabeçalho Set-Cookie recebido de sua origem, mesmo na situação de conteúdo em cache (_cache hit_). Para evitar que um usuário receba Set-Cookie de sessão de outro usuário, você deve listar todos os cookies de sessão (cookies privados) de sua aplicação na aba Cache Settings de sua configuração de Content Delivery, na seção Advanced Cache Key, em Cache by Cookie.
+> By using the Forward Cookies functionality, you are determining that Azion forwards to the users the Set-Cookie header received from its origin, even in a cache content situation (cache hit). To prevent a user from receiving another user's Set-Cookie session, you must list all session cookies (private cookies) for your application in the Cache Settings tab of your Edge Application configuration, in the Advanced Cache Key section, in Cache by Cookie.
 
 **JavaScript Cookies**
 
-Uma alternativa ao envio do Response Header Set-Cookie é a criação de cookies por JavaScript. JavaScript permite criar, ler e expirar cookies através da propriedade document.cookie.
+An alternative to sending the Response Header Set-Cookie is to create cookies using JavaScript. JavaScript allows you to create, read and expire cookies through the document.cookie property.
 
-Para criar um cookie por JavaScript, é necessário informar _name=value_ e, opcionalmente, _expires_ e _path_:
+To create a JavaScript cookie, you must enter name = value and, optionally, expires and path:
 
 ~~~
-document.cookie = “username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/”;
+document.cookie = “username=John Doe; expires=Thu, 18 Dec 2020 12:00:00 UTC; path=/”;
 ~~~
 
-Você encontrará mais informações sobre JavaScript Cookies clicando [aqui](https://www.w3schools.com/js/js_cookies.asp).
+You will find more information about JavaScript Cookies by clicking [here](https://www.w3schools.com/js/js_cookies.asp).
 
-Por padrão, a Azion não irá filtrar o Request Header Cookie independentemente de sua configuração de Forward Cookies e, portanto, JavaScript Cookies poderão ser enviados para sua origem para viabilizar o gerenciamento de sua aplicação.
+By default, Azion will not filter the Request Header Cookie regardless of its Forward Cookies configuration and therefore JavaScript Cookies may be sent to the origin to enable the management of your application.
 
 ---
 
-## 4. Suporte a POST/PUT e outros métodos {#SuportePOSTPUT}
+## 4. Support for POST/PUT and other methods
 
-Você pode utilizar a Azion para acelerar suas aplicações web e APIs. Através do Application Acceleration você estende as funcionalidades do Content Delivery para suportar os métodos POST, PUT, PATCH, DELETE, além dos já suportados nativamente GET, HEAD e OPTIONS.
+You can use Azion to accelerate your web applications and APIs. Through the Application Acceleration you extend the Edge Application functionalities to support the POST, PUT, PATCH, DELETE methods, in addition to those already natively supported GET, HEAD and OPTIONS.
 
-Você pode ativar a funcionalidade para os paths desejados:
+To use the functionality, follow these steps:
 
 
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery
-2. Edite a configuração de Content Delivery desejada
-3. Na aba Rules Engine, adicione ou edite uma configuração customizada para um ou mais _paths_
-4. No campo Behavior, selecione Application Acceleration
-
-Com o Application Acceleration, você contará com importantes otimizações de protocolo além de manter uma conexão keepalive entre nossos Edge Servers e sua origem, sempre que possível.
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
+2. Add or edit one “Edge Application”.
+3. In the "Main Settings" tab, activate the “Application Acceleration” module.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Edit this page](#) on GitHub.
