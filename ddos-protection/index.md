@@ -5,14 +5,14 @@ Azion DDoS Protection protects your content and applications from Distributed De
 Through a modern approach to detect and mitigate attacks from the network, transport and application layers, we reduce downtime without impacting the performance of your service.
 
 
-> 1. [DDoS Protection Plans](#planos-de-ddos-protection)
-> 2. [Standard DDoS Protection](#standard-ddos-protection) 
-> 3. [Managed DDoS Protection](#managed-ddos-protection)
-> 4. [Modalities Comparison](#comparativo-de-modalidades)
+> 1. [DDoS Protection Plans](#1-ddos-protection-plans)
+> 2. [Standard DDoS Protection](#2-standard-ddos-protection) 
+> 3. [Managed DDoS Protection](#3-managed-ddos-protection)
+> 4. [Modalities Comparison](#4-modalities-comparison)
 
 ---
 
-## 1. DDoS Protection Plans {#planos-de-ddos-protection}
+## 1. DDoS Protection Plans
 
 The service is offered in Standard and Managed modalities. All Azion customers benefit from protection against DDoS attacks in the Standard modality, without the need to hire our [Support](documentation_products_support) service and without any additional costs.
 
@@ -21,10 +21,9 @@ The service is offered in Standard and Managed modalities. All Azion customers b
 | Developers and small businesses, whose online presence and availability is not critical to business results. | Companies that use Azion in a production and mission critical environment and need a resilient and highly available service. |
 | Recommended plan: Standard | Recommended plan: Managed |
 
-
 ---
 
-## 2. Standard DDoS Protection {#standard-ddos-protection}
+## 2. Standard DDoS Protection
 
 The Azion Standard DDoS Protection protects your content, web applications and APIs, when delivered over the Azion network, from the most common DDoS attacks in the network and transport layers (layers 3 and 4), such as volumetric attacks, Slow Reads and SYN/ACK flood.
 
@@ -46,7 +45,7 @@ You can also mitigate DDoS attacks on the application layer (layer 7) by contrac
 
 ---
 
-## 3. Managed DDoS Protection {#managed-ddos-protection}
+## 3. Managed DDoS Protection
 
 For a higher level of protection, in addition to all the features of the Standard modality, Managed DDoS Protection has extra features for detection against more sophisticated and large-scale attacks and is integrated with Azion Edge Firewall and Azion WAF. In addition, through the Infrastructure Protection add-on, you can protect your entire infrastructure (ASN), and through the DNS Protection add-on, you can protect your DNS service.
 
@@ -105,7 +104,7 @@ If the use of any of your Azion services expands in response to a DDoS attack, A
 
 ---
 
-## 4. Modalities Comparison {#comparativo-de-modalidades}
+## 4. Modalities Comparison
 
 | Functionalities | Standard | Managed |
 |------------|----------|--------------|
