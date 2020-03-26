@@ -1,4 +1,4 @@
-# Massive Redirect with Azion Edge Functions
+# Massive Redirect with **Azion Edge Functions**
 
 ## Migrate applications and domains without affecting a page's rank and user experience
 

@@ -129,6 +129,6 @@ A Azion também disponibiliza para você algumas funções para simplificar a ma
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/content-delivery/rules-engine/index.md) on GitHub.

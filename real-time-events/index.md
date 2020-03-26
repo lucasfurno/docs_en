@@ -63,4 +63,6 @@ You can use the Refresh button to update the returned data, repeating the last s
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/real-time-events/index.md) on GitHub.

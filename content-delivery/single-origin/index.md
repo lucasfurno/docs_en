@@ -83,4 +83,6 @@ To set up a Single Origin:
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/content-delivery/single-origin/index.md) on GitHub.

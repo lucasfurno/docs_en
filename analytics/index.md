@@ -205,3 +205,5 @@ For customers who have the Web Application Firewall product, there is a specific
 ---
 
 Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/analytics/index.md) on GitHub.

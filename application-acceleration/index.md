@@ -13,7 +13,7 @@ Application Acceleration extends the functionality of the Azion Edge Application
 
 ---
 
-## 1. Advanced Cache Key
+## 1. Advanced Cache Key {#AdvancedCacheKey}
 
 You can use Azion to deliver your dynamic or static content. Even the dynamic part of a website can often be cached for a user profile, grouped according to the specific needs of your application, whether by city, browsing profile, or shopping profile. If you want your dynamic content to be cached on Azion's Edge Nodes, you can define advanced cache key rules based on Cookies or Query String.
 
@@ -57,7 +57,7 @@ Use this functionality to segment your content by user profile, browsing session
 
 ---
 
-## 2. Bypass Cache
+## 2. Bypass Cache {BypassCache}
 
 You can also use Azion to deliver your dynamic and personalized content, even when some of your content cannot be cached on Azion's infrastructure. In Azion you define cache rules per path. Create a Bypass Cache rule for the paths of your website that cannot be cached in our infrastructure.
 
@@ -82,7 +82,7 @@ This difference is important for you to be able to obtain maximum optimization i
 
 ---
 
-## 3. Forward Cookies
+## 3. Forward Cookies {#ForwardCookies}
 
 If your origin manages application cookies, you may need the Forward Cookies functionality.
 
@@ -113,7 +113,7 @@ By default, Azion will not filter the Request Header Cookie regardless of its Fo
 
 ---
 
-## 4. Support for POST/PUT and other methods
+## 4. Support for POST/PUT and other methods {#SuportePOSTPUT}
 
 You can use Azion to accelerate your web applications and APIs. Through the Application Acceleration you extend the Edge Application functionalities to support the POST, PUT, PATCH, DELETE methods, in addition to those already natively supported GET, HEAD and OPTIONS.
 
@@ -128,4 +128,4 @@ To use the functionality, follow these steps:
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](#) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/application-acceleration/index.md) on GitHub.

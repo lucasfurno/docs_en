@@ -145,4 +145,4 @@ O WAF só bloqueia as ameaças se estiver configurado em Blocking Mode.
 
 Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Clique aqui](https://github.com/aziontech/docs_en/edit/master/web-application-firewall/index.md) para editar esta página no GitHub.

@@ -149,6 +149,6 @@ Use this functionality to segment your content by user profile, browsing session
 
 ---
 
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/index.md) on GitHub.

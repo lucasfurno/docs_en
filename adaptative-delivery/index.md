@@ -104,4 +104,6 @@ Você também pode utilizar essa estratégia, caso deseje preservar o domínio e
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/adaptative-delivery/index.md) on GitHub.
