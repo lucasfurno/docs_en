@@ -1,4 +1,4 @@
-# WAF
+# WAF 123
 
 Web Application Firewall protege as suas aplicações contra ameaças como SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) e muito mais. O WAF analisa as requisições HTTP e HTTPS, detecta e bloqueia ameaças antes que elas alcancem a sua infraestrutura e sem impactar na performance de suas aplicações.
 
