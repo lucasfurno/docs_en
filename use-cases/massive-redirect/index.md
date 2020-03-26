@@ -1,52 +1,52 @@
-# Massive Redirect com **Azion Edge Functions**
+# Massive Redirect with Azion Edge Functions
 
-## Migre aplicações e domínios sem afetar o ranqueamento de uma página e a experiência dos usuários
+## Migrate applications and domains without affecting a page's rank and user experience
 
-As equipes de marketing digital e tecnologia trabalham intensamente na construção de páginas e estratégias de SEO para que o seu ranqueamento em sites de busca seja o melhor possível, conduzindo mais usuários de forma orgânica a elas. Nesse cenário, quando por algum motivo é preciso mudar o domínio, a aplicação ou a estrutura de navegação do site, é fundamental construir uma estratégia de redirecionamento das páginas antigas para não perder o ranqueamento nos buscadores, como o Google, pois isso coloca em risco a experiência de uma parte importante da audiência do site.
+The digital marketing and technology teams work intensively in the construction of pages and SEO strategies so that their ranking in search engines is the best possible, thereby organically leading more users to them. In this scenario, when for some reason it is necessary to change the domain, application or navigation structure of the website, it is essential to build a strategy for redirecting old pages so as not to lose ranking in search engines, such as Google, as this puts the experience of an important part of the audience of the website at risk.
 
-Quando surge a necessidade de realizar uma dessas mudanças, uma das grandes preocupações das equipes de marketing é como manter o ranqueamento e autoridade no novo endereço ou estrutura de navegação. É provável que o domínio principal, todos os subdomínios e páginas que pertencem a essa estrutura terão suas pontuações nos sites de buscas impactadas.
+When the need arises to make one of these changes, one of the major concerns of marketing teams is how to maintain ranking and authority in the new address or navigation structure. It is likely that the main domain, all subdomains and pages that belong to this structure will have their scores on search engines impacted.
 
-A solução é configurar uma reposta de "redirect" permanente do endereço anterior para o novo, o chamado código HTTP 301(moved permanently). Com isso, a autoridade do endereço antigo é transferida para o novo, mantendo o ranqueamento nos sites de busca.
+The solution is to configure a permanent "redirect" response from the previous address to the new one, the so-called HTTP 301 code (moved permanently). With this, the authority of the old address is transferred to the new one, maintaining the ranking on the search engines.
 
-Há várias técnicas para implementar um redirect 301, por exemplo, inserindo um script diretamente no código-fonte da página. Contudo, dependendo da quantidade de páginas, essa técnica pode se tornar muito onerosa e acima de tudo prejudicar a performance e a experiência dos usuários, o que também é penalizado pelos algoritmos dos site de busca. Uma alternativa é criar um arquivo diretamente no Web Server da aplicação, que processará os redirecionamentos por meio de regras, eliminando a necessidade do apontamento individual dentro das páginas do site.
+There are several techniques for implementing a 301 redirect, for example, by inserting a script directly into the page's source code. However, depending on the number of pages, this technique can become very costly and, above all, impair the performance and experience of users, which is also penalized by the algorithms of the search engines. An alternative is to create a file directly on the application's Web Server, which will process redirects by means of rules, eliminating the need for individual entry within the website pages.
 
-Entretanto, é comum um site ter centenas de páginas, e dessa forma a complexidade da configuração das regras aumenta proporcionalmente à quantidade de redirects necessários, tornando esse um trabalho nada trivial e de difícil manutenção. Empresas que fazem uso - ou pretendem fazer - de alguma plataforma de CMS ou e-commerce para gerenciar suas páginas, como Wordpress, Joomla, Magento, SAP Hybris e VTEX,  encontrarão enormes desafios na hora de trocar de domínio, implementar melhorias na estrutura da página ou trocar de ferramenta ou plataforma: estrutura de páginas a ser reconstruída, centenas de páginas que apontam para links antigos que deixarão de existir, complexidade na manutenção de páginas e links antigos.
+However, it is common for a website to have hundreds of pages, and therefore the complexity of configuring the rules increases in proportion to the number of necessary redirects, making this an important and difficult to maintain job. Companies that use - or intend to use - any CMS or e-commerce platform to manage their pages, such as Wordpress, Joomla, Magento, SAP Hybris and VTEX, will face enormous challenges when it comes to changing domains, implementing improvements in the structure of the page or change tools or platform: such as structure of pages to be rebuilt, hundreds of pages that point to old links that will cease to exist, and the complexity in maintaining old pages and links.
 
-De maneira geral, o conceito é simples. Todavia, a estratégia adotada para lidar com Massive Redirects irá definir a complexidade na implementação e manutenção, e principalmente a eficácia do ranqueamento e experiência dos usuários. Afinal, nada mais frustrante que um usuário encontrar sua página por um buscador, e ao acessá-la receber um erro de página não encontrada ou lentidão na abertura da págin
+In general, the concept is simple. However, the strategy adopted to deal with Massive Redirects will define the complexity in the implementation and maintenance, and mainly the effectiveness of ranking and user experience. After all, nothing is more frustrating than a user finding your page through a search engine, and when accessing it they receive a page not found error or slowness in opening the page.
 
-## Azion Edge Functions: funções serverless para redirect massivo de páginas.
+## Azion Edge Functions: serverless functions for massive redirect of pages.
 
-Com a Edge Function _Massive Redirect_ da Azion você pode configurar de forma rápida e simples todos os seus redirecionamentos, em um só lugar, não importa a quantidade de páginas.
+With Azion's Edge Function Massive Redirect you can quickly and simply configure all your redirects, in one place, no matter how many pages there are.
 
-O _Massive Redirect_ é uma função serverless executada diretamente na edge da rede, mais próximo aos usuários, o que garante uma série de vantagens ao seu negócio.
+Massive Redirect is a serverless function that is executed directly at the edge of the network, closer to users, which guarantees a series of advantages for your business.
 
-Veja alguns casos onde o Azion Massive Redirect é a solução ideal:
+Here are some cases where Azion Massive Redirect will be the ideal solution:
 
-* Migração de plataforma de CMS, e-commerce, LMS e outras;
-* Atualização de URL (ex. o endereço mudou ou as URLs precisam ser transformadas em URLs amigáveis);
-* Atualização de site (ex. a estrutura do site foi remodelada, com mudança na estrutura de diretórios, subdomínios ou páginas);
-* Redirecionar uma página que não existe mais (ex. páginas obsoletas, como promoções expiradas ou conteúdos descontinuados);
-* Evitar a duplicação de conteúdo (ex. impedir que os motores de busca considerem o endereço antigo e o novo como sendo diferentes, dividindo a pontuação e ranqueamento).
+* Migration of CMS, e-commerce, LMS and other platforms;
+* URL update (e.g. the address has changed or the URLs need to be transformed into friendly URLs);
+* Website update (e.g. the website structure has been remodeled, with a change in the structure of directories, subdomains or pages);
+* Redirect a page that no longer exists (e.g. obsolete pages, such as expired promotions or discontinued content);
+* Avoid duplication of content (e.g. preventing search engines from considering the old and new addresses as being different, thereby dividing the scoring and ranking).
 
-## Entendendo o funcionamento do Massive Redirect na Azion
+## Understanding how Massive Redirect works at Azion
 
-Antes de começar, certifique-se de que o serviço Edge Functions está ativo em sua conta da Azion e que você já conta com a função Massive Redirect em seu Libraries de Edge Functions. Caso não esteja, entre em contato com nosso time comercial para habilitar o serviço.
+Before you start, make sure that the Edge Functions service is active in your Azion account and that you already have the Massive Redirect function in your Edge Functions Libraries. If not, contact our sales team to enable the service.
 
-Para o funcionamento da Edge Function Massive Redirect, informamos por parâmetros (**Edge Function Json args**) uma lista com os endereços a serem redirecionados e o respectivo de destino. Quando uma requisição chegar até a edge node da Azion, nosso serviço interpretará a instrução definida pela função, verificando se o endereço acessado corresponde aos recebidos no *Json args* (parâmetros), e executará o redirect para o destino correspondente. A partir desse momento, a requisição passará a ser direcionada para o novo endereço, de forma transparente para sua aplicação e para os servidores de sua origem.
+For the operation of the Edge Function Massive Redirect, we inform through parameters (**Edge Function Json args**) a list with the addresses to be redirected and the respective destination. When a request reaches the Azion edge node, our service will interpret the instruction defined by the function, checking if the address accessed corresponds to those received in *Json args* (parameters), and will execute the redirect to the corresponding destination. From that moment, the request will be directed to the new address, transparently to your application and to the servers of its origin.
 
-Para utilizar a Function Massive Redirect, edite o **Edge Application** ao qual deseja atribuir este serviço, garantindo que o Edge Function está habilitado na aba Main Settings. A seguir, selecione a aba Functions e clique no botão **Add Function**. Informe um nome para sua função personalizada (utilize um nome significativo, por exemplo _MyStoreRedirect_, pois é por meio dele que sua Function será identificada posteriormente na configuração da Rule Engine) e selecione na lista de opções a **Edge Function** que você quer utilizar, nesse caso, a opção **Massive Redirect**. Note que o código da função irá aparecer logo abaixo, na seção **Code**, apenas para leitura e entendimento. 
+To use the Function Massive Redirect, edit the **Edge Application** to which you want to assign this service, ensuring that the Edge Function is enabled in the Main Settings tab. Then select the Functions tab and click the **Add Function** button. Enter a name for your custom function (use a meaningful name, for example MyStoreRedirect, as this is how your Function will be identified later in the Rule Engine configuration) and select the **Edge Function** you want to use from the list of options, in this case , the **Massive Redirect** option. Note that the function code will appear below, in the **Code**, section, for reading and understanding only. 
 
-Na seção **Json args**, informe os parâmetros (endereços antigos e novos) que serão passados para a função. O endereço antigo pode ser informado de duas formas:
+In the **Json args**, section, enter the parameters (old and new addresses) that will be passed on to the function. The old address can be informed in two ways:
 
-* _**from**_: utilize o endereço completo a ser redirecionado (localização antiga);
-* _**from_regex**_: utilize uma expressão regular para representar um padrão de construção de URL, permitindo configurar mais de um endereço com uma única regra.
+* _**from**_: use the full address to be redirected (old location);
+* _**from_regex**_: use a regular expression to represent a URL building pattern, allowing you to configure more than one address with a single rule.
 
-Para o endereço novo, temos também duas opções:
+For the new address, we also have two options:
 
-* **moved**: localização de destino (URI) para um redirecionamento permanente (HTTP status 301);
-* **found**: localização de destino (URI) para um redirecionamento temporário (HTTP status 302).
+* **moved**: destination location (URI) for a permanent redirect (HTTP status 301);
+* **found**: destination location (URI) for a temporary redirect (HTTP status 302).
 
-É possível configurar um ou vários redirecionamentos na mesma Edge Function. Veja alguns exemplos de como pode ser feita essa configuração:
+It is possible to configure one or more redirects in the same Edge Function. Here are some examples of how this configuration can be done:
 
 ~~~
 [{
@@ -54,7 +54,7 @@ Para o endereço novo, temos também duas opções:
     "moved": "https://www.new-site.com"
 }]
 ~~~
-Redirecionamento permanente (301) de [www.old-site.com](#) para [www.new-site.com](#)
+Permanent redirecting (301) from [www.old-site.com](#) to [www.new-site.com](#)
 
 ~~~
 [{
@@ -63,7 +63,7 @@ Redirecionamento permanente (301) de [www.old-site.com](#) para [www.new-site.co
 
 }]
 ~~~
-Redirecionamento permanente (301) utilizando expressão regular, direcionando os endereços **api**, **store** e *checkout* do domínio [old-site.com](#) para o domínio [new-site.com](#).
+Permanent redirection (301) using regular expression, directing the **api**, **store** and *checkout* addresses from the [old-site.com](#) domain to the [new-site.com](#) domain.
 
 ~~~
 [{
@@ -83,14 +83,15 @@ Redirecionamento permanente (301) utilizando expressão regular, direcionando os
     "found": "https://www.new-site.com/category/clothes/dress/new_year_eve"
 }]
 ~~~
-Vários redirecionamentos configurados na mesma Function.
+Several redirects configured in the same Function.
 
-Depois de criada, basta associar sua Function a uma Rule Engine dentro de sua Edge Application. Na aba **Rules Engine**, utilize a Default Rule ou crie uma nova rule com um critério de validação (**criteria**) para ativar sua function, e na seção **Behavior**, selecione Run Function e escolha a Function de Massive Redirect que você criou.
+Once created, simply associate your Function with a Rule Engine within your Edge Application. In the **Rules Engine**,  tab, use the Default Rule or create a new rule with a validation criterion (**criteria**) to activate your function, and in the **Behavior**, section, select Run Function and choose the Massive Redirect Function that you created.
 
-Entre em contato com nosso Suporte em caso de dúvidas.
+
+Please contact our Support if you have any questions.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn’t find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/use-cases/massive-redirect/index.md) on GitHub.
