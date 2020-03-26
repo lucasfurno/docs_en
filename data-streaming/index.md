@@ -1,112 +1,109 @@
 # Data **Streaming**
-    
-Data Streaming é um produto de Edge Analytics que permite que você alimente suas plataformas de SIEM, big data e stream processing com dados de acesso ao seu conteúdo e aplicações, em tempo real, adicionando ainda mais inteligência ao seu negócio.
 
-Essa integração permite que você analise o comportamento de seus usuários e da performance dos seus conteúdos, aplicações e troubleshooting, de forma simples e ágil.
+Data Streaming is an Edge Analytics product that allows you to feed your SIEM, big data and stream processing platforms with access to your content and applications data, in real time, adding even more intelligence to your business.
 
-
-  > 1. [Data Sources](#DataSources)
-  > 2. [Template](#Template)
-  > 3. [Domains](#Domains)
-  > 4. [Endpoint](#Endpoint)
+This integration allows you to analyze the behavior of your users and the performance of your content, applications and troubleshooting, in a simple and agile way.
 
 
----
-
-## 1. Data Sources {#DataSources}
-
-A primeira etapa é a escolha do Data Source, que representa a aplicação na Azion que gerou os registros de eventos, para isso, você deve selecionar de onde seus dados serão coletados.
-
-
-* **Edge Applications:** requisições de seus usuários a seus Edge Applications na Azion.
-* **WAF Events:** se você tiver contratado o produto [Web Application Firewall]({%tl documentation_products_web_application_firewall %}), o data source WAF Events apresentará as requisições analisadas pelo WAF.
+  > 1. [Data Sources](#1-data-sources)
+  > 2. [Template](#2-template)
+  > 3. [Domains](#3-domains)
+  > 4. [Endpoint](#4-endpoint)
 
 ---
 
-## 2. Template {#Template}
+## 1. Data Sources
 
-O template representa uma seleção de variáveis que devem ser coletadas e um formato para transferência. Você pode selecionar templates criados e mantidos pela Azion ou customizar sua própria seleção.
+The first step is choosing the Data Source, which represents the application at Azion that generated the event logs, for this, you must select where your data will be collected from.
 
-Quando selecionada a opção "Custom Template", é possível criar seu próprio Data Set personalizado, no formato JSON, e selecionar as variáveis mais adequadas às suas necessidades.
 
-Consulte a documentação que segue para obter a descrição das variáveis disponíveis: [Fields]({%tl documentation_products_data_streaming_fields %}).
-
-Seus eventos serão agrupados em blocos de até 2.000 registros separados pelo caracter \n, e enviados no payload para seu endpoint. O Data Streaming enviará seus eventos quando o bloco atingir 2000 registros ou a cada 60 segundos, o que ocorrer antes.
+* **Edge Applications**: requests from your users to your Edge Applications at Azion.
+* **WAF Events**: if you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the data source WAF Events will present the requests analyzed by WAF.
 
 ---
 
-## 3. Domains {#Domains}
+## 2. Template
 
-Você pode associar ao Data Streaming um ou mais de seus domínios cadastrados na Azion.
+The template represents a selection of variables to be collected and a format for transfer. You can select templates created and maintained by Azion or customize your own selection.
 
-Ao associar um domínio ao Data Streaming, os eventos associados a esse domínio serão coletados e enviados para seu endpoint.
+When selecting the "Custom Template" option, it is possible to create your own customized Data Set, in JSON format, and select the variables that best suit your needs.
+
+See the documentation that follows for a description of the available variables: [*Fields*](https://www.azion.com/pt-br/docs/produtos/data-streaming/fields/)
+
+Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever is reached first.
 
 ---
 
-## 4. Endpoint {#Endpoint}
+## 3. Domains
 
-Endpoint é o destino para onde você deseja enviar os dados coletados pela Azion.
+You can associate Data Streaming with one or more of your domains registered with Azion.
 
-O tipo de endpoint representa o método que seu endpoint está configurado para receber os dados do Data Streaming.
+When associating a domain with Data Streaming, the events associated with that domain will be collected and sent to its endpoint.
+
+---
+
+## 4. Endpoint
+
+The Endpoint is the destination where you want to send the data collected by Azion.
+
+The endpoint type represents the method that your endpoint is configured to receive data from the Data Streaming.
 
 **Standard HTTP/HTTPS POST**
 
-A utilização deste tipo de endpoint, faz com que o serviço de Data Streaming envie os dados no payload de um POST HTTP, para o processamento em sua plataforma.
+The use of this type of endpoint, causes the Data Streaming service to send data in the payload of an HTTP POST, for processing on the platform.
 
 * **Endpoint URL** 
 
-A URL configurada em sua plataforma para receber os dados do Data Streaming. Utilize o formato _scheme://domain/path_.
+  The URL configured on the platform to receive Data Streaming data. Use the format *scheme://domain/path*.
 
 * **Custom Headers** 
 
-Você pode informar um ou mais cabeçalhos customizados para a sua requisição HTTP/HTTPS. Para a configuração dos cabeçalhos, é necessário informar o Nome e o Valor para cada cabeçalho.
+  You can enter one or more custom headers for your HTTP / HTTPS request. For the configuration of the headers, it is necessary to inform the Name and Value for each header.
 
 **Apache Kafka**
 
-A utilização deste tipo de endpoint, faz com que o serviço de Data Streaming envie os dados para um endpoint Kafka em sua infraestrutura.
+The use of this type of endpoint, causes the Data Streaming service to send data to a Kafka endpoint in its infrastructure.
 
 * **Bootstrap Servers** 
 
-Os servers no cluster Kafka, no formato "host1:port1, host2:port2, ...". A lista não precisa conter todos os servidores de seu cluster, apenas alguns servidores que serão utilizados para a conexão inicial. Recomendamos que você utilize mais de um server para aumentar a redundância e disponibilidade.
+  The servers in the Kafka cluster, in the format "host1: port1, host2: port2, ...". The list does not need to contain all the servers in your cluster, just a few servers that will be used for the initial connection. We recommend that you use more than one server to increase redundancy and availability.
 
 * **Topic** 
 
-Você precisa definir um Topic onde deseja que o Data Streaming publique as mensagens em seu cluster.
+  You need to define a Topic where you want Data Streaming to post messages to your cluster.
 
 **Simple Storage Service (S3)**
 
-A utilização deste tipo de endpoint, faz com que o serviço de Data Streaming envie os dados diretamente para qualquer storage que trabalhe com o protocolo S3, como por exemplo Amazon S3, Cloud Storage, entre outros.
+The use of this type of endpoint, makes the Data Streaming service send data directly to any storage that works with the S3 protocol, such as Amazon S3, Cloud Storage, among others.
 
 * **Host URL** 
 
-A URL do seu Host S3. Você pode conectar com qualquer provedor que trabalhe com o protocolo S3.
+  The URL of the Host S3. You can connect with any provider that works with the S3 protocol.
 
 * **Bucket Name** 
 
-O nome do Bucket que o objeto será enviado. É importante que o Bucket já esteja criado para que o Data Streaming possa enviar os objetos.
+  The name of the Bucket that the object will be sent to. It is important that the Bucket is already created so that Data Streaming can send the objects.
 
 * **Region** 
 
-A região a qual o Bucket está hospedado. Por exemplo, "us-east-1".
+  The region in which the Bucket is hosted. For example, "us-east-1".
 
 * **Access Key** 
 
-O chave para acesso ao Bucket.
+  The key to access the Bucket.
 
 * **Secret Key** 
 
-O segredo da chave para acessar ao Bucket.
+  The secret key to access the Bucket.
 
 * **Object Key Prefix** 
 
-Um prefixo para os arquivos enviados. Por exemplo "waf_logs", então todos os objetos enviados serão salvos com "waf_logs_&lt;TIMESTAMP&gt;_&lt;UUID&gt;".
+  A prefix for the sent files. For example "waf_logs", then all sent objects will be saved with `"waf_logs_ <TIMESTAMP> _ <UUID>"`.
 
 * **Content Type** 
 
-O formato que o objeto será criado no Bucket. Tendo "plain/text" e "application/gzip" como opções.
+  The format that the object will be created in, in the Bucket. Having "plain/text" and "application/gzip" as options.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
-
-[Clique aqui](#) para editar esta página no GitHub.
+Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
