@@ -7,7 +7,7 @@ If you are new to Azion or if you are increasing your usage, we want to provide 
 > 1. [Support Plans](#1-support-plans)
 > 2. [Response Time](#2-response-time)
 > 3. [Service Channels](#3-service-channels)
-> 4. [Work Scope](#4-work-scope)
+> 4. [Work Scope](#4-working-scope)
 
 ---
 
