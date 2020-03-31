@@ -2,12 +2,12 @@
 
 Through Single Origin you may set up the address of your origin and adjust parameters.
 
-> 1. [Single Origin Features](#1-single-origin-features)
-> 2. [How to set up a Single Origin](#2-how-to-set-up-a-single-origin)
+> 1. [Single Origin Features](#single-origin-features)
+> 2. [How to set up a Single Origin](#how-to-set-up-a-single-origin)
 
 ---
 
-## 1. **Single Origin Features**
+## 1. Single Origin Features {#single-origin-features}
 
 With Single Origin you add an origin for your content and customize Host Header, connection method and authentication credentials.
 
@@ -71,7 +71,7 @@ Displays timeout setting in seconds pre-defined by Azion. Timeout values cannot 
 
 ---
 
-## 2. **How to set up a Single Origin**
+## 2. How to set up a Single Origin {#how-to-set-up-a-single-origin}
 
 To set up a Single Origin:
 
@@ -83,4 +83,6 @@ To set up a Single Origin:
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/content-delivery/single-origin/index.md) on GitHub.

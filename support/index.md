@@ -168,4 +168,6 @@ With Azion Managed DDoS Protection Unlimited you have 24×7 access to the Securi
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/support/index.md) on GitHub.

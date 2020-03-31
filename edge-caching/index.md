@@ -4,23 +4,16 @@ Speed up the delivery by keeping your content cached at the edge of the network,
 
 [Edge Caching](https://www.azion.com/pt-br/produtos/edge-caching/) is a standard module for all of your edge applications at Azion. This product reduces the latency and has a high rate of transfer through the *edge network global* and highly distributed of Azion.
 
-
-
-> 1. [How Does it Work?](#1-how-does-it-work?)
->
-> 2. [Cache Settings](#2-cache-settings)
-> 3. [Browser Cache Settings](#3-browser-cache-settings)
-> 4. [CDN Cache Settings](#4-cdn-cache-settings)
-> 5. [L2 Caching](#5-l2-caching)
-> 6. [Advanced Cache Key](#6-advanced-cache-key)
-
-
+> 1. [How Does it Work?](#how-does-it-work?)
+> 2. [Cache Settings](#cache-settings)
+> 3. [Browser Cache Settings](#browser-cache-settings)
+> 4. [CDN Cache Settings](#cdn-cache-settings)
+> 5. [L2 Caching](#l2-caching)
+> 6. [Advanced Cache Key](#advanced-cache-key)
 
 ---
 
-
-
-## **1. How does it work?**
+## 1. How does it work?  {}
 
 Azion's Edge Caching is a standard feature available for all Edge Applications at Azion, which guarantees performance and low latency.
 
@@ -149,6 +142,6 @@ Use this functionality to segment your content by user profile, browsing session
 
 ---
 
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/index.md) on GitHub.

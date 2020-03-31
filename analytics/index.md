@@ -9,49 +9,40 @@ The Analytics screen has some regions which enable you to filter information, su
 
 
 
-1. [Filter data interval](#1-filter-data-interval)
-
-2. [Export to CSV](#2-export-to-csv)
-
-3. [How to Interpret the Graphics](#3-how-to-interpret-the-graphics)
-
-4. [Data Transferred](#4-data-transferred**)
-
-5. [Requests](#5-requests)
-
-6. [Status Codes](#6-status-codes)
-
-7. [HTTP Methods](#7-http-methods)
-
-8. [Connections](#8-connections)
-
-9. [Storage](#9-storage-(stored-data))
-
-10. [WAF](#10-web-application-firewall-(waf) )
+> 1. [Filter data interval](#filter-data-interval)
+> 2. [Export to CSV](#export-to-csv)
+> 3. [How to Interpret the Graphics](#how-to-interpret-the-graphics)
+> 4. [Data Transferred](#data-transferred)
+> 5. [Requests](#requests)
+> 6. [Status Codes](#status-codes)
+> 7. [HTTP Methods](#http-methods)
+> 8. [Connections](#connections)
+> 9. [Storage](#storage-stored-data)
+> 10. [WAF](#web-application-firewall-waf)
 
     
 
 ---
 
-## 1. **Filter Data Interval**
+## 1. Filter Data Interval {#filter-data-interval}
 
 Every graph options of Analytics products have a Data Interval Filter.The graphs are updated and present the information according to the criteria selected in the filter.
 
 ---
 
-## **2. Export to CSV**
+## 2. Export to CSV {#export-to-csv}
 
 After applying the filters, you can export the information to a CSV file, to perform this action, click on the CSV icon next to the desired graphic.
 
 ---
 
-## **3. How to Interpret the Graphics**
+## 3. How to Interpret the Graphics {#how-to-interpret-the-graphics}
 
 The information is presented according to the solution and the time interval selected in the filters, the graphs presented are grouped in:
 
 ---
 
-## **4. Data Transferred**
+## 4. Data Transferred {#data-transferred}
 
 This tab presents graphs with the information referring to the volume of data transferred by the solution you selected, this tab presents 4 graphs referring to the volume of data transferred in the solution and in the selected period, as follows:
 
@@ -87,7 +78,7 @@ At the bottom of the graph shows the average of the band used in the interval.
 
 ---
 
-## 5. Requests
+## 5. Requests {#requests}
 
 **Total Requests:** Number of customer requests to the content. At the bottom of the graph shows the sum of requests for the interval.
 
@@ -107,7 +98,7 @@ At the bottom of the graph shows the average of the band used in the interval.
 
 ---
 
-## 6. Status Codes
+## 6. Status Codes {#status-codes}
 
 This tab presents graphs with information regarding the Content Delivery Status codes. 
 
@@ -156,7 +147,7 @@ Excellent documentation to deepen your knowledge of HTTP Status Codes can be fou
 
 ---
 
-## 7. HTTP Methods
+## 7. HTTP Methods {#http-methods}
 
 This graph shows the requests for your site segregated by the HTTP method used. For more in-depth information about HTTP methods you can read through this URL: [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) . Graph available only in the Analytics Premium product.
 
@@ -170,7 +161,7 @@ This graph shows the requests for your site segregated by the HTTP method used. 
 
 ---
 
-## 8. Connections
+## 8. Connections {#connections}
 
 This tab is available when the *Live Streaming* solution is selected. It presents information regarding the number of users connected to your company's streams.
 
@@ -180,7 +171,7 @@ This tab is available when the *Live Streaming* solution is selected. It present
 
 ---
 
-## 9. Storage **(Stored Data)**
+## 9. Storage (Stored Data) {#storage-stored-data}
 
 This tab presents graphs with information regarding the Cloud Storage product.
 
@@ -188,7 +179,7 @@ This tab presents graphs with information regarding the Cloud Storage product.
 
 ---
 
-## 10. Web Application Firewall (WAF) 
+## 10. Web Application Firewall (WAF) {#web-application-firewall-waf}
 
 For customers who have the Web Application Firewall product, there is a specific graphic to show the behavior of requests.
 
@@ -205,3 +196,5 @@ For customers who have the Web Application Firewall product, there is a specific
 ---
 
 Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/analytics/index.md) on GitHub.

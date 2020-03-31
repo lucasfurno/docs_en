@@ -212,6 +212,6 @@ Todo o processo de integração é conduzido remotamente, por telefone ou videoc
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Clique aqui](#) para editar esta página no GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/integration-services/index.md) on GitHub.

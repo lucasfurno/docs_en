@@ -2,12 +2,12 @@
 
 To achieve high levels of fault tolerance and performance, it is necessary to guarantee the availability of your content and applications even in the event of incidents with your original servers. Azion Load Balancer allows balancing traffic to your origins, data centers or cloud providers, avoids network congestion and overloading your servers. In addition, it detects failures and provides multiple algorithms that allow you to distribute the load to the available infrastructures, ensuring the best experience for your users and results for your company.
 
-> 1. [Load Balancer Features](#1-load-balancer-features)
-> 2. [How to set up Load Balancer](#2-how-to-set-up-load-balancer)
+> 1. [Load Balancer Features](#FuncionalidadesLoadBalancer)
+> 2. [How to set up Load Balancer](#ComoConfigurarLoadBalancer)
 
 ---
 
-## **1. Load Balancer Features**
+## 1. Load Balancer Features {#FuncionalidadesLoadBalancer}
 
 With Azion Load Balancer you add multiple origins to your content, select the load balancing method that best suits your needs and customize timeouts and error handling.
 
@@ -65,7 +65,7 @@ The default values for Azion Load Balancer timeouts are:
 
 ---
 
-## **2. How to set up Load Balancer**
+## 2. How to set up Load Balancer {#ComoConfigurarLoadBalancer}
 
 To set up Azion Load Balancer:
 
@@ -78,4 +78,6 @@ To set up Azion Load Balancer:
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/load-balancer/index.md) on GitHub.
