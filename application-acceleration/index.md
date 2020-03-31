@@ -6,10 +6,10 @@ Through Application Acceleration you can configure advanced cache by path rules 
 
 Application Acceleration extends the functionality of the Azion Edge Application product to allow you to configure rules per path to:
 
-> 1. [Advanced Cache Key](#1-advanced-cache-key)
-> 2. [Bypass Cache](#2-bypass-cache)
-> 3. [Forward Cookies](#3-forward-cookies)
-> 4. [Support for POST/PUT and other methods](#4-support-for-POST/PUT-and-other-methods)
+> 1. [Advanced Cache Key](#AdvancedCacheKey)
+> 2. [Bypass Cache](#BypassCache)
+> 3. [Forward Cookies](#ForwardCookies)
+> 4. [Support for POST/PUT and other methods](#SuportePOSTPUT)
 
 ---
 
@@ -57,7 +57,7 @@ Use this functionality to segment your content by user profile, browsing session
 
 ---
 
-## 2. Bypass Cache {BypassCache}
+## 2. Bypass Cache {#BypassCache}
 
 You can also use Azion to deliver your dynamic and personalized content, even when some of your content cannot be cached on Azion's infrastructure. In Azion you define cache rules per path. Create a Bypass Cache rule for the paths of your website that cannot be cached in our infrastructure.
 

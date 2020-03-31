@@ -3,14 +3,14 @@
 Real-Time Events is an Edge Orchestration module that allows you to view data on your Azion products and services in real time.
 You can use Real-Time Events to perform complex searches and explore your application data on Azion, which are organized in Data Origins.
 
-> 1. [Data Origins](#1-data-origins)
-> 2. [Time Filter](#2-time-filter)
-> 3. [Search](#3-search)
-> 4. [Refresh](#4-refresh)
+> 1. [Data Origins](#DataSources)
+> 2. [Time Filter](#TimeFilter)
+> 3. [Search](#Search)
+> 4. [Refresh](#Refresh)
 
 ---
 
-## 1. Data Origins
+## 1. Data Origins {#DataSources}
 
 The first step for you to explore your data is choosing the Data Origin, which represents the Azion product or service that generated the events.
 
@@ -25,7 +25,7 @@ Azion makes available the following Data Origins:
 
 ---
 
-## 2. Time Filter
+## 2. Time Filter {#TimeFilter}
 
 Real-Time Events keeps the events from the last 24 hours for you and you can choose to filter only the most recent events. The Time Filter restricts the event search result, and is selected by default for Last 15 minutes, but you can change the scope of the search by selecting:
 
@@ -41,7 +41,7 @@ Real-Time Events keeps the events from the last 24 hours for you and you can cho
 
 ---
 
-## 3. Search
+## 3. Search {#Search}
 
 In the Search field, you can optionally filter your search results by a keyword or phrase.
 
@@ -55,7 +55,7 @@ You may search for more complex field compositions. Use the notations AND and OR
 
 ---
 
-## 4. Refresh
+## 4. Refresh {#Refresh}
 
 The search always returns the results ordered by the time of the event, from the most recent to the oldest.
 

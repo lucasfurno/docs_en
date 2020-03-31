@@ -5,14 +5,14 @@ Data Streaming is an Edge Analytics product that allows you to feed your SIEM, b
 This integration allows you to analyze the behavior of your users and the performance of your content, applications and troubleshooting, in a simple and agile way.
 
 
-  > 1. [Data Sources](#1-data-sources)
-  > 2. [Template](#2-template)
-  > 3. [Domains](#3-domains)
-  > 4. [Endpoint](#4-endpoint)
+  > 1. [Data Sources](#data-sources)
+  > 2. [Template](#template)
+  > 3. [Domains](#domains)
+  > 4. [Endpoint](#endpoint)
 
 ---
 
-## 1. Data Sources
+## 1. Data Sources {#data-sources}
 
 The first step is choosing the Data Source, which represents the application at Azion that generated the event logs, for this, you must select where your data will be collected from.
 
@@ -22,7 +22,7 @@ The first step is choosing the Data Source, which represents the application at 
 
 ---
 
-## 2. Template
+## 2. Template {#template}
 
 The template represents a selection of variables to be collected and a format for transfer. You can select templates created and maintained by Azion or customize your own selection.
 
@@ -34,7 +34,7 @@ Your events will be grouped in blocks of up to 2,000 registrations separated by 
 
 ---
 
-## 3. Domains
+## 3. Domains {#domains}
 
 You can associate Data Streaming with one or more of your domains registered with Azion.
 
@@ -42,7 +42,7 @@ When associating a domain with Data Streaming, the events associated with that d
 
 ---
 
-## 4. Endpoint
+## 4. Endpoint {#endpoint}
 
 The Endpoint is the destination where you want to send the data collected by Azion.
 
