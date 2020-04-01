@@ -39,7 +39,7 @@ It is the service responsible for creating Cache configurations, containing seve
 
 **To find this service:**
 
-1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **“Edge Services”** and select **Edge Applications**.
+1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Add or edit one **Edge Application**.
 3. Access the tab **Cache Settings**.
 4. Edit or create one **Cache Settings** setting.
