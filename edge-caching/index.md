@@ -13,7 +13,7 @@ Speed up the delivery by keeping your content cached at the edge of the network,
 
 ---
 
-## 1. How does it work?  {}
+## 1. How does it work?
 
 Azion's Edge Caching is a standard feature available for all Edge Applications at Azion, which guarantees performance and low latency.
 
@@ -39,10 +39,10 @@ It is the service responsible for creating Cache configurations, containing seve
 
 **To find this service:**
 
-1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **“Edge Services”** and select **“Edge Applications”**.
-2. Add or edit one **“Edge Application”**.
-3. Access the tab **“Cache Settings”**.
-4. Edit or create one **“Cache Settings”** setting.
+1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **“Edge Services”** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. Access the tab **Cache Settings**.
+4. Edit or create one **Cache Settings** setting.
 
 
 
@@ -88,14 +88,14 @@ An additional layer of cache that reduces traffic to its origin, while increasin
 
 To use the L2 Caching module, follow these steps:
 
-1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **“Edge Services”** and select **“Edge Applications”**.
-2. Edit the **“Edge Application”** that wishes to use the module.
-3. To enable the **“L2 Caching”** module, continue in the tab **“Main Settings”** and select the option **“L2 Caching”** in the section Edge Application Modules.
-4. After enabling the module, access the tab **“Cache Settings”**.
-5. Add or edit the **“Cache Settings”** settings which will work with the **“L2 Caching”** layer.
-6. Set up the field **“****Default TTL (seconds)”** to the value bigger or equal to **“2592000 seconds”**
-7. .Following, enable the option **“L2 Caching”** and save the settings.
-8. That’s it, the **“L2 Caching”** module is enabled.
+1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services* and select **“Edge Applications**.
+2. Edit the **Edge Application** that wishes to use the module.
+3. To enable the **L2 Caching** module, continue in the tab **“Main Settings”** and select the option **L2 Caching** in the section Edge Application Modules.
+4. After enabling the module, access the tab **Cache Settings**.
+5. Add or edit the **Cache Settings** settings which will work with the **L2 Caching** layer.
+6. Set up the field ******Default TTL (seconds)** to the value bigger or equal to **2592000 seconds**
+7. .Following, enable the option **L2 Caching** and save the settings.
+8. That’s it, the **L2 Caching** module is enabled.
 
 
 
@@ -111,10 +111,10 @@ As a standard, Azion considers each URL as a different object in cache. Through 
 
 To find this functionality:
 
-1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **“Edge Services”** and select **“Edge Applications”**.
-2. Edit the **“Edge Application”** that wishes to use the module.
-3. In the tab Cache Settings, add or edit a custom cache setting.
-4. In the Advanced Cache Key section, define your custom Cache by Query String and Cache by Cookie setting.
+1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
+2. Edit the **Edge Application** that wishes to use the module.
+3. In the tab **Cache Settings**, add or edit a custom cache setting.
+4. In the **Advanced Cache Key** section, define your custom Cache by Query String and **Cache by Cookie** setting.
 
 **Cache by Query String**
 
