@@ -27,8 +27,8 @@ To use the functionality, follow these steps:
 4. After enabling the module, access the tab **Cache Settings**.
 5. In the tab **Cache Settings**, add or edit a custom cache setting.
 6. In the **Advanced Cache Key** section, define your custom Cache by **Query String** and **Cache by Cookie** setting.
-7. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-8. In the "Set Cache Policy" behavior, select the custom cache configuration.
+7. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+8. In the **Set Cache Policy** behavior, select the custom cache configuration.
 
 
 **Cache by Query String**
@@ -66,8 +66,8 @@ To use the functionality, follow these steps:
 
 1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Add or edit one **Edge Application**.
-3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-4. Select the "Bypass Cache" behavior.
+3. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+4. Select the **Bypass Cache** behavior.
 
 
 When using Bypass Cache, you will be configuring the Azion service to forward all requests to a path directly to their origin. Still, you will have important protocol optimizations to speed up your application and a keepalive connection between Azion Edge Nodes and their origin, whenever possible.
@@ -92,8 +92,8 @@ To use the functionality, follow these steps:
 
 1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Add or edit one **Edge Application**.
-3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-4. Select the "Forward Cookies" behavior.
+3. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+4. Select the **Forward Cookies** behavior.
 
 > By using the Forward Cookies functionality, you are determining that Azion forwards to the users the Set-Cookie header received from its origin, even in a cache content situation (cache hit). To prevent a user from receiving another user's Set-Cookie session, you must list all session cookies (private cookies) for your application in the Cache Settings tab of your Edge Application configuration, in the Advanced Cache Key section, in Cache by Cookie.
 
@@ -122,7 +122,7 @@ To use the functionality, follow these steps:
 
 1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Add or edit one **Edge Application**.
-3. In the "Main Settings" tab, activate the **Application Acceleration** module.
+3. In the **Main Settings** tab, activate the **Application Acceleration** module.
 
 ---
 
