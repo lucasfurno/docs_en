@@ -1,4 +1,4 @@
-# *Domains*
+# **Domains**
 
 Speed up the delivery by keeping your content cached at the edge of the network, closer to your users.
 
