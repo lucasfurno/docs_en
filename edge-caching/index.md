@@ -91,8 +91,8 @@ To find this functionality:
 
 1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Edit the **Edge Application** that wishes to use the module.
-3. In the tab Cache Settings, add or edit a custom cache setting.
-4. In the Advanced Cache Key section, define your custom Cache by Query String and Cache by Cookie setting.
+3. In the tab **Cache Settings**, add or edit a custom cache setting.
+4. In the **Advanced Cache Key** section, define your custom Cache by Query String and **Cache by Cookie** setting.
 
 **Cache by Query String**
 

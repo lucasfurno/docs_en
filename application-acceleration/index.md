@@ -21,14 +21,14 @@ As a standard, Azion considers each URL as a different object in cache. Through 
 
 To use the functionality, follow these steps:
 
-1. Acess [Real-Time Manager](https://manager.azion.com/)  and click the menu “Edge Services” and select “Edge Applications”.
-2. Add or edit one “Edge Application”.
-3. To enable the “Application Acceleration” module, continue in the tab “Main Settings” and select the option “Application Acceleration” in the section [Edge Application Modules].
-4. After enabling the module, access the tab “Cache Settings”.
-5. In the tab “Cache Settings”, add or edit a custom cache setting.
-6. In the “Advanced Cache Key” section, define your custom Cache by “Query String” and “Cache by Cookie” setting.
-7. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-8. In the "Set Cache Policy" behavior, select the custom cache configuration.
+1. Acess [Real-Time Manager](https://manager.azion.com/)  and click the menu **Edge Services** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. To enable the **Application Acceleration** module, continue in the tab **Main Settings** and select the option **Application Acceleration** in the section **Edge Application Modules**.
+4. After enabling the module, access the tab **Cache Settings**.
+5. In the tab **Cache Settings**, add or edit a custom cache setting.
+6. In the **Advanced Cache Key** section, define your custom Cache by **Query String** and **Cache by Cookie** setting.
+7. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+8. In the **Set Cache Policy** behavior, select the custom cache configuration.
 
 
 **Cache by Query String**
@@ -37,8 +37,8 @@ At Azion you define how you want the content to be cached according to variation
 
 
 * **Content does not vary by Query String (Improves Caching):** defines that the cache key must ignore the Query String, that is, two distinct URLs just by varying the Query String will be considered as the same cached object, for example http://seudominio.com/path?queryA e http://seudominio.com/path?queryB will deliver the same cache content to your users.
-* **Content varies by some Query String fields (Whitelist):** you can list which Query String fields should be considered to differentiate between objects in the Azion Edge Caching. All other fields will be ignored. For example, if you list the field “city”, the URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=A&nome=Y will be considered as a single object in cache, while URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=B&nome=X will be considered as different objects.
-* **Content varies by Query String, except for some fields (Blacklist):** you can list which Query String fields to ignore when differentiating cached objects. All other fields will be considered. For example, if you list the field “random”, the URLs http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=B&random=123 will be considered different object in cache, while http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=A&random=456 will be considered as the same object in cache.
+* **Content varies by some Query String fields (Whitelist):** you can list which Query String fields should be considered to differentiate between objects in the Azion Edge Caching. All other fields will be ignored. For example, if you list the field **city**, the URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=A&nome=Y will be considered as a single object in cache, while URLs http://seudominio.com/path?cidade=A&nome=X and http://seudominio.com/path?cidade=B&nome=X will be considered as different objects.
+* **Content varies by Query String, except for some fields (Blacklist):** you can list which Query String fields to ignore when differentiating cached objects. All other fields will be considered. For example, if you list the field **random**, the URLs http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=B&random=123 will be considered different object in cache, while http://seudominio.com/path?cidade=A&random=123 and http://seudominio.com/path?cidade=A&random=456 will be considered as the same object in cache.
 * **Content varies by all Query String fields:** defines that the cache key must consider all Query String fields, that is, two different URLs by the variation of the Query String will be considered as two different cached objects, for example http://yourdomain. com/path?queryA and http://yourdomain.com/path?queryB will be stored as separate objects in the Azion cache.
 
 Furthermore, to increase cache’s efficiency, you may enable the Query String Sort functionality. With the Query String Sort functionality enabled, all fields in the query string will be sorted, making the position of the fields irrelevant in the definition of the cache key. If the field positions are relevant to differentiate your content, you must leave the feature disabled.
@@ -64,10 +64,10 @@ You can also use Azion to deliver your dynamic and personalized content, even wh
 To use the functionality, follow these steps:
 
 
-1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
-2. Add or edit one “Edge Application”.
-3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-4. Select the "Bypass Cache" behavior.
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+4. Select the **Bypass Cache** behavior.
 
 
 When using Bypass Cache, you will be configuring the Azion service to forward all requests to a path directly to their origin. Still, you will have important protocol optimizations to speed up your application and a keepalive connection between Azion Edge Nodes and their origin, whenever possible.
@@ -90,10 +90,10 @@ By default, Azion filters the Response Header Set-Cookie sent by its origin. If 
 
 To use the functionality, follow these steps:
 
-1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
-2. Add or edit one “Edge Application”.
-3. In the "Rules Engine" tab, add or edit a rule in "Request Phase" to define the behavior for one or more paths.
-4. Select the "Forward Cookies" behavior.
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. In the **Rules Engine** tab, add or edit a rule in **Request Phase** to define the behavior for one or more paths.
+4. Select the **Forward Cookies** behavior.
 
 > By using the Forward Cookies functionality, you are determining that Azion forwards to the users the Set-Cookie header received from its origin, even in a cache content situation (cache hit). To prevent a user from receiving another user's Set-Cookie session, you must list all session cookies (private cookies) for your application in the Cache Settings tab of your Edge Application configuration, in the Advanced Cache Key section, in Cache by Cookie.
 
@@ -120,9 +120,9 @@ You can use Azion to accelerate your web applications and APIs. Through the Appl
 To use the functionality, follow these steps:
 
 
-1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu “Edge Services” and select “Edge Applications”.
-2. Add or edit one “Edge Application”.
-3. In the "Main Settings" tab, activate the “Application Acceleration” module.
+1. Acess [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. In the **Main Settings** tab, activate the **Application Acceleration** module.
 
 ---
 
