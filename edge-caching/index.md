@@ -79,9 +79,10 @@ To use the L2 Caching module, follow these steps:
 7. .Following, enable the option **L2 Caching** and save the settings.
 8. That’s it, the **L2 Caching** module is enabled.
 
+
 ---
 
-## 6. Advanced Cache Key {##advanced-cache-key}
+## 6. Advanced Cache Key {#advanced-cache-key}
 
 You can use Azion to deliver your dynamic or static content. Even the dynamic part of a website can often be cached for a user profile, grouped according to the specific needs of your application, whether by city, browsing profile, or shopping profile. If you want your dynamic content to be cached on Azion's Edge Nodes, you can define advanced cache key rules based on Cookies or Query String.
 
@@ -91,8 +92,9 @@ To find this functionality:
 
 1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
 2. Edit the **Edge Application** that wishes to use the module.
-3. In the tab **Cache Settings**, add or edit a custom cache setting.
-4. In the **Advanced Cache Key** section, define your custom Cache by Query String and **Cache by Cookie** setting.
+3. In the tab Cache Settings, add or edit a custom cache setting.
+4. In the Advanced Cache Key section, define your custom Cache by Query String and Cache by Cookie setting.
+
 
 **Cache by Query String**
 
