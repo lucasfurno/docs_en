@@ -12,6 +12,7 @@ Edge Pulse is a product from Edge Analytics, based on the RUM market solution, w
 ## 1. What is RUM? {#what-is-rum}
 
 RUM is the abbreviation used for the concept of "_Real User Monitor_". In other words, RUM is a monitoring model which captures data from the final user with the objective of explaining how your users are being impacted by the availability and efficiency of the content delivery.
+
 ---
 
 ## 2. How does it work? {#how-does-work}
