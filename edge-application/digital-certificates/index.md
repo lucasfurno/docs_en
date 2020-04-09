@@ -70,4 +70,4 @@ Para utilizar seu Custom Certificate com a Azion utilizamos a extensão SNI (Ser
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-applications/digital-certificates/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/digital-certificates/index.md) on GitHub.

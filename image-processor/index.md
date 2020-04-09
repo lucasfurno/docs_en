@@ -290,4 +290,4 @@ Para reduzir seu consumo no Image Optimization, a Azion recomenda que você aume
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/image-optimization/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/image-processor/index.md) on GitHub.

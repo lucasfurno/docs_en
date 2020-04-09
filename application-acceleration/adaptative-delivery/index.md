@@ -106,4 +106,4 @@ Você também pode utilizar essa estratégia, caso deseje preservar o domínio e
 
 Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/adaptative-delivery/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/application-acceleration/adaptative-delivery/index.md) on GitHub.

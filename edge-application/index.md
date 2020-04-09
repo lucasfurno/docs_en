@@ -1,0 +1,86 @@
+# Edge **Application**
+
+Azion Edge Application allows you to build your web applications to run on Azion's Edge Computing platform.
+
+You can use the features such as Edge Caching, Application Acceleration, and Edge Functions to build more robust web applications, capable of meeting large access peaks with better performance and security for your users.
+
+> 1. [How Does it Work?](#how-does-work)
+> 2. [Edge Caching](#caching-cdn)
+> 3. [Minimum TLS Version](#minimum-tls-version)
+> 3. [Edge Application Modules](#edge-application-modules)
+> 4. [Support Documentation](#documentacoes-de-suporte)
+
+---
+
+## 1. How Does it Work?? {##how-does-work}
+
+Azion works with a reverse proxy architecture, through which your users connect to the Edge Nodes of our highly distributed global network, which will be able to cache their content or even perform functions of their application, in addition to having a wide arsenal for optimization.
+
+When a user requests content on the internet, their browser or application starts with DNS resolution to translate the requested domain to an IP address. When using Azion, you will set up the DNS for your web application to point to a generated address when creating a Domain at Azion.
+
+Azion selects, through your SDN Router, the Edge Node closest to the user, reducing latency and increasing the speed of content transfer.
+
+In this architecture, your content or web application needs to be made available from a origin, which can be one or more web servers in your infrastructure, a cloud service or one of Azion's Origin Services.
+
+---
+
+## 2. Edge Caching {#caching-cdn}
+
+Azion's highly distributed global network allows you to deliver your content much more efficiently. Content that is cached (cache hit) on Azion's Edge Nodes can be delivered directly to your users, from the nearest Edge Node, without having to access the origin. In addition to increasing performance and scalability for your content, you can save on your origin infrastructure.
+
+A _cache miss_ occurs when a content is requested and it is not in cache. Azion minimizes the effect of _cache miss_, by maintaining a keepalive connection with the origin, whenever possible, avoiding the overhead of the TCP/IP handshake. Regardless of the volume of simultaneous requests made to Azion's Edge Nodes, each Edge Node will search the content at the origin only once per cache miss, which substantially reduces the impact on your infrastructure.
+
+---
+
+## 3. Minimum TLS version {#minimum-tls-version}
+
+The TLS (_Transport Layer Security_) protocol allows you to encrypt web traffic. Currently the protocol offers some versions that can be used, such as: TLS 1.0  (_Deprecated_), 1.1 (_Deprecated_), 1.2 e 1.3.
+
+You will be able to choose the minimum version of TLS that will be supported to encrypt the traffic.
+
+~~~
+Attention: when choosing recent versions of the protocol, be aware that some old devices or browsers will not be able to access the Edge Application.
+~~~
+
+To use the functionality, follow these steps:
+
+1. Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Edge Applications**.
+2. Add or edit one **Edge Application**.
+3. To choose the minimum version of TLS it is necessary that the **Delivery Protocol** in the **Main Settings** tab is **HTTP & HTTPS**.
+4. Select the minimum version of the TLS protocol that will encrypt the traffic.
+
+~~~
+Minimum TLS Version functionality is available in the latest version of Edge Application (Version 3).
+
+If the functionality isn't visible, you need to update the version of your Edge Application to enable this and numerous other features.
+~~~
+
+---
+
+## 4. Edge Application Modules {#edge-application-modules}
+
+Azion provides modules so that you can build high-performance, scalable and secure applications, with much more simplicity and free of operational tasks. Check the documentations of each product:
+
+*   [Application Acceleration]({% tl documentation_products_application_acceleration %})
+*   [Edge Caching]({% tl documentation_products_application_acceleration %})
+*   [Edge Functions]({% tl edge_services_compute_modules_edge_functions %})
+*   [Image Processor]({% tl documentation_products_image_optimization %})
+*   [Load Balancer]({% tl documentation_products_load_balancer %})
+
+---
+
+## 5. Support Documentation {#support-documentation}
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Real-Time Purge]({% tl documentation_products_edge_applications_real_time_purge %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Rules Engine]({% tl documentation_products_edge_applications_rules_engine %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Digital Certificates]({% tl documentation_products_edge_applications_digital_certificates %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Single Origin]({% tl documentation_products_content_delivery_single_origin %})
+
+---
+
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/index.md) on GitHub.

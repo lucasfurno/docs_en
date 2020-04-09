@@ -250,4 +250,4 @@ A operação de purge é executada conforme os seguintes limites de uso, baseado
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-applications/real-time-purge/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/real-time-purge/index.md) on GitHub.
