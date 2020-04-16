@@ -255,7 +255,7 @@ __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(00ffff)__
 
 ---
 
-## 9. Como o Image Optimization é tarifado {#combinar-filtros}
+## 9. Como combinar múltiplos filtros {#combinar-filtros}
 
 O Image Optimization permite que você combine os filtros desejados separando os mesmos por “:”.
 
