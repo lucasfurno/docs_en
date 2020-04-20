@@ -9,7 +9,7 @@ A utilização da mesma URL de um conteúdo para todos os dispositivos melhora a
 Com o Adaptive Delivery você cria seus grupos de dispositivos customizados e configura como
     deseja que a Azion trate as variações de seu conteúdo de acordo com o dispositivo detectado.
 
-O uso do Adaptive Delivery requer o (Application Acceleration)](documentation_products_application_acceleration):
+O uso do Adaptive Delivery requer o [Application Acceleration](documentation_products_application_acceleration):
 
 >  1. [Detecção de dispositivo](#deteccao-de-dispositivo)
 >  2. [Variação de cache do conteúdo por grupo de dispositivos](#variacao-de-cache-do-conteudo-por-grupo-de-dispositivos)
