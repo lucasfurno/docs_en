@@ -1,91 +1,91 @@
 # Digital **Certificates**
 
-Você precisará de um certificado SSL para trafegar dados em HTTPS. O uso de HTTPS garante a você segurança na transmissão de dados de seus clientes pela internet, demonstra a confiabilidade de seu site e a autenticidade de seu domínio, além de melhorar a posição de seu site em motores de busca como o Google. Você também precisará de HTTPS se desejar utilizar o protocolo HTTP/2, que traz importantes melhorias de desempenho em comparação com o HTTP/1.1
+You will need a SSL Certificate to traffic data over HTTPS. The use of HTTPS guarantees you security in the transmission of your customers' data over the internet, demonstrates the reliability of your website and the authenticity of your domain, in addition to improving the position of your website in search engines like Google. You will also need HTTPS if you want to use the HTTP/2 protocol, which brings important performance improvements compared to HTTP/1.1.
 
-Na Azion, você poderá contar com as seguintes opções de certificado SSL para tráfego em HTTPS:
+At Azion, you can count on the following SSL Certificate options for HTTPS traffic:
 
 > 1. _[Shared Domain](#shared-domain)_
 > 2. _[Custom Certificate](#custom-certificate)_
 > 3. _RSA_
 > 4. _ECC/ECDSA_
-> 5. _Como utilizar Custom Certificate_
+> 5. _How to use Custom Certificate_
 
 ---
 
 ## 1. Shared Domain {#shared-domain}
 
-Ao utilizar o Azion Edge Application você conta com nosso certificado SSL para tráfego em HTTPS, sem custo adicional, basta utilizar o domínio compartilhado da Azion.
+When using Azion Edge Application you have our SSL certificate for HTTPS traffic, at no additional cost, just use Azion's shared domain.
 
-Quando você cria uma configuração de Edge Application no [Real-Time Manager](https://manager.azion.com/) é atribuído automaticamente um domínio na zona “azioncdn.net”. Se desejar, você pode utilizar o domínio atribuído para entregar seu conteúdo estático sobre HTTPS, evitando os custos de emissão de certificados SSL para ambientes de homologação ou URLs cujo domínio possa ser compartilhado com outros clientes da Azion.
+When you create an Edge Application set-up at [Real-Time Manager](https://manager.azion.com/) you are attributed automatically as domain at “azioncdn.net”. If you wish, you may use to deliver your static content over HTTPS, avoiding the costs of issuing SSL certificates for approval environments or URLs whose domain can be shared with other Azion customers.
 
-Para utilizar o certificado SSL da Azion para o Shared Domain:
+To use Azion's SSL certificate as a Shared Domain:
 
-1.  Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu **Edge Services** e selecione Domains.
-2.  Adicione ou edite uma configuração de **Domain**.
-3.  No campo **Digital Certificate**, selecione **Azion (SAN)**
-4.  Pronto, ao salvar a configuração você estará usando o Shared Domain da Azion.
+1.  Access [Real-Time Manager](https://manager.azion.com/) and click the menu **Edge Services** and select **Domains**.
+2.  Add or edit your **Domain** settings.
+3.  In the field **Digital Certificate**, select **Azion (SAN)**
+4.  After you **saved** your settings you will be using the Shared Domain at Azion.
 
 ---
 
 ## 2. Custom Certificate {#custom-certificate}
 
-Para utilizar o seu domínio em HTTPS você precisará de um certificado SSL (X.509) próprio. Você pode, sem custos adicionais, configurar o seu certificado SSL no Real-Time Manager. Caso não possua um, a Azion poderá intermediar o processo de emissão e manutenção do seu certificado SSL junto a uma Autoridade Certificadora (CA) de escolha da Azion. Para tanto, você precisará comprovar que o domínio é realmente seu. Há três tipos de validação que você pode escolher:
+To use your domain in HTTPS you will need your own SSL Certificate (X.509). You may, without additional costs, set up your SSL Certificate in the Real-Time Manager. If you do not have one, Azion will be able to mediate the process of issuing and maintaining your SSL Certificate with a Certification Authority (CA) of your choice. To do this, you will need to prove that the domain is really yours. There are three types of validations that you can choose:
 
-- DV (_Domain Validation_) é a validação sobre o seu direito de uso do domínio, sendo a mais simples das três opções. Esta á a opção recomendada pela Azion para a maioria das empresas.
-- OV (_Organization Validation_) é a validação sobre o seu direito de uso do domínio e mais algumas validações sobre a organização requisitante.
-- EV (_Extended Validation_) é uma validação estendida, que exige documentações adicionais para comprovação sobre a existência física, legal e operacional da organização requisitante, sendo a mais complexa das três opções.
+- DV (Domain Validation) is the validation on your domain use right, being the simplest of the three options. This is Azion’s recommended option for most companies.
+- OV (Organization Validation) is the validation on your domain use right and some other validations on the requesting organization.
+- EV (Extended Validation) is an extended validation, which requires additional documentation to prove the physical, legal and operational existence of the requesting organization, being the most complex of the three options.
 
-Atualmente a Azion trabalha com dois tipos de certificados, que são eles: “RSA” e “ECC/ECDSA”. Cada certificado tem sua característica e seu nível de segurança, e a Azion permite que você escolha a opção que se ajusta melhor ao seu cenário.
+Azion currently works with two types of certificates, which are: “RSA” and “ECC/ECDSA”. Each certificate has its characteristics and its security level, and Azion allows you to choose the option that best fits your scenario.
 
 ## 3. RSA
 
-É um dos primeiros sistemas de criptografia de chave pública e é amplamente utilizado para transmissão segura de dados. Neste sistema de criptografia, a chave de encriptação é pública e é diferente da chave de decriptação que é secreta (privada).Toda mensagem cifrada usando uma chave pública só pode ser decifrada usando a respectiva chave privada. 
+It is one of the first public key cryptography systems and is widely used for the secure transmission of data. In this encryption system, the encryption key is public and is different from the decryption key that is secret (private). Any message encrypted using a public key can only be decrypted using the respective private key.  
 
-O RSA é um algoritmo relativamente lento e, por isso, é menos usado para criptografar diretamente os dados do usuário. Mais frequentemente, o RSA passa chaves criptografadas compartilhadas para criptografia de chave simétrica que, por sua vez, pode executar operações de criptografia-descriptografia em massa a uma velocidade muito maior.
+RSA is a relatively slow algorithm and is therefore less used to directly encrypt user data. Most often, RSA passes shared encrypted keys to symmetric key encryption, which in turn can perform mass encryption-decryption operations at a much greater speed.
 
 ## 4. ECC/ECDSA
 
-A Criptografia de Curvas Elípticas, é uma aproximação para a criptografia de chave pública com base na estrutura algébrica de curvas elípticas. A criptografia de chave pública é baseada na criação de enigmas matemáticos que são difíceis de resolver, por isso ele se torna muito mais seguro que outros tipos de certificado como por exemplo o RSA.
+Elliptical Curve Cryptography is an approach to public key cryptography based on the algebraic structure of elliptical curves. Public key cryptography is based on the creation of mathematical puzzles that are difficult to solve, therefore it becomes much more secure than other types of certificates such as RSA.
 
-Chaves menores são menos intensivas computacionalmente para gerar assinaturas porque envolvem números matemáticos menores. ECC é mais rápida na geração de assinaturas e com mais performance sobre RSA.
+Smaller keys are less computationally intensive to generate signatures because they involve smaller mathematical numbers. ECC is faster in generating signatures and has better performance than RSA.
 
-## 5. Como utilizar o Custom Certificate
+## 5. How to use Custom Certificate
 
-Para adicionar seu Custom Certificate, você irá precisar do par Certificado (X.509) no formato [ASCII PEM](https://www.google.com.br/search?q=Como+converter+um+certificado+PFX+para+PEM&cad=h) e a respectiva chave privada, a qual não pode estar protegida por _passphrase_.
+To add your Custom Certificate, you will need the Certificate pair (X.509) in [ASCII PEM](https://www.google.com.br/search?q=Como+converter+um+certificado+PFX+para+PEM&cad=h) format and the respective private key, which cannot be protected by *passphrase*.
 
-O certificado é o arquivo que você recebe de sua CA. Ele inicia com:
+The certificate is the file you receive from your CA. It starts with:
 
 ~~~
 -----BEGIN CERTIFICATE-----
 ~~~
 
-Você deve copiar todo o conteúdo incluindo o marcador de início e também o marcador de finalização:
+You must copy all the content including the start marker and also the end marker:
 
 ~~~
 -----END CERTIFICATE-----
 ~~~
 
-A chave privada é o arquivo que você utilizou para gerar a requisição CSR que enviou para sua CA. O conteúdo inicia com:
+The private key is the file that you used to generate the CSR request which was sent to your CA. The content starts with:
 
 ~~~
 -----BEGIN RSA PRIVATE KEY-----
 ~~~
 
-Você deve copiar todo o conteúdo incluindo o marcador de início e também o marcador de finalização:
+You must copy all the content including the start marker and also the end marker:
 
 ~~~
 -----END RSA PRIVATE KEY-----
 ~~~
 
-Para utilizar seu Custom Certificate com a Azion utilizamos a extensão SNI (Server Name Indication) do protocolo TLS. Confira a [lista de browsers com suporte a SNI](https://caniuse.com/#feat=sni).
+To use your Custom Certificate with Azion, we use the SNI (Server Name Indication) extension of the TLS protocol. Check the [browser list with SNI support](https://caniuse.com/#feat=sni).
 
-Para utilizar seu próprio certificado:
+To use your own certificate:
 
-1.  Acesse o [Real-Time Manager](https://manager.azion.com/)  e entre no menu **Edge Services** e selecione **Digital Certificates**.
-2.  Adicione um **Digital Certificate** incluindo as  informações do seu Certificado.
-3.  Acesse o menu **Edge Services** e selecione Domains.
-4.  No campo **Digital Certificate**, selecione o **Digital Certificate** criado no **passo 2**
-5.  Pronto, ao salvar a configuração você estará usando seu próprio Certificado.
+1.  Access [Real-Time Manager](https://manager.azion.com/)  and click the menu **Edge Services** and select **Digital Certificates**.
+2.  Add a **Digital Certificate** including the information of your Certificate.
+3.  Access the menu **Edge Services** and select **Domains**.
+4.  In the field **Digital Certificate**, select **Digital Certificate** created in **step 2**
+5.  After you saved your settings you will be using your own Certificate.
 
 ---
 
