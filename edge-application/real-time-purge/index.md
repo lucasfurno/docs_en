@@ -8,7 +8,7 @@ Through Real-Time Purge you can instantly delete your content cache on Azion.
 > 4. [Purge methods](#Purge-methods)
 > 5. [Purge objects with varying content](#Purge-objects-with-varying-content)
 > 6. [Purge confirmation](#Purge-confirmation)
-> 7. [Limites](#limites)
+> 7. [Limits](#limits)
 
 ---
 
