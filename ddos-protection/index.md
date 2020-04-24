@@ -7,13 +7,13 @@ Through a modern approach to detect and mitigate attacks from the network, trans
 
 > 1. [DDoS Protection - 5Gbps](#ddos-protection-5gbps) 
 > 2. [DDoS Protection - 20Gbps, 50Gbps, and Unlimited](#ddos-protection-20-50-unlimited)
-> 3. [Modalities Comparison](#comparativo-de-modalidades)
+> 3. [Modalities Comparison](#modalities_comparison)
 
 ---
 
 ## 1. DDoS Protection - 5Gbps {#ddos-protection-5gbps}
 
-The Azion Standard DDoS Protection protects your content, web applications and APIs, when delivered over the Azion network, from the most common DDoS attacks in the network and transport layers (layers 3 and 4), such as volumetric attacks, Slow Reads and SYN/ACK flood.
+The Azion DDoS Protection protects your content, web applications and APIs, when delivered over the Azion network, from the most common DDoS attacks in the network and transport layers (layers 3 and 4), such as volumetric attacks, Slow Reads and SYN/ACK flood.
 
 Your traffic is monitored in real time using anomaly analysis algorithms and traffic signatures to quickly detect and protect the availability of your content, with automatic attack mitigation, without impacting delivery latency.
 
@@ -57,11 +57,11 @@ DDoS Protection can be contracted for plans with an attack volume of 20 Gbps, 50
 
 Advanced detection**
 
-Azion DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer advanced detection, inspecting network flows, as well as monitoring each application layer for its resources delivered by Azion using Azion WAF and Azion Edge Firewall. It uses advanced algorithms and SDN to allow granular detection and mitigation of DDoS attacks. Azion Managed DDos Protection detects attacks such as HTTP floods, HTTP Slow Reads, DNS query floods, SYN/ACK Flood and many others.
+Azion DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer advanced detection, inspecting network flows, as well as monitoring each application layer for its resources delivered by Azion using Azion WAF and Azion Edge Firewall. It uses advanced algorithms and SDN to allow granular detection and mitigation of DDoS attacks. Azion  DDos Protection - 20Gbps, 50Gbps, and Unlimited detects attacks such as HTTP floods, HTTP Slow Reads, DNS query floods, SYN/ACK Flood and many others.
 
 **Mitigation of complex attacks**
 
-In addition to the benefits of the Standard modality, Azion DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer more sophisticated algorithms for automated attack mitigation. Using advanced routing techniques, Managed DDoS Protection offers an additional level of automated protection against higher volume DDoS attacks.
+In addition to the benefits of the standard modality, Azion DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer more sophisticated algorithms for automated attack mitigation. Using advanced routing techniques, DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer an additional level of automated protection against higher volume DDoS attacks.
 
 For application layer attacks, you will need Azion WAF to create advanced rules to automatically block malicious requests and Azion Edge Firewall to configure proactive blacklist or network whitelist rules, geolocation or rate limit, or create standby rules to be used in response to incidents as they happen.
 
@@ -79,21 +79,21 @@ Azion DDoS Protection - 20Gbps, 50Gbps, and Unlimited offer complete visibility 
 
 **Security Response Team (SRT)**
 
-If you choose the Mission Critical support plan in conjunction with Managed DDoS Protection Unlimited, you will have 24×7 access to Azion's Security Response Team (SRT), which can be triggered during or after an attack, or even earlier for support in building proactive rules.
+If you choose the Mission Critical support plan in conjunction with DDoS Protection Unlimited, you will have 24×7 access to Azion's Security Response Team (SRT), which can be triggered during or after an attack, or even earlier for support in building proactive rules.
 
 Whenever triggered, the SRT will assist you in tracing incidents, identifying the root cause and applying the necessary mitigations on your behalf.
 
 **Cost protection**
 
-Managed DDoS Protection includes Cost Protection for its Azion services, a measure to guarantee against the increase in your costs with Azion resulting from a volumetric attack.
+DDoS Protection - 20Gbps, 50Gbps, and Unlimited include Cost Protection for its Azion services, a measure to guarantee against the increase in your costs with Azion resulting from a volumetric attack.
 
 If the use of any of your Azion services expands in response to a DDoS attack, Azion will provide service credits to avoid surplus charges for peak usage.
 
 ---
 
-## 4. Modalities Comparison {#comparativo-de-modalidades}
+## 4. Modalities Comparison {#modalities_comparison}
 
-| Functionalities                                              | DDoS Protection - 5Gbps | DDoS Protection - 20Gbps, 50Gbps and Unlimited               |
+| Functionalities                                              | DDoS Protection - 5Gbps | DDoS Protection - 20Gbps, 50Gbps, and Unlimited              |
 | ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ |
 | Network flow analysis (layers 3 and 4)                       | Yes                     | Yes                                                          |
 | Always-on detection of attacks                               | Yes                     | Yes                                                          |
