@@ -1,70 +1,70 @@
 # Real-Time **Purge** {#real-time-purge-title}
 
-Por meio do Real-Time Purge você pode deletar instantaneamente o cache de seu conteúdo na Azion.
+Through Real-Time Purge you can instantly delete your content cache on Azion.
 
-> 1. [Estratégias de atualização de conteúdo](#estrategias-de-atualizacao-de-conteudo)
+> 1. [Content update strategies](#Content-update-strategies)
 > 2. [Real-Time Purge](#real-time-purge)
-> 3. [Tipos de Purge](#tipos-de-purge)
-> 4. [Métodos de Purge](#metodos-de-purge)
-> 5. [Purge de objetos com variação de conteúdo](#purge-de-objetos-com-variacao-de-conteudo)
-> 6. [Confirmação do Purge](#confirmacao-do-purge)
-> 7. [Limites](#limites)
+> 3. [Types of Purge](#Types-of-Purge)
+> 4. [Purge methods](#Purge-methods)
+> 5. [Purge objects with varying content](#Purge-objects-with-varying-content)
+> 6. [Purge confirmation](#Purge-confirmation)
+> 7. [Limits](#limits)
 
 ---
 
-## 1. Estratégias de atualização de conteúdo {#estrategias-de-atualizacao-de-conteudo}
+## 1. Content update strategies {#Content-update-strategies}
 
-Quando você atualiza um conteúdo em sua origem, você deve escolher a melhor estratégia para atualização do mesmo no cache da Azion.
+When you update content at its source, you must choose the best strategy for updating it in the Azion cache.
 
-| Tempo de expiração | Nomes de objetos com versão | Real-Time Purge |
+| Expiration time | Names of objects with version | Real-Time Purge |
 |--------------------|-----------------------------|-----------------|
-| Ao configurar sua política de cache, você determina o tempo que deseja que seus objetos fiquem em cache na Azion. Quando você atualiza seu conteúdo na origem, a Azion poderá continuar servindo uma cópia em cache do mesmo, pelo tempo que você tiver definido. | Recomendamos que, sempre possível, você utilize alguma marcação de versionamento no nome de seus objetos. Ao atualizar o mesmo na origem, você incrementa a versão no nome do objeto, forçando com que cada modificação de seu conteúdo seja tratada como um novo objeto pela Azion. | Se julgar necessário, você pode deletar instantaneamente o cache de seu conteúdo na Azion tanto no produto Edge Caching quanto em L2 Caching. Dessa forma, você instrui a Azion a buscar a versão mais recente de seu conteúdo na origem. |
+| When configuring your cache policy, you determine how long you want your objects to be cached in Azion. When you update your content at the source, Azion will be able to continue serving a cached copy of it for as long as you have defined it. | We recommend that, whenever possible, you use some versioning marker with the name of your objects. When you update it at the source, you increase the version in the name of the object, forcing each change of its content to be treated as a new object by Azion.| If you deem it necessary, you can instantly delete your content cache in Azion in both Edge Caching and L2 Caching. By doing this, you instruct Azion to fetch the most recent version of your content from the source.|
 
 
-Utilize, sempre que possível, políticas de cache com tempos longos para expiração de seu conteúdo, como por exemplo, 1 ano (definindo o campo Maximum TTL com o valor de 31.536.000 segundos). Dessa forma você estará otimizando a performance de seu conteúdo ou aplicação, melhorando a experiência para seus usuários, reduzindo seu tráfego com a Azion e reduzindo a carga em sua origem.
+Whenever possible, use cache policies with long expiry times for your content, such as 1 year (setting the Maximum TTL field to 31,536,000 seconds). By doing this, you will be optimizing the performance of your content or application, improving the experience for your users, reducing your traffic with Azion and reducing the load at your source.
 
-Para versionar o nome de seus objetos, você pode utilizar como marcação de versão um número sequencial, um timestamp ou outro mecanismo que julgar mais apropriado. Por exemplo, ao invés de nomear uma imagem como _image.jpg_, você poderia chamá-la de _image_1.jpg_ e, quando for necessário atualizá-la, incremente a versão para _image_2.jpg_. Dessa forma, toda atualização de seu conteúdo será tratada como um novo objeto pela Azion, o que garante a você os seguintes benefícios:
+To version the name of your objects, you can use a sequential number, a timestamp or other mechanism that you think is most appropriate as a version marker. For example, instead of naming an image as image.jpg, you could call it image_1.jpg and, when you need to update it, increase the version to image_2.jpg. In this way, any update of your content will be treated as a new object by Azion, which guarantees you the following benefits:
 
-*   Permite que você controle qual objeto uma requisição deve retornar, mesmo que o usuário possua a versão anterior localmente gravada no cache do navegador ou em algum cache intermediário. Mesmo removendo o cache da Azion, o usuário pode continuar acessando a versão antiga de seus caches locais, até que transcorra o tempo de expiração.
-*   Por meio do Raw Logs, você pode acompanhar as versões servidas de seus objetos, tornando mais simples a análise de resultados de suas modificações.
-*   Versionamento viabiliza que você sirva versões diferentes de seus objetos para usuários distintos.
-*   Simplica também o processo de _rollback_ em caso de problemas com sua atualização.
+*   It allows you to control which object a request should return, even if the user has the previous version locally saved in the browser cache or in some intermediate cache. Even if the Azion cache is removed, the user can still access the old version of their local caches, until the expiration time elapses.
+*   Through Raw Logs, you can follow the served versions of your objects, making it easier to analyze the results of your changes.
+*   Versioning makes it possible for you to serve different versions of your objects to different users.
+*   It also simplifies the rollback process in case of problems with your update.
 
 ---
 
 ## 2. Real-Time Purge {#real-time-purge}
 
-Ao disponibilizar uma operação de purge rápida e previsível, a Azion torna possível que você aumente o tempo de expiração (TTL) de seus objetos em cache, ou armazene em cache objetos _event-drive_, melhorando _offload_ e performance de seu conteúdo ou aplicação, além de reduzir seu tráfego com a Azion.
+By providing a fast and predictable purge operation, Azion makes it possible for you to increase the expiry time (TTL) of your cached objects, or cache event-drive objects, improving the offload and performance of your content or application, in addition to reducing your traffic with Azion.
 
-Ao utilizar o Real-Time Purge para gerenciar a expiração do cache de seu conteúdo, você poderá realizar também:
+When using Real-Time Purge to manage the expiration of your content cache, you can also perform:
 
-*   Cache de conteúdos dinâmicos e respostas de API, sem sacrificar a experiência de usuário, pois os produtos Edge Caching e L2 Caching os Edge Servers da Azion serão atualizados com seu conteúdo mais recente.
-*   Melhor eficiência do cache, garantindo maior controle sobre como seus objetos são servidos pela Azion.
-*   Melhor e mais previsível gestão de objetos obsoletos ou desatualizados, auxiliando seus desenvolvedores na construção de soluções confiáveis, resilientes e com melhor performance.
+*   Dynamic content caching and API responses, without sacrificing the user experience, as Azion's Edge Caching and L2 Caching products will be updated with your latest content.
+*   Better cache efficiency, ensuring greater control over how your objects are served by Azion.
+*   Better and more predictable management of obsolete or outdated objects, assisting its developers in building reliable, resilient and better performing solutions.
 
-Além disso, disponibilizamos duas opções de interface para execução de purge de objetos no Edge Caching e L2 Caching em cache: via [Real-Time Manager](https://manager.azion.com/) ou via [Azion API]({% tl api_v3_real_time_purge %}).
+In addition, we offer two interface options for performing object purge in Edge Caching and L2 Caching in cache: via [Real-Time Manager](https://manager.azion.com/) or via [Azion API]({% tl api_v3_real_time_purge %}).
 
-Para acessar o Real-Time Purge via web:
+To access Real-Time Purge via the web:
 
-1.  Acesse o Real-Time Manager.
-2.  Entre no menu Real-Time Purge.
-3.  Preencha os argumentos solicitados e clique no botão de Purge.
+1.  Access Real-Time Manager.
+2.  Enter the Real-Time Purge menu.
+3.  Fill in the requested arguments and click on the Purge button.
 
 ---
 
-## 3. Tipos de Purge {#tipos-de-purge}
+## 3. Types of Purge {#Types-of-Purge}
 
-Você pode executar o purge no produto de Edge Caching quanto em L2 Caching passando como parâmetro a lista de URLs, uma expressão Wildcard ou a lista de Cache Keys.
+You can purge the Edge Caching product as well as L2 Caching using the URL list as a parameter, or it can be done through a Wildcard expression or the Cache Keys list.
 
 **URL Purge**
 
-Permite o purge dos objetos em cache, passando-se como argumento uma listagem de URLs. O formato da URL deve respeitar o padrão _scheme://host_ ou apenas _host_, seguido ou não de um _/path_ e da _?query-string_. Ao ocultar o _scheme_, será realizada a expiração dos conteúdos tanto de “http” quanto de “https”.
+It allows for the purge of cached objects, giving a list of URLs as an argument. The URL format must be according to the standard: _scheme://host_ or just _host_, followed or not by a _/path_ and the  _?query-string_. By hiding the *scheme*, the contents of both "http" and "https" will expire.
 
-URL Purge não é recursivo, o que significa que somente as URLs informadas serão expiradas do cache. As URLs são convertidas automaticamente para suas respectivas Cache Keys, sem considerar eventuais variação de conteúdo na mesma URL. Como essa operação não irá expirar variações de conteúdo baseadas em cookies, device groups, formato de imagem ou outras, considere utilizar Cache Key Purge ou Wildcard Purge para essas situações. A expiração de variações do conteúdo baseadas em Query String pode ser realizada usando URL Purge, uma vez que a Query String é uma componente da URL, desde que os argumentos utilizados para variação do conteúdo sejam enviados na ordem correta em que forem apresentados. Se você utiliza a funcionalidade de Query String Sort, ordene os argumentos na requisição ou considere utilizar Cache Key Purge ou Wildcard Purge como alternativa.
+A URL Purge is not recursive, which means that only the URLs entered will expire from the cache. The URLs are automatically converted to their respective Cache Keys, without considering any variation of content in the same URL. As this operation will not expire content variations based on cookies, device groups, image format or others, consider using the Cache Key Purge or Wildcard Purge for these situations. The expiration of content variations based on Query String can be performed using the URL Purge, since Query String is a component of the URL, as long as the arguments used for content variation are sent in the correct order in which they were presented. If you use the Query String Sort functionality, order the arguments in the request or consider using a Cache Key Purge or Wildcard Purge as an alternative.
 
-Se você utilizar o caracter asterisco (*) em uma requisição de URL Purge, ele será tratado como um caracter na URL e não como Wildcard.
+If you use the asterisk (*) character in a URL Purge request, it will be treated as a character in the URL and not as a Wildcard.
 
-Exemplos de URL Purge:
+Examples of a URL Purge:
 
 ~~~
 www.yourdomain.com static.yourdomain.com/include/site.css static.yourdomain.com/include/site.js dynamic.yourdomain.com/app.py?argument
@@ -72,9 +72,9 @@ www.yourdomain.com static.yourdomain.com/include/site.css static.yourdomain.com/
 
 **Wildcard Purge**
 
-Permite o purge dos objetos em cache, passando-se como argumento uma expressão Wildcard. O formato da expressão Wildcard deve respeitar o padrão _scheme://host_ ou apenas _host_, seguido ou não de um /path e da ?query-string, com caracter asterisco (*) no path ou na query string.
+It allows for the purge of cached objects, giving a Wildcard expression as an argument. The Wildcard expression format must be according to the standard: _scheme://host_ or just _host_, followed or not by a /path and the ?query-string, with an asterisk character (*) in the path or query string.
 
-A expressão Wildcard é convertida automaticamente em múltiplos objetos em um mesmo domínio. Para expirar as variações de conteúdo baseadas em cookies, device groups ou formato de imagem, para a mesma URL, utilize a URL com a expressão “@@*” no final.
+The Wildcard expression is automatically converted to multiple objects in the same domain. To expire the content variations based on cookies, device groups or image format, for the same URL, use the URL with the expression “@@ *” at the end.
 
 ~~~
 www.yourdomain.com/* static.yourdomain.com/include/*.css static.yourdomain.com/*/site.js static.yourdomain.com/images/image_1.jpg?ims=* dynamic.yourdomain.com/app.py@@*
@@ -83,168 +83,181 @@ www.yourdomain.com/* static.yourdomain.com/include/*.css static.yourdomain.com/*
 
 **Cache Key Purge**
 
-Permite o purge dos objetos em cache, passando-se como argumento uma listagem de Cache Keys.
+It allows for the purge of cached objects, giving a list of Cache Keys as an argument.
 
-A Cache Key é uma entrada de índice para um objeto no cache da Azion. O formato padrão de cache key adotado pela Azion utiliza _host_ e _path_ da URL para identificar objetos. Você pode especificar uma chave de cache avançada para identificar diferentes variações de um objeto, com base em:
+A Cache Key is an index entry for an object in the Azion cache. The standard cache key format adopted by Azion uses the URL host and path to identify objects. You can specify an advanced cache key to identify different variations of an object, based on:
 
-*   Argumentos de Query String ou Query String Sort.
-*   Cookies (ao utilizar o [Azion Application Acceleration]({% tl documentation_products_application_acceleration %})).
-*   Device Groups (ao utilizar o [Azion Adaptive Delivery]({% tl documentation_products_adaptative_delivery %})).
-*   Formato de imagens de acordo com o suporte do navegador (ao utilizar o [Azion Image Optimization]({% tl documentation_products_image_optimization %})).
+*   Query String or Query String Sort arguments.
+*   Cookies (when using [Azion Application Acceleration]({% tl documentation_products_application_acceleration %})).
+*   Device Groups (when using [Azion Adaptive Delivery]({% tl documentation_products_adaptative_delivery %})).
+*   Image format according to browser support (when using [Azion Image Optimization]({% tl documentation_products_image_optimization %})).
 
-Para obter a Cache Key, deve-se requisitar o conteúdo utilizando o Azion Debug Header (Pragma: azion-debug-cache), por exemplo:
+To obtain the Cache Key, you must request the content using the Azion Debug Header (Pragma: azion-debug-cache), for example:
 
 ~~~
 HEAD /path HTTP/1.1 Host: yourdomain.com Pragma: azion-debug-cache
 ~~~
 
-A resposta retornará um cabeçalho com a cache key (X-Cache-Key), por exemplo:
+The response will return a header with the cache key (X-Cache-Key), for example:
 
 ~~~
 X-Cache-Key: yourdomain.com/path@@
 ~~~
 
-Cada variação do objeto é representada por uma cache key distinta e é expirada individualmente. Por exemplo, se houver uma variação de objeto por device group, cada URL de cada grupo terá uma Cache Key distinta com o separador “@@” e o nome do device group. Para realizar o purge de todas as variações, deve-se buscar a cache key individualmente de cada grupo.
+Each variation of the object is represented by a separate cache key and is expired individually. For example, if there is an object variation by device group, each URL in each group will have a separate Cache Key with the separator “@@” and the name of the device group. To purge all variations, you must search for the cache key individually for each group.
 
-Exemplos de Cache Key Purge:
+Examples of Cache Key Purge:
 
 ~~~
-www.yourdomain.com/@@ www.yourdomain.com/@@Mobile static.yourdomain.com/include/site.css static.yourdomain.com/include/site.js static.yourdomain.com/images/image_1.jpg?ims=880x@@ static.yourdomain.com/images/image_1.jpg?ims=880x@@webp
+www.yourdomain.com/@@ www.yourdomain.com/@@Mobile 
+static.yourdomain.com/include/site.css 
+static.yourdomain.com/include/site.js 
+static.yourdomain.com/images/image_1.jpg?ims=880x@@ 
+static.yourdomain.com/images/image_1.jpg?ims=880x@@webp
 ~~~
 
 ---
 
-## 4. Métodos de Purge {#metodos-de-purge}
+## 4. Purge methods {#Purge-methods}
 
 **Delete**
 
-O método Delete remove o objeto do cache. Na próxima requisição do usuário ao conteúdo, será realizada uma requisição GET incondicional para a origem.
+The Delete method removes the object from the cache. In the next user's content request, an unconditional GET request will be made to the source.
 
-Este método de purge impede que a Azion entregue um objeto desatualizado (_stale_), caso a origem esteja inacessível. Ao invés disso, se a origem estiver inacessível, será entregue uma página de erro.
+This purge method prevents Azion from delivering an outdated object (_stale_), in the case that the source is inaccessible. Or instead of this, if the source is inaccessible, an error page will be delivered.
 
-O uso do método Delete é indicado para:
+The use of the Delete method is indicated for:
 
-*   Remover um conteúdo do cache da Azion, após a remoção do mesmo na origem.
-*   Forçar a remoção e posterior atualização de conteúdos para os quais o _timestamp_ não é confiável.
-*   Forçar a entrega de uma página de erro no lugar de um objeto desatualizado (stale), caso sua origem esteja inacessível e a Azion não consiga obter a versão mais recente de seu conteúdo.
+*   Removing content from the Azion cache, after removing it from the source.
+*   Forcing the removal and subsequent update of content for which the  _timestamp_ is not trusted.
+*   Forcing the delivery of an error page in place of an outdated object (stale), if its source is inaccessible and Azion is unable to obtain the latest version of its content.
 
 ---
 
-## 5. Purge de objetos com variação de conteúdo {#purge-de-objetos-com-variacao-de-conteudo}
+## 5. Purge objects with varying content {#Purge-objects-with-varying-content}
 
 **Adaptive Delivery**
 
-Ao utilizar o produto Adaptive Delivery, você estará utilizando uma chave de cache avançada. Além de _host_ e _path_, a chave de cache incluirá o separador @@ seguido do nome do device group.
+When using the Adaptive Delivery product, you will be using an advanced cache key. In addition to _host_ and _path_, the cache key will include the @@ separator followed by the device group name.
 
-Por exemplo, para uma mesma URL http://www.yourdomain.com/, utilizando a Adaptive Delivery, as chaves de cache poderiam ser:
+For example, for the same URL http://www.yourdomain.com/, using Adaptive Delivery, the cache keys could be:
 
 ~~~
 www.yourdomain.com/@@ www.yourdomain.com/@@Mobile www.yourdomain.com/@@Tablet
 ~~~
 
-Para executar o purge de objetos com variação baseada em device groups, você pude utilizar Cache Key Purge, informando todas as variações individualmente, ou Wildcard Purge, utilizando @@* no final.
+To purge objects with variations based on device groups, you can use a Cache Key Purge, reporting all the variations individually, or a Wildcard Purge, using @@* at the end.
 
 Application Acceleration
 
-Ao utilizar variação de conteúdo baseada em Cookies, além do host e path, a chave de cache incluirá o separador @@ seguido do nome dos cookies utilizados e valores.
+When using cookie-based content variation, in addition to the host and path, the cache key will include the @@ separator followed by the name of the cookies used and values.
 
-Por exemplo, para uma mesma URL http://www.yourdomain.com/, utilizando variação de conteúdo baseada no cookie “user”, as chaves de cache poderiam ser:
-
-~~~
-www.yourdomain.com/@@ www.yourdomain.com/@@user=user1 www.yourdomain.com/@@user=user2
-~~~
-
-Para executar o purge de objetos com variação baseada em cookies, você pude utilizar Cache Key Purge, informando todas as variações individualmente, ou Wildcard Purge, utilizando @@* no final.
-
-Ao utilizar variação de conteúdo baseada em Query String, além do _host_ e _path_, a chave de cache incluirá o separador ? e os argumentos de query string utilizados. Por exemplo:
+For example, for the same URL http://www.yourdomain.com/, using content variation based on the “user” cookie, the cache keys could be:
 
 ~~~
-dynamic.yourdomain.com/product.py?id=1000 dynamic.yourdomain.com/product.py?id=1001
+www.yourdomain.com/@@ www.yourdomain.com/@@user=user1 
+www.yourdomain.com/@@user=user2
 ~~~
 
-Para executar o purge de objetos com variação baseada em query string, você pude utilizar Cache Key Purge, informando todas as variações individualmente, ou Wildcard Purge, utilizando ?* no final, ou ainda URL Purge, informando na URL apenas os argumentos utilizados na cache key. Caso você utilize Query String Sort, os argumentos terão que ser enviados na ordem correta.
+To purge objects with variations based on cookies, you can use a Cache Key Purge, reporting all the variations individually, or a Wildcard Purge, using @@* at the end.
+
+When using Query String based content variation, in addition to the _host_ and _path_, will the cache key include the separator? and the query string arguments used. For example:
+
+~~~
+dynamic.yourdomain.com/product.py?id=1000 
+dynamic.yourdomain.com/product.py?id=1001
+~~~
+
+To purge objects with variation based on query string, you could use a Cache Key Purge, reporting all the variations individually, or a Wildcard Purge, using ?* at the end, or a URL Purge, informing in the URL only the arguments used in the cache key. If you use Query String Sort, the arguments must be sent in the correct order.
 
 **Image Optimization**
 
-Ao utilizar o Image Optimization, você estará utilizando uma chave de cache avançada. Além de _host_ e _path_, a chave de cache incluirá o separador ? e os argumentos do produto, além do separador @@ para identificação de variação por formato de imagem suportada pelo navegador.
+When using Image Optimization, you will be using an advanced cache key. In addition to _host_ and _path_, will the cache key include the separator? and the product arguments, in addition to the @@ separator for identifying image format variation supported by the browser.
 
-São exemplos de chaves de cache utilizando o Image Optimization:
+Examples of cache keys using Image Optimization:
 
 ~~~
-static.yourdomain.com/images/image.jpg@@ static.yourdomain.com/images/image.jpg@@webp static.yourdomain.com/images/image.jpg?ims=88x@@ static.yourdomain.com/images/image.jpg?ims=88x@@webp
+static.yourdomain.com/images/image.jpg@@ 
+static.yourdomain.com/images/image.jpg@@webp 
+static.yourdomain.com/images/image.jpg?ims=88x@@ 
+static.yourdomain.com/images/image.jpg?ims=88x@@webp
 ~~~
 
-Para executar o purge de imagens processadas pelo Image Optimization, você pode utilizar Cache Key Purge, informando todas as variações individualmente, ou Wildcard Purge, utilizando * no final.
+To purge images processed by Image Optimization, you can use a Cache Key Purge, reporting all variations individually, or a Wildcard Purge, using * at the end.
 
 **Sliced Files**
 
-Se você utiliza a otimização de cache para entrega de arquivos grandes (_sliced files_), como em mídias para _Progressive Download_, você estará utilizando uma chave de cache avançada. Além de _host_ e _path_, a chave de cache incluirá o separador _@@bytes=_, para cada _slice_ do conteúdo.
+If you use cache optimization to deliver large files (_sliced files_), as in  _Progressive Download_ media, you will be using an advanced cache key. In addition to _host_ and _path_,  the cache key will include the @@ bytes = separator, for each slice of content.
 
-São exemplos de chave de cache utilizando otimização para entrega de arquivos grandes:
+Examples of cache keys using optimization for delivering large files:
 
 ~~~
-static.yourdomain.com/midias/file.mp4@@bytes=0-1048575 static.yourdomain.com/midias/file.mp4@@bytes=1048576-2097151
+static.yourdomain.com/midias/file.mp4@@bytes=0-1048575 
+static.yourdomain.com/midias/file.mp4@@bytes=1048576-2097151
 ~~~
 
-Para executar o purge de objetos utilizando essa otimização, você deve utilizar Wildcard Purge, colocando _@@*_ no final. Você também pode utilizar o Cache Key Purge, desde que informe a cache key de todos os _slices_ corretamente.
+To purge objects using this optimization, you must use a Wildcard Purge, putting @@* at the end. You can also use the Cache Key Purge, as long as you enter the cache key for all _slices_ correctly.
 
-Tome cuidado ao executar o purge para um _slice_ individualmente, pois em caso de alteração do conteúdo na origem, o mesmo poderá ficar inconsistente no cache.
+Be careful when you purge individually for a _slice_ because if there is a change of content at the source, it may be inconsistent in the cache.
 
 **Media Packager**
 
-Ao utilizar o produto Media Packager para entrega de suas mídias em HLS, você estará utilizando a funcionalidade de _dynamic packaging_, que cria automaticamente uma playlist m3u8 e segmenta suas mídias em chunks ts. A URL de seu conteúdo será criada dinamicamente pelo Media Packager.
+When using the Media Packager product to deliver your media in HLS, you will be using the dynamic packaging functionality, which automatically creates an m3u8 playlist and segments your media into ts chunks. The URL of your content will be created dynamically by Media Packager.
 
-São exemplos de chave de cache utilizando o Media Packager:
+Examples of a cache key using Media Packager:
 
 ~~~
-medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/chunklist.m3u8 medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_1.ts medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_2.ts medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_3.ts
+medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/chunklist.m3u8 
+medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_1.ts 
+medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_2.ts 
+medias.yourdomain.com/your_id/_definst_/mp4:yourmedia.mp4/media_3.ts
 ~~~
 
-Para executar o purge de objetos criados via Media Packager, você pode utilizar Cache Key Purge, informando todas as chaves de cache de playlist e chunks individualmente, ou utilizar Wildcard Purge, colocando * logo após o nome de seu arquivo de mídia.
+To purge objects created via Media Packager, you can use a Cache Key Purge, informing all playlist cache keys and chunks individually, or use a Wildcard Purge, placing * after the name of your media file.
 
 **Live Ingest**
 
-Se você utiliza o produto Live Ingest para realizar transmuxing de suas transmissões Live de RTMP para HLS, serão criadas automaticamente as playlists m3u8 e os chunks ts.
+If you use the Live Ingest product to transmit your Live transmissions from RTMP to HLS, the m3u8 playlists and ts chunks will be created automatically.
 
-Você não pode executar o purge para esse tipo de conteúdo. A playlist m3u8 e os chunks ts irão expirar automaticamente por TTL.
+You cannot purge this type of content. The m3u8 playlist and ts chunks will automatically expire via TTL.
 
 **POST Method**
 
-Por default, a Azion permite o cache apenas dos métodos GET e HEAD. Você pode ativar o cache do método POST em suas Cache Settings e, nesse caso, estará usando uma chave de cache avançada. Além do _host_ e _path_, a chave de cache incluirá o separador _@@_ seguido do hash MD5 do corpo da requisição (POST arguments).
+By default, Azion only allows caching of the GET and HEAD methods. You can enable the POST method cache in your Cache Settings, in which case you will be using an advanced cache key. In addition to the host and path, the cache key will include the @@ separator followed by the MD5 hash of the request body (POST arguments).
 
 ~~~
 dynamic.yourdomain.com/path@@md5_of_post_arguments
 ~~~
 
-Para executar o purge desses objetos, você pode utilizar Cache Key Purge, informando todas as variações individualmente, ou Wildcard Purge, utilizando @@* no final.
+To purge these objects, you can use a Cache Key Purge, reporting all variations individually, or a Wildcard Purge, using @@* at the end.
 
 **Custom Configurations**
 
-Se você possui uma Custom Configuration com uma chave de cache customizada, você deve utilizar o Cache Key Purge para deletar o cache de seus objetos. Além de _host_ e _path_, a chave de cache poderá incluir o separador _@@_ seguido de seus argumentos customizados.
+If you have a Custom Configuration with a custom cache key, you must use the Cache Key Purge to delete the cache of your objects. In addition to _host_ and _path_, the cache key may include the @@ separator followed by its custom arguments.
 
 ~~~
 dynamic.yourdomain.com/path@@custom_arguments
 ~~~
 
-É necessário que você consulte o formato customizado de sua chave de cache para executar o Cache Key Purge.
+You must consult the custom format of your cache key to run the Cache Key Purge.
 
 ---
 
-## 6. Confirmação do Purge {#confirmacao-do-purge}
+## 6. Purge confirmation {#Purge-confirmation}
 
-O purge é uma operação que não requer confirmação. Uma vez que o Real-Time Purge é concluído quase que instantaneamente, nenhuma confirmação da operação é necessária e você pode considerar que seus purges serão concluídos em menos de 3 segundos, execeto no caso de uso consistente dos Rate Limits.
+The purge is an operation that does not require confirmation. Since the Real-Time Purge is completed almost instantly, no confirmation of the operation is required and you can expect your purges to be completed in less than 3 seconds, except in the case of consistent use of Rate Limits.
 
-Quando necessário, você poderá consultar o histórico de purges para saber o usuário que realizou a requisição, horário, lista de argumentos, tipo e método de purge.
+When necessary, you can consult the purging history to find out which user made the request, the time, argument list, type and purge method.
 
 ---
 
-## 7. Limites {#limites}
+## 7. Limits {#Limits}
 
-A operação de purge é executada conforme os seguintes limites de uso, baseados no tipo e no número de objetos que estão sendo expirados:
+The purge operation is performed according to the following usage limits, based on the type and number of objects being expired:
 
-*   Para URL e Cache Key Purges, até 10 mil objetos a cada 60 segundos, sendo até 200 requisições com 50 objetos por requisição, por cliente. A URL e a Cache Key são limitadas em 4.096 caracteres.
-*   Para Wildcard Purges, até 2 mil requests por dia (por intervalo de 24h), sendo uma Wildcard URL por requisição. A Wildcard URL é limitada em 256 caracteres.
-*   O histórico de purges é limitado a 6 meses e até 1 milhão de requisições.
+*   For URL and Cache Key Purges, up to 10,000 objects every 60 seconds, with up to 200 requests with 50 objects per request, per client. The URL and Cache Key are limited to 4,096 characters.
+*   For Wildcard Purges, up to 2,000 requests per day (per 24h interval), one Wildcard URL per request. The Wildcard URL is limited to 256 characters.
+*   Purging history is limited to 6 months and up to 1 million requests.
 
 ---
 
