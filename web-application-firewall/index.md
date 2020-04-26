@@ -1,98 +1,101 @@
 # Web Application Firewall
 
-O Web Application Firewall protege as suas aplicações contra ameaças como SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) e muito mais. O WAF analisa as requisições HTTP e HTTPS, detecta e bloqueia atividades maliciosas antes que elas alcancem a sua infraestrutura, sem impactar na performance de suas aplicações.
+Web Application Firewall protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
 
-> 1. *[Como funciona?](#como-funciona)*
-> 2. *[Documentação de Suporte](#documentacao-de-suporte)*
+> 1. *[How does it work?](#how-does-it-work)*
+> 2. *[Support Documents](#support-documents)*
 
 ---
 
-## 1. Como funciona {#como-funciona}
+## 1. How does it work? {#how does it work}
 
-O Web Application Firewall é um módulo do Azion Edge Firewall, baseado na metodologia de scoring de requisições. Cada requisição *http/https* é comparada com um conjunto extremamente restritivo de regras de bloqueio e recebe uma pontuação para cada família de ameaças.
+Web Application Firewall is an Azion Edge Firewall’s module, based on the request scoring methodology. Each *http/https* request is compared to a set of extremely restrictive blocking rules and receives a score for each family of threat.
 
-De acordo com a pontuação recebida pela requisição, a mesma poderá ser liberada ou bloqueada diretamente nos Edge Nodes da Azion, antes que a ameaça atinja sua origem. Você define o nível desejado de sensibilidade para o bloqueio de cada família de ameaças.
+According to the received score by the request, it can be freed or blocked directly in Azion’s Edge Nodes, before the threat reaches its origin. You define the desired sensitivity level to block each family of threat.
 
-Para evitar o bloqueio de requisições lícitas e o mal funcionamento de sua aplicação, você deve executar uma etapa de aprendizagem, na qual o **WAF Rule Set** identifica os comportamentos legítimos de sua aplicação, inserindo-os em uma *whitelist*.
+To avoid licit requests and malefaction of your application, you must run a learning stage, in which the WAF Rule Set identified legitimate behaviors in your application, inserting them into a *whitelist*.
 
-Você ainda pode monitorar o comportamento e a efetividade de suas configurações de **Web Application Firewall**. Através de nossas ferramentas **Real-Time Events** e **Data Streaming**, a Azion disponibiliza dashboards e relatórios para consultas de logs de eventos on-line e em tempo real. Além disso, você pode importar os registros de logs da Azion e manipulá-los dentro de suas próprias ferramentas de análise.
+You can also monitor the behavior and effectiveness of your **Web Application Firewall** settings. Through our **Real-Time Events** and **Data Streaming** tools, Azion offers dashboards and reports for online and real-time event log checks. Furthermore, you may import Azion’s record logs and manipulate them within your own analysis tools.
 
 ~~~
-Para utilizar os recursos de WAF Rule Sets  é necessário habilitar o módulo Web Application Firewall no Edge Firewall Rule Set.
+To use your WAF Rule Sets resources you need to enable the Web Application Firewall module in the Edge Firewall Rule Set.
 ~~~
 
-**Modo de Operação**
+**Operation Modes**
 
-Para obter o máximo de desempenho e precisão do produto é necessária a etapa de aprendizagem. Você conta com dois modos de operação para lhe apoiar nessa etapa:
+In order to maximize the product’s performance and precision you need the learning stage. You count on two operation modules to help you in this stage:
 
-*   **Counting Mode:** é utilizado para especificar que o WAF não deve bloquear nenhuma requisição. O tráfego de suas aplicações será analisado e as ameaças encontradas serão apenas contabilizadas. Utilize esse modo de operação durante a primeira etapa de aprendizagem.
-*   **Blocking Mode:** é utilizado para analisar e bloquear as ameaças detectadas, protegendo as suas aplicações dos usuários maliciosos. Você pode executar a etapa de aprendizagem sempre que julgar necessário, mesmo em Blocking Mode.
+*   **Counting Mode:** used to specify that the WAF shall not block any request. Your applications’ traffic will be analyzed and the threats found will only be accounted for. Use this mode of operation during the first learning stage.
+*   **Blocking Mode:** used to analyze and block found threats, protecting your applications from malicious users. You may run the learning stage every time you deem necessary, even during Blocking Mode.
 
-**Famílias de Ameaças**
+**Families of Threats**
 
-As ameaças são categorizadas em famílias de acordo com o objetivo do ataque. Você pode ativar ou desativar a proteção para cada família de ameaças individualmente de acordo com as proteções requeridas pelo tipo de sua aplicação e funcionalidades que ela apresente.
+The threats are categorized in families according to the object of the attack. You can activate or deactivate protection for each family of threat individually according to the protections required by the family of your application and the features it presents.
 
 
 | Threat Type                  | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
-| SQL Injections               | Previne tentativas de ataque através de injeção de código SQL na aplicação. |
-| Remote File Inclusions (RFI) | Previne tentativas de incluir arquivos, usualmente através de scripts no servidor web. |
-| Directory Traversal          | Previne a exploração de vulnerabilidade referente a sanitização insuficiente de campos de nomes de arquivo fornecidos pelos usuários, de modo que caracteres representando atalhos para o diretório pai sejam passados através da API de arquivos. |
-| Cross-Site Scripting (XSS)   | Previne a injeção de scripts client-side em páginas vistas por seus visitantes. |
-| File Upload                  | Previne a tentativa de envio de arquivos para o servidor web. |
-| Evading Tricks               | Previne contra algunas truques de codificação utilizados para tentar escapar dos mecanismos de proteção. |
-| Unwanted Access              | Previne as tentativas de acesso a páginas administrativas ou vulneráveis, bots e ferramentas de scanning de segurança. |
-| Identified Attacks           | Previne vários tipos de ataques comuns e vulnerabilidades conhecidas que certamente deverão ser bloqueados. |
+| SQL Injections               | Prevents attack attempts by injecting SQL code into the application. |
+| Remote File Inclusions (RFI) | Prevents attempts to include files, usually through scripts, on the web server. |
+| Directory Traversal          | Prevents exploitation of vulnerability regarding insufficient sanitization of file name fields provided by users, so that characters representing shortcuts to the parent directory are passed through the file API. |
+| Cross-Site Scripting (XSS)   | Prevents the injection of client-side scripts into pages viewed by your visitors. |
+| File Upload                  | Prevents attempting to upload files to the web server.       |
+| Evading Tricks               | Prevents some coding tricks used to try to escape the protection mechanisms. |
+| Unwanted Access              | Prevents attempts to access administrative or vulnerable pages, bots and security scanning tools. |
+| Identified Attacks           | Prevents several types of common attacks and known vulnerabilities that are certain to be blocked. |
 
-**Sensitivity (Sensibilidade)**
+**Sensitivity**
 
-A sensibilidade define o rigor com o qual o WAF irá considerar uma requisição como uma ameaça:
+Sensitivity defines the rigor with which the WAF will consider a request as a threat:
 
-- **Lowest**: é nível de sensibilidade mais baixo, a requisição será considerada uma ameaça se apresentar indícios muito fortes e receber uma pontuação alta. Essa sensibilidade tem um menor nível de proteção para suas aplicações, mas também evitará o bloqueio de requisições com menor chance de representar ameaças (falsos positivos)
+- **Lowest**: is a lower level of sensitivity, the request will be considered a threat if it presents very strong evidence and receives a high score. This sensitivity has a lower level of protection for your applications, but it will also avoid blocking requests with less chance of representing threats (false positives).
 
-- **Low**: é nível de sensibilidade mais baixo, a requisição será considerada uma ameaça se apresentar indícios muito fortes e receber uma pontuação alta. Essa sensibilidade tem um menor nível de proteção para suas aplicações, mas também evitará o bloqueio de requisições com menor chance de representar ameaças (falsos positivos).
+- **Low**: is a lower level of sensitivity, the request will be considered a threat if it presents very strong evidence and receives a high score. This sensitivity has a lower level of protection for your applications, but it will also avoid blocking requests with less chance of representing threats (false positives).
 
-- **Medium**: é o nível de sensibilidade recomendado pela Azion. A requisição será considerada como ameaça se apresentar indícios suficientes e receber uma pontuação intermediária.
+- **Medium**: is the level of sensitivity recommended by Azion. The request will be considered a threat if it presents sufficient evidence and receives an intermediate score.
 
-- **High**: é o maior nível de proteção para sua aplicação. Ao menor indício de uma ameaça, a requisição poderá ser bloqueada, mesmo quando apresentar uma pontuação relativamente baixa. Esse nível de sensibilidade pode apresentar mais falsos positivos, se a etapa de aprendizagem não tiver cobertura suficiente sobre a variabilidade de cenários e usos de sua aplicação.
+- **High**: is the highest level of protection for your application. At the slightest indication of a threat, the request can be blocked, even when it presents a relatively low score. This level of sensitivity may show more false positives, if the learning stage does not have sufficient coverage on the variability of scenarios and uses of its application.
 
-- **Highest**: é o maior nível de proteção para sua aplicação. Ao mínimo indício de uma ameaça, a requisição poderá ser bloqueada, mesmo quando apresentar uma pontuação muito baixa. Esse nível de sensibilidade pode apresentar muitos falsos positivos, se a etapa de aprendizagem não tiver cobertura suficiente sobre a variabilidade de cenários e usos de sua aplicação.
+- **Highest**: is the highest level of protection for your application. At the slightest indication of a threat, the request can be blocked, even when it has a very low score. This level of sensitivity may show many false positives, if the learning stage does not have sufficient coverage on the variability of scenarios and uses of its application.
 
-**Regras** {#regras}
+**Rules**
 
-O conjunto de regras que incrementam o score de uma requisição. Quanto maior o score, maior a probabilidade da requisição ser considerada um ataque pelo WAF.
+The set of rules which increase the score of a request. The bigger the score, the higher probability of a request to be considered an attack by WAF.
 
-A Azion trabalha com um conjunto extremamente restritivo de regras para assegurar a segurança de sua aplicação. Cada regra é composta pelos campos que seguem.
+Azion works with an extremely restrictive set of rules to ensure the security of your application. Each rule consists of the following fields.
 
 | Campo            | Descrição                                                    |
 | ---------------- | ------------------------------------------------------------ |
-| Rule Id          | Id numérico único de cada regra do WAF.                      |
-| Rule Description | Uma descrição textual do que a regra faz.                    |
-| Match Pattern    | Condição de comparação, string ou regex, que será buscada na requisição. |
-| Path             | Quando especificado, restringe a aplicação da _Match Zone_ somente ao _path_ definido. O _path_ delimita o escopo de atuação da regra. |
-| Match Zones      | Partes ou campos da requisição que serão comparados com o _Match Pattern_. Pode ser:<br> **Path:** o <em>match pattern</em> será comparado com o <em>path</em> da requisição. <br> **Query String:** o _match pattern_ será comparado com a _query string_, também chamada de GET _arguments_. <br> **Request Header:** o _match pattern_ será comparado com os cabeçalhos HTTP da requisição. <br> **Request Body:** o _match pattern_ será comparado com o _body_ de um POST, também chamado de POST _arguments_. <br> **File Name (Multipart Body):** o _match pattern_ será comparado com o nome de arquivos em _multipart POSTs_. <br> **Raw Body:** o _match pattern_ será comparado com o _body_ não interpretado de uma requisição, também chamado de _unparsed body_. |
-| Attack Family    | A(s) família(s) de ataques para as quais a regra incrementa a pontuação. |
+| Rule Id          | Unique numeric ID for each rule of the WAF.                  |
+| Rule Description | A textual description of what the rule does.                 |
+| Match Pattern    | Comparison condition, string or regex, which will be sought in the request. |
+| Path             | When specified, restrict the application of the *Match Zone* to the defined *path* only. *Path* delimits the scope of the rule. |
+| Match Zones      | Parts or fields of the requisition that will be compared to the *Match Pattern*. These can be:<br/>**Path:** *match pattern* will be compared to the *path* of the request.<br/>**Query String:** *match pattern* will be compared to the *query string*, also called GET *arguments*.<br/>**Request Header:** *match pattern* will be compared to the HTTP headers of the request.<br/>**Request Body:** *match pattern* will be compared to the *body* of a POST, also called POST *arguments*.<br/>**File Name (Multipart Body)**: *match pattern* will be compared to the file names in *multipart POSTs*.<br/>**Raw Body:** *match pattern* will be compared to *body* that was not interpreted from a request, also called *unparsed body*. |
+| Attack Family    | The attack family(s) for which the rule increases the score. |
 
 **Whitelist**
 
-É a listagem de comportamentos legítimos de sua aplicação, que não devem incrementar o _score_ das requisições. Pode ser gerada automaticamente durante a etapa de aprendizagem ou inserida manualmente por meio de regras customizadas.
+It is the list of legitimate behaviors of your application, which should not increase the *score* of requests. It can be generated automatically during the learning stage or manually entered through custom rules.
 
-Cada regra de bloqueio possui _match zones_, conforme explicado na seção [Regras](#regras). A _whitelist_ tem o objetivo de desativar determinadas _Match Zones_ de uma regra de bloqueio.
+Each blocking rule has *match zones*, as explained in the Rules section. *Whitelist* aims to disable certain *Match Zones* from a blocking rule.
 
 | Campo                | Descrição                                                    |
 | -------------------- | ------------------------------------------------------------ |
-| Rule Id              | Id numérico único da regra de bloqueio para a qual a whitelist foi gerada. |
-| Rule Description     | Uma descrição textual do que faz a regra de bloqueio para a qual a whitelist foi gerada. |
-| Path                 | Quando especificado, restringe a aplicação da whitelist somente ao path definido. O path delimita o escopo de atuação da whitelist. |
-| Whitelist Match Zone | É a whitelist propriamente dita. Define a parte ou campo da requisição para a qual a regra de bloqueio deve ser desativada. <br><br> **Path:** a rule id não será aplicada ao path da requisição. <br><br> **Query String:** a rule id não será aplicada a query string, também chamada de GET arguments. Pode ser restrito tanto ao nome quanto ao valor dos argumentos. É possível delimitar o escopo da whitelist a um único GET argument utilizando Conditional Query String. <br><br> **Request Header:** a rule id não será aplicada aos cabeçalhos HTTP da requisição. Pode ser restrito tanto ao nome quanto ao valor dos cabeçalhos. É possível delimitar o escopo da whitelist a um único cabeçalho HTTP utilizando Conditional Request Header. <br><br> **Request Body:** a rule id não será aplicada ao body de um POST, também chamado de POST arguments. Pode ser restrito tanto ao nome quanto ao valor dos argumentos. É possível delimitar o escopo da whitelist a um único POST argument utilizando Conditional Request Body. <br><br> **File Name (Multipart Body):** a rule id não será aplicada ao nome de arquivo em um multipart POST. <br><br> **Raw Body:** a rule id não será aplicada ao body não interpretado de uma requisição, também chamado de unparsed body. |
-| Status               | O status de ativação da regra na whitelist.                  |
+| Rule Id              | Unique numeric ID for the blocking rule for which the whitelist was generated. |
+| Rule Description     | A textual description of what makes the blocking rule for which the whitelist was generated. |
+| Path                 | When specified, restrict the application of the *Whitelist* to the defined *path* only. Path delimits the scope of the whitelist. |
+| Whitelist Match Zone | It is the whitelist itself. Defines the part or field of the request for which the blocking rule is to be disabled. <br>**Path:** the rule id will not be applied to the request path.<br/>**Query String:** the rule id will not be applied to the query string, also called GET arguments. It can be restricted to both the name and the value of the arguments. It is possible to limit the scope of the whitelist to a single GET argument using Conditional Query String.<br/>**Request Header:** the rule id will not be applied to the HTTP headers of the request. It can be restricted to both the name and the value of the headers. It is possible to limit the scope of the whitelist to a single HTTP header using Conditional Request Header.<br/>**Request Body:** the rule id will not be applied to the body of a POST, also called POST arguments. It can be restricted to both the name and the value of the arguments. It is possible to limit the scope of the whitelist to a single POST argument using Conditional Request Body.<br/>**File Name** (Multipart Body): the rule id will not be applied to the file name in a multipart POST.<br/>**Raw Body:** the rule id will not be applied to the body that was not interpreted from a request, also called an unparsed body. |
+| Status               | The activation status of the rule in the whitelist.          |
 
 ---
 
-## 2. Documentação de Suporte {#documentacao-de-suporte}
+## 2. Support Documents {#support-documents}
 
-- [Edge Firewall](https://www.azion.com/pt-br/docs/produtos/edge-firewall/)
+- [Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/)
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.]
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/web-application-firewall/index.md) on GitHub.
+
