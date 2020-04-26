@@ -33,7 +33,7 @@ You can also mitigate DDoS attacks on the application layer (layer 7) by contrac
 
 ---
 
-## 3. DDoS Protection - 20Gbps, 50Gbps, and Unlimited {#ddos-protection-20-50-unlimited}
+## 2. DDoS Protection - 20Gbps, 50Gbps, and Unlimited {#ddos-protection-20-50-unlimited}
 
 For a higher level of protection, in addition to all the features of the standard modality, DDoS Protection - 20Gbps, 50Gbps, and Unlimited have extra features for detection against more sophisticated and large-scale attacks and is integrated with Azion Edge Firewall. In addition, through the Infrastructure Protection add-on, you can protect your entire infrastructure (ASN), and through the DNS Protection add-on, you can protect your DNS service.
 
@@ -91,7 +91,7 @@ If the use of any of your Azion services expands in response to a DDoS attack, A
 
 ---
 
-## 4. Modalities Comparison {#modalities_comparison}
+## 3. Modalities Comparison {#modalities_comparison}
 
 | Functionalities                                              | DDoS Protection - 5Gbps | DDoS Protection - 20Gbps, 50Gbps, and Unlimited              |
 | ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ |
