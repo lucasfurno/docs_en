@@ -83,7 +83,7 @@ Web Application Firewall (WAF) protects your applications against threats such a
 - [Edge Firewall Rules Engine](https://www.azion.com/en/documentation/products/edge-firewall/rules-engine/)
 - [Network Lists](https://www.azion.com/en/documentation/products/edge-firewall/network-lists/)
 - [WAF Rule Sets](https://www.azion.com/en/documentation/products/edge-firewall/waf-rule-sets/)
-- [Access Permissions](https://www.azion.com/en/documentation/products/edge-firewall/acess-permissions/)
+- [Access Permissions](https://www.azion.com/en/documentation/products/edge-firewall/access-permissions/)
 
 ---
 
