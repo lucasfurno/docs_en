@@ -51,7 +51,7 @@ Determines the set of conditions that need to be met for the execution of Behavi
 A condição para execução de uma regra deve ser a comparação de uma variável com um argumento. Os operadores de comparação são:
 
 | Operator | Description | Argument |
-|----------|----------=--|----------|
+|----------|-------------|----------|
 | is equal | The value of the variable is equal to the argument, compared character by character. | string |
 | is not equal | The value of the variable is not exactly the same as the argument. | string |
 | starts with | The value of the variable starts with the argument. | string |
@@ -179,4 +179,8 @@ For your WAF to effectively take action it is necessary to associate it with a B
 
 > Remember: WAF only blocks threats if it is configured in Blocking Mode.
 
+---
+
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/rules-engine/index.md) on GitHub.

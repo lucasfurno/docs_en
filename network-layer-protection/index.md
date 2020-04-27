@@ -44,3 +44,5 @@ To ensure you are protected from attacks targeting your origin, we suggest you u
 ---
 
 Didn’t find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/network-layer-protection/index.md) on GitHub.

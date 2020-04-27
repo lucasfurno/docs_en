@@ -6,7 +6,7 @@ Edge Firewall uses the Real-Time Manager per-team permissions system. This way, 
 
 ---
 
-## 1. Hands-on. Configuring access permissions for Azion Edge Firewall {# hands-on}
+## 1. Hands-on. Configuring access permissions for Azion Edge Firewall {#hands-on}
 
 Each user in Real-Time Manager can be associated with teams and, for each team, you can assign access permissions:
 
@@ -32,3 +32,5 @@ To configure Edge Firewall permissions:
 ---
 
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+
+[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/acess-permissions/index.md) on GitHub.
