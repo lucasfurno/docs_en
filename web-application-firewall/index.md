@@ -1,3 +1,4 @@
+
 # Web Application Firewall
 
 Web Application Firewall protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
@@ -95,7 +96,6 @@ Each blocking rule has *match zones*, as explained in the Rules section. *Whitel
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
 
 [Edit this page](https://github.com/aziontech/docs_en/edit/master/web-application-firewall/index.md) on GitHub.
-

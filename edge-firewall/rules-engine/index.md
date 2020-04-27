@@ -1,3 +1,4 @@
+
 # Rules Engine for Edge Firewall
 
 The Rules Engine is designed for you to be able to implement your security logic at the edge. Based on programmable criteria, you choose what you want to do: block, ignore the request, limit the access rate, apply a WAF policy, perform an edge function with your own security code or simply monitor traffic to identify threats.
@@ -15,6 +16,7 @@ The Rules Engine is designed for you to be able to implement your security logic
 Each request from your users to your application is processed first by Edge Firewall.
 
 You can define a set of security rules in Edge Firewall. The rules are composed by criteria which represent the conditions for the execution of the rules, and by behaviors which represent the actions that need to be executed.
+
 
 The processing of the rules is sequential and you can use as criteria a powerful set of variables and comparison operators. If the conditions are met, the behaviors of each rule are executed until all the rules are processed or a rule with a finalizing behavior is found in the path (*Deny* or *Drop*).
 
@@ -154,6 +156,7 @@ Create a configuration with Web Application Firewall business rules through the 
 2. Click on New Rule to add a new rule.
 3. Fill the field which will appear, as shown below:
 
+
 **Rule Name (Name of your rule)**
 
 Give your Rule Engine a descriptive name. e.g.: Rate Limiting Googlebot
@@ -229,4 +232,3 @@ Remember: WAF only blocks threats if it is configured in Blocking Mode.
 Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
 
 [Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-firewall/rules-engine/index.md) on GitHub.
-

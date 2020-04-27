@@ -48,8 +48,6 @@ $time-iso8601 $azion-client-id $azion-virtualhost-id $azion-configuration-id $az
 
 Based on this information, you can adjust the sensitivity of the WAF *rule* set, until no more false positives occur. You can also ask Azion to generate a *whitelist* for your application.
 
-
-
 ---
 
 ## 3. **Approve the desired whitelist** {#approve-whitelist}

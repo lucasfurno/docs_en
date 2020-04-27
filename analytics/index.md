@@ -1,4 +1,4 @@
-# Analytics
+#  Real-Time **Metrics**
 
 To use the Analytics you have to access [Real-Time Manager](https://manager.azion.com/) and click on Control your traffic.
 
