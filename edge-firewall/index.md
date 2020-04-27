@@ -18,9 +18,10 @@ With this you can:
 
 > 1. [How does it work?](#how-does-it-work)
 > 2. [Edge Firewall Modules](#edge-firewall-modules)
-> 5. [Support Documents](#support-documents)
+> 3. [Support Documents](#support-documents)
 
 ---
+
 ## 1. **How does it work?**? {#how-does-it-work}
 
 When you use Azion as your edge computing platform, you can set up security settings in Edge Firewall to protect your applications.
@@ -38,6 +39,7 @@ Each rule is made up of Criteria and Behaviors. The Behaviors are only executed 
 Which criteria and behaviors are available in Edge Firewall, depends on which modules have been activated in the Rule Set.
 
 ---
+
 ## 2. Edge Firewall Modules {#edge-firewall-modules}
 
 The Azion Edge Firewall has the following modules, so that you can build high performance, scalable, safe edge applications, much more simply and without heavy maintenance.
@@ -47,6 +49,7 @@ The Azion Edge Firewall has the following modules, so that you can build high pe
 The DDoS Protection module secures your content and applications against *Distributed Denial of Service* (*DDoS*) type attacks. By using a modern approach to detect and mitigate attacks on the network, transport and application layers, we reduce the downtime without affecting your service’s performance.
 
 ---
+
 ### Edge Functions
 
 Edge Functions are components of Azion’s Edge Computing Platform, which enable serverless functions to be added to your applications, relieving your infrastructure, performing functions closer to the user, ensuring the necessary agility and scalability to meet your business objectives.
@@ -56,6 +59,7 @@ You benefit from having a microservice-based architecture, which easily allows f
 You can still use *third-party* security solutions to protect sensitive data and applications against attacks at the edge of the network.
 
 ---
+
 ### [Network Layer Protection](https://www.azion.com/pt-br/documentacao/produtos/network-layer-protection/)
 
 This module gives you the option to create filters for IP/CIDR addresses, ASNs or countries (*geolocation*), by configuring Network Lists and setting up business rules to check criteria and block or release, as needed, which are specified in the Rules Engine of Edge Firewall.
@@ -67,17 +71,20 @@ Network Layer Protection works within layers 3 and 4 of the OSI model and it is 
 With this Azion Edge Firewall add-on you can set up a security perimeter around your origin infrastructure, whether that be in the cloud, hosted or your own datacenter. The service enables your origin to be able to restrict access to specific IP addresses from our network and block any other access to your origin.
 
 ---
+
 ### [Web Application Firewall](https://www.azion.com/pt-br/documentacao/produtos/web-application-firewall/)
 
 Web Application Firewall (WAF) protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and many others. The WAF analyses HTTP and HTTPS requests, detects and blocks threats before they can reach your infrastructure and affect your applications performance.
 
 ---
+
 ## 3. Support Documentation {#support-documentation}
 
 - [Edge Firewall Rules Engine](https://www.azion.com/en/documentation/products/edge-firewall/rules-engine/)
 - [Network Lists](https://www.azion.com/en/documentation/products/edge-firewall/network-lists/)
 - [WAF Rule Sets](https://www.azion.com/en/documentation/products/edge-firewall/waf-rule-sets/)
 - [Access Permissions](https://www.azion.com/en/documentation/products/edge-firewall/acess-permissions/)
+
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
