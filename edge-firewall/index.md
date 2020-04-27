@@ -22,7 +22,7 @@ With this you can:
 
 ---
 
-## 1. **How does it work?**? {#how-does-it-work}
+## 1. How does it work? {#how-does-it-work}
 
 When you use Azion as your edge computing platform, you can set up security settings in Edge Firewall to protect your applications.
 
