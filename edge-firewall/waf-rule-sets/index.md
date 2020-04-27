@@ -79,4 +79,4 @@ A partir desse momento, sua aplicação estará protegida e as ameaças detectad
 
 Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/waf-rule-sets/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/blob/master/edge-firewall/waf-rule-sets/index.md) on GitHub.
