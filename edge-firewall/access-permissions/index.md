@@ -33,4 +33,6 @@ To configure Edge Firewall permissions:
 
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
 
+
 [Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/acess-permissions/index.md) on GitHub.
+
