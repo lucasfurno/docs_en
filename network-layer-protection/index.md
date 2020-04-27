@@ -7,7 +7,7 @@ Azion's Network Layer Protection allows you to create watch lists based on the n
 > 1. *[How does it work?](#how-does-it-work)*
 > 2. *[Network Lists](#network-lists)*
 > 3. *[Origin Shield](#origin-shield)*
-> 5. *[Documentação de Suporte](#documentacao-de-suporte)*
+> 4. *[Support Documents](#support-documents)*
 
 ---
 
