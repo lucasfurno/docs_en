@@ -44,7 +44,7 @@ Which criteria and behaviors are available in Edge Firewall, depends on which mo
 
 The Azion Edge Firewall has the following modules, so that you can build high performance, scalable, safe edge applications, much more simply and without heavy maintenance.
 
-### [DDoS Protection](https://www.azion.com/pt-br/documentacao/produtos/ddos-protection/) 
+### [DDoS Protection](https://www.azion.com/en/documentation/products/ddos-protection/) 
 
 The DDoS Protection module secures your content and applications against *Distributed Denial of Service* (*DDoS*) type attacks. By using a modern approach to detect and mitigate attacks on the network, transport and application layers, we reduce the downtime without affecting your service’s performance.
 
@@ -60,7 +60,7 @@ You can still use *third-party* security solutions to protect sensitive data and
 
 ---
 
-### [Network Layer Protection](https://www.azion.com/pt-br/documentacao/produtos/network-layer-protection/)
+### [Network Layer Protection](https://www.azion.com/en/documentation/products/network-layer-protection/)
 
 This module gives you the option to create filters for IP/CIDR addresses, ASNs or countries (*geolocation*), by configuring Network Lists and setting up business rules to check criteria and block or release, as needed, which are specified in the Rules Engine of Edge Firewall.
 
@@ -72,7 +72,7 @@ With this Azion Edge Firewall add-on you can set up a security perimeter around 
 
 ---
 
-### [Web Application Firewall](https://www.azion.com/pt-br/documentacao/produtos/web-application-firewall/)
+### [Web Application Firewall](https://www.azion.com/en/documentation/products/web-application-firewall/)
 
 Web Application Firewall (WAF) protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and many others. The WAF analyses HTTP and HTTPS requests, detects and blocks threats before they can reach your infrastructure and affect your applications performance.
 
