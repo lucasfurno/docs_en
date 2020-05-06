@@ -9,6 +9,8 @@ This page lists the latest changes to Azion products and services. Here you will
 *  Azion Edge Firewall's General Availability.
 * Bug fix in the Intelligent DNS product interface.
 * Bug fix in the Real-Time Metrics product interface.
+* Bug Fix in the Edge Application product at Cache error pages.
+* Integration with Radware Bot Manager.
 
 ---
 
