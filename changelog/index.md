@@ -4,6 +4,16 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**apr/2020**
+
+*  Azion Edge Firewall's General Availability.
+* Bug fix in the Intelligent DNS product interface.
+* Bug fix in the Real-Time Metrics product interface.
+* Bug Fix in the Edge Application product at Cache error pages.
+* Integration with Radware Bot Manager.
+
+---
+
 **mar/2020**
 
 * Making  [API]({% tl documentation_products_intelligent_dns %}) available for managing Zones and Records for the Intelligent DNS product.
@@ -85,7 +95,6 @@ This page lists the latest changes to Azion products and services. Here you will
 * Edge Caching add-on L2 Caching available in early access for Customers with Cloud Storage.
 * Improvements in the Server Fail response in the Intelligent DNS product, for when the server is unable to respond.
 * Support to the Wildcard in the registration of Records in the Intelligent DNS product.
-
 
 ---
 
