@@ -1,6 +1,6 @@
 # Conduct A/B testing using Edge Computing’s **logic systems**
 
-[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/ddos-protection/index.md)
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/ab-testing/index.md)
 
 A/B Testing is a widely used tool to assist decision-making on a service, with respect to different versions of applications, interfaces or locations. You can use Edge Computing’s logic systems to set up testing, which will give you a range of benefits, such as using more than one variant of the test on the same URL, while maintaining your SEO ranking.
 
