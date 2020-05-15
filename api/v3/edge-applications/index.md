@@ -355,5 +355,3 @@ Content-Type: application/json
 ---
 
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/api/v3/edge-applications/index.md) on GitHub.
