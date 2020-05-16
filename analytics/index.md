@@ -179,8 +179,6 @@ For customers who have the Web Application Firewall product, there is a specific
 
 **Other Threats:** This graph shows the average number of attacks blocked by WAF and which are not separated by the attack classifications above.
 
-
-
 ## 9. Live Streaming {#connections}
 
 This tab is available when the *Live Streaming* solution is selected. It presents information regarding the number of users connected to your company's streams.
