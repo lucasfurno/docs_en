@@ -1,6 +1,6 @@
 # API **V2**
 
-[Edit on GitHub](https://github.com/aziontech/docs_en/edit/master/api/v2/index.md)
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v2/index.md)
 
 The Azion API is a RESTful API, based on HTTPS requests, that allows you to integrate your systems with our platform, simply, quickly and securely.
 This technical guidance is aimed at clients and developers. Here you can find instructions on how the API works and what functionality is available. This guidance is being constantly updated and we recommend that you check it before doing any development on your application, even if you are already familiar with our API.
