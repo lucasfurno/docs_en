@@ -1,82 +1,84 @@
-# WAF Rule **Sets**
+# WAF Rule Sets
 
-O WAF Rule Set protege as suas aplicações contra ameaças como SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) e muito mais. O WAF analisa as requisições HTTP e HTTPS, detecta e bloqueia atividades maliciosas antes que elas alcancem a sua infraestrutura, sem impactar na performance de suas aplicações.
+The WAF Rule Set protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
 
-> 1. [Hands-on](#hands-on)
-> 2. [Monitorando a detecção de ameaças](#associe-a-rule-set-criada-com-as-aplicacoes-que-deseja-monitorar)
-> 3. [Aprove a whitelist desejada](#aprove-a-whitelist-desejada)
-> 4. [Ative o bloqueio de ameaças na rule set](#ative-o-bloqueio-de-ameacas-na-rule-set)
-
----
-
-## 1. Hands-on. Criando uma WAF Rule Set para suas aplicações {#hands-on}
-
-WAF Rule Set é o conjunto de regras que protege contra os mais variados tipos de ataque. Nela estão definidas as proteções que você deseja ativar, o nível de sensibilidade da detecção e a *whitelist*.
-
-Para criar uma *rule set*:
-
-1. Acesse o [Real-Time Manager](https://manager.azion.com/login/?next=/) e entre no menu *Edge Services* > WAF.
-2. Adicione uma nova *rule set* clicando no botão *Add*.
-3. Na aba Main Settings, ative as proteções e o nível de sensibilidade desejados.
-4. Salve sua *rule set* com um nome sugestivo. Você vai precisar dele para realizar posteriormente a associação da *rule set* por meio do Rules Engine.
-
-Recomendamos que você ative a regra em Counting Mode no primeiro momento, para acompanhar a amostra de ameaças detectadas na etapa de aprendizagem, antes de efetivamente bloquear as requisições. Dessa forma você poderá também ajustar a sensibilidade da detecção, de acordo com a sua aplicação.
-
-Durante o Counting Mode é recomendado que você deixe todas as proteções ativadas para que possa monitorar as ameaças detectadas pelo WAF.
-
-Se forem detectados falsos positivos, algumas regras poderão ser incluídas na *whitelist* pelo Suporte da Azion, sem a necessidade de desativar a proteção completa para uma família de ameaças. Entre em contato se desejar avaliar a necessidade de incluir regras em *whitelist*, antes de desabilitar a sua proteção.
-
-Por fim, a *rule set* deve estar ativa para que o WAF analise as suas requisições. O checkbox Active serve para permitir que você habilite e desabilite o WAF rapidamente para todos os *paths* que estiverem associados à rule set.
+> 1. *[Hands-on](#hands-on)*
+> 3. *[Monitoring threat detection](#monitoring-threat-detection)*
+> 4. *[Approve the desired whitelist](#approve-whitelist)*
+> 5. *[Enable threat blocking in the rule set](#enable-threat-blocking)*
 
 ---
 
-## 2. Monitorando a detecção de ameaças {#associe-a-rule-set-criada-com-as-aplicacoes-que-deseja-monitorar}
+## 1. Hands-on. **Creating a WAF Rule Set for your applications** {#hands-on}
 
-Deixe a rule set do WAF em modo Counting Mode pelo tempo que julgar necessário para que a maior parte das funcionalidades de sua aplicação seja coberta. Você deve acompanhar os gráficos da aba WAF pelo Real-Time Metrics ou os logs do WAF por meio dos produtos Real-Time Events e Data Streaming.
+WAF Rule Set is the set of rules that protects against the most varied types of attacks. It defines the protections you want to activate, the detection sensitivity level and the *whitelist*.
 
-No Real-Time Metrics, o primeiro gráfico da aba WAF (Threats vs Requests) apresenta três séries temporais:
+To create a *rule set*:
 
-* Regular Requests: todas as requisições HTTP e HTTPS analisadas pelo WAF e consideradas seguras.
-* Threats: o volume de ameaças detectadas pelo WAF e contabilizadas, quando em modo *Counting*. Essas ameaças não estão sendo bloqueadas nesse momento.
-* Threats Blocked: ameaças efetivamente bloqueadas pelo WAF. Para começar a bloquear as ameaças encontradas, a rule set tem que estar em *Blocking Mode*.
+1.  Access [Real-Time Manager](https://manager.azion.com/) and enter the *Edge Services> WAF* menu.
+2.  Add a new *rule set* by clicking the *Add* button.
+3.  In the Main Settings tab, activate the desired protections and sensitivity level.
+4.  Save your *rule set* with a descriptive name. You will need it to perform the *rule set* association later through the Rules Engine.
 
-Se você tiveir também o serviço Data Streaming, é possível acompanhar informações mais detalhadas sobre IP, data e horário de acesso, status code, família de ataque detectada e modo de atuação configurado.
+We recommend that you activate the rule in _Counting Mode _ at the first moment, to follow the sample of threats detected in the learning stage, before effectively blocking requests. That way you can also adjust the detection sensitivity, according to your application.
+
+During Counting Mode, it is recommended that you leave all protections enabled so that you can monitor the threats detected by WAF.
+
+If false positives are detected, some rules can be added to the *whitelist* by Azion Support, without the need to disable the full protection for a family of threats. Contact us if you wish to assess the need to include *whitelist* rules before disabling your protection.
+
+Finally, the *rule set* must be active for WAF to analyze your requests. The Active checkbox serves to allow you to enable and disable WAF quickly for all *paths* that are associated with the rule set.
+
+---
+
+## 2. **Monitoring threat detection** {#monitoring-threat-detection}
+
+Leave the WAF rule set in **Counting Mode** for as long as you deem necessary so that most of your application's functionality is covered. You should follow the graphics on the WAF tab by Real-Time Metrics or the WAF logs through the **Real-Time Events** and **Data Streaming** products.
+
+In Real-Time Metrics, the first chart on the WAF tab (Threats vs Requests) presents three time series:
+
+*   **Regular Requests:** all HTTP and HTTPS requests analyzed by WAF and are considered secure.
+*   **Threats:** the volume of threats detected by WAF and accounted for, when in *Counting* mode. These threats are not being blocked at the moment.
+*   **Threats Blocked:** threats effectively blocked by WAF. To start blocking the threats found, the rule set must be in *Blocking Mode*.
+
+If you also have the **Data Streaming** service, you can track more detailed information about IP, date and time of access, status code, detected attack family and the configured mode of action.
 
 ~~~
 $time-iso8601 $azion-client-id $azion-virtualhost-id $azion-configuration-id $azion-solution $azion-solution-id $host $conn-request-time $req-method $resp-status $req-uri $waf-threat-family $waf-threat-action $client-geoip-country-name $client-geoip-region-name $client-addr $client-port $req-header(User-Agent) $req-header(Referer) 2017-01-04T17:00:19+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.129 GET 200 /request-uri?key=value $XSS $LEARNING-BLOCK Brazil Sao Paulo 1.2.3.4 61511 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:19+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.025 POST 200 /request-uri $SQL $LEARNING-BLOCK Brazil Santa Catarina 2.3.4.5 61513 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:40+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.026 GET 301 /request-uri?key=value $RFI $LEARNING-BLOCK Brazil Rio de Janeiro 5.6.7.8 26102 Mozilla/5.0 (Linux; Android 5.1.1; SM-G800H Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:41+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.391 POST 200 /request-uri $UWA $LEARNING-BLOCK Brazil Rio Grande do Sul 9.10.11.12 26102 Mozilla/5.0 (Linux; Android 5.1.1; SM-G800H Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36 https://www.yoursite.com/referrer
 ~~~
 
-Com base nessas informações, você pode ajustar a sensibilidade da *rule set* do WAF até que não ocorram mais falsos positivos - ou mesmo solicitar à Azion a geração de *whitelist* para sua aplicação.
+Based on this information, you can adjust the sensitivity of the WAF *rule* set, until no more false positives occur. You can also ask Azion to generate a *whitelist* for your application.
 
 ---
 
-## 3. Aprove a whitelist desejada {#aprove-a-whitelist-desejada}
+## 3. **Approve the desired whitelist** {#approve-whitelist}
 
-Solicite ao Suporte da Azion a geração da proposta de whitelist, baseada na etapa de aprendizagem de sua aplicação.
+Ask Azion Support to generate the whitelist proposal, based on the learning stage of your application.
 
-A proposta de whitelist gerada pela Azion será inserida na plataforma e estará disponível para sua aprovação:
+The whitelist proposal generated by Azion will be inserted in the platform and will be available for your approval:
 
-1. Acesse o menu Cloud Security > WAF, ou acesse o atalho “Manage WAF” na tela inicial.
-2. Edite a *rule set* para a qual deseja avaliar a *whitelist*.
-3. Na aba *Whitelist*, habilite todas as regras que desejar aprovar.
-4. Salve sua *rule set*.
-
----
-
-## 4. Ative o bloqueio de ameaças na rule set {#ative-o-bloqueio-de-ameacas-na-rule-set}
-
-Após monitorar o comportamento de sua aplicação e as ameaças detectadas após a etapa de aprendizagem e aprovação da *whitelist*, você deve alterar a *rule set* para Blocking:
-
-1. Acesse o menu Edge Services > WAF.
-2. Edite a *rule set* do WAF desejada.
-3. Altere o modo de Counting para Blocking.
-
-A partir desse momento, sua aplicação estará protegida e as ameaças detectadas serão efetivamente bloqueadas.
-
-> Lembre-se: o WAF só bloqueia as ameaças se estiver configurado em Blocking Mode.
+1.  Access the Edge Services > WAF menu, or access the “Manage WAF” shortcut on the home screen.
+2.  Edit the *rule set* you want to use to evaluate the *whitelist*.
+3.  In the *Whitelist* tab, enable any rules you wish to approve.
+4.  Save your *rule set*.
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+## 4. **Activate threat blocking in the rule set** {#enable-threat-blocking}
+
+After monitoring the behavior of your application and the threats detected after the learning period and approval of the *whitelist*, you must change the *rule set* to Blocking:
+
+1.  Access the **Edge Services** menu > **WAF**.
+2.  Edit the desired **WAF *rule set***.
+3.  Change the mode from **Counting** to Blocking.
+
+From that moment on, your application will be protected and the detected threats will be effectively blocked.
+
+~~~
+Remember: WAF only blocks threats if it is configured in Blocking Mode.
+~~~
+
+---
+
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
 [Edit this page](https://github.com/aziontech/docs_en/blob/master/edge-firewall/waf-rule-sets/index.md) on GitHub.

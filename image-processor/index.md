@@ -1,148 +1,145 @@
-# Image **Optimization**
+# Image **Processor**
 
-O Azion Image Optimization automatiza seu workflow de tratamento de imagens.
+The Azion Image Processor automates your workflow for processing images.
 
-A otimização de suas imagens reduz o tamanho das mesmas, sem perda perceptível de qualidade visual, o que reduz o tempo transferência de seu conteúdo e melhora a experiência de usuário. Isso aumenta a fluidez de suas páginas e a velocidade de navegação, sem você precisar fazer praticamente nada.
+Optimizing your images reduces their size, but without any perceivable loss of visual quality. This reduces their transfer time and improves the user’s experience. This makes your pages load better and speeds up navigation, without you needing to do practically anything.
 
-Você automatiza seu workflow de tratamento de imagens, utilizando as funções para redimensionar, recortar ou aplicar filtros em suas imagens, sem a necessidade de gerenciar dezenas de versões e recortes de cada imagem em seu acervo.
+You automate your workflow for processing images, using the functions to resize or edit your images or apply filters, without needing to manage dozens of versions and edits of each image in your library.
 
-> 1. [Instruções de uso](#instrucoes-de-uso)
-> 2. [Redimensionar a imagem com auto-crop](#redimensionar-a-imagem-com-auto-crop)
-> 3. [Redimensionar a imagem com fit-in](#redimensionar-a-imagem-com-fit-in)
-> 4. [Recortar a imagem](#recortar-a-imagem)
-> 5. [Alterar qualidade da imagem](#alterar-qualidade-da-imagem)
-> 6. [Adicionar marca d’água na imagem](#adicionar-marca-dagua-na-imagem)
-> 7. [Converter o formato de uma imagem](#converter-o-formato-de-uma-imagem)
-> 8. [Preencher imagem](#preencher-imagem)
-> 9. [Combinar filtros](#combinar-filtros)
-> 10. [Como o Image Optimization é tarifado](#como-o-image-optimization-e-tarifado)
-
+> 1. [Instructions](#instructions)
+> 2. [Resize the image with auto-crop](#resize-with-auto-crop)
+> 3. [Resize the image with fit-in](#resize-with-fit-in)
+> 4. [Crop the image](#crop)
+> 5. [Change image quality](#change-image-quality)
+> 6. [Add a watermark to the image](#add-watermark)
+> 7. [Convert image to another format](#convert-image-format)
+> 8. [Fill image](#fill-image)
+> 9. [Combine Filters](#combine-filters)
 
 ---
 
-## 1. Instruções de uso {#instrucoes-de-uso}
+## 1. Instructions {#instructions}
 
-Desenvolvemos este produto para que você possa otimizar, redimensionar, recortar e aplicar filtros em suas imagens. Assim, proporcionamos mais velocidade e dinamismo à experiência de seu usuário.
+We developed this product for people to be able to optimize, resize, crop and apply filters to their images, with the aim of making the user experience faster and more dynamic.
 
-Os formatos de imagem suportados são JPEG, GIF, PNG, BMP, ICO e WEBP (para [browsers compatíveis](https://caniuse.com/#search=webp)).
+It supports the following formats: JPEG, GIF, PNG, BMP, ICO and WEBP (for [compatible browsers](https://caniuse.com/%23search=webp))
 
-**Como configurar o Azion Image Optimization**
+**How to configure Azion Image Processor**
 
-Para configurar o Azion Image Optimization, siga as seguintes etapas, consultando as demais documentações técnicas, sempre que necessário:
+To configure Azion Image Processor, take the following steps and, when necessary, check the technical manuals:
 
-**Etapa 1. Crie ou edite a configuração de Content Delivery para distribuição de suas imagens**
+**Step 1: Set up or edit an Edge Application setting for sending your images.**
 
-1.  Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Content Delivery
-2.  Se você já tiver criado uma configuração de Content Delivery para distribuição de suas imagens, pule diretamente para a Etapa 2
-3.  Caso contrário, crie uma configuração de Content Delivery para distribuição de suas imagens, seguindo a documentação de [Primeiros Passos]({% tl documentation_first_steps %}#crie-uma-nova-configuracao)
+1.  Open up [Real-Time Manager](https://manager.azion.com/) and go into the Edge Services > Edge Application menu.
+2.  If you have already set up an Edge Application setting for sending your images, jump straight to step 2.
+3.  If not, set up an Edge Application setting for sending your images, following the [First Steps]({% tl documentation_first_steps %}#crie-uma-nova-configuracao) guide.
 
-**Etapa 2. Habilite Advanced Cache Key para suas imagens**
+**Step 2: Set up Advanced Cache Key for your images**
 
-> Para utilizar as funcionalidades de redimensionamento, recorte ou aplicação de filtros em imagens, você precisará configurar a variação de conteúdo por Query String
+> To make use of the resize and crop functions and apply filters to your images, you need to configure some of the various content for Query String
 
-1.  Edite a configuração de Content Delivery responsável pela distribuição de suas imagens, criada na Etapa 1
-2.  Na aba Cache Settings, adicione ou edite uma política de cache customizada para suas imagens
-3.  Atribua um nome sugestivo para sua política, você irá precisar dele na Etapa 3
-4.  Na seção Expiration Settings, configure a política de expiração de suas imagens no cache, seguindo o que você aprendeu na documentação de Primeiros Passos; para imagens, a Azion recomenda que você utilize tempos mais longos como maximum TTL para CDN Cache, como por exemplo, 7.776.000 segundos (3 meses).
-5.  Na seção Advanced Cache Key, selecione uma das opções:
-    *   _Content varies by some Query String fields (Whitelist):_ se você desejar listar todos os campos da Query String que diferenciam suas imagens. O Image Optimization utiliza o campo _ims_, que deverá ser incluído na listagem com os demais campos necessários por sua aplicação de gestão de imagens. Essa opção requer o produto Application Acceleration.
-    *   _Content varies by Query String, except for some fields (Blacklist):_ se você desejar listar apenas quais campos da Query String devem ser ignorados ao diferenciar os objetos em cache. Nesse caso, garanta que o campo _ims_ seja removido da listagem. Essa opção requer o produto Application Acceleration.
-    *   _Content varies by all Query String fields:_ se você não sabe ou não se sente seguro para listar os campos da Query String que são responsáveis pela variação do seu conteúdo em cache, ou se não possui o produto Application Acceleration.
-6.  Nas demais seções, edite as configurações de acordo com sua necessidade e salve sua configuração de cache.
+1.  Open the Edge Application setting that is responsible for sending your images, created in Step 1.
+2.  In the Cache Settings tab, add or edit a cache policy customized for your images.
+3.  Give your policy a suitable name, you will need to be able to identify it in Step 3.
+4.  In the Expiration Settings section, configure the cache expiry policy for your images, follow the instructions you learned from the First Steps guidance; for images, Azion recommends that you choose times that are longer than the maximum TTL for the CDN Cache, for example, 7,776,000 seconds (3 months).
+5.  In the Advanced Cache Key section, choose one of the following options:
+    *   *Content varies by some Query String fields (Whitelist):* if you want to list all the fields in the Query String that will identify your images. Image Processor uses the *ims* field, so this has to be included in the list as one of the required fields for your image manager application. For this you need the **Application Acceleration** product.
+    *   *Content varies by Query String, except for some fields (Blacklist):* if you only want to list those fields in the Query String that should be ignored to identify the objects in your cache. In this case, it guarantees that the *ims* field will be removed from the list. For this you need the **Application Acceleration** product.
+    *   *Content varies by all Query String fields:* if you don’t know or aren’t sure about which fields to list in the Query String because you aren’t responsible for all the content in the cache or do not have the Application Acceleration product.
+6.  In the other sections, edit the settings as required and save your cache setting.
 
+**Step 3: Set up Image Processor**
 
-**Etapa 3. Habilite o Image Optimization**
+1.  In the Rules Engine tab, add or edit a customized rule for one or more image paths.
+2.  In the Path field, enter the path for your images or use the regex recommended by Azion *\.(jpg|jpeg|gif|png|bmp)$*
+3.  Choose the logical operator **Matches**, if you used the regular expression in the Path field.
+4.  In the Behavior field **Set Cache Settings**, select the preset used in Stage 2.
+5.  Also select **Image Processor** in the Behavior field.
+6.  In the other sections, use whatever settings are best for you and save the rule.
 
-1.  Na aba Rules Engine, adicione ou edite uma regra customizada para um ou mais paths de imagens
-2.  No campo Path, digite o caminho para suas imagens ou use a regex recomendada pela Azion _\.(jpg|jpeg|gif|png|bmp)$_
-3.  Marque o checkbox Regex, se estiver utilizando expressão regular no campo Path
-4.  No campo Behavior, selecione Image Optimization
-5.  No campo Cache Settings, selecione o preset criado na Etapa 2
-6.  Em todas as demais seções, utilize as configurações adequadas para sua necessidade e salve a regra.
+From this point on, images in the configured *path* will automatically be optimized. As well as this, Image Processor will detect whether the browser is compatible with the WEBP format and, where possible, it will try to automatically convert the format of the image, giving you yet another benefit. BMP images will also be automatically converted to JPEG or WEBP, depending on the browser’s compatibility.
 
-A partir de agora, as imagens do path configurado serão automaticamente otimizadas. Além disso, o Image Optimization detecta o compatibilidade do browser com o formato WEBP e, quando possível, converte o formato da imagem automaticamente, trazendo ainda mais ganhos para você. Imagens BMP também serão automaticamente convertidas para JPEG ou WEBP, dependendo da compatibilidade do browser.
+**Real-Time Metrics** gives you a graph showing the *Bandwidth Saving* achieved, enabling you to monitor the savings you make from the optimization.
 
-Se você tiver contratado o [Azion Analytics Premium]({% tl documentation_products_analytics %}), acompanhe o gráfico de _Bandwidth Saving_ para monitorar a economia de tráfego resultante da otimização.
-
-Conheça, a seguir, as demais funcionalidades do produto, configuradas como argumentos na Query String da URL da imagem.
+See below the other features of the product, configured as arguments in the Query String of the image’s URL.
 
 ---
 
-## 2. Redimensionar a imagem com auto-crop {#redimensionar-a-imagem-com-auto-crop}
+## 2. **Resize the image with auto-crop** {#resize-with-auto-crop}
 
-Você pode utilizar o Image Optimization da Azion para redimensionar suas imagens, sem a necessidade de ter que gerenciar múltiplos arquivos em seu acervo de imagens.
+You can use Azion’s Image Processor to resize your images, without needing to manage multiple files in your image library.
 
-A partir de uma imagem original de seu acervo, o Image Optimization poderá criar imagens derivadas, sob demanda, do tamanho que melhor se adapte à sua página.
+Once an image is in your library, Image Processor can create images derived from it, as required, in the size that best suits your page.
 
-Você especifica as dimensões desejadas como argumentos na Query String, no formato:
+You specify the required size as arguments in the Query String, in the format:
 
 ~~~
 ims=WidthxHeight
 ~~~
 
-*   Width: largura, em pixels, para a imagem derivada
-*   Height: altura, em pixels, para a imagem derivada
+*   Width: in pixels for the derived image
+*   Height: in pixels for the derived image
 
 
-Para redimensionar a imagem preservando o _aspect ratio_, omita um dos dois valores, o qual será calculado automaticamente. Utilize _Widthx_ para especificar apenas a largura e deixar que a altura seja calculada proporcionalmente, ou _xHeight_, para especificar apenas a altura e deixar que a largura seja calculada automaticamente. 
+To preserve the *aspect ratio* when you resize an image, just leave out one of the two dimensions, and it will be calculated automatically. Use *Widthx* to only specify the width and the height will be calculated proportionately, or *xHeight*, to specify just the height and the width will be automatically calculated.
 
 
-Você também pode especificar ambas as dimensões, _Width_ e _Height_, para recortar (_auto-crop_) a imagem, nas dimensões desejadas. O recorte é centralizado e pode ocorrer tanto na vertical quanto na horizontal, dependendo do melhor encaixe das dimensões originais nas dimensões especificadas.
+You can also specify both dimensions, *Width* and *Height* and crop (*auto-crop*) the image to the required size. The image is cropped centrally and both horizontal and vertical sections may be adjusted, depending on the best fit with the specified dimensions.
 
+Use the value *orig* for any of the image dimensions, if you wish to keep them at the original size.
 
-Utilize o valor _orig_ em qualquer das dimensões da imagem, se desejar manter a dimensão original.
-**Exemplos de aplicação
+**Sample results**
 
-_http://yourdomain.com/image.jpg?ims=880x_ (880 pixels de largura, altura automática)
+_http://yourdomain.com/image.jpg?ims=880x_ (880 pixels in width, automatic height)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)
 
 
-_http://yourdomain.com/image.jpg?ims=880xorig_ (880 pixels de largura, altura original)
+_http://yourdomain.com/image.jpg?ims=880xorig_ (880 pixels in width, original height)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)
 
 
-_http://yourdomain.com/image.jpg?ims=400x_ (400 pixels de largura, altura automática)
+_http://yourdomain.com/image.jpg?ims=400x_ (400 pixels in width, automatic height)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)
 
-_http://yourdomain.com/image.jpg?ims=400x400_ (400 pixels de largura, 400 pixels de altura)
+_http://yourdomain.com/image.jpg?ims=400x400_ (400 pixels in width, 400 pixels in height)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)
 
-_http://yourdomain.com/image.jpg?ims=x100_ (largura automática, 100 pixels de altura)
+_http://yourdomain.com/image.jpg?ims=x100_ (automatic width, 100 pixels in height)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)
 
 ---
 
-## 3. Redimensionar a imagem com fit-in {#redimensionar-a-imagem-com-fit-in}
+## 3. Resize the image with fit-in {#resize-with-fit-in}
 
-Outra forma de redimensionar a imagem é utilizando fit-in:
+Another way to resize an image is to use fit-in:
 
 ~~~
 ims=fit-in/WidthxHeight
 ~~~
 
-*   Width: largura máxima, em pixels, para a imagem derivada
-*   Height: altura máxima, em pixels, para a imagem derivada
+*   Width: maximum width, in pixels for the derived image
+*   Height: maximum height, in pixels for the derived image
 
-A imagem derivada será redimensionada para caber na área especificada por WidthxHeight. O aspect ratio da imagem original é preservado e, se desejar, você pode ocultar um dos valores.
+The derived image will be resized to fit the specified area (Width x Height). The aspect ratio of the original image is kept and, if you like, you can hide one of the values.
 
-Caso a área especificada seja maior do que as dimensões da imagem, a imagem não será aumentada. As dimensões especificadas como parâmetros do _fit-in_ representam os limites de tamanho máximo da área que a imagem pode ocupar. Uma ou ambas as dimensões da imagem poderá ser menor do que a área delimitadora.
+Should the specified area be greater than the image’s size, the image will be blown up. The specified dimensions are parameters for *fit-in*. They represent the maximum area that the image may occupy. One or both of the images dimensions will be less than the area limit.
 
-**Exemplo de aplicação**
+**Sample result**
 
-_https://yourdomain.com/image.jpg?ims=fit-in/400x400_ (largura máxima de 400 pixels e altura máxima de 400 pixels)
+_https://yourdomain.com/image.jpg?ims=fit-in/400x400_ (maximum width of 400 pixels and maximum height of 400 pixels)
 
 [![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)
 
 ---
 
-## 4. Recortar a imagem {#recortar-a-imagem}
+## 4. Crop the image {#crop}
 
-O recorte da imagem pode ser feito informando um ponto inicial (AxB) e um ponto final (CxD), como argumento na Query String da URL da imagem:
+Cropping the image may be done by entering a starting point (AxB) and an end point (CxD), as an argument in the Query String of the image’s URL:
 
 
 ~~~
@@ -150,10 +147,10 @@ ims=AxB:CxD
 ~~~
 
 
-*   AxB: ponto inicial do recorte indicando a posição, em pixels, do canto superior esquerdo da área a ser recortada.
-*   CxD: ponto final do recorte indicando a posição, em pixels, do canto inferior direito da área a ser recortada.
+*   AxB: the starting point for the crop indicates the coordinates in pixels form the top left corner of the area to be cropped.
+*   CxD: the end point for the crop indicates the coordinates in pixels form the lower right corner of the area to be cropped.
 
-**Exemplo de aplicação**
+**Sample result**
 
 _http://yourdomain.com/image.jpg?ims=430x20:910x730_
 
@@ -161,19 +158,19 @@ _http://yourdomain.com/image.jpg?ims=430x20:910x730_
 
 ---
 
-## 5. Alterar qualidade da imagem {#alterar-qualidade-da-imagem}
+## 5. Change image quality {#change-quality}
 
-O Image Optimization otimiza suas imagens, reduzindo o tamanho do arquivo e, portanto, o tempo de transferência do mesmo. O valor default de qualidade utilizado é de 85%, o que proporciona otimização sem perda perceptível de qualidade visual.
+The Image Processor optimizes your images, reducing the file size and, therefore, its transfer time. The default value for the quality level to be used is 85%, which allows for them to be optimized, without any perceptible loss of visual quality.
 
-Se necessário, você pode definir uma qualidade customizada para suas imagens, utilizando o filtro:
+If necessary, however, you can customize this for your images, using the filter:
 
 ~~~
 filters:quality(Number)
 ~~~
 
-Onde _Number_ deve ser um número inteiro entre 0 e 100, que representa a qualidade desejada.
+Where Number must be a whole number between 0 and 100, that equals the level of quality you wish.
 
-**Exemplo de aplicação~**
+**Sample result**
 
 __http://yourdomain.com/image.jpg?ims=filters:quality(100)__
 
@@ -184,44 +181,43 @@ __http://yourdomain.com/image.jpg?ims=filters:quality(85)__
 [![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))
 
 __http://yourdomain.com/image.jpg?ims=filters:quality(15)__
- 
+
 [![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))
 
 ---
 
-## 6. Adicionar marca d’água na imagem {#adicionar-marca-dagua-na-imagem}
+## 6. Add a watermark to the image {#add-waterark}
 
-Para adicionar marca d’água em imagens utilizando o Image Optimization, utilize o filtro:
+To add a watermark to images, using Image Processor, use the following filter:
 
 ~~~
 filters:watermark(ImageURL,X,Y,Alpha)
 ~~~
 
-*   ImageURL: é a URL da imagem que deve ser inserida como marca d’água. Caso a URL contenha parênteses, eles devem ser codificados como %28 para “(” e %29 para “)”.
-*   X: posição horizontal de inserção da marca d’água. Números positivos representam deslocamento, em pixels, da borda à esquerda para a direita, enquanto números negativos reprentam deslocamento da borda à direita para a esquerda. Pode ser utilizado o valor center, para centralizar horizontalmente a marca d’água, ou o valor repeat, para preencher horizontalmente a imagem com repetições da marca d’água.
-*   Y: posição vertical de inserção da marca d’água. Números positivos representam um deslocamento, em pixels, do topo para a base, enquanto números negativos representam deslocamento da base para o topo. Pode ser utilizado o valor center, para centralizar verticalmente a marca d’água, ou o valor repeat, para preencher verticalmente a imagem com repetições da marca d’água.
-*   Alpha: transparência da marca d’água. Deve ser um número entre 0 (completamente opaco) e 100 (completamente transparente).
+*   ImageURL: this is the URL of the image that you wish to insert as a watermark. Should the URL include parentheses, they must be coded as %28 for “(“ and %29 for “)”.
+*   X: The horizontal position for the watermark to be inserted at. Positive numbers represent the degree of offset, in pixels, from the left edge to the right, while negative numbers represent the offset from the right edge to the left. You can use the value, center, to have the watermark set centrally along the horizontal, or the value, repeat, to horizontally fill the image with repeated watermarks.
+*   Y: The vertical position for the watermark to be inserted at. Positive numbers represent the degree of offset, in pixels, from the top to the bottom, while negative numbers represent the offset from the bottom to the top. You can use the value, center, to have the watermark set centrally along the vertical, or the value, repeat, to vertically fill the image with repeated watermarks.
+*   Alpha: The watermark’s degree of transparency. It must be a number between 0 (totally opaque) and 100 (totally transparent).
 
-
-**Exemplo de aplicação**
+**Sample result**
 
 __http://yourdomain.com/image.jpg?ims=filters:watermark(http://yourdomain.com/watermark-image.png,-25,-10,50)__
 
 ---
 
-## 7. Converter o formato de uma imagem {#converter-o-formato-de-uma-imagem}
+## 7. Convert image to another format {#convert-image-format}
 
-Você pode converter o formato de uma imagem utilizando o filtro:
+You can convert the image to another format using the filter:
 
 ~~~
 filters:format(ImageFormat)
 ~~~
 
-Onde ImageFormat pode assumir os valores webp, jpeg, gif ou png.
+Where ImageFormat can be replaced by the values webp, jpeg, gif or png.
 
-**Exemplo de aplicação**
+**Sample result**
 
-Para converter uma image jpeg para gif:
+To convert a jpeg image to a gif:
 
 __http://yourdomain.com/image.jpg?ims=filters:format(gif)__
 
@@ -229,17 +225,17 @@ __http://yourdomain.com/image.jpg?ims=filters:format(gif)__
 
 ---
 
-## 8. Preencher imagem {#preencher-imagem}
+## 8. Fill Image {#fill-image}
 
-O Image Optimization também pode ser utilizado para gerar uma imagem derivada em um tamanho maior do que o da original, mas ao invés de redimensioná-la para o tamanho desejado, pode preencher o espaço com uma cor customizada. Utilize o parâmetro de [fit-in](#redimensionar-a-imagem-com-fit-in) com as dimensões desejadas associado com filtro __fill__:
+Image Processor can also be used to create a derived image that is a larger size than the original, but instead of resizing it to the required size, you can fill the area with a custom color. Use the same parameters as [fit-in](https://www.azion.com/pt-br/docs/produtos/image-optimization/%23redimensionar-a-imagem-com-fit-in) to the dimensions you want, together with the filter *fill*:
 
 ~~~
 filters:fill(Color)
 ~~~
-    
-Onde __Color__ é a cor de preenchimento, seguindo a nomenclatura e códigos especificados para o [padrão HTML](https://en.wikipedia.org/wiki/Web_colors).
 
-**Exemplo de aplicação**
+Where *Color* is the color to be used for the fill, using the nomenclature and codes specified for [standard HTML](https://en.wikipedia.org/wiki/Web_colors).
+
+**Sample results**
 
 __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(gray)__
 
@@ -255,36 +251,19 @@ __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(00ffff)__
 
 ---
 
-## 9. Como combinar múltiplos filtros {#combinar-filtros}
+## 9. Combine filters {#combine-filters}
 
-O Image Optimization permite que você combine os filtros desejados separando os mesmos por “:”.
+Image Processor allows you to combine the filters you want, separating each of them with “:”.
 
 ~~~
 filters:filter1(arg1):filter2(arg2)
 ~~~
 
-Onde filter1(arg1) e filter2(arg2) são os filtros que você deseja aplicar.
+Where filter1(arg1) and filter2(arg2) are the filters you want to apply.
 
-**Exemplo de aplicação**
+**Sample result**
 
 __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(gray):quality(100)__
-
----
-
-## 10. Como o Image Optimization é tarifado {#como-o-image-optimization-e-tarifado}
-
-A cobrança do Azion Image Optimization é baseada no número de requisições de processamento de imagens.
-
-As imagens podem ser processadas mais de uma vez, dependendo de fatores como:
-
-*   a quantidade de derivações solicitadas: recortes, redimensionamentos e aplicação de filtros
-*   o hit ratio das imagens no cache do Azion Content Delivery
-
-São contabilizadas tanto requisições HTTP quanto HTTPS, sem distinção de valor entre ambas.
-
-A cobrança do Image Optimization é adicional a cobrança do Content Delivery, no entanto, a redução do tamanho das imagens traz economia no tráfego total de conteúdo pelo Content Delivery. Acompanhe o gráfico __Bandwidth Saving__ para monitorar a economia.
-
-Para reduzir seu consumo no Image Optimization, a Azion recomenda que você aumente o tempo de vida de suas imagens em cache (__hit ratio__), o que também resultará em maior economia de tráfego no Content Delivery.
 
 ---
 
