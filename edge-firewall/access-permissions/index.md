@@ -19,7 +19,7 @@ Each user in Real-Time Manager can be associated with teams and, for each team, 
 
 To configure Edge Firewall permissions:
 
-1. With an account with administrator privileges (admin), access [Real-Time Manager](https://manager.azion.com/login/?next=/) and enter the Your Account menu in the upper right section of the header.
+1. With an account with administrator privileges (admin), access [Real-Time Manager](https://manager.azion.com/) and enter the Your Account menu in the upper right section of the header.
 2. Select the Teams menu.
 3. Edit or add a Team.
 4. Confirm View/Edit Edge Firewall or View/Edit Network Lists permissions.
@@ -33,4 +33,4 @@ To configure Edge Firewall permissions:
 
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/acess-permissions/index.md) on GitHub.
+[Edit this page](https://github.com/aziontech/docs_en/blob/master/edge-firewall/access-permissions/index.md) on GitHub.

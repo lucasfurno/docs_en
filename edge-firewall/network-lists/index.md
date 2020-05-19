@@ -1,51 +1,53 @@
 # Network **Lists**
 
-Network Lists é o recurso da plataforma da Azion que permite criar e gerenciar *whitelists* *, *blacklists* ou mesmo *greylists* baseadas na rede ou localização do usuário. Com ele é possível prevenir diversos tipos de ataques a sua rede, até mesmo impedir que usuários com comportamentos maliciosos tenham acesso à suas aplicações.
+Network Lists is the Azion platform feature that allows you to create and manage whitelists *, *blacklists* or even *greylists* based on the user's network or location. With it, it is possible to prevent different types of attacks to your network, as well as to prevent users with malicious behavior from having access to your applications.
 
-Através de regras de restrições por IPs, ASN ou por *geolocation*. As Network Lists são utilizadas nas regras de negócio do Rules Engine do Edge Firewall, mitigando riscos de segurança e otimizando a performance de seus recursos.
+Through restrictions rules by IPs, ASN or *geolocation*. Network Lists are used in the business rules of the Edge Firewall Rules Engine, mitigating security risks and optimizing the performance of your resources.
 
 ~~~
-Atenção: Para utilizar o recurso de Network Lists é necessário habilitar o módulo Network Layer Protection.
+Attention: To use the Network Lists feature, it is necessary to enable the Network Layer Protection module.
 ~~~
 
-> 1. [Como funciona?](#como-funciona)
+> 1. [How does it work?](#how-does-it-work)
 > 2. [Hands-On](#hands-on)
-> 3. [Documentação de Suporte](#documentacao-de-suporte)
+> 3. [Support Documents](#support-documents)
 
 ---
 
-## 1. Como funciona? {#como-funciona}
+## 1. How does it work? {#how-does-it-work}
 
-Com Azion Network Lists, você pode criar e gerenciar listas que são carregadas em todos os Edge Nodes da Azion. Sempre que uma Network List é associada a uma regra, ela é comparada com o endereço IP do cliente que está realizando a requisição HTTP, levando em conta os operadores de comparação configurados na Rule do Rules Engine.
+With Azion Network Lists, you can create and manage lists that are loaded on all Azion Edge Nodes. Whenever a Network List is associated with a rule, it is compared with the IP address of the client performing the HTTP request, taking into account the comparison operators configured in the Rules Engine Rule.
 
-Uma Network List pode ser dos tipos:
+A Network List can be these types:
 
-* IP/CIDR: Corresponde a uma lista de endereços IP ou CIDR, devendo ser preenchido um endereço por linha. Se preferir, informe também a máscara de sub-rede dos endereços IP.
-* ASN: AS Number refere-se a Alocação de Números de Sistema Autônomo que corresponde a um grupo de redes de edereços IP gerenciado por um ou mais operadores de rede que possuem uma clara e única política de roteamento. Consultando o serviço de ASN Whois da [LACNIC](http://lacnic.net/cgi-bin/lacnic/whois?lg=EN) o ASN da Azion, por exemplo, é AS52580. Escolha o tipo ASN para representar uma lista de grupos AS, devendo ser preenchido um endereço por linha, somente o número sem prefixo.
-* Countries: Corresponde uma lista de Países. Para incluir Países na lista, selecione os itens na aba Available Countries e mova para aba Chosen Countries.
+* IP/CIDR: It corresponds to a list of IP addresses or CIDR, one address per line must be filled in. If you prefer, also enter the subnet mask of the IP addresses.
+* ASN: AS Number refers to Autonomous System Number Allocation which corresponds to a group of IP address networks managed by one or more network operators that have a clear and unique routing policy. Consulting the ASN Whois service for [LACNIC](http://lacnic.net/cgi-bin/lacnic/whois?lg=EN), Azion's ASN, for example, is AS52580. Choose the ASN type to represent a list of AS groups, filling in one address per line, with only the number without the prefix.
+* Countries: Corresponds to a list of Countries. To include Countries in the list, select the items in the Available Countries tab and move to the Chosen Countries tab.
 
-Depois de criar uma Network List associe a mesma em uma ou mais Rules ou Rules Sets que possuam o módulo Network Layer Protection ativado.
+After creating a Network List, associate it with one or more Rules or Rule Sets that have the Network Layer Protection module activated.
 
-> Atenção: Uma Network Lists terá o efetivo uso quando associada a uma ou mais Rules no Edge Firewall Rules Engine através do condicional(Criteria) Network, para isso, o módulo Network Layer Protection deve estar habilitado.
+> Attention: A Network Lists will have effective use when it is associated with one or more Rules on the Edge Firewall Rules Engine through the conditional (Criteria) Network, for this, the Network Layer Protection module must be enabled.
 
-Para proporcionar ainda mais agilidade aos seus processos, a Azion provê e mantém algumas Network Lists atualizadas automaticamente e prontas para usar. Uma delas é a Network List Azion IP Tor Exit Nodes, que contém os endereços IP de saídas da rede Tor e poderá ser utilizada em uma ou mais Rules, por meio do da condição (Criteria) Network, de acordo com suas necessidades de negócio.
+To provide even more agility to your processes, Azion provides and maintains some Network Lists that are updated automatically and ready to use. One of them is the *Azion IP Tor Exit Nodes* *Network List*, which contains the IP addresses of the *Tor* network exits and can be used in one or more Rules, through the condition (Criteria) Network, according to your business needs.
 
-> O conteúdo das Network Lists providas pela Azion não pode ser editado.
+> The content of the Network Lists provided by Azion cannot be modified.
 
-## 2. Hands-on. Passo a Passo para criar uma Network List {#hand-on}
+## 2. Hands-on. Step by Step to create a Network List {#hand-on}
 
-1. A partir do Real-Time Manager, acesse o menu Libraries > Network Lists.
-2. Para incluir uma nova lista, clique no botão Add.
-3. Preencha os campos que aparecerão, conforme abaixo:
-  - Add Network List (Nome da sua lista): Atribui um nome sugestivo para sua *Network List*. Esse nome aparecerá na lista de opções na seção *Criterias*, dentro da configuração de *Rules Engine*.
-  - Type: Tipo da *Network List*. Podem ser os seguintes tipos:
-    - ASN (*Autonomous System Number*)
-    - *Countries* (Países)
-    - IP/CIDR (Endereços IP ou classes de endereços)
-  - List: Adicione aqui os itens que irão compor a sua lista. Para os tipos ASN e IP/CIDR, um campo de digitação será apresentado. Inclua um endereço por linha. Itens duplicados serão excluídos automaticamente. Para o tipo Countries, uma lista para seleção será apresentada. Selecione os itens na aba Available Countries e mova para aba Chosen Countries para incluí-los na lista.
-4. Clique en *Save* para finalizar a configuração.
+1. From Real-Time Manager, access the menu Libraries> Network Lists.
+2. To add a new list, click the Add button.
+3. Fill in the field which will appear, as shown below:
 
-## 3. Documentação de Suporte {#documentacao-de-suporte}
+  - Add Network List (Name of your list): Give your *Network List* a descriptive name. This name will appear in the list of options in the *Criteria* section, within the *Rules Engine* configuration.
+  - Type: Type of *Network List*. They can be the following types:
+      - ASN (*Autonomous System Number*)
+      - *Countries
+      - **IP/CIDR* (IP addresses or classes of addresses)
+  - List: Add the items that will make up your list here. For *ASN* and *IP/CIDR* types, a typing field will be displayed. Include one address per line. Duplicated items will be deleted automatically. For the Countries type, a selection list will be presented. Select the items in the Available Countries tab and move to the Chosen Countries tab to include them in the list.
+
+4. Click on *Save* to finalize the configuration.
+
+## 3. Support Documents {#support-documents}
 
 * [Network Lists API]({% tl api_v3_network_lists %})
 * [Edge Firewall]({% tl documentation_products_edge_firewall %})

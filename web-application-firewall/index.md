@@ -1,79 +1,98 @@
-# WAF **Rule Sets**
 
-The WAF Rule Set protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
+# Web Application Firewall
 
-> 1. [Hands-on](#hands-on)
-> 2. [Monitoring threat detection](#associe-a-rule-set-criada-com-as-aplicacoes-que-deseja-monitorar)
-> 3. [Approve the desired whitelist](#aprove-a-whitelist-desejada)
-> 4. [Enable threat blocking in the rule set](#ative-o-bloqueio-de-ameacas-na-rule-set)
+Web Application Firewall protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
 
----
-
-## 1.Hands-on. Creating a WAF Rule Set for your applications {#hands-on}
-
-WAF Rule Set is the set of rules that protects against the most varied types of attacks. It defines the protections you want to activate, the detection sensitivity level and the *whitelist*.
-
-Para criar uma *rule set*:
-
-1. Access [Real-Time Manager](https://manager.azion.com/login/?next=/) and enter the *Edge Services* > WAF menu.
-2. Add a new *rule set* by clicking the *Add button*.
-3. In the Main Settings tab, activate the desired protections and sensitivity level.
-4. Save your *rule set* with a descriptive name. You will need it to perform the *rule set* association later through the Rules Engine.
-
-We recommend that you activate the rule in _Counting Mode _ at the first moment, to follow the sample of threats detected in the learning stage, before effectively blocking requests. That way you can also adjust the detection sensitivity, according to your application.
-
-During Counting Mode, it is recommended that you leave all protections enabled so that you can monitor the threats detected by WAF.
-
-If false positives are detected, some rules can be added to the *whitelist* by Azion Support, without the need to disable the full protection for a family of threats. Contact us if you wish to assess the need to include *whitelist* rules before disabling your protection.
-
-Finally, the *rule set* must be active for WAF to analyze your requests. The Active checkbox serves to allow you to enable and disable WAF quickly for all *paths* that are associated with the rule set.
+> 1. *[How does it work?](#how-does-it-work)*
+> 2. *[Support Documents](#support-documents)*
 
 ---
 
-## 2. Monitoring threat detection {#associe-a-rule-set-criada-com-as-aplicacoes-que-deseja-monitorar}
+## 1. How does it work? {#how does it work}
 
-Leave the WAF rule set in Counting Mode for as long as you deem necessary so that most of your application's functionality is covered. You should follow the graphics on the WAF tab by Real-Time Metrics or the WAF logs through the Real-Time Events and Data Streaming products.
+Web Application Firewall is an Azion Edge Firewall’s module, based on the request scoring methodology. Each *http/https* request is compared to a set of extremely restrictive blocking rules and receives a score for each family of threat.
 
-In Real-Time Metrics, the first chart on the WAF tab (Threats vs Requests) presents three time series:
+According to the received score by the request, it can be freed or blocked directly in Azion’s Edge Nodes, before the threat reaches its origin. You define the desired sensitivity level to block each family of threat.
 
-* Regular Requests: all HTTP and HTTPS requests analyzed by WAF and are considered secure.
-* Threats: the volume of threats detected by WAF and accounted for, when in *Counting mode*. These threats are not being blocked at the moment.
-* Threats Blocked: threats effectively blocked by WAF. To start blocking the threats found, the rule set must be in *Blocking Mode*.
+To avoid licit requests and malefaction of your application, you must run a learning stage, in which the WAF Rule Set identified legitimate behaviors in your application, inserting them into a *whitelist*.
 
-If you also have the Data Streaming service, you can track more detailed information about IP, date and time of access, status code, detected attack family and the configured mode of action.
+You can also monitor the behavior and effectiveness of your **Web Application Firewall** settings. Through our **Real-Time Events** and **Data Streaming** tools, Azion offers dashboards and reports for online and real-time event log checks. Furthermore, you may import Azion’s record logs and manipulate them within your own analysis tools.
 
 ~~~
-$time-iso8601 $azion-client-id $azion-virtualhost-id $azion-configuration-id $azion-solution $azion-solution-id $host $conn-request-time $req-method $resp-status $req-uri $waf-threat-family $waf-threat-action $client-geoip-country-name $client-geoip-region-name $client-addr $client-port $req-header(User-Agent) $req-header(Referer) 2017-01-04T17:00:19+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.129 GET 200 /request-uri?key=value $XSS $LEARNING-BLOCK Brazil Sao Paulo 1.2.3.4 61511 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:19+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.025 POST 200 /request-uri $SQL $LEARNING-BLOCK Brazil Santa Catarina 2.3.4.5 61513 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:40+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.026 GET 301 /request-uri?key=value $RFI $LEARNING-BLOCK Brazil Rio de Janeiro 5.6.7.8 26102 Mozilla/5.0 (Linux; Android 5.1.1; SM-G800H Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36 https://www.yoursite.com/referrer 2017-01-04T17:00:41+00:00 1234a 10203b 1020304050 ha 1441740010 www.yoursite.com 0.391 POST 200 /request-uri $UWA $LEARNING-BLOCK Brazil Rio Grande do Sul 9.10.11.12 26102 Mozilla/5.0 (Linux; Android 5.1.1; SM-G800H Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36 https://www.yoursite.com/referrer
+To use your WAF Rule Sets resources you need to enable the Web Application Firewall module in the Edge Firewall Rule Set.
 ~~~
 
-Based on this information, you can adjust the sensitivity of the WAF *rule set*, until no more false positives occur. You can also ask Azion to generate a *whitelist* for your application.
+**Operation Modes**
+
+In order to maximize the product’s performance and precision you need the learning stage. You count on two operation modules to help you in this stage:
+
+*   **Counting Mode:** used to specify that the WAF shall not block any request. Your applications’ traffic will be analyzed and the threats found will only be accounted for. Use this mode of operation during the first learning stage.
+*   **Blocking Mode:** used to analyze and block found threats, protecting your applications from malicious users. You may run the learning stage every time you deem necessary, even during Blocking Mode.
+
+**Families of Threats**
+
+The threats are categorized in families according to the object of the attack. You can activate or deactivate protection for each family of threat individually according to the protections required by the family of your application and the features it presents.
+
+
+| Threat Type                  | Description                                                  |
+| ---------------------------- | ------------------------------------------------------------ |
+| SQL Injections               | Prevents attack attempts by injecting SQL code into the application. |
+| Remote File Inclusions (RFI) | Prevents attempts to include files, usually through scripts, on the web server. |
+| Directory Traversal          | Prevents exploitation of vulnerability regarding insufficient sanitization of file name fields provided by users, so that characters representing shortcuts to the parent directory are passed through the file API. |
+| Cross-Site Scripting (XSS)   | Prevents the injection of client-side scripts into pages viewed by your visitors. |
+| File Upload                  | Prevents attempting to upload files to the web server.       |
+| Evading Tricks               | Prevents some coding tricks used to try to escape the protection mechanisms. |
+| Unwanted Access              | Prevents attempts to access administrative or vulnerable pages, bots and security scanning tools. |
+| Identified Attacks           | Prevents several types of common attacks and known vulnerabilities that are certain to be blocked. |
+
+**Sensitivity**
+
+Sensitivity defines the rigor with which the WAF will consider a request as a threat:
+
+- **Lowest**: is a lower level of sensitivity, the request will be considered a threat if it presents very strong evidence and receives a high score. This sensitivity has a lower level of protection for your applications, but it will also avoid blocking requests with less chance of representing threats (false positives).
+
+- **Low**: is a lower level of sensitivity, the request will be considered a threat if it presents very strong evidence and receives a high score. This sensitivity has a lower level of protection for your applications, but it will also avoid blocking requests with less chance of representing threats (false positives).
+
+- **Medium**: is the level of sensitivity recommended by Azion. The request will be considered a threat if it presents sufficient evidence and receives an intermediate score.
+
+- **High**: is the highest level of protection for your application. At the slightest indication of a threat, the request can be blocked, even when it presents a relatively low score. This level of sensitivity may show more false positives, if the learning stage does not have sufficient coverage on the variability of scenarios and uses of its application.
+
+- **Highest**: is the highest level of protection for your application. At the slightest indication of a threat, the request can be blocked, even when it has a very low score. This level of sensitivity may show many false positives, if the learning stage does not have sufficient coverage on the variability of scenarios and uses of its application.
+
+**Rules**
+
+The set of rules which increase the score of a request. The bigger the score, the higher probability of a request to be considered an attack by WAF.
+
+Azion works with an extremely restrictive set of rules to ensure the security of your application. Each rule consists of the following fields.
+
+| Campo            | Descrição                                                    |
+| ---------------- | ------------------------------------------------------------ |
+| Rule Id          | Unique numeric ID for each rule of the WAF.                  |
+| Rule Description | A textual description of what the rule does.                 |
+| Match Pattern    | Comparison condition, string or regex, which will be sought in the request. |
+| Path             | When specified, restrict the application of the *Match Zone* to the defined *path* only. *Path* delimits the scope of the rule. |
+| Match Zones      | Parts or fields of the requisition that will be compared to the *Match Pattern*. These can be:<br/>**Path:** *match pattern* will be compared to the *path* of the request.<br/>**Query String:** *match pattern* will be compared to the *query string*, also called GET *arguments*.<br/>**Request Header:** *match pattern* will be compared to the HTTP headers of the request.<br/>**Request Body:** *match pattern* will be compared to the *body* of a POST, also called POST *arguments*.<br/>**File Name (Multipart Body)**: *match pattern* will be compared to the file names in *multipart POSTs*.<br/>**Raw Body:** *match pattern* will be compared to *body* that was not interpreted from a request, also called *unparsed body*. |
+| Attack Family    | The attack family(s) for which the rule increases the score. |
+
+**Whitelist**
+
+It is the list of legitimate behaviors of your application, which should not increase the *score* of requests. It can be generated automatically during the learning stage or manually entered through custom rules.
+
+Each blocking rule has *match zones*, as explained in the Rules section. *Whitelist* aims to disable certain *Match Zones* from a blocking rule.
+
+| Campo                | Descrição                                                    |
+| -------------------- | ------------------------------------------------------------ |
+| Rule Id              | Unique numeric ID for the blocking rule for which the whitelist was generated. |
+| Rule Description     | A textual description of what makes the blocking rule for which the whitelist was generated. |
+| Path                 | When specified, restrict the application of the *Whitelist* to the defined *path* only. Path delimits the scope of the whitelist. |
+| Whitelist Match Zone | It is the whitelist itself. Defines the part or field of the request for which the blocking rule is to be disabled. <br>**Path:** the rule id will not be applied to the request path.<br/>**Query String:** the rule id will not be applied to the query string, also called GET arguments. It can be restricted to both the name and the value of the arguments. It is possible to limit the scope of the whitelist to a single GET argument using Conditional Query String.<br/>**Request Header:** the rule id will not be applied to the HTTP headers of the request. It can be restricted to both the name and the value of the headers. It is possible to limit the scope of the whitelist to a single HTTP header using Conditional Request Header.<br/>**Request Body:** the rule id will not be applied to the body of a POST, also called POST arguments. It can be restricted to both the name and the value of the arguments. It is possible to limit the scope of the whitelist to a single POST argument using Conditional Request Body.<br/>**File Name** (Multipart Body): the rule id will not be applied to the file name in a multipart POST.<br/>**Raw Body:** the rule id will not be applied to the body that was not interpreted from a request, also called an unparsed body. |
+| Status               | The activation status of the rule in the whitelist.          |
 
 ---
 
-## 3. Approve the desired whitelist {#aprove-a-whitelist-desejada}
+## 2. Support Documents {#support-documents}
 
-Ask Azion Support to generate the whitelist proposal, based on the learning stage of your application.
-
-The whitelist proposal generated by Azion will be inserted in the platform and will be available for your approval:
-
-1. Access the Cloud Security> WAF menu, or access the “Manage WAF” shortcut on the home screen.
-2. Edit the *rule set* you want to use to evaluate the *whitelist*.
-3. In the *Whitelist* tab, enable any rules you wish to approve.
-4. Save your *rule set*.
-
----
-
-## 4. Activate threat blocking in the rule set {#ative-o-bloqueio-de-ameacas-na-rule-set}
-
-After monitoring the behavior of your application and the threats detected after the learning period and approval of the *whitelist*, you must change the *rule set* to Blocking:
-
-1. Access the Edge Services menu > WAF.
-2. Edit the desired WAF *rule set*.
-3. Change the mode from Counting to Blocking.
-
-From that moment on, your application will be protected and the detected threats will be effectively blocked.
-
-> Remember: WAF only blocks threats if it is configured in Blocking Mode.
+- [Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/)
 
 ---
 
