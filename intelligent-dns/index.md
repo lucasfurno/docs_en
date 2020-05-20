@@ -221,5 +221,3 @@ It is important to check that all your records are definitely registered and tes
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/intelligent-dns/index.md) on GitHub.
