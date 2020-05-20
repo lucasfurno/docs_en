@@ -1,5 +1,7 @@
 # **Fields**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/data-streaming/fields/index.md)
+
 Azion provides a wide range of variables related to access to its contents and applications. You can feed your big data and stream processing platforms, selecting templates created and maintained by Azion, which have a collection of variables available; or customize your own Data Set in the [Data Streaming](https://www.azion.com/en/products/data-streaming/) product.
 
 | Variable | Source of data | Description |
@@ -51,5 +53,3 @@ Azion provides a wide range of variables related to access to its contents and a
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/Jessicactr/docs_en/edit/master/data-streaming/fields/index.md) on GitHub.
