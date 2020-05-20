@@ -1,5 +1,7 @@
 # Support
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/support/index.md)
+
 At Azion you are served by a team of engineers who are specialized in performance, security, high availability and scalability of content, web applications and APIs, especially in mission critical environments.
 
 If you are new to Azion or if you are increasing your usage, we want to provide you with the right resources to support your success. Azion Support offers a unique combination of tools and expertise to help you do amazing things with Azion.
@@ -169,5 +171,3 @@ With Azion Managed DDoS Protection Unlimited you have 24×7 access to the Securi
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/support/index.md) on GitHub.
