@@ -1,5 +1,7 @@
 # Edge **Application**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-application/index.md)
+
 Azion Edge Application allows you to build your web applications to run on Azion's Edge Computing platform.
 
 You can use the features such as Edge Caching, Application Acceleration, and Edge Functions to build more robust web applications, capable of meeting large access peaks with better performance and security for your users.
@@ -84,5 +86,3 @@ Azion provides modules so that you can build high-performance, scalable and secu
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/index.md) on GitHub.
