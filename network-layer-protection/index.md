@@ -45,4 +45,4 @@ To ensure you are protected from attacks targeting your origin, we suggest you u
 
 ---
 
-Can't find what you were looking for? [Open a ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

@@ -69,7 +69,7 @@ In this section, the cache options for your content will be defined. There are t
 | Field | Description |
 |-------|-----------|
 | **Browser Cache Settings** | Use the *Honor Origin Cache Headers* option if you want Azion to send its users the same cache control headers received from their origin.<br><br>You can also customize the Browser Cache control by selecting the *Override Cache Settings* option. In this case, you must define a **Maximum TTL**, which is the maximum lifetime (in seconds) that the content can be cached in your users' browser. |
-| **CDN Cache Settings** | Use the *Honor Origin Cache Headers* option if you want Azion to respect the cache control headers received from your origin, for managing the cache on Azion's Edge Nodes. You can also customize the CDN Cache control by selecting the *Override Cache Settings* option. In this case, you must define a **Maximum TTL**, which is the maximum lifetime (in seconds) that the content can be cached in Azion’s Edge Nodes. You can, at any time, purge the content in real time. | 
+| **CDN Cache Settings** | Use the *Honor Origin Cache Headers* option if you want Azion to respect the cache control headers received from your origin, for managing the cache on Azion's Edge Nodes. You can also customize the CDN Cache control by selecting the *Override Cache Settings* option. In this case, you must define a **Maximum TTL**, which is the maximum lifetime (in seconds) that the content can be cached in Azion’s Edge Nodes. You can, at any time, purge the content in real time. |
 
 Don't forget to save your configuration by clicking the **Save**.
 

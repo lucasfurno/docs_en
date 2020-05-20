@@ -81,7 +81,6 @@ To use the L2 Caching module, follow these steps:
 7. .Following, enable the option **L2 Caching** and save the settings.
 8. That’s it, the **L2 Caching** module is enabled.
 
-
 ---
 
 ## 6. Advanced Cache Key {#advanced-cache-key}

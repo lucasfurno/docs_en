@@ -46,4 +46,4 @@ To set up the Azion Domains:
 
 ---
 
-Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

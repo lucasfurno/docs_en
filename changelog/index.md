@@ -459,4 +459,4 @@ Note: Just as the interface has been updated to require the purge type, the [Pur
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/).
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

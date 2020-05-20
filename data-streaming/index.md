@@ -108,4 +108,4 @@ The use of this type of endpoint, makes the Data Streaming service send data dir
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

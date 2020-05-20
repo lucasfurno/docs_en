@@ -49,7 +49,6 @@ Azion provides a wide range of variables related to access to its contents and a
 | $waf\_server                          | WAF                    | Hostname used in the request.                                                                                                                                                    |
 | $waf\_uri                             | WAF                    | URI used in the request.                                                                                                                                                        |
 
-
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

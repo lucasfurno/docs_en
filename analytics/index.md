@@ -199,4 +199,4 @@ At the bottom of the graph we have the total optimized with the image traffic.
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
