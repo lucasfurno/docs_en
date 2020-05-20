@@ -1,4 +1,5 @@
 # Azion Edge Firewall: multi-layered security in **Edge**
+
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/edge-firewall/index.md)
 
 For online service providers like e-commerce, internet banking and media businesses, investing in security is as important as investing in the development of new applications, websites or integrating APIs. Every day, new threats are discovered and, in order to protect yourself from the activities of cybercriminals, it is necessary to constantly update security policies and adopt internet security tools, such as firewalls.
