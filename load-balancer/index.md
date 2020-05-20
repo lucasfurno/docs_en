@@ -1,5 +1,7 @@
 # Load **Balancer**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/load-balancer/index.md)
+
 To achieve high levels of fault tolerance and performance, it is necessary to guarantee the availability of your content and applications even in the event of incidents with your original servers. Azion Load Balancer allows balancing traffic to your origins, data centers or cloud providers, avoids network congestion and overloading your servers. In addition, it detects failures and provides multiple algorithms that allow you to distribute the load to the available infrastructures, ensuring the best experience for your users and results for your company.
 
 > 1. [Load Balancer Features](#FuncionalidadesLoadBalancer)
@@ -79,5 +81,3 @@ To set up Azion Load Balancer:
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/load-balancer/index.md) on GitHub.
