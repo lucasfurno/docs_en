@@ -1,5 +1,7 @@
 # Integration **Services**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/integration-services/index.md)
+
 É a forma mais rápida e segura para migrar seus conteúdos, aplicações web e APIs para a Azion, não importa a complexidade e o volume de recursos que você utiliza. Nosso time de Integration Services irá ativar os serviços contratados por você e prover as ferramentas, documentações e treinamentos necessários para seu sucesso utilizando a plataforma da Azion.
 
 O serviço de integração está disponível nas seguintes modalidades, planejadas de acordo com as necessidades particulares de cada cliente:
@@ -213,5 +215,3 @@ Todo o processo de integração é conduzido remotamente, por telefone ou videoc
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/integration-services/index.md) on GitHub.
