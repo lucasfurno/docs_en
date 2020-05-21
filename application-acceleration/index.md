@@ -1,5 +1,7 @@
 # Application **Acceleration**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/application-acceleration/index.md)
+
 This is the service of accelerating web applications and APIs through protocol optimizations and the management of the different requirements of dynamic content.
 
 Through Application Acceleration you can configure advanced cache by path rules that allow granular caching, content segmentation and cache policies based on criteria such as name/value of Cookies and Query Strings, as well as features such as Bypass Cache, Forward Cookies and support for POST/PUT and other HTTP methods.
@@ -127,5 +129,3 @@ To use the functionality, follow these steps:
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/application-acceleration/index.md) on GitHub.

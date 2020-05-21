@@ -1,6 +1,8 @@
 #  Real-Time **Metrics**
 
-To use the Analytics you have to access [Real-Time Manager](https://manager.azion.com/) and click on Control your traffic.
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/analytics/index.md)
+
+To use the Metrics you have to access [Real-Time Manager](https://manager.azion.com/) and click on Control your traffic.
 
 The Analytics screen has some regions which enable you to filter information, such as:
 
@@ -197,6 +199,4 @@ For customers who have the Web Application Firewall product, there is a specific
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/analytics/index.md) on GitHub.
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
