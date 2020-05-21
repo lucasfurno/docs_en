@@ -22,7 +22,7 @@ As the name suggests, it is a system for associating domain names. It manages to
 
 ## 2. How does Intelligent DNS work? {#how-it-works}
 
-It’s designed for those that want high performance and high availability for their hosting and their domain. Intelligent DNA is an authoritative DNS solution, and allows the client to manage their domains, zones and records through a friendly and intuitive interface. In addition, it is possible to create ANAME type entries, which would allow you to host and use *naked domains* with other Azion products.
+It’s designed for those that want high performance and high availability for their hosting and their domain. Intelligent DNS is an authoritative DNS solution, and allows the client to manage their domains, zones and records through a friendly and intuitive interface. In addition, it is possible to create ANAME type entries, which would allow you to host and use *naked domains* with other Azion products.
 
 ---
 
