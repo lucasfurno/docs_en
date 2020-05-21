@@ -4,9 +4,9 @@
 
 To use the Metrics you have to access [Real-Time Manager](https://manager.azion.com/) and click on Control your traffic.
 
-The Metrics screen has some regions which enable you to filter information, such as:
+The Analytics screen has some regions which enable you to filter information, such as:
 
-* Area to filter your data interval: Where you can select either the period or domain you would like to be displayed.
+* Area to filter your data interval: Where you can select the period you would like to be displayed.
 * Data Area: Where the graphs with the requested data are displayed.
 
 
@@ -18,9 +18,9 @@ The Metrics screen has some regions which enable you to filter information, such
 > 5. [Requests](#requests)
 > 6. [Status Codes](#status-codes)
 > 7. [HTTP Methods](#http-methods)
-> 8. [WAF](#web-application-firewall-waf)
-> 9. [Connections](#connections)
-> 10. [Bandwidth](#storage-stored-data)
+> 8. [Connections](#connections)
+> 9. [Storage](#storage-stored-data)
+> 10. [WAF](#web-application-firewall-waf)
 
 ​    
 
@@ -28,11 +28,7 @@ The Metrics screen has some regions which enable you to filter information, such
 
 ## 1. Filter Data Interval {#filter-data-interval}
 
-Every graph options of Metrics products have a Data Interval Filter.
-
-In same graphs it's possible to filter by domain.
-
-The graphs are updated and present the information according to the criteria selected in the filter.
+Every graph options of Analytics products have a Data Interval Filter.The graphs are updated and present the information according to the criteria selected in the filter.
 
 ---
 
@@ -50,27 +46,27 @@ The information is presented according to the solution and the time interval sel
 
 ## 4. Data Transferred {#data-transferred}
 
-This tab presents graphs with the information referring to the volume of data transferred by the domain you selected. This tab presents 4 graphs referring to the volume of data transferred in the domain and in the selected period, as follows:
+This tab presents graphs with the information referring to the volume of data transferred by the solution you selected, this tab presents 4 graphs referring to the volume of data transferred in the solution and in the selected period, as follows:
 
-**Edge Caching:** This graph shows the sum (Saved Data + Missed Data) of the volume of data trafficked in the domain and in the selected period, hover over the graph to see the exact value trafficked in the period.
+**Total Data:** This graph shows the sum (Saved Data + Missed Data) of the volume of data trafficked in the solution and in the selected period, hover over the graph to see the exact value trafficked in the period.
 
 The values displayed at the bottom of the graph are the sum of the volume in the range.
 
-**Edge Offloaded:** This graph shows the percentage of the volume of data that was delivered by the Azion solution, that is, it is the representation of the Saved Data graph only in percentages, hover over the graph to see the exact percentage in the selected range.
+**Data Offloaded:** This graph shows the percentage of the volume of data that was delivered by the Azion solution, that is, it is the representation of the Saved Data graph only in percentages, hover over the graph to see the exact percentage in the selected range.
 
-The values displayed at the bottom of the graph are the averages in the range.
+The values displayed at the bottom of the graph are the interval measures.
 
-**Saved Data:** This graph shows the volume of data that was delivered by Azion's servers, in other words, without searching for content on the origin server, hover over the graph to see the exact value of the period.
+**Saved Data (Data Delivered by the Cache):** This chart shows the volume of data that was delivered by Azion's servers, in order words, without searching for content on the origin server, hover over the chart to see the exact value of the period.
 
 The values displayed at the bottom are the sum of the volume of the range.
 
-**Missed Data:** This graph shows the volume of data that was delivered by the origin server, in other words, the request was made to Azion's servers, but the content had not been transferred from the origin to them. In the moment the originating server fulfills the request, it also sends the content to Azion's servers.
+**Missed Data (Data Delivered by the Origin):** This chart shows the volume of data that was delivered by the origin server, in other words, the request was made to Azion's servers, but the content had not been transferred from the origin to them. The moment the originating server fulfills the request; it also sends the content to Azion's servers.
 
 The values displayed at the bottom of the graph are the sum of the volume in the range.
 
 **Bandwidth Usage**
 
-**Total Bandwidth Usage:** Number of Mbps used by the band. At the bottom of the graph shows the average of the band used in the interval.
+**Total Bandwidth Usage:** Number of Mbps used by the band.At the bottom of the graph shows the average of the band used in the interval.
 
 **Bandwidth Offload:** Percentage of bandwidth that was downloaded.
 
@@ -108,7 +104,7 @@ At the bottom of the graph shows the average of the band used in the interval.
 
 This tab presents graphs with information regarding the Content Delivery Status codes. 
 
-Excellent documentation to deepen your knowledge of HTTP Status Codes can be found at this link: [List of HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) . Only available in Metrics Premium.
+Excellent documentation to deepen your knowledge of HTTP Status Codes can be found at this link: [List of HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) . Only available in Analytics Premium.
 
 **HTTP Status Codes 2xx:** This status class indicates that the user's request was received, understood, accepted and processed by the server.
 
@@ -116,8 +112,8 @@ Excellent documentation to deepen your knowledge of HTTP Status Codes can be fou
 | ---- | ------------------------------------------------------------ |
 | 200  | **OK:** Default status of a successful HTTP request. It means that the content was delivered to the user correctly. |
 | 204  | **No Content:** It means that the server completed the request but there was no content to be delivered. |
-| 206  | **Partial Content:** The server is delivered only part of the content because it had been divided into parts. |
-| 2xx  | **Other Status:** Here you can find other types of Status of requests that were also attended but that are not quite common. |
+| 206  | **Partial Content:** The server is delivering only part of the content as it has been divided into parts. |
+| 2xx  | **Other Status:** Here you can find other types of Status of requests that were also attended but that are not very common. |
 
 **HTTP Status Codes 3xx**: This status class indicates that the user's request has been redirected and needs one more step to be delivered.
 
@@ -126,7 +122,7 @@ Excellent documentation to deepen your knowledge of HTTP Status Codes can be fou
 | 301  | **Moved Permanently**: This and all future requests will be redirected to another URL. |
 | 302  | **Found:** This request was temporarily redirected to another URL. |
 | 304  | **Not Modified:** It is identified by the Header of the content that it has not yet been modified and does not need to be requested again. It can deliver the existing file in the user’s Browser. |
-| 3xx  | **Redirection:** Here you can find other types of Status of requests that were also redirected but that are not quite common. |
+| 3xx  | **Redirection:** Here you can find other types of Status of requests that were also redirected but that are not very common. |
 
 
 
@@ -137,8 +133,8 @@ Excellent documentation to deepen your knowledge of HTTP Status Codes can be fou
 | ---- | ------------------------------------------------------------ |
 | 400  | **Bad request:** The server cannot process the request, usually due to an error in the request format. |
 | 403  | **Forbidden:** The request is valid but not authorized on the server, it means that the user or the IP that is making the request is not authorized to do so. |
-| 404  | **Not Found:** The file requested does not exist at the origin. |
-| 4xx  | **Client Error:** Here you can find other types of Status of requests that also generated errors but that are not quite common. |
+| 404  | **Not Found:** The file requested by the request does not exist at the origin. |
+| 4xx  | **Client Error:** Here you can find other types of Status of requests that also generated errors but that are not very common. |
 
 
 
@@ -149,13 +145,13 @@ Excellent documentation to deepen your knowledge of HTTP Status Codes can be fou
 | 500  | **Internal Server Error:** It is a generic message that is given when there is an unexpected error on the server not being able to handle the request. |
 | 502  | **Bad Gateway:** When the server is serving as a Gateway or Proxy and receives an invalid response from the origin. Usually occurs when the origin is offline. |
 | 503  | **Service Unavailable:** Server is not available. Usually a temporary Status. |
-| 5xx  | **Server Error:** Here you can find other types of Status of requests that also generated errors but that are not quite common. |
+| 5xx  | **Server Error:** Here you can find other types of Status of requests that also generated errors but that are not very common. |
 
 ---
 
 ## 7. HTTP Methods {#http-methods}
 
-This graph shows the requests for your site segregated by the HTTP method used. For more in-depth information about HTTP methods you can read through this URL: [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) . Graph available only in the Metrics Premium product.
+This graph shows the requests for your site segregated by the HTTP method used. For more in-depth information about HTTP methods you can read through this URL: [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) . Graph available only in the Analytics Premium product.
 
 
 | Method | Description                                                  |
@@ -167,7 +163,27 @@ This graph shows the requests for your site segregated by the HTTP method used. 
 
 ---
 
-## 8. Web Application Firewall (WAF) {#web-application-firewall-waf}
+## 8. Connections {#connections}
+
+This tab is available when the *Live Streaming* solution is selected. It presents information regarding the number of users connected to your company's streams.
+
+**Average Connected Users:** Average users connected to the selected Stream. At the bottom of the graph, the average number of users connected in the interval is displayed.
+
+**Max Connected Users:** Maximum users connected to the selected Stream. At the bottom of the graph, the maximum number of users connected in the interval is displayed.
+
+---
+
+## 9. Storage (Stored Data) {#storage-stored-data}
+
+
+This tab presents graphs with information regarding the Cloud Storage product.
+
+**Used Space:** Amount of information stored by your company over time. At the bottom of the graph, the maximum storage utilization in the interval is displayed.
+
+---
+
+
+## 10. Web Application Firewall (WAF) {#web-application-firewall-waf}
 
 For customers who have the Web Application Firewall product, there is a specific graphic to show the behavior of requests.
 
@@ -180,22 +196,6 @@ For customers who have the Web Application Firewall product, there is a specific
 **SQL Injection Threats:** This graph represents the average of SQL Injection type attacks, a code insertion technique used to attack data-driven applications.
 
 **Other Threats:** This graph shows the average number of attacks blocked by WAF and which are not separated by the attack classifications above.
-
-## 9. Live Streaming {#connections}
-
-This tab is available when the *Live Streaming* solution is selected. It presents information regarding the number of users connected to your company's streams.
-
-**Average Connected Users:** Average users connected to the selected Stream. At the bottom of the graph, the average number of users connected in the interval is displayed.
-
-**Max Connected Users:** Maximum users connected to the selected Stream. At the bottom of the graph, the maximum number of users connected in the interval is displayed.
-
----
-
-## 10. Bandwidth Saving {#storage-stored-data}
-
-This tab is available when the customer has the _Image Processor_ solution. It presents the savings that the customer has when traveling images.
-
-At the bottom of the graph we have the total optimized with the image traffic.
 
 ---
 
