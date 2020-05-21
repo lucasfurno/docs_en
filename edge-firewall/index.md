@@ -1,5 +1,7 @@
 # Edge **Firewall**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/access-permissions/index.md)
+
 Azion Edge Firewall is a security product that gives protection from the network layer to the application layer. Your Azion security team presents you with the most advanced resources for protecting your applications against all types of attack, all in one place.
 
 With Edge Firewall, you can extend your security perimeter to the edge of the network, as your access control rules are processed directly through the Azion Edge Network, closer to users, which helps prevent undesirable requests from reaching your origin or getting access to your applications.
@@ -89,4 +91,3 @@ Web Application Firewall (WAF) protects your applications against threats such a
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-firewall/index.md) on GitHub.

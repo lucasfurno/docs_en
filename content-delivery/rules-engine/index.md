@@ -1,5 +1,7 @@
 # Rules **Engine**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/content-delivery/rules-engine/index.md)
+
 Você pode transferir parte da lógica das regras de negócio de sua aplicação para o Intelligent Edge da Azion utilizando as funcionalidades de _serverless_ computing do produto Application Acceleration. Dessa forma, você constrói uma arquitetura que entrega melhor performance para seus usuários e consome menos recursos e processamento em sua origem.
 
 O Rules Engine foi elaborado para permitir a codificação de uma lógica de execução condicional de comportamentos e ações diretamente no Intelligent Edge da Azion, mais próximo de seus usuários e, portanto, com melhor performance e taxa de transferência para sua aplicação.
@@ -113,7 +115,7 @@ Se necessária precedência explícita, você pode adicionar múltiplos grupos d
 Em Behavior você adiciona os comportamentos que deseja executar, caso as condições da regra sejam satisfeitas.
 
 Em cada fase de processamento, comportamentos distintos estão disponíveis.
-  
+
 ---
 
 ## 4. Funções {#funcoes}
@@ -122,7 +124,7 @@ Para os behaviors que solicitam um argumento obrigatório, como por exemplo o be
 
 A Azion também disponibiliza para você algumas funções para simplificar a manipulação de seus argumentos:
 
-| Função e Argumento | Descrição | 
+| Função e Argumento | Descrição |
 |:--------|:-------:|
 |${cookie_time_offset(number)}|Retorna a data atual acrescida de um offset em segundos, informado como argumento, para ser utilizado na definição do tempo de expiracão de um cookie. Por exemplo, se você deseja que o cookie expire em 1 hora, utilize o behavior Add Response Cookie com o argumento:<br>_&lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=${cookie_time_offset(3600)}_|
 |${encode_base64(string)}|Retorna o agumento codificado em base64. Por exemplo, _${encode_base64(www.domain.com)} retornará o valor d3d3LmRvbWFpbi5jb20K_|
@@ -130,5 +132,3 @@ A Azion também disponibiliza para você algumas funções para simplificar a ma
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/content-delivery/rules-engine/index.md) on GitHub.
