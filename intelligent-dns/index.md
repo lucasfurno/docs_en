@@ -1,83 +1,83 @@
 # Intelligent **DNS**
 
-Com a Azion sua aplicação fica mais rápida. Com o Intelligent DNS vai ficar ainda mais. Ele é um módulo para hospedagem de domínios que compõe nossa solução de roteamento de tráfego, o Edge Traffic Router. Sua implementação confere uma redução substancial na latência das requisições, melhorando a performance de suas aplicações e APIs, proporcionando uma melhor experiência para o usuário final.
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/intelligent-dns/index.md)<br>
+Azion’s Intelligent DNS is a domain hosting service that makes up Azion's traffic routing solution, the Edge Traffic Router. With this, your domains will be hosted on Azion’s distributed infrastructure, using the same performance and security solutions that have been built into Azion’s other products, combining techniques to optimize requests, while protecting against DDoS attacks.
 
-> 1. [O que é um DNS?](#o-que-e-um-dns)
-> 2. [Como funciona o Intelligent DNS?](#como-funciona-o-intelligent-dns)
+> 1. [What is a DNS?](#what-is-dns)
+> 2. [How does Intelligent DNS work?](#how-it-works)
 > 3. [Hands-on](#hands-on)
-> 4. [Tipos de entradas suportadas e as respectivas recomendações](#tipos-de-entradas-suportadas)
-> 5. [Regras de preenchimento de valores (Value)](#regras-de-preenchimento-de-valores)
-> 6. [Como utilizar wildcards?](#como-utilizar-wildcards)
-> 7. [Como testar minha zona?](#como-testar-minha-zona)
-> 8. [Como configurar o Intelligent DNS para responder pelos seus domínios?](#como-configurar-responder-pelos-dominios)
+> 4. [Types of supported entries and recommendations for each](#types-of-entries)
+> 5. [Rules for filling in values](#rules-for-filling)
+> 6. [How do I use wildcards?](#wildcards)
+> 7. [How do I test my zone?](#test-my-zone)
+> 8. [How do I configure Intelligent DNS to respond to my domains?](#how-configure-it)
 
 ---
 
-## 1. O que é um DNS(Domain Name System)? {#o-que-e-um-dns}
+## 1. What is a DNS (Domain Name System)? {#what-is-dns}
 
-Como o próprio nome diz é um sistema de resolução de nomes de domínios. Ele consegue resolver o nome em um endereço IP para que possa ser estabelecida uma conexão com o destino que fornecerá o conteúdo do site solicitado.
-
----
-
-## 2. Como funciona o Intelligent DNS? {#como-funciona-o-intelligent-dns}
-
-O Intelligent DNS é um produto desenhado para quem busca alto desempenho e alta disponibilidade para o seu negócio. Acoplado a ampla rede de pontos de presença dos edges da Azion, atua em conjunto com nossos mecanismos de edge network, combinando técnicas para otimização das requisições, ocasionando em melhores tempos de resposta, diminuindo consideravelmente o tempo de entrega de seu conteúdo.
-
-Sendo ele um DNS autoritativo, o cliente consegue facilmente gerenciar as configurações de entradas de seus domínios, através de uma interface amigável e intuitiva, com a garantia de alta disponibilidade de resolução de consultas que só uma rede de edges de alto desempenho como a da Azion pode oferecer. Além disso, é possível criar entradas do tipo ANAME, possibilitando o registro de um _naked domain_, configurações que, apesar de não obrigatórias, favorecem a usabilidade e acessibilidade web.
+As the name suggests, it is a system for associating domain names. It manages to translate the name into an IP address so that it can establish a connection with the target that can supply the content for the requested website.
 
 ---
 
-## 3. Hands-on. Passo a passo para configurar o Intelligent DNS {#hands-on}
+## 2. How does Intelligent DNS work? {#how-it-works}
+
+It’s designed for those that want high performance and high availability for their hosting and their domain. Intelligent DNS is an authoritative DNS solution, and allows the client to manage their domains, zones and records through a friendly and intuitive interface. In addition, it is possible to create ANAME type entries, which would allow you to host and use *naked domains* with other Azion products.
 
 ---
 
-## Criação de uma Zona Hospedada
-
-1.  A partir do [Real-Time Manager](https://manager.azion.com/), acesse o menu _Routing Services > Intelligent DNS_. Você visualizará a interface principal onde poderá criar e administrar suas zonas.
-2.  Clique no botão **Add Zone** e preencha os campos indicados a seguir:  
-    **Name for zone** (Nome da Zona): Identificador da sua nova zona de domínio criada. Esse campo é livre. Você pode cadastrar essa informação da maneira que melhor lhe convier.  
-    **Domain** (Domínio): Nesse campo você deve informar apenas o [Naked Domain](https://en.wikipedia.org/wiki/DNS_zone) em formato [FQDN](https://pt.wikipedia.org/wiki/FQDN). Ex: _mydomain.com_.  
-    **Active**: Essa flag indica se essa zona está ativa e deve ser respondida pelo Intelligent DNS ou não. Zonas desativadas são desconsideradas nas respostas do DNS.
-3.  Para finalizar, clique no botão **Save**
+## 3. Hands-on Configuring Intelligent DNS step by step {#hands-on}
 
 ---
 
-## Criando registros em sua zona
+## Creating a Hosting Zone
 
-Crie e edite entradas para seus domínios de acordo com a sua necessidade.
+1.  From [Real-Time Manager](https://manager.azion.com/), go to the menu _Routing Services > Intelligent DNS_. This will bring up the main interface where you can create and menage your zones.
+2.  Click on the **Add Zone** button and fill in the following fields:  
+    **Name for zone**: Identifier for the newly created zone of the domain. This field is free text. You can enter text in whatever form suits you best.
+    **Domain**: You can only enter the [Naked Domain](https://en.wikipedia.org/wiki/DNS_zone) in [FQDN](https://pt.wikipedia.org/wiki/FQDN) format, in this field. E.g.: _mydomain.com_.  
+    **Active**: This flag indicates whether the zone is active and therefore whether the Intelligent DNS should respond to it or not. Deactivated zones are ignored in DNS responses.
+3.  Click on the **Save** button to finish.
 
-A partir do [Real-Time Manager](https://manager.azion.com/), acesse o menu _Routing Services > Intelligent DNS_. Selecione o domínio que deseja administrar. Você visualizará a interface principal onde poderá criar e editar suas zonas. Ao fazer isso, você verá duas abas:
+---
+
+## Creating Records in your zone
+
+Create and edit entries for your domains as needed.
+
+From [Real-Time Manager](https://manager.azion.com/), go to the menu _Routing Services > Intelligent DNS_. Choose the domain you want to manage. This will bring up the main interface where you can create and edit your zones. On doing so, you will see two tabs:
 
 **Main Settings**
 
-Nessa aba você poderá editar o nome da zona, o seu domínio principal, o status dela no serviço de DNS e também terá acesso aos endereços dos servidores autoritativos da Azion (name servers) que responderão as consultas referentes a essa sua zona.
+In this tab you can edit the name of the zone, the main domain, the service status of DNS and you will also have access to the addresses of Azion’s authoritative servers (name servers) that will answer the queries for your zone.
 
 **Records**
 
-Nessa aba, você verá a lista de registros que fazem parte dessa zona.  
-Para inserir um novo registro, clique no botão **Add Record**. A tela de inclusão será apresentada com os campos a seguir:
+In this tab you will see a list of all the records that are part of this zone.
+Click on the button **Add Record**, to add a new record. The window for adding records will open, with the following fields:
 
-*   **Name (Nome do Registro)**  
-    Essa descrição é o domínio que se deseja criar. Como por exemplo: "_help_", em "<em">help.azion.com", ou então "_manager_" em "_manager.azion.com_".</em"> 
-*   **Type (Tipo do Registro)**  
-    É o tipo de registro que está sendo adicionado, como por exemplo um registro do tipo A, AAAA, MX ou CNAME, dentre outros.  
-    [(ver seção Tipos de entradas suportadas e as respectivas recomendações que o Intelligent DNS segue)](#tipos-de-entradas-suportadas)  
+*   **Name**  
+    This description is the domain that you want to create. For example: "*help*", in "*help.azion.com*", or then "*manager*" in "*manager.azion.com*". 
+*   **Type**  
+    This is the type of record that is being added, such as types A, AAAA, MX or CNAME, among other examples.
+    [(see section - Types of supported entries and recommendations for each)](#types-of-entries)  
 
-*   **Value (Valor do Registro)**  
-    É a resposta de DNS para o registro cadastrado, como por exemplo um endereço IPv4.  
-    [(ver seção Regras de preenchimento de valores (Value))](#regras-de-preenchimento-de-valores)  
+*   **Value**  
+    This is the DNS response to the registered record, such as an IPv4 address for example.
+    [(see section - Rules for filling in values)](#rules-for-filling)
 
-*   **TTL (Time To Live)**: É o tempo que uma resposta pode ficar em cache em servidores resolvers.  
+*   **TTL (Time To Live)**
+    This is the time that a response can be cached for on a resolver server.
 
-Para finalizar a criação de seu registro, clique no botão **Save**. A partir desse momento, essas informações serão sincronizadas com o serviço de atendimento do Intelligent DNS. Suas configurações são salvas e distribuídas para a rede da Azion praticamente em tempo real.
+Click on the **Save** button to finish creating your record. From this moment, this set of information will synchronized with the Intelligent DNS service. Your settings are saved and distributed to the Azion network virtually in real time.
 
-Pronto. Seu domínio já está configurado e preparado para ser atendido pelo Intelligent DNS da Azion. Para verificar se tudo deu certo, execute alguns dos testes descritos na seção [Como testar minha zona?](#como-testar-minha-zona)
+There you have it. Your domain is already set up and ready to be served by Azion´s Intelligent DNS. To make sure everything is working, run some of the tests described in the section - [How do I test my zone?](#test-my-zone)
 
 ---
 
-## 4. Tipos de entradas suportadas e as respectivas recomendações que o Intelligent DNS segue {#tipos-de-entradas-suportadas}
+## 4. Types of supported entries and recommendations for each that Intelligent DNS follows {#types-of-entries}
 
-Para prover a criação de registros, o Intelligent DNS implementa os seguintes tipos de entradas DNS.
+Intelligent DNS supports the following types of entries, for creating records.
 
 | Type | Referência |
 |------|------------|
@@ -92,72 +92,73 @@ Para prover a criação de registros, o Intelligent DNS implementa os seguintes 
 | TXT | [RFC1035](https://tools.ietf.org/html/rfc1035) e [RFC1464](https://tools.ietf.org/html/rfc1464) |
 
 
-## 5. Regras de preenchimento de valores (Value) {#regras-de-preenchimento-de-valores}
+## 5. Rules for filling in values {#rules-for-filling}
 
-| Type | Regra de restrição | Exemplo |
+| Type | Restriction rule | Example |
 |------|--------------------|---------|
-| A | [Deve seguir o formato IPv4](https://pt.wikipedia.org/wiki/IPv4) <br><br> Máximo de 10 endereços IP (um por linha)<br><br> Somente endereços IPv4 válidos serão aceitos como resposta| Nome da Zona: azion.com<br><br> Nome do Registro: @ (Ou em branco)<br><br> Valor da resposta:<br><br> 192.209.210.67<br><br> 198.199.105.93 |
-| AAAA | [Deve seguir o formato IPv6](https://pt.wikipedia.org/wiki/IPv6) Máximo de 10 endereços IP (um por linha)<br><br> Somente endereços IPv6 válidos serão aceitos como resposta | Nome da Zona: azion.com<br><br> Nome do Registro: www<br><br> Valor da resposta:<br><br> 2800:3f0:4001:815::2004 |
-| ANAME | [Deve respeitar o formato FQDN](https://pt.wikipedia.org/wiki/FQDN)<br><br> Apenas um domínio para cada registro do tipo ANAME<br><br> Somente domínios abaixo de azioncdn.net são aceitos como valor.<br><br> Pode coexistir com registros de mesmo nome mas de tipos diferentes (MX, TXT etc.) | Nome da Zona: azion.com<br><br> Nome do Registro: @<br><br> Valor da resposta:<br><br> 32082s.ha.azioncdn.net |
-| CNAME | [Deve respeitar o formato FQDN](https://pt.wikipedia.org/wiki/FQDN) <br><br> Apontar somente para outro nome de domínio, nunca para um endereço IP<br><br> Não pode ser colocado no nível do domínio raiz.<br><br> Permitido apenas um domínio para cada registro do tipo CNAME<br><br> Um nome de host definido em um registro CNAME não deve ter outros registros de recursos de outros tipos (MX, A, etc.)<br><br> Os registros CNAME podem apontar para outros registros CNAME, mas isso não é considerado uma boa prática, pois é ineficiente<br><br> Caso um registro CNAME estiver apontando para um registro da mesma zona, o Intelligent DNS responderá todos eles em apenas um consulta |  |
-| MX | Deve seguir o formato [PRIORITY] [ADDRESS]<br><br> Máximo de 10 endereços IP (um por linha) | Nome da Zona: azion.com<br><br> Nome do Registro: mail<br><br> Valor(es) da resposta:<br><br> 10 mailserver.example.com<br><br> 20 mailserver2.example.com |
-| NS | [Deve respeitar o formato FQDN](https://pt.wikipedia.org/wiki/FQDN)  ou endereço de ip<br><br> Máximo de 10 endereços (um por linha)<br><br> Um NS não pode ser configurado para o domínio principal da zona (naked domain)<br><br> Deve apontar para os servidores que detém autoridade sobre aquele registro| Nome da Zona: azion.com<br><br> Nome do Registro: ns<br><br> Valores de resposta:<br><br> ns1.aziondns.net<br><br> ns2.aziondns.net |
-| PTR | [Zonas reversas vinculadas a endereços IPv6 seguem outras regras. Veja aqui mais informações.](https://pt.wikipedia.org/wiki/Reverse_DNS_lookup) | 1- Crie uma nova zona, colocando a seguinte informação como DOMAIN:<br> 0.168.192.in-addr.arpa<br><br> 2 - Após a criação dessa zona, você deve criar um registro associado a ela do tipo PTR, com a seguinte configuração:<br><br> Nome do Registro: 1<br><br> Valor da resposta: www.exemplo.com |
-| SRV | Deve obedecer o seguinte formato no nome do registro: '_service._protocol.name'. Exemplo: "_ldap._tcp.azionsrv"<br><br> Os valores de resposta devem seguir, obrigatoriamente, o formato [prioridade] [peso] [porta] [destino]<br><br> Máximo de 10 respostas por registro (uma por linha)<br><br> Deve apontar para o nome do host que possua um registro A ou AAAA.<br><br> Obs: É você quem deve ter essa atenção, pois o Intelligent DNS não realiza essa validação automaticamente | Nome da Zona: azion.com<br><br> Nome do Registro: _ldap._tcp.azionsrv<br><br> Valores de resposta:<br><br> 0 60 5060 bigbox.example.com   |
-| TXT | Limite total de 1000 caracteres<br><br> Textos separados por ENTER são considerados respostas diferentes para o Intelligent DNS | Nome da Zona: azion.com<br><br> Nome do Registro: txt<br><br> Valores de resposta:<br><br> This domain name is reserved for use in documentation<br><br> "printer=lpr5"<br><br> "favorite drink=orange juice"   |
+| A | [Must be in IPv4 format](https://pt.wikipedia.org/wiki/IPv4) <br><br>Maximum of 10 IP addresses (one per line).<br><br>Only valid IPv4 addresses are accepted as a response. | Name of zone: azion.com<br><br>Name of record: @ (or blank)<br><br>Value(s) of response:<br><br> 192.209.210.67<br><br> 198.199.105.93 |
+| AAAA | [Must be in IPv6 format](https://pt.wikipedia.org/wiki/IPv6) <br /><br />Maximum of 10 IP addresses (one per line).<br/><br>Only valid IPv6 addresses are accepted as a response. | Name of zone: azion.com<br><br>Name of record: www<br><br>Value(s) of response:<br><br> 2800:3f0:4001:815::2004 |
+| ANAME | [Must be in FQDN format](https://pt.wikipedia.org/wiki/FQDN)<br><br>Only one domain for each ANAME type record.<br><br>Only the domains below from azioncdn.net are accepted.<br><br>Records with the same same, but of different types (MX, TXT etc.) can coexist. | Name of zone: azion.com<br><br>Name of record: @<br><br>Value of response:<br><br> 32082s.ha.azioncdn.net |
+| CAA | The value of the response must follow the format [FLAG] [TAG] “[VALUE]”.<br />Example: 0 issue "ca.example.net".<br /><br />It will not be possible to register a CAA type record, when the zone already has a CNAME type record.<br /><br />N.B. the tool [SSL mate](https://sslmate.com/caa/) can help when creating and querying. | Flag: If the flag has a value of 0 (zero), all flags will be switched off. If the flag has a value of 1, the 0 bit (Issuer Critical Flag) is on, i.e. A CA must not send certificates for any FQDN, if the relevant record for that FQDN contains a CAA.<br /><br />Tag: The tags must be in lower case and must follow the naming convention in the RFC, Example: *issue*, *issuewild*, *iodef*.<br />Issue: indicates that the CA of the ACM specified in the *value* field can send a certificate to your domain or sub-domain.<br />Issuewild: indicates that the CA of the ACM specified in the *value* field can send a wildcard certificate to your domain or sub-domain.<br />iodef: indicates that should the CA receive an invalid request for a certificate, it should send a notification to the domain owner. Use url (http/https) or mailto, e.g. “mailto:email@domain.com”, “https://url” and "http://url".<br /><br />Value:<br />The value must always be between inverted commas, e.g. “ca.example.com”, and the content will depend on the tag you use.<br />Issue: url or a sequence, e.g. “ca.example.net; account=123456” or “ca.example.com”<br />Issuewild: must use a domain with a wildcard e.g. “*.example.com”<br />iodef: a url callback or an email address, e.g. “mailto:email@domain”, “https://example.com/callback” and “http://example.com/callback”. |
+| CNAME | [Must be in FQDN format](https://pt.wikipedia.org/wiki/FQDN) <br><br>Only point it to another domain name, never an IP address.<br><br>It can’t be added at the level of the root domain.<br><br>Only one domain is allowed for each CNAME type record.<br><br>A defined host name in a CNAME record must not include records from other types of resources (MX, A, etc.)<br><br>CNAME records can point to other CNAME records, but this isn’t considered good practice, as it is inefficient.<br><br>Should a CNAME record be pointing to a record in the same zone, Intelligent DNS will respond to all of them on receiving one query. |  |
+| MX | Must be in the format [PRIORITY] [ADDRESS].<br><br>Maximum of 10 IP addresses (one per line). | Name of zone: azion.com<br><br>Name of record: mail<br><br>Value(s) of response:<br><br> 10 mailserver.example.com<br><br> 20 mailserver2.example.com |
+| NS | [Must be in FQDN format](https://pt.wikipedia.org/wiki/FQDN) or an IP address.<br><br>Maximum of 10 addresses (one per line).<br><br>An NS cannot be configured by the main domain of the zone (naked domain).<br><br>It must point to the servers that have authority over that record. | Name of zone: azion.com<br><br>Name of records: ns<br><br>Value(s) of response:<br><br> ns1.aziondns.net<br><br> ns2.aziondns.net |
+| PTR | [Reverse zones lined to IPv6 addresses follow other rules. See here for more information.](https://pt.wikipedia.org/wiki/Reverse_DNS_lookup) | 1- Create a new zone, add the following information for DOMAIN:<br> 0.168.192.in-addr.arpa<br><br> 2 - After creating the zone, you must create a type PTR record associated with it, with the following settings:<br><br>Name of record: 1<br><br>Value of response: www.exemplo.com |
+| SRV | The record name must have the following format: '_service._protocol.name'. Example: "_ldap._tcp.azionsrv".<br><br>The response values must be in the format [priority] [weight] [port] [target].<br><br>Maximum of 10 records (one per line).<br><br>It must point to the host name that has an A or AAAA record.<br><br>N.B. You must pay special attention to this, because Intelligent DNS will not validate this automatically. | Name of zone: azion.com<br><br>Name of record: _ldap._tcp.azionsrv<br><br>Value(s) of response:<br><br> 0 60 5060 bigbox.example.com |
+| TXT | Limited to 100 characters.<br><br>Text that is separated by ENTER is considered as differente responses by Intelligent DNS | Name of zone: azion.com<br><br>Name of record: txt<br><br>Value(s) of response:<br><br> This domain name is reserved for use in documentation<br><br> "printer=lpr5"<br><br> "favorite drink=orange juice" |
 
-## 6. Como utilizar wildcards? {#como-utilizar-wildcards}
+## 6. How do I use wildcards? {#wildcards}
 
-Um registro curinga é um registro que responde a solicitações de DNS para domínios que você ainda não definiu. Você pode criá-los para qualquer tipo, inserindo um asterisco (*) no nome do registro. Por exemplo, imagine que você tenha a seguinte configuração para uma zona cujo domínio é "_example.com_":
+A wildcard record is a record that responds to DNS requests by domains that you haven’t yet defined. You can create them for any type, inserting an asterisk in the record name. For example, imagine that you have the following configuration for a zone whose domain is “*example.com*”:
 
 | Name | Type | Value |
 |------|------|-------|
 | www | A | 192.168.0.1<br><br> 192.168.0.2<br><br> 192.168.0.3 |
-| * | A | 1.1.1.1 |      
+| * | A | 1.1.1.1 |
 | *.wildcard | A | 2.2.2.2  |
 
-Isso significa que:
+This means that:
 
-*   Se a consulta for realizada por _www.example.com_ a resposta será composta por 3 endereços IP: 192.168.0.1, 192.168.0.2 e 192.168.0 OBS: Ele **não é** um wildcard, mas tem prioridade na resposta porque encontrou corretamente o registro consultado.
-*   Se a consulta for realizada por _ghost.example.com_ a resposta será efetuada de acordo com o wildcard encontrado. Ou seja, responderá: 1.1.1.1
-*   Se a consulta for realizada por _another.wildcard.example.com_ a resposta será efetuada de acordo com o wildcard encontrado para essa construção Ou seja, responderá: 2.2.2.2
-*   Se a consulta for realizada por _wrong.record.example.com_ a resposta não terá nenhum valor, pois não existe nenhuma correspondência a essa estrutura consultada.
+*   If the query was made by *www.example.com* the response would consist of 3 IP addresses: 192.168.0.1, 192.168.0.2 and 192.168.0. N.B. It isn’t a wildcard, but it is given priority for the response because it correctly meets the record that is queried.
+*   If the query was made by *ghost.example.com* the response would be according to the wildcard it found. I.e. The response would be: 1.1.1.1
+*   If the query was made for *another.wildcard.example.com* the response be according to the wildcard it found this time, i.e. The response would be: 2.2.2.2
+*   If the query was made for *wrong.record.example.com* the response would have no value, because there is nothing that corresponds to this structure.
 
-**Restrições na construção de wildcards**
+**Restrictions on the use of wildcards**
 
-Somente será considerado um wildcard, o asterisco mais à esquerda seguido, obrigatoriamente, por um ponto. Todos os demais asteriscos, se existirem, serão considerados como caracteres válidos.
+It is only read as a wildcard if the leftmost asterisk is followed by a period. Any other asterisks, should there be some, are then considered valid characters.
 
-Asteriscos localizados mais a esquerda que não estiverem sendo seguidos por um ponto, não serão considerados wildcards.
+Any asterisks to the very left, that aren’t followed by a period, will be disregarded as wildcards.
 
-Não é permitido a utilização de caracteres curingas em registros do tipo SRV, pois ele segue uma norma de formatação em seu nome.
+You can’t use wildcard characters in SRV type records because it requires a standard format in its name.
 
 ---
 
-## 7. Como testar minha zona? {#como-testar-minha-zona}
+## 7. How do I test my zone? {#test-my-zone}
 
-Se você já efetuou as configurações desejadas no Intelligent DNS e agora deseja verificar se ele está respondendo adequadamente suas informações, você pode testá-lo utilizando as seguintes ferramentas:
+If you have already set up Intelligent DNS as you want and you now want to test it to see if it is processing your information properly, you can test it using the following tools:
 
 ### DIG
 
-O "_dig_" (domain information groper) é uma ferramenta de linha de comando de administração de rede para consultar o DNS. Ela é útil para solucionar problemas de rede e para fins educacionais. Ele pode operar com base na opção da linha de comando e nos argumentos do sinalizador, ou no modo em lote, lendo solicitações de um arquivo do sistema operacional. Quando um servidor de nomes específico não é informado na chamada de comando, ele usa o resolvedor padrão do sistema operacional, geralmente configurado no arquivo resolv.conf. Sem argumentos, ele consulta a zona raiz do DNS.
+The “*dig*” (domain information groper) is a network administration command-line tool for querying the Domain Name System (DNS). dig is useful for network troubleshooting and for educational purposes. It is useful for network troubleshooting and for educational purposes. It can operate based on command line option and flag arguments, or in batch mode by reading requests from an operating system file. When a specific name server is not specified in the command invocation, it uses the operating system's default resolver, usually configured in the file resolv.conf. Without any arguments it queries the DNS root zone.
 
-É um componente do pacote de software para servidores de nomes de domínio _BIND_ e, na prática, substitui ferramentas antigas, como "_nslookup_" e o "_host_". No entanto, as ferramentas mais antigas ainda são usadas de maneira complementar.
+It is a component of the domain name server software suite *BIND* and supersedes in functionality older tools, such as “*nslookup*” and “*host*”. However, the older tools are still used in complementary fashion.
 
-Para você testar o Intelligent DNS, deve utilizar um dos nameservers listados na aba _Main Settings_ de sua zona cadastrada na Azion.
+To test Intelligent DNS, you should use one of the nameservers listed on the *Main Settings* tab of your Azion registered zone.
 
-Por exemplo, imagine que você tenha a seguinte configuração:
+For example, imagine you have the following settings:
 
 | Name | Type | Value | TTL |
 |------|------|-------|-----|
 | www | A | 192.168.0.1<br><br> 192.168.0.2<br><br> 192.168.0.3 | 3600 |
 
-Para verificar como o Intelligent DNS responderá por uma consulta ao tipo "A" cadastrado para o registro "_www_", digite o seguinte comando:
+To check how Intelligent DNS handles a type A query, registered to the “www” record, type the following command:
 
 ~~~
   > dig A www.example.com @ns1.aziondns.net 
 ~~~
 
-Essa será a resposta a essa consulta:
+The response to this will be:
 
 ~~~
  ; <<>> DiG 9.10.6 <<>> A www.example.com @ns1.aziondns.net ;; global options: +cmd ;; Got answer: ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46329 ;; flags: qr aa rd; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1 ;; WARNING: recursion requested but not available ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 4096 ;; QUESTION SECTION: ;www.example.com. IN A ;; ANSWER SECTION: www.example.com. 3600 IN A 192.168.0.1 www.example.com. 3600 IN A 192.168.0.2 www.example.com. 3600 IN A 192.168.0.3 ;; Query time: 22 msec ;; SERVER: 179.191.160.2#53(179.191.160.2) ;; WHEN: Thu Sep 12 13:13:14 -03 2019 ;; MSG SIZE rcvd: 137
@@ -165,21 +166,21 @@ Essa será a resposta a essa consulta:
 
 ### HOST
 
-O _host_ realiza pesquisas de DNS, convertendo nomes de domínio em endereços IP e vice-versa. Quando nenhum argumento ou opção é fornecido, o host imprime um breve resumo dos argumentos e opções da linha de comando.
+*Host* queries the DNS, converting domain names into IP addresses and vice-versa. If no argument or option is provided, the host prints a brief summary of the command line options and arguments.
 
-Por exemplo, imagine que você tenha a seguinte configuração:
+For example, imagine you have the following settings:
 
 | Name | Type | Value | TTL |
 |------|------|-------|-----|
 | www | A | 192.168.0.1<br><br> 192.168.0.2<br><br> 192.168.0.3 | 3600 |
 
-Para verificar como o Intelligent DNS responderá por uma consulta ao tipo "A" cadastrado para o registro "_www_", digite o seguinte comando:
+To check how Intelligent DNS handles a type A query, registered to the “www” record, type the 
 
 ~~~
 > host www.example.com ns1.aziondns.net
 ~~~
 
-Essa será a resposta a essa consulta:
+The response to this will be:
 
 ~~~
 Using domain server: Name: ns1.aziondns.net Address: 179.191.160.2#53 Aliases: www.example.com has address 192.168.0.1 www.example.com has address 192.168.0.2 www.example.com has address 192.168.0.3
@@ -187,21 +188,21 @@ Using domain server: Name: ns1.aziondns.net Address: 179.191.160.2#53 Aliases: w
 
 ### NSLOOKUP
 
-_Nslookup_ é uma ferramenta, comum ao Windows e ao Linux, utilizada para se obter informações sobre registros de DNS de um determinado domínio, host ou IP.
+*Nslookup* is a tool, common to both Windows and Linux, used to obtain information about DNS records for a particular domain, host or IP.
 
-Por exemplo, imagine que você tenha a seguinte configuração:
+For example, imagine you have the following settings:
 
 | Name | Type | Value | TTL |
 |------|------|-------|-----|
 | www | A | 192.168.0.1<br><br> 192.168.0.2<br><br> 192.168.0.3 | 3600 |
 
-Para verificar como o Intelligent DNS responderá por uma consulta ao tipo "A" cadastrado para o registro "_www_", digite o seguinte comando:
+To check how Intelligent DNS handles a type A query, registered to the “www” record, type the following command:
 
 ~~~
  > nslookup www.example.com ns1.aziondns.net
 ~~~
 
-Essa será a resposta a essa consulta:
+The response to this will be:
 
 ~~~
  Server: ns1.aziondns.net Address: 179.191.160.2#53 Name: www.example.com Address: 192.168.0.1 Name: www.example.com Address: 192.168.0.2 Name: www.example.com Address: 192.168.0.3
@@ -209,16 +210,14 @@ Essa será a resposta a essa consulta:
 
 ---
 
-## 8. Como configurar o Intelligent DNS para responder pelos seus domínios? {#como-configurar-responder-pelos-dominios}
+## 8. How do I configure Intelligent DNS to respond to my domains? {#how-configure-it}
 
-Para que o Intelligent DNS passe a responder como autoridade sobre suas zonas, você deve efetuar o apontamento no seu DNS de registro. (registro.br, GoDaddy, AWS Registrar, etc)
+So that Intelligent DNS can take over authority for its zones, you must list it in your DNS registry. (registro.br, GoDaddy, AWS Registrar, etc.)
 
-Para efetuar o apontamento no seu DNS de registro, utilize um dos nameservers listados na aba _Main Settings_ de suas zonas cadastradas na Azion.
+To list it in your DNS registry, use one of the nameservers listed on the Main Settings tab of your Azion registered zones.
 
-Importante verificar se todos os seus registros estão devidamente cadastrados e testados no Intelligent DNS antes de efetuar esse apontamento. Caso contrário você correrá o risco de ter indisponibilidade do seu serviço.
+It is important to check that all your records are definitely registered and tested in Intelligent DNS before doing this. If you don’t, you run the risk of a loss of service.
 
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/intelligent-dns/index.md) on GitHub.
