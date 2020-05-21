@@ -82,4 +82,3 @@ Remember: WAF only blocks threats if it is configured in Blocking Mode.
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-

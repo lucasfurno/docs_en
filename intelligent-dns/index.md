@@ -1,7 +1,8 @@
 # Intelligent **DNS**
 
-[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/intelligent-dns/index.md)<br>
-Azion’s Intelligent DNS is a domain hosting service that makes up Azion's traffic routing solution, the Edge Traffic Router. With this, your domains will be hosted on Azion’s distributed infrastructure, using the same performance and security solutions that have been built into Azion’s other products, combining techniques to optimize requests, while protecting against DDoS attacks.
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/intelligent-dns/index.md)
+
+Com a Azion sua aplicação fica mais rápida. Com o Intelligent DNS vai ficar ainda mais. Ele é um módulo para hospedagem de domínios que compõe nossa solução de roteamento de tráfego, o Edge Traffic Router. Sua implementação confere uma redução substancial na latência das requisições, melhorando a performance de suas aplicações e APIs, proporcionando uma melhor experiência para o usuário final.
 
 > 1. [What is a DNS?](#what-is-dns)
 > 2. [How does Intelligent DNS work?](#how-it-works)
