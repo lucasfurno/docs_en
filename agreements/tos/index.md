@@ -1,6 +1,6 @@
 # Terms of **Service**
 
-*Last updated: May 25, 2019.*
+*Last updated: May 15, 2019.*
 
 The following definitions related to Products and Services, billing methods, and other terms apply to the purchase and use of Azion Products and Services. We are constantly looking to improve our solutions. Consequently, this document may be updated and you should always look at its latest version.
 
@@ -96,11 +96,3 @@ TB: terabyte(s), 1 TB = 1.000 GB.
 GB: gigabyte(s), 1 GB = 1.000 MB.
 MB: megabyte(s), 1 MB = 1.000 KB.
 KB ou kB: kilobyte(s), 1KB = 1.000 bytes.
-
-Previous versions of the agreement:
-
-[Term of Service - May 15, 2019] (https://www.azion.com/en/documentation/agreements/tos/15-may-2019/).
-
-[Term of Service - October 25, 2017] (https://www.azion.com/en/documentation/agreements/tos/25-october-2016/).
-
-[Term of Service - November 10, 2016] (https://www.azion.com/en/documentation/agreements/tos/10-november-2016/)
