@@ -1,5 +1,7 @@
 # Serverless functions running on the **Edge**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/serverless-functions/index.md)
+
 With edge computing (or **_Edge Computing_**) and its Serverless functions (Edge Functions), it is now possible to dispense with the configuration of servers and the use of computing clouds (or Cloud Computing). From a simple "Hello World" to complex scenarios, there are many case possibilities that can be built and processed directly in **_Edge Nodes_**.
 
 From serverless functions running on the edge, it is possible to configure automatic responses to requests, create static sites with dynamic navigation and many other options, in a decentralized manner, with high availability, low latency, high transfer capacities and a better user experience as well as devices that trigger them (IoT's for example).
@@ -49,5 +51,3 @@ In the **_Rules Engine_** tab, use the Default Rule or create a new rule with a 
 ---
 
 Didn’t find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/use-cases/serverless-functions/index.md) on GitHub.
