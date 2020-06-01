@@ -9,16 +9,17 @@ This page lists the latest changes to Azion products and services. Here you will
 **may/2020**
 
 * Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
+* Now you can view the content of Network Lists provided by Azion through Real-Time Manager user interface or Network Lists API.
 
 ---
 
 **apr/2020**
 
 *  Azion Edge Firewall's General Availability.
-* Bug fix in the Intelligent DNS product interface.
-* Bug fix in the Real-Time Metrics product interface.
-* Bug Fix in the Edge Application product at Cache error pages.
-* Integration with Radware Bot Manager.
+*  Bug fix in the Intelligent DNS product interface.
+*  Bug fix in the Real-Time Metrics product interface.
+*  Bug Fix in the Edge Application product at Cache error pages.
+*  Integration with Radware Bot Manager.
 
 ---
 
