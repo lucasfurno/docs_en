@@ -6,6 +6,12 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**may/2020**
+
+* Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
+
+---
+
 **apr/2020**
 
 *  Azion Edge Firewall's General Availability.
