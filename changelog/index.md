@@ -10,6 +10,10 @@ This page lists the latest changes to Azion products and services. Here you will
 
 * Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
 * Now you can view the content of Network Lists provided by Azion through Real-Time Manager user interface or Network Lists API.
+* Real-Time Analytics renamed to Real-Time Metrics
+* Added graphics referring to "L2 Caching" metrics, in the Real-Time Metrics interface
+* Bug fix performance Data Streaming
+* Real-Time Metrics supporting monster clients
 
 ---
 
