@@ -13,7 +13,7 @@ This page lists the latest changes to Azion products and services. Here you will
 * Real-Time Analytics renamed to Real-Time Metrics
 * Added graphics referring to "L2 Caching" metrics, in the Real-Time Metrics interface
 * Bug fix performance Data Streaming
-* Real-Time Metrics supporting monster clients
+* Bug fix Real-Time Metrics supporting larger number of domains Edge Application
 
 ---
 
