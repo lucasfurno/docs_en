@@ -10,7 +10,7 @@ Rule Sets deprecated from Edge Firewall show the following banner:  *"**This Edg
 
 > 1. [What has changed?](#what-has-changed?)
 > 2. [Assigning your Rule Sets to the latest version of Edge Firewall](#assigning-rule-sets)
-> 3. [Support Documents](#support-documents)
+> 3. [Support Documents](#support-documentation)
 
 ---
 
@@ -60,12 +60,12 @@ If you used **Geo Blocking** in your deprecated rule set, in the new rule set:
 1. Access the [Real-Time Manager](https://manager.azion.com/) and enter the **Libraries** > **Network Lists** menu.
 2. Add or edit a **Network List**.
 3. In the **Type** option, select **Countries**.
-4. Copie a lista de países da rule set deprecated para a **Network Lists**.
-5. Em **Edge Firewall**, habilite o módulo **Network Layer Protection**.
-6. Na aba **Rule Engine**, crie uma nova **Rule** e selecione o **Criteria: Network**.
-7. Incluir o operador lógico, por exemplo, se for **Match** para **Blacklist**, ou **Does not Match** para **Whitelist**.
-8. Após, selecione a **Network List** do tipo **Country** criada nos passos 3 e 4.
-9. Em **Behavior**, selecione o Behavior **Deny 403**.
+4. Copy the list of countries from the deprecated rule set to **Network Lists**.
+5. In the **Edge Firewall**, enable the **Network Layer Protection** module.
+6. On the **Rule Engine** tab, create a new **Rule** and select **Criteria: Network**.
+7. Include the logical operator, for example, for **Match** means **Blacklist**, or if **Does not Match** means **Whitelist**.
+8. Then, select the **Country** type of **Network List** created in steps 3 and 4.
+9. In **Behavior**, select the Behavior **Deny 403**.
 
 #### Secure Token
 
@@ -73,11 +73,11 @@ If you used **Geo Blocking** in your deprecated rule set, in the new rule set:
 
 Se você usava **Secure Token** em sua rule set deprecated, na nova rule set:
 
-1. Habilite o módulo **Secure Token**.
-2. Na aba **Functions**, clique em **Add function** para instanciar uma Edge Function de **Secure Token**.
-3. Preencha as informações e utilize o editor para customizar **Args** da Função para definir a secret que será utilizada para composição do hash.
-4. Na aba **Rules Engine** defina o **Criteria** para condicionar o uso da Edge Function.
-5. Em **Behavior** selecione **Run Function** e selecione a **Edge Function** e escolha a Function **Secure Token** instanciada nos passos 2 e 3.
+1. Enable the module **Web Application Firewall**.
+2. In the **Functions** tab, select **Add function** to instantiate a **Secure Token** Edge Function.
+3. Fill in the information and use the editor to customize Function **Args** to define the secret that will be used to compose the hash.
+4. On the **Rules Engine** tab, define a **Criteria** that will be used on **Edge Function**.
+5. In **Behavior** select **Run Function**, then select **Secure Token** function, created in steps 2 and 4.
 
 #### IP Blocking
 
@@ -85,15 +85,15 @@ Se você usava **Secure Token** em sua rule set deprecated, na nova rule set:
 
 Se você usava **IP Blocking** em sua rule set deprecated, na nova rule set:
 
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu **Libraries** e selecione **Network Lists**.
-2. Adicione ou Edite uma **Network List**.
-3. Na opção **Type**, selecione **IP/CIDR**.
-4. Copie a lista de países da rule set deprecated para sua **Network Lists**.
-5. Em **Edge Firewall**, habilite o módulo **Network Layer Protection**.
-6. Na aba **Rule Engine**, crie uma nova **Rule** e selecione o **Criteria: Network**.
-7. Incluir o operador lógico, por exemplo, se for **Match** é **Blacklist**, se for **Does not Match** equivale a **Whitelist**.
-8. Após, selecione a **Network List** do tipo **IP/CIDR** criada nos passos 3 e 4.
-9. Em **Behavior**, selecione o Behavior **Deny 403**.
+1. Access the [Real-Time Manager](https://manager.azion.com/) and enter the **Libraries** > **Network Lists** menu.
+2. Add or edit a **Network List**.
+3. In the **Type** option, select **IP/CIDR**.
+4. Copy the list of IP`s from the deprecated rule set to **Network Lists**.
+5. In the **Edge Firewall**, enable the **Network Layer Protection** module.
+6. On the **Rule Engine** tab, create a new **Rule** and select **Criteria: Network**.
+7. Include the logical operator, for example, for **Match** means **Blacklist**, or if **Does not Match** means **Whitelist**.
+8. Then, select the **IP/CIDR** type of **Network List** created in steps 3 and 4.
+9. In **Behavior**, select the Behavior **Deny 403**.
 
 #### Rate Limiting
 
@@ -101,48 +101,48 @@ Se você usava **IP Blocking** em sua rule set deprecated, na nova rule set:
 
 Se você usava **Rate Limiting** em sua rule set deprecated, na nova rule set:
 
-1. Selecione a Aba **Rules Engine**.
-2. Em seguida, defina uma **Criteria** para sua Rule Set.
-3. Em **Behavior**, selecione **Set Rate Limit**.
-4. Defina o número de requisições por segundo em **Average Rate Limit**.
-5. Configure para **Client IP** Address ou **Global**.
-6. Após, defina o **Maximum burst size**.
+1. Select the **Rules Engine** tab.
+1. Then, define a **Criteria** for your Rule Set.
+2. In **Behavior**, select **Set Rate Limit**.
+3. Set the number of requests per second in the **Average Rate Limit**.
+4. Set to **Client IP** Address or **Global**.
+5. After, set the **Maximum burst size**.
 
-#### Associação de Domains à nova Rule Set
+#### Association of Domains to the new Rule Set
 
-Após efetuar as configurações, associe um ou mais **domains** à nova **Rule Set**
+After making the settings associate one or more domains to the new **Rule Set**:
 
-1. Edite a nova **Rule Set** do **Edge Firewall**.
-2. Em **Main Settings**, na seção **Domains**, selecione domains que deseja associar à **Rule Set**.
-3. **Salve** para aplicar a configuração.
+1. Edit the new **Rule Set** of the **Edge Firewall**.
+2. In **Main Settings**, in the **Domains** section, select domains that will be associated with the **Rule Set**.
+3. **Save** to apply the configuration.
 
-#### Associação de WAF Rule Set
+#### WAF Rule Set Association
 
-Após efetuar as configurações, associe seus WAF Rule Sets à nova Rule Set. WAF Rule Sets são usados da mesma forma, porém, passam do Edge Application para o Rules Engine do Edge Firewall:
+After making the settings associate your WAF Rule Set to the new **Rule Set**. WAF Rule Sets are used in the same way however, they pass from the Edge Application to the Edge Firewall Rules Engine:
 
-1. Edite a nova **Rule Set** do **Edge Firewall**.
-2. Habilite o módulo **Web Application Firewall**.
-3. Na aba **Rules Engine** adicione ou edite uma Rule.
-4. Na Rule, defina o **Criteria** para condicionar o uso da WAF Rule Set.
-5. Em **Behavior** selecione **Set WAF Rule Set** e escolha um WAF Rule Set.
-6. **Salve** para aplicar a configuração.
+1. Edit the new **Rule Set** of the **Edge Firewall**.
+2. Enable the module **Web Application Firewall**.
+3. On the **Rules Engine** tab, add or edit a Rule.
+4. Set the **Criteria** to condition the use of the **WAF Rule Set**.
+5. In **Behavior** select **Set WAF Rule Set** and choose a WAF Rule Set.
+6. **Save** to apply the settings.
 
-### Passo 2 - Removendo as regras de Edge Firewall no Edge Application
+### Step 2 - Removing the Edge Firewall rules in the Edge Application
 
 Depois de criar e aplicar as Rule Sets da versão mais recente do Edge Firewall para seu domínio, remova as Rules em Edge Application:
 
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu **Edge Services** e selecione **Edge Applications**.
-2. Edite uma **Edge Application** com configuração de **Edge Firewall**.
-3. Entre na aba **Rules Engine**, e identifique as **Rules Sets** com **Behaviors Set Edge Firewall** ou **Set WAF Rule Set**.
-4. Agora basta remover o **Behavior** de **Edge Firewall**.
-5. Em seguida confirme o **Delete** e sua regra já estará deletada. 
+1. Access the [Real-Time Manager](https://manager.azion.com/) and enter the **Edge Services** > **Edge Application** menu. .
+2. Edit an **Edge Application** with the **Edge Firewall** configuration.
+3. On the **Rules Engine** tab, identify the **Behaviors Set Edge Firewall** with **Rule Sets** or **Set WAF Rule Set**.
+4. Then, remove the **Behavior** from **Edge Application**.
+5. After confirm **Delete** and your Rule will be removed. 
 
 ---
 
-## 3. Documentação de suporte {#support-documents}
+## 3. Support Documentation {#support-documentation}
 
-- [Support Documents](https://www.azion.com/pt-br/documentacao/produtos/edge-firewall/)
+- [Edge Firewall](https://www.azion.com/pt-br/documentacao/produtos/edge-firewall/)
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
