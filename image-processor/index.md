@@ -55,7 +55,7 @@ To configure Azion Image Processor, take the following steps and, when necessary
 1.  In the Rules Engine tab, add or edit a customized rule for one or more image paths.
 2.  In the Path field, enter the path for your images or use the regex recommended by Azion:
 ~~~
-\.(jpg|jpeg|gif|png|bmp)
+\.(jpg|jpeg|gif|bmp|png)$
 ~~~
 3.  Choose the logical operator **Matches**, if you used the regular expression in the Path field.
 4.  In the Behavior field **Set Cache Settings**, select the preset used in Stage 2.
