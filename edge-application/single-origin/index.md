@@ -23,7 +23,7 @@ You can fill in a custom value for Host Header to be sent to your origin. For ex
 
 Or, you can use the variable *$host* in the Host Header field, to instruct the edge nodes to pass on to the origin the same Host header received from your visitors. Use this set up if you multiple *virtualhosts* being replied by the same origin.
 
-**Origin Path {#origin-patch}**
+### Origin Path  {#origin-path}
 
 If you need that the Edge Nodes of Azion request the content of your origin in a different URL path, you may define an Origin Path. Azion will concatenate the Origin Path with the URI requested by the user.
 
@@ -31,7 +31,7 @@ The definition of the Origin Path is optional. If it is not defined, it will onl
 
 For example, if in your origin the whole content is under the path */secure*, though this path is not shown in the URL for your users, you may define the */secure* as the Origin Path in your origin settings. The rest of the path will be preserved, in accordance with the user’s request.
 
-**Origin Protocol Policy**
+### Origin Protocol Policy {#origin-protocol-policy}
 
 Azion’s delivery architecture allows you to customize the desired type of connection of the Edge Nodes to your origin:
 
@@ -43,15 +43,13 @@ Azion’s delivery architecture allows you to customize the desired type of conn
 
   
 
-**Address**
+### Address {#address}
 
 After the definition of the fields above, add an origin informing the IP address or hostname (FQDN – Full Qualified Domain Name) of your origin.
 
 You may also customize the origin port, if you defined the *Origin Protocol Policy* in the *Enforce HTTP* or *Enforce HTTPS*, using the notation *host:port.*
 
-
-
-## HMAC Authentication {#hmac}
+### HMAC Authentication {#hmac-authentication}
 
 You may include a Single Origin where the origin is found in an Object Storage with private access, with authentication through HMAC.
 
@@ -67,7 +65,7 @@ _©2020 Google LLC All rights reserved. Google Cloud Storage is a trademark of G
 
 
 
-**Timeouts**
+### Timeouts {#timeouts}
 
 Displays timeout setting in seconds pre-defined by Azion. Timeout values cannot be customized.
 
