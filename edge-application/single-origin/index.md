@@ -23,7 +23,7 @@ You can fill in a custom value for Host Header to be sent to your origin. For ex
 
 Or, you can use the variable *$host* in the Host Header field, to instruct the edge nodes to pass on to the origin the same Host header received from your visitors. Use this set up if you multiple *virtualhosts* being replied by the same origin.
 
-**Origin Path**
+**Origin Path {#origin-patch}**
 
 If you need that the Edge Nodes of Azion request the content of your origin in a different URL path, you may define an Origin Path. Azion will concatenate the Origin Path with the URI requested by the user.
 
