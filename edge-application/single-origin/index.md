@@ -49,9 +49,7 @@ After the definition of the fields above, add an origin informing the IP address
 
 You may also customize the origin port, if you defined the *Origin Protocol Policy* in the *Enforce HTTP* or *Enforce HTTPS*, using the notation *host:port.*
 
-## HMAC Authentication 
-
-## {#hmac-authentication}
+## HMAC Authentication {#hmac-authentication}
 
 You may include a Single Origin where the origin is found in an Object Storage with private access, with authentication through HMAC.
 
