@@ -13,7 +13,7 @@ Through Single Origin you may set up the address of your origin and adjust param
 
 With Single Origin you add an origin for your content and customize Host Header, connection method and authentication credentials.
 
-**Host Header**
+### Host Header {#host-header}
 
 The Host header is used by your origin to identify the *virtualhost* and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.
 
