@@ -64,9 +64,11 @@ CDN Cache Settings is the amount of time the Azion’s Edge Applications take to
 
 ## 5. L2 Caching {#l2-caching}
 
-L2 Caching is the module that performs the role of intermediary between Azion's global network of Edge Nodes and their Origin. 
+L2 Caching is an additional layer of cache between the Azion Edge and its origin that helps to further reduce the load on your infrastructure. When accessing your applications on Azion, your user accesses our highly distributed network capable of performing edge caching. When you activate L2 Caching in your edge applications, you have a second layer of cache that will be responsible for feeding the edge, keeping your content in the cache for as long as you determine.
 
-An additional layer of cache that reduces traffic to its origin, while increasing performance, availability and decreasing the number of requests at the origin.
+L2 Caching was designed principally for objects that can be cached for a long time. So, you can only activate it in cache policies with time-to-live (TTL) equal to or greater than 30 days (2592000 seconds).
+
+Whenever necessary, you can use Real-Time Purge to expire your L2 Caching content before the estimated TTL time. Remember to expire first on L2 Caching and then later on Edge Caching, to avoid edge feedback with outdated L2 content.
 
 > Attention, the L2 Caching module works with a minimum “TTL” of 2592000 seconds.
 
