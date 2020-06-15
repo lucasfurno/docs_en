@@ -55,6 +55,8 @@ You may include a Single Origin where the origin is found in an Object Storage w
 
 <p style="background-color:#ddeef8; color:#1574ba"> When enabling HMAC Authentication, your private content will begin to be delivered to your users through Edge Application.</p>
 
+<p style="background-color:#ddeef8; color:#1574ba"> Unfortunately, this feature is not yet available for use in conjunction with the Azion Image Processor. We will soon correct this lack.</p>
+
 You should include in the access credentials HMAC, Region, Access Key and Secret Key provided by your Object Storage provider. 
 
 Google Cloud Storage™ supports buckets with local type single region (us-east1 for example) and multiregional and if this is your case, you can set the value "auto" to Region. 
