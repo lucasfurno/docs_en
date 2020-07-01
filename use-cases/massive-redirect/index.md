@@ -34,11 +34,11 @@ Here are some cases where Azion Massive Redirect will be the ideal solution:
 
 Before you start, make sure that the Edge Functions service is active in your Azion account and that you already have the Massive Redirect function in your Edge Functions Libraries. If not, contact our sales team to enable the service.
 
-For the operation of the Edge Function Massive Redirect, we inform through parameters (**Edge Function Json args**) a list with the addresses to be redirected and the respective destination. When a request reaches the Azion edge node, our service will interpret the instruction defined by the function, checking if the address accessed corresponds to those received in *Json args* (parameters), and will execute the redirect to the corresponding destination. From that moment, the request will be directed to the new address, transparently to your application and to the servers of its origin.
+For the operation of the Edge Function Massive Redirect, we inform through parameters (Edge Function Json args) a list with the addresses to be redirected and the respective destination. When a request reaches the Azion edge node, our service will interpret the instruction defined by the function, checking if the address accessed corresponds to those received in *Json args* (parameters), and will execute the redirect to the corresponding destination. From that moment, the request will be directed to the new address, transparently to your application and to the servers of its origin.
 
-To use the Function Massive Redirect, edit the **Edge Application** to which you want to assign this service, ensuring that the Edge Function is enabled in the Main Settings tab. Then select the Functions tab and click the **Add Function** button. Enter a name for your custom function (use a meaningful name, for example MyStoreRedirect, as this is how your Function will be identified later in the Rule Engine configuration) and select the **Edge Function** you want to use from the list of options, in this case , the **Massive Redirect** option. Note that the function code will appear below, in the **Code**, section, for reading and understanding only. 
+To use the Function Massive Redirect, edit the Edge Application to which you want to assign this service, ensuring that the Edge Function is enabled in the Main Settings tab. Then select the Functions tab and click the *Add Function* button. Enter a name for your custom function (use a meaningful name, for example MyStoreRedirect, as this is how your Function will be identified later in the Rule Engine configuration) and select the Edge Function you want to use from the list of options, in this case , the "Massive Redirect" option. Note that the function code will appear below, in the *Code* section, for reading and understanding only. 
 
-In the **Json args**, section, enter the parameters (old and new addresses) that will be passed on to the function. The old address can be informed in two ways:
+In the *Json args* section, enter the parameters (old and new addresses) that will be passed on to the function. The old address can be informed in two ways:
 
 * _**from**_: use the full address to be redirected (old location);
 * _**from_regex**_: use a regular expression to represent a URL building pattern, allowing you to configure more than one address with a single rule.
@@ -65,7 +65,7 @@ Permanent redirecting (301) from [www.old-site.com](#) to [www.new-site.com](#)
 
 }]
 ~~~
-Permanent redirection (301) using regular expression, directing the **api**, **store** and *checkout* addresses from the [old-site.com](#) domain to the [new-site.com](#) domain.
+Permanent redirection (301) using regular expression, directing the api, store and checkout addresses from the [old-site.com](#) domain to the [new-site.com](#) domain.
 
 ~~~
 [{
@@ -87,7 +87,7 @@ Permanent redirection (301) using regular expression, directing the **api**, **s
 ~~~
 Several redirects configured in the same Function.
 
-Once created, simply associate your Function with a Rule Engine within your Edge Application. In the **Rules Engine**,  tab, use the Default Rule or create a new rule with a validation criterion (**criteria**) to activate your function, and in the **Behavior**, section, select Run Function and choose the Massive Redirect Function that you created.
+Once created, simply associate your Function with a Rule Engine within your Edge Application. In the *Rules Engine* tab, use the Default Rule or create a new rule with a validation criterion (criteria) to activate your function, and in the *Behavior* section, select Run Function and choose the Massive Redirect Function that you created.
 
 
 Please contact our Support if you have any questions.
