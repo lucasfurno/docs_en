@@ -27,7 +27,7 @@ From *Real-Time Manager*, create a new configuration of *Edge Firewall* or edit 
 
 Next, we simply configure a task in "Behavior" for our rule, in this case we use the option "Deny (403 Forbidden)". With this, we have established a rule by which every request to our shop, that originates from the site http://www.malicioussite.com will be blocked and will return the status code HTTP 403.
 
-To take advantage of everything that Azion *Edge Firewall* has available, make sure you activate all the modules within *Edge Firewall*, on the Main Settings tab, through *Real-Time Manager. Contact our Solutions team for more details.
+To take advantage of everything that Azion *Edge Firewall* has available, make sure you activate all the modules within *Edge Firewall*, on the Main Settings tab, through Real-Time Manager. Contact our Solutions team for more details.
 
 
 ---
