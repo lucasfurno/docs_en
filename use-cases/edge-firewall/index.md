@@ -13,21 +13,21 @@ The Azion Edge Firewall is a multi-layered security platform that provides Edge 
 See how the Azion Edge Firewall can help you:
 
 * **Network Layer Protection**: constructs a security wall around your content, web applications and the source infrastructure. Protect yourself form the sort of data theft that can cause huge financial and reputational harm to your company, blocking malicious attacks through smart rules that include network blocking (black and white lists of IP addresses, ASN numbers, countries or regions), limiting transfer rates, and more.
-* **Web Application Firewall** (WAF): create highly customizable rules, with real-time configuration updates, to protect any type of web application, including e-commerce, CMS or internet banking, against OWASP's Top 10 vulnerabilities, including critical attacks on the application layer, such as **SQL Injection**, or new and evolving threats;
+* **Web Application Firewall** (WAF): create highly customizable rules, with real-time configuration updates, to protect any type of web application, including e-commerce, CMS or internet banking, against OWASP's Top 10 vulnerabilities, including critical attacks on the application layer, such as *SQL Injection*, or new and evolving threats;
 * Azion's **DDoS Protection** is the result of our globally distributed network and expertise in security, providing you with the skills and capacity you need to mitigate the risk from even the biggest and most complex of attacks, both at the network and the application layers;
-* **Edge Functions: create and configure security functions, such as ReCaptcha, JWT, Web Token and Bot Protection among others, and protect the information that is important to your competitive strategy, such as price and content, from malicious attacks that consume bandwidth, increase traffic and compromise applications, as well as damaging your SEO ranking.
+* **Edge Functions**: create and configure security functions, such as ReCaptcha, JWT, Web Token and Bot Protection among others, and protect the information that is important to your competitive strategy, such as price and content, from malicious attacks that consume bandwidth, increase traffic and compromise applications, as well as damaging your SEO ranking.
 
 ## How it works 
 
-Before you begin, make sure that the **_Edge Firewall_** service and its modules are active on your Azion account. If not, please get in contact with our commercial team to access the service.
+Before you begin, make sure that the *Edge Firewall* service and its modules are active on your Azion account. If not, please get in contact with our commercial team to access the service.
 
-To show how it works, we will configure **_Edge Firewall+** for an e-commerce store (domain name - www.myecommerce.com, which must be pre-configured within **_Edge Application_**), as an example, and demonstrate how we will prevent a particular malicious website from redirecting traffic from our store. For this, we will configure a rule within **_Edge Firewall_** to block _Header HTTP Referer_.
+To show how it works, we will configure *Edge Firewall* for an e-commerce store (domain name - www.myecommerce.com, which must be pre-configured within *Edge Application*), as an example, and demonstrate how we will prevent a particular malicious website from redirecting traffic from our store. For this, we will configure a rule within *Edge Firewall* to block _Header HTTP Referer_.
 
-From **_Real-Time Manager_**, create a new configuration of **_Edge Firewall_** or edit an existing one. We will need to include our domain, www.myecommerce.com on the **_Main Settings_** tab, so that it can be protected by the rule. Save your rule set and next add a **_New Rule_** on the **_Rules Engine_** tab. Choose a name in the **_Rule Engine_** and define the activation criteria (Criteria). In our example we are going to use the variable **_Header Referer_**, the operator **_matches_** and, for the string comparison, a fictitious address for a malicious site http://www.malicioussite.com.
+From *Real-Time Manager*, create a new configuration of *Edge Firewall* or edit an existing one. We will need to include our domain, www.myecommerce.com on the **_Main Settings_** tab, so that it can be protected by the rule. Save your rule set and next add a "New Rule" on the *Rules Engine* tab. Choose a name in the "Rule Engine" and define the activation criteria (Criteria). In our example we are going to use the variable **_Header Referer_**, the operator **_matches_** and, for the string comparison, a fictitious address for a malicious site http://www.malicioussite.com.
 
-Next, we simply configure a task in **_Behavior_** for our rule, in this case we use the option **_Deny (403 Forbidden)_**. With this, we have established a rule by which every request to our shop, that originates from the site http://www.malicioussite.com will be blocked and will return the status code HTTP 403.
+Next, we simply configure a task in "Behavior" for our rule, in this case we use the option "Deny (403 Forbidden)". With this, we have established a rule by which every request to our shop, that originates from the site http://www.malicioussite.com will be blocked and will return the status code HTTP 403.
 
-To take advantage of everything that Azion **_Edge Firewall_** has available, make sure you activate all the modules within **_Edge Firewall_**, on the **_Main Setting_**s tab, through **_Real-Time Manager_**. Contact our Solutions team for more details.
+To take advantage of everything that Azion *Edge Firewall* has available, make sure you activate all the modules within *Edge Firewall*, on the Main Settings tab, through *Real-Time Manager. Contact our Solutions team for more details.
 
 
 ---
