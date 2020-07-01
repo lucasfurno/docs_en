@@ -8,7 +8,7 @@ As well as this, you can control the distribution of access to the different sce
 
 ## A/B Testing with Azion’s Edge Functions
 
-***A/B Testing*** is a serverless function available on Azion’s Edge Computing platform. With it, you can quickly and simply set up your A/B tests, combining both business and testing rules directly at the ***Edge*** and control and direct traffic on your site, however your test evolves.	
+**A/B Testing** is a serverless function available on Azion’s Edge Computing platform. With it, you can quickly and simply set up your A/B tests, combining both business and testing rules directly at the Edge and control and direct traffic on your site, however your test evolves.	
 
 Set up logic processes on the Edge, giving your more options on how to apply your tests and many other benefits:
 
@@ -19,7 +19,7 @@ Set up logic processes on the Edge, giving your more options on how to apply you
 
 ## How does Azion’s A/B Testing work?
 
-Before you begin, check that the ***Edge Functions*** service is active in your Azion account and that you already have the function in your ***Edge Functions Libraries***. If not, please get in contact with our commercial team to access the service.
+Before you begin, check that the Edge Functions service is active in your Azion account and that you already have the function in your Edge Functions Libraries. If not, please get in contact with our commercial team to access the service.
 
 **Understand the process**
 
@@ -29,7 +29,7 @@ When the request arrives at the Edge, the algorithm distributes it, according to
 
 In order to demonstrate the practical application of configuring an A/B test, we will use the example of a new version of the application server, running from a different port within the same infrastructure. In this case, we want to conduct a graduated test of the access flow to the site, checking the performance of the application’s new configuration and so, therefore, we can take rapid action to correct any issues that it causes.
 
-To configure your test through ***Edge Function A/B Testing***, edit the Edge Application to which you want to apply the test, checking that the option ***Edge Function*** is available in the     ***Main Settings*** tab. Next, go to the ***Functions*** tab and add a new function ***A/B Testing***. Make sure you give it an appropriate identifiable name (for example MyABTest), as you will need to be able to identify it later when configuring it in the Rule Engine. Note that the function code that appears in the ***Code*** field, will be read only and just for information and the parameters for the test to be run against will be in the ***Json Args*** tab. Below is a description of each of the  ***Json Args*** parameter fields:  
+To configure your test through Edge Function A/B Testing edit the Edge Application to which you want to apply the test, checking that the option Edge Function is available in the *Main Settings* tab. Next, go to the *Functions* tab and add a new function A/B Testing. Make sure you give it an appropriate identifiable name (for example MyABTest), as you will need to be able to identify it later when configuring it in the Rule Engine. Note that the function code that appears in the *Code* field, will be read only and just for information and the parameters for the test to be run against will be in the *Json Args* tab. Below is a description of each of the *Json Args* parameter fields:  
 
 ~~~
 {
@@ -105,7 +105,7 @@ Next is an example of the configuration of a basic function, assigning a 90 perc
 }
 ~~~
 
-Edit the parameters and click on ***Save*** to save. On the ***Rules Engine*** tab, use the Default Rule or create a new rule with the validation criteria (***criteria***) to activate your function. In the ***Behavior*** section, select Run Function and choose the MyABTest Function that you created and click on ***Save*** to finish.
+Edit the parameters and click on ***Save*** to save. On the *Rules Engine* tab, use the Default Rule or create a new rule with the validation criteria (criteria) to activate your function. In the *Behavior* section, select Run Function and choose the MyABTest Function that you created and click on ***Save*** to finish.
 
 ---
 
