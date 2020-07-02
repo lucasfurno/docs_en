@@ -46,7 +46,7 @@ First, you need to create a Rule Set and new rules based on pre-existing rules. 
 If you used **Referer Block** in your deprecated rule set, in the new rule set:
 
 1. Enable the module **Web Application Firewall**.
-2. Then, follow the tab **Rule Engine** in **Criteria**, and select **Header Referer**.
+2. Then, follow the tab **Rules Engine** in **Criteria**, and select **Header Referer**.
 3. Add the domain of the old Rule Set with the condition **Header Referer**, using the comparator **does not match**.
 4. For each domain in **Accepted Domains** of the old Rule Set, add an **AND** rule by repeating step 3.
 5. In **Behavior**, select the Behavior **Deny 403**.
@@ -62,7 +62,7 @@ If you used **Geo-Blocking** in your deprecated rule set, in the new rule set:
 3. In the **Type** option, select **Countries**.
 4. Copy the list of countries from the deprecated rule set to **Network Lists**.
 5. In the **Edge Firewall**, enable the **Network Layer Protection** module.
-6. On the **Rule Engine** tab, create a new **Rule** and select **Criteria: Network**.
+6. On the **Rules Engine** tab, create a new **Rule** and select **Criteria: Network**.
 7. Choose a logical operator where **Match** means Blacklist and **Does not Match** means Whitelist.
 8. Then, select the **Country** type of **Network List** created in steps 3 and 4.
 9. In **Behavior**, select the Behavior **Deny 403**.
@@ -73,7 +73,7 @@ If you used **Geo-Blocking** in your deprecated rule set, in the new rule set:
 
 If you used **Secure Token** in your deprecated rule set, in the new rule set:
 
-1. Enable the module **Web Application Firewall**.
+1. Enable the module **Edge Functions**.
 2. In the **Functions** tab, select **Add function** to instantiate a **Secure Token** Edge Function.
 3. Fill in the information and use the editor to customize Function **Args** to define the secret that composes the hash.
 4. On the **Rules Engine** tab, define a **Criteria** that will be used on **Edge Function**.
@@ -90,7 +90,7 @@ If you used **IP Blocking** in your deprecated rule set, in the new rule set:
 3. In the **Type** option, select **IP/CIDR**.
 4. Copy the list of IP`s from the deprecated rule set to **Network Lists**.
 5. In the **Edge Firewall**, enable the **Network Layer Protection** module.
-6. On the **Rule Engine** tab, create a new **Rule** and select **Criteria: Network**.
+6. On the **Rules Engine** tab, create a new **Rule** and select **Criteria: Network**.
 7. Choose a logical operator where **Match** means Blacklist and **Does not Match** means Whitelist.
 8. Then, select the **IP/CIDR** type of **Network List** created in steps 3 and 4.
 9. In **Behavior**, select the Behavior **Deny 403**.
