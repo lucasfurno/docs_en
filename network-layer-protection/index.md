@@ -31,11 +31,17 @@ Network Lists enables you to create, look up or update Network Lists that are be
 
 ## 3. Origin Shield {#origin-shield}
 
-With this Azion Edge Firewall add-on you can set up a security perimeter around your origin infrastructure, whether that be in the *cloud*, *hosted* or your own *datacenter*. The service enables your origin to be able to restrict access to specific IP addresses from our network and block any other access to your origin.
+Origin Shield is an Azion Network Layer Protection add-on. You will be able to create a security perimeter for your source infrastructure, whether a cloud, hosting provider, or even your own data center. With this service, your origin will be able to restrict access only to specific IP addresses of our network and block any other access to your origin.
 
-Our IP address list can be updated regularly, but any updates will only authorize new servers for those who are using the Origin Shield add-on, four days after the list is published. Therefore, we suggest that you automatically check our IP list and update your edge filters whenever it receives any updates, so there is no problem with service availability.
+Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on, **seven days** after publication.
 
-To ensure you are protected from attacks targeting your origin, we suggest you use **Azion’s DDoS Protection - 20Gbps, 50 Gbps or Unlimited,** with the **Infrastructure Protection add-on**, which will safeguard your ASN via BGP, using Azion’s distributed network.
+Origin Shield is available through Real-Time Manager or our API. To learn more and how to use our API, consult the documentation on How to Consult Network List data - Origin Shield.
+
+How-to check the Origin Shield IP list through Real-Time Manager:
+
+1. From the **Real-Time Manager**, access the **Libraries** > **Network Lists** menu.
+2. To inspect the list, check the Network List **Azion IP Origin Shield**.
+3. The list can be consulted with **View Network Lists** permission.
 
 ---
 
