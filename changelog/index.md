@@ -6,6 +6,14 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**jun/2020**
+
+* Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
+* Bugfix of synchronization of the serial number of the SOA record in the Intelligent DNS product.
+* 
+
+---
+
 **may/2020**
 
 * Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
