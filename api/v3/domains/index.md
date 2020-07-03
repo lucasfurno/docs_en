@@ -26,7 +26,7 @@ Required permission: ***View Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 
 **Request Example**
 
@@ -89,7 +89,7 @@ Required permission: ***View Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 | :domain_id *(required)* | The id of the domain to be consulted. | URI | Integer |
 
 **Request Example**
@@ -131,7 +131,7 @@ Required permission: ***Edit Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 | :domain_id *(required)* | The id of the domain to be consulted. | URI | Integer |
 
 **Request Example**
@@ -160,7 +160,7 @@ Required permission: ***Edit Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 |Content-Type<br>(required) | The type of encoding used in Body (application/json).<br>e.g.:<br>Content-Type: application/json | header | string |
 | body | The configuration to be created must be sent encoded in json format with the following fields: <br> **name** (string): the name of the configuration you want to create.<br> **cnames** (array of strings): the site domain list (CNAMEs). The default value is empty.<br> **cname_access_only**(boolean): defines whether the delivery of the content should be carried out only by the domains listed in the “cnames” field or if the azion domain (azioncdn.net) will also be used. The default value is false.<br> **digital_certificate** (number): the SSL certificate id, previously registered on the platform as a [Custom Certificate]({% tl api_v3_digital_certificates %}), which must be used in case of delivery via https. The default value is null, representing that Azion's shared SSL certificate will be used.<br>**edge_application_id** (number): the Edge Application id that should be associated with the domain. Consult the list of [Edge Applications]({% tl api_v3_edge_applications %}).<br>**is_active** (boolean): defines whether the domain should be registered as active (in production) or inactive.| body | json |
 
@@ -218,9 +218,9 @@ Required permission: ***Edit Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 |Content-Type<br>(required) | The type of encoding used in Body (application/json).<br>e.g.:<br>Content-Type: application/json | header | string |
-| body | The configuration to be overwritten must be sent encoded in json format with the following fields:  <br> **name** (string): the name of the configuration you want to create.<br> **cnames** (array of strings): the site domain list (cnames). The default value is empty.<br> **cname_access_only**(boolean): defines whether the delivery of the content should be carried out only by the domains listed in the “cnames” field or if the azion domain (azioncdn.net) will also be used. The default value is false.<br> **digital_certificate** (number): the SSL certificate id, previously registered on the platform as a [Custom Certificate]({% tl api_v3_digital_certificates %}), which must be used in case of delivery via https. The default value is null, representing that Azion's shared SSL certificate will be used.<br>**edge_application_id** (number): the Edge Application id that should be associated with the domain. Consult the list of [Edge Applications]({% tl api_v3_edge_applications %}).<br>**is_active** (boolean): defines whether the domain should be registered as active (in production) or inactive.| body | json |
+| body | The configuration to be overwritten must be sent encoded in json format with the following fields:  <br> **name** (string): the name of the configuration you want to create.<br> **cnames** (array of strings): the site domain list (CNAMEs). The default value is empty.<br> **cname_access_only**(boolean): defines whether the delivery of the content should be carried out only by the domains listed in the “cnames” field or if the azion domain (azioncdn.net) will also be used. The default value is false.<br> **digital_certificate** (number): the SSL certificate id, previously registered on the platform as a [Custom Certificate]({% tl api_v3_digital_certificates %}), which must be used in case of delivery via https. The default value is null, representing that Azion's shared SSL certificate will be used.<br>**edge_application_id** (number): the Edge Application id that should be associated with the domain. Consult the list of [Edge Applications]({% tl api_v3_edge_applications %}).<br>**is_active** (boolean): defines whether the domain should be registered as active (in production) or inactive. | body | json |
 
 **Request Example**
 
@@ -274,9 +274,9 @@ Required permission: ***Edit Domains***
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 |Content-Type<br>(required) | The type of encoding used in Body (application/json).<br>e.g.:<br>Content-Type: application/json | header | string |
-| body | Here the fields you want to update must pass on the new values: <br> **name** (string): the name of the configuration you want to create.<br> **cnames** (array of strings): the site domain list (cnames). The default value is empty.<br> **cname_access_only**(boolean): defines whether the delivery of the content should be carried out only by the domains listed in the “cnames” field or if the azion domain (azioncdn.net) will also be used. The default value is false.<br> **digital_certificate** (number): the SSL certificate id, previously registered on the platform as a [Custom Certificate]({% tl api_v3_digital_certificates %}), which must be used in case of delivery via https. The default value is null, representing that Azion's shared SSL certificate will be used.<br>**edge_application_id** (number): the Edge Application id that should be associated with the domain. Consult the list of [Edge Applications]({% tl api_v3_edge_applications %}).<br>**is_active** (boolean): defines whether the domain should be registered as active (in production) or inactive.| body | json |
+| body | Here the fields you want to update must pass on the new values: <br> **name** (string): the name of the configuration you want to create.<br> **cnames** (array of strings): the site domain list (CNAMEs). The default value is empty.<br> **cname_access_only**(boolean): defines whether the delivery of the content should be carried out only by the domains listed in the “cnames” field or if the azion domain (azioncdn.net) will also be used. The default value is false.<br> **digital_certificate** (number): the SSL certificate id, previously registered on the platform as a [Custom Certificate]({% tl api_v3_digital_certificates %}), which must be used in case of delivery via https. The default value is null, representing that Azion's shared SSL certificate will be used.<br>**edge_application_id** (number): the Edge Application id that should be associated with the domain. Consult the list of [Edge Applications]({% tl api_v3_edge_applications %}).<br>**is_active** (boolean): defines whether the domain should be registered as active (in production) or inactive. | body | json |
 
 **Request Example**
 
