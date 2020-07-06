@@ -10,7 +10,7 @@ This page lists the latest changes to Azion products and services. Here you will
 
 * Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
 * Bugfix of synchronization of the serial number of the SOA record in the Intelligent DNS product.
-* 
+* Azion Online Sales Channel released.
 
 ---
 
