@@ -6,6 +6,19 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**jun/2020**
+
+* Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
+* Bugfix of synchronization of the serial number of the SOA record in the Intelligent DNS product.
+* Azion Online Sales Channel released.
+* Bugfix Data Transferred In + Out.
+* Additional feature Sampling in the Data Streaming product (in Early Access).
+* Option to activate / deactivate the Edge Functions product through account subscriptions.
+* Bug fix Network Lists UI adjustment to prevent saving empty Network Lists
+* Bug fix adjustment in Edge Functions to allow creating and instantiating using special characters
+
+---
+
 **may/2020**
 
 * Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
