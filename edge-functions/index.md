@@ -2,7 +2,7 @@
 
 [Edite no GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-functions/index.md)
 
-Azion Edge Functions allows you to create targeted serverless applications to events, at the edge of the network, closer to users.
+Azion Edge Functions allows you to create serverless applications to event-oriented, at the edge of the network, closer to users.
 
 With Edge Functions, you can perform serverless functions in response to events on Edge Nodes of our network. Without having to provision or manage servers. 
 
@@ -13,7 +13,7 @@ You can use functions to handle HTTP in the following Request and Response phase
 - As soon as Edge Node gets the response from Origin (Origin Response)
 - Before Azion Edge Node forwards the response to the user (Viewer Response)
 
-You can also generate * Responses * without necessarily having to forward the request to the origin.
+You can also generate Responses without necessarily having to forward the request to the origin.
 
 Using Edge Functions written in **Lua** and **JavaScript** on Azion's Edge Computing platform, you can create a variety of solutions, for example:
 
@@ -26,9 +26,9 @@ Using Edge Functions written in **Lua** and **JavaScript** on Azion's Edge Compu
 See more ways to use Edge Functions in [Use Cases](https://www.azion.com/en/documentation/use-cases/).
 
 > 1. [How does it work?](#how-does-it-work)
-> 2. [How to use?](# how-to-use)
-> 3. [Hands-on](# hands-on)
-> 4. [Support Documentation](# support-documentation)
+> 2. [How to use?](#how-to-use)
+> 3. [Hands-on](#hands-on)
+> 4. [Support Documentation](#support-documentation)
 
 ---
 
@@ -36,7 +36,7 @@ See more ways to use Edge Functions in [Use Cases](https://www.azion.com/en/docu
 
 Create your custom functions or use any of the existing ones provided by azion, both for Edge Application or Edge Firewall. The languages currently supported by the platform are **Lua and JavaScript**.
 
-Edge Functions run in the treatment of the request, the Azion Edge Platform provides a Rules Engine model that can trigger the execution of the Edge Functions code according to the treatment phases. 
+Edge Functions run in the treatment of the request, and the Azion Edge Computing Platform provides a Rules Engine model that can trigger the execution of the Edge Functions code according to the treatment phases. 
 
 The language-specific Runtime provides a programming interface for interacting and manipulating Request and Response objects to implement the necessary logic.
 
@@ -96,11 +96,6 @@ To see your Edge Function  effectively in production you just need to write, ins
 3. In Language, select ***JavaScript***.
 
 
-   ~~~
-code
-   ~~~
-
-
 4. Access an Edge Application and Enable the Edge Functions Module, 
 
 
@@ -108,11 +103,6 @@ code
 
 
 6. Example of response when running the Behavior Run Function:
-
-
-   ~~~
-{"flip a coin": "heads"}
-   ~~~
 
 
 7. Use ***Real-Time Metrics*** to track metrics such as, for example, the number of invocations of Edge Functions instances.
