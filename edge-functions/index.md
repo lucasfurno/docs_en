@@ -68,7 +68,7 @@ For more details of each Runtime API and code samples, see the documentation for
 
 According to its initiator type, before associating an execution trigger with Edge Function, it must be instantiated in Edge Application or Edge Firewall. With the Edge Functions module enabled, through the **Functions** tab, you can instantiate your Edge Functions for later use in a Rules Engine Rule.
 
-To learn more about Edge Functions Instances, access the [Edge Application] documentation (https://www.azion.com/en/documentation/products/edge-application/edge-functions-instances/) and [Edge Firewall] (https://www.azion.com/en/documentation/products/edge-firewall/edge-functions-instances/)
+To learn more about Edge Functions Instances, access the [Edge Application](https://www.azion.com/en/documentation/products/edge-application/edge-functions-instances/) and [Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/edge-functions-instances/) documentation.
 
 ### Edge Functions Metrics
 
@@ -95,6 +95,17 @@ To see your Edge Function  effectively in production you just need to write, ins
 
 3. In Language, select ***JavaScript***.
 
+      ~~~
+      let a = Math.floor(Math.random() * 10);
+      if (a > 5) {
+          const jso = JSON.parse('{ "flip a coin": "heads"}');
+          AzionSetResponse(JSON.stringify(jso));
+      } else {
+          const jso = JSON.parse('{ "flip a coin": "tails" }');
+          AzionSetResponse(JSON.stringify(jso));
+      }
+      ~~~
+
 
 4. Access an Edge Application and Enable the Edge Functions Module, 
 
@@ -103,6 +114,10 @@ To see your Edge Function  effectively in production you just need to write, ins
 
 
 6. Example of response when running the Behavior Run Function:
+
+      ~~~
+      {"flip a coin":"heads"}
+      ~~~
 
 
 7. Use ***Real-Time Metrics*** to track metrics such as, for example, the number of invocations of Edge Functions instances.
