@@ -18,5 +18,5 @@ AzionSetResponse("Hello World JS");
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 

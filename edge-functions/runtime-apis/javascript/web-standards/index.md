@@ -16,4 +16,4 @@ Atenção - eval, new Function blocked for security reasons
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
