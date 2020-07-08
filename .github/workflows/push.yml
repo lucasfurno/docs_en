@@ -9,11 +9,11 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-
+    
     container:
       image: centos:7
       options: --privileged
-
+    
     steps:
       - name: Checkout doc
         uses: actions/checkout@v2
