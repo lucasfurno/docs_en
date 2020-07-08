@@ -11,10 +11,11 @@ This page lists the latest changes to Azion products and services. Here you will
 * Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
 * Bugfix of synchronization of the serial number of the SOA record in the Intelligent DNS product.
 * Azion Online Sales Channel released.
+* Bugfix Data Transferred In + Out.
+* Additional feature Sampling in Data Streaming. 
 * Option to activate / deactivate the Edge Functions product through account subscriptions.
 * Bug fix Network Lists UI adjustment to prevent saving empty Network Lists
 * Bug fix adjustment in Edge Functions to allow creating and instantiating using special characters
-
 
 ---
 
