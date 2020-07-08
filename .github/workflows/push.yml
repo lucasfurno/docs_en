@@ -7,11 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  check-syntax:
-    runs-on: self-hosted
-    container:
-      image: centos:7
-      options: --privileged
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout doc
