@@ -7,13 +7,11 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    check-syntax:
-      runs-on: self-hosted
-
-      container:
-        image: centos:7
-        options: --privileged
+  check-syntax:
+    runs-on: self-hosted
+    container:
+      image: centos:7
+      options: --privileged
 
     steps:
       - name: Checkout doc
