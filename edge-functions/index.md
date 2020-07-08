@@ -2,132 +2,131 @@
 
 [Edite no GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-functions/index.md)
 
-O Azion Edge Functions permite que você crie aplicações serverless orientadas a eventos, na edge da rede, mais perto dos usuários.
+Azion Edge Functions allows you to create targeted serverless applications to events, at the edge of the network, closer to users.
 
-Com Edge Functions você pode executar funções serverless em resposta a eventos em Edge Nodes de nossa rede distribuída. Sem ter que provisionar ou gerenciar servidores. 
+With Edge Functions, you can perform serverless functions in response to events on Edge Nodes of our network. Without having to provision or manage servers. 
 
-Você pode usar functions para manipular HTTP nas seguintes fases de Request e HTTP Response:
+You can use functions to handle HTTP in the following Request and Response phases:
 
-- Assim que a requisição de um usuário for recebida no Edge Node (Viewer Request)
-- Antes que o Azion Edge Node encaminhe a requisição à Origin (Origin Request)
-- Assim que  o Edge Node receber a resposta da Origin (Origin Response)
-- Antes que o Azion Edge Node encaminhe a resposta para o usuário (Viewer Respnse)
+- As soon as a user's requests are received in the Edge Node (Viewer Request)
+- Before Azion Edge Node forwards the Request to Origin (Origin Request)
+- As soon as Edge Node gets the response from Origin (Origin Response)
+- Before Azion Edge Node forwards the response to the user (Viewer Response)
 
-Você pode também gerar *Responses* sem necessáriamente ter que encaminhar a requisição para a origem.
+You can also generate * Responses * without necessarily having to forward the request to the origin.
 
-Com o uso de Edge Functions escritas em Lua e JavaScript na plataforma de Edge Computing da Azion, você poderá criar uma variedade de soluções, por exemplo:
+Using Edge Functions written in **Lua** and **JavaScript** on Azion's Edge Computing platform, you can create a variety of solutions, for example:
 
-- Inspecionar Cookies para Rewrite de URLs para diferentes versões de seu site em experimentos A/B Test.
-- Enviar objetos diferentes para seus usuários baseado em User-Agent header, que contem informação sobre o device que enviou a Request. Por exemplo, você pode enviar imagens em diferentes resoluções baseado no dispositivo dos usuários.
-- Inspecionar Headers e Authorized Tokens, inserindo Header e permitindo Access Controll antes de encaminhar a request à Origem.
-- Adicionar, remover ou modificar cabeçalhos, e rewrite de path direcionando usuários para diferentes objetos em cache.
-- Gerar HTTP responses para tarefas como redirecionar usuários não autenticados para páginas de login, ou criar e entregar webpages estáticas geradas diretamente na edge.
+- Inspect cookies to rewrite URLs to different versions of a site for A/B testing.
+- Send different objects to your users based on the User-Agent header, which contains information about the device that submitted the request. For example, you can send images in different resolutions to users based on their devices.
+- Inspect headers or authorized tokens, inserting a corresponding header and allowing access control before forwarding a request to the origin.
+- Add, delete, and modify headers and rewrite the URL path to direct users to different cache objects.
+- Generate new HTTP responses to do things like redirect unauthenticated users to login pages, or create and deliver static webpages right from the edge.
 
-Veja mais formas de uso das Edge Functions em [Casos de Uso](https://www.azion.com/pt-br/documentacao/casos-de-uso/).
+See more ways to use Edge Functions in [Use Cases](https://www.azion.com/en/documentation/use-cases/).
 
-> 1. [Como funciona?](#como-funciona)
-> 2. [Como utilizar?](#como-utilizar)
-> 3. [Hands-on](#hands-on)
-> 4. [Documentação de Suporte](#documentacao-de-suporte)
-
----
-
-## 1. Como funciona? {#como-funciona}
-
-Crie suas próprias funções personalizadas ou utilize alguma das já existentes disponibilizadas pela azion, tanto para Edge Application ou Edge Firewall. As linguagens suportadas atualmente pela plataforma são **Lua e JavaScript**.
-
-Edge Functions executam no tratamento/atendimento da requisição, a plataforma de Edge provê um modelo de Rules Engine que pode ser usado para vincular a execução do código das Edge Functions de acordo com as fases de tratamento. 
-
-O runtime específico de cada linguagem provê uma interface de programação para interagir e manipular os objetos de Request e Response para implementar a lógica necessária.
-
-Ao instanciar uma Edge Function, você pode informar parâmetros que serão passados para a função, em formato [JSON](https://www.json.org/), através de argumentos, podendo ainda definir e executar testes on-line para validar sua construção.
-
-Edge Functions são executadas diretamente na infraestrutura das Edges da Azion. Para utilizá-las, basta que estejam associadas a um Behavior no Rules Engine. Assim, quando uma requisição satisfazer os critérios definidos nas regras da Rule Engine, o *trigger* para execução da Edge Function será disparado.
+> 1. [How does it work?](#how-does-it-work)
+> 2. [How to use?](# how-to-use)
+> 3. [Hands-on](# hands-on)
+> 4. [Support Documentation](# support-documentation)
 
 ---
 
-## 2. Como utilizar? {#como-utilizar}
+## 1. How does it work? {#how-does-it-work}
 
-Crie suas próprias funções personalizadas ou utilize alguma das funções prontas para uso providas pela Azion ou Independent Software Vendors. Através do Real-Time Manager, em Libraries. Você pode criar Edge Functions e manter um repositório funções que poderão ser utilizadas em Edge Application ou Edge Firewall. Consulte a Runtime API de acordo com o Runtime escolhido para escrita da Edge Function.
+Create your custom functions or use any of the existing ones provided by azion, both for Edge Application or Edge Firewall. The languages currently supported by the platform are **Lua and JavaScript**.
 
-### Criar Edge Functions
+Edge Functions run in the treatment of the request, the Azion Edge Platform provides a Rules Engine model that can trigger the execution of the Edge Functions code according to the treatment phases. 
 
-Utilize a Runtime API da linguagem de sua preferência para escrever Edge Functions.
+The language-specific Runtime provides a programming interface for interacting and manipulating Request and Response objects to implement the necessary logic.
 
-Ao criar Edge Functions usando o *Runtime Enviroment* JavaScript, as Edge Functions escritas pelo próprio usuário entram direto em produção sem passar por uma revisão interna uma vez que o código é executado isoladamente e limitado a recursos isolados.
+When instantiating an Edge Function, you can enter parameters that will be passed to the function, in [JSON](https://www.json.org/) format, through arguments. You can also define and run tests online to validate its construction.
 
-O código de Edge Functions escritas em Lua passa por uma revisão minuciosa de nossos engenheiros de software antes de entrar em produção. Nosso objetivo é garantir a segurança e uso correto da plataforma de Edge Computing, seu código poderá ser revisado em critérios como:
-
-- Uso de variáveis globais que não são permitidas. Por conta do ambiente multi-tenant, o código da Edge Function Lua deve evitar uso de variáveis globais e shared memory
-- Chamadas HTTP bloqueantes. Toda chamada a serviço externo deverá usar o protocolo HTTP por meio de APIs assíncronas para que o processo não seja bloqueado
-- O Código ou Lib também deve passar nos testes luacheck.
-
-Para mais detalhes de cada Runtime API e exemplos de código, consulte a documentação de [Runtime APIs](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/)
-
-### Instanciar Edge Functions
-
-Antes de associar um trigger de execução à Edge Function, ela deve ser instanciada, de acordo com o seu initiator type, em Edge Application ou Edge Firewall. Para isso, o módulo Edge Functions deve estar habilitado, então, através da aba **Functions** você poderá instanciar suas Edge Functions para posterior uso em uma Rule do Rules Engine.
-
-Para saber mais sobre Edge Functions Instances acesse a documentação de [Edge Application](https://www.azion.com/pt-br/documentacao/produtos/edge-application/edge-functions-instances/) e [Edge Firewall](https://www.azion.com/pt-br/documentacao/produtos/edge-firewall/edge-functions-instances/)
-
-### Métricas para Edge Functions
-
-Através do Real-Time Metrics, fornecemos informações em tempo real sobre o desempenho das suas Edge Functions.
-
-Para acessar os gráficos, siga as seguintes etapas:
-
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu **Data Services** e selecione **Real-Time Metrics**, em seguida, clique em **Edge Functions**.
-2. Visualize informações como, por exemplo, a quantidade de invocações por instância de Edge Function.
-
-Leia mais sobre o [Real-Time Metrics](https://www.azion.com/pt-br/produtos/real-time-metrics/).
+Edge Functions are performed directly on Azion Edges infrastructure. To use them, just be associated with a Behavior in the Rules Engine. Thus, when a request meets the criteria defined in the Rule Engine rules, the trigger to run the Edge Function will be triggered.
 
 ---
 
-## 4. Hands-On Passo a passo para criar uma Edge Function 	{#hands-on}
+## 2. How to use? {#how-to-use}
 
-Para que sua Edge Function entre efetivamente em producão basta escrever, instânciar e associar a um Behavior _Run Function_, em uma Rule no Rules Engine:
+Write your custom functions or use any of the ready-to-use provided by Azion or Independent Software Vendors. Through Real-Time Manager, in Libraries. You can create Edge Functions and maintain a repository of functions that can be used at the Edge Application or Edge Firewall. Consult the Runtime API according to the Runtime chosen for writing the Edge Function.
 
-1. Acesse o [Real-Time Manager](https://manager.azion.com/) e entre no menu Libraries, selecione Edge Functions.
+### Create Edge Functions
 
-2. Adicione uma nova _edge function_ clicando no botão _Add Function_.
+Use the Runtime API of your preferred language to write Edge Functions.
 
-3. Em Language, selecione ***JavaScript***.
+Using the Runtime Environment JavaScript, Edge Functions written by the user go directly into production without undergoing an internal review because code runs on limited to isolated resources.
 
-   ~~~
-   let a = Math.floor(Math.random() * 10);
-   if (a > 5) {
-       const jso = JSON.parse('{ "flip a coin": "heads"}');
-       AzionSetResponse(JSON.stringify(jso));
-   } else {
-       const jso = JSON.parse('{ "flip a coin": "tails" }');
-       AzionSetResponse(JSON.stringify(jso));
-   }
-   ~~~
+The Edge Functions code written in Lua undergoes a thorough review by our software engineers before going into production. Our goal is to ensure the security and correct use of the Edge Computing platform. We review your code according to the following criteria:
 
-4. Acesse uma Edge Application e Habilite o Módulo Edge Functions, 
+- Use of global variables that are not allowed. Due to the multi-tenant environment, the Edge Function Lua code should avoid using global variables and shared memory
+- blocking HTTP calls. Every call to an external service must use the HTTP protocol through asynchronous APIs so that the process is not blocked
+- The Code or Lib must also pass the luacheck tests.
 
-5. Na aba ***Rules Engine***, crie ou edite uma Rule e na seção ***Behavior***, no campo ***Then***,  selecione "Run Function" e associe a **Edge Function** desejada. 
+For more details of each Runtime API and code samples, see the documentation for [Runtime APIs](https://www.azion.com/en/documentation/products/edge-functions/runtime-apis/).
 
-6. Exemplo de Resposta ao executar o Behavior Run Function:
+### Edge Functions Instances
 
-   ~~~
-   {"flip a coin":"heads"}
-   ~~~
+According to its initiator type, before associating an execution trigger with Edge Function, it must be instantiated in Edge Application or Edge Firewall. With the Edge Functions module enabled, through the **Functions** tab, you can instantiate your Edge Functions for later use in a Rules Engine Rule.
 
-7. Utilize o ***Real-Time Metrics*** para acompanhar métricas como, por exemplo, a quantidade de invocações de instâncias de Edge Functions.
+To learn more about Edge Functions Instances, access the [Edge Application] documentation (https://www.azion.com/en/documentation/products/edge-application/edge-functions-instances/) and [Edge Firewall] (https://www.azion.com/en/documentation/products/edge-firewall/edge-functions-instances/)
 
+### Edge Functions Metrics
 
+Through Real-Time Metrics, we provide real-time information about the performance of your Edge Functions.
+
+To access the graphs, follow these steps:
+
+1. Access the [Real-Time Manager](https://manager.azion.com/) and enter the **Data Services** menu and select **Real-Time Metrics**, then click **Edge Functions**.
+2. View information such as the number of invocations per instance of Edge Function.
+
+Read more about [Real-Time Metrics](https://www.azion.com/en/documentation/products/real-time-metrics/).
 
 ---
 
-## 4. Documentação de Suporte 	{#documentacao-de-suporte}
+## 4. Hands-On Step by step to create an Edge Function{# hands-on}
+
+To see your Edge Function  effectively in production you just need to write, instantiate and associate it with a Behavior _Run Function_, in a Rule in Rules Engine:
+
+1. Access the [Real-Time Manager](https://manager.azion.com/) and enter the Libraries menu, select Edge Functions.
+
+
+2. Add a new _edge function_ by clicking the _Add Function_ button.
+
+
+3. In Language, select ***JavaScript***.
+
+
+   ~~~
+code
+   ~~~
+
+
+4. Access an Edge Application and Enable the Edge Functions Module, 
+
+
+5. On the ***Rules Engine*** tab, create or edit a Rule and in the ***Behavior*** section, in the **field *Then***, select "Run Function" and associate the desired **Edge Function**. 
+
+
+6. Example of response when running the Behavior Run Function:
+
+
+   ~~~
+{"flip a coin": "heads"}
+   ~~~
+
+
+7. Use ***Real-Time Metrics*** to track metrics such as, for example, the number of invocations of Edge Functions instances.
+
+---
+
+## 4. Support Documentation{#documentacao-de-suporte}
 
 - Edge Application - Edge Functions Instances
-- [Edge Application Rules Engine](https://www.azion.com/pt-br/documentacao/produtos/edge-application/rules-engine/)
+- [Edge Application Rules Engine](https://www.azion.com/en/documentation/products/edge-application/rules-engine/)
 - Edge Firewall - Edge Functions Instances
-- [Edge Firewall Rules Engine](https://www.azion.com/pt-br/documentacao/produtos/edge-firewall/rules-engine/)
+- [Edge Firewall Rules Engine](https://www.azion.com/en/documentation/products/edge-firewall/rules-engine/)
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
