@@ -9,7 +9,7 @@ Native JavaScript APIs are available to be used – e.g., **Math** and **JSON** 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
 ~~~
-Atenção - eval, new Function blocked for security reasons
+eval, new Function are blocked for security reasons.
 ~~~
 
 
