@@ -95,16 +95,18 @@ To see your Edge Function  effectively in production you just need to write, ins
 
 3. In Language, select ***JavaScript***.
 
-      ~~~
-      let a = Math.floor(Math.random() * 10);
-      if (a > 5) {
-          const jso = JSON.parse('{ "flip a coin": "heads"}');
-          AzionSetResponse(JSON.stringify(jso));
-      } else {
-          const jso = JSON.parse('{ "flip a coin": "tails" }');
-          AzionSetResponse(JSON.stringify(jso));
-      }
-      ~~~
+   ~~~
+   {
+       let a = Math.floor(Math.random() * 10);
+       if (a > 5) {
+           let coin = JSON.parse('{ "flip a coin": "heads"}');
+           AzionSetResponse(JSON.stringify(coin));
+       } else {
+           let coin = JSON.parse('{ "flip a coin": "tails" }');
+           AzionSetResponse(JSON.stringify(coin));
+       }
+   }
+   ~~~
 
 
 4. Access an Edge Application and Enable the Edge Functions Module, 
@@ -115,9 +117,9 @@ To see your Edge Function  effectively in production you just need to write, ins
 
 6. Example of response when running the Behavior Run Function:
 
-      ~~~
-      {"flip a coin":"heads"}
-      ~~~
+   ~~~
+   {"flip a coin":"heads"}
+   ~~~
 
 
 7. Use ***Real-Time Metrics*** to track metrics such as, for example, the number of invocations of Edge Functions instances.
@@ -134,4 +136,3 @@ To see your Edge Function  effectively in production you just need to write, ins
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
