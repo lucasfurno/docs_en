@@ -19,7 +19,7 @@ Also, you can create your ACP or SaaS, publish your solution at Azion Marketplac
 
 The Azion Marketplace offers you products that can be launched to your edge resources at the Azion Platform. After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
 
-At this stage, you will find Free and Bring Your Own License products, that are products you buy a license directly with an Independent Software Vendor (ISV) and input it into your Edge Application. 
+At this stage, you will find Free and Bring Your Own License products, products that you buy a license directly with an Independent Software Vendor (ISV) and instantiate in your Edge Application. 
 
 Once you have launched a product, you can create an instance of this product in your Edge Application and you're ready to use it.
 
@@ -53,7 +53,7 @@ You can get more information about the Edge Functions module [here](../edge-func
 
 If you purchased an Azion Cell Package, you will find it the purchased product as a new Edge Application to be used in your account. 
 
-You can get more information about Edge Applications [here](../edge-application/index.md). 
+You can get more information about Edge Application [here](../edge-application/index.md). 
 
 
 
