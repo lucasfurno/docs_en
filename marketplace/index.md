@@ -61,7 +61,7 @@ You can get more information about Edge Application [here](../edge-application/i
 
 You can plug your SaaS or develop your own product at Azion Platform, publish it at Azion Marketplace and start making sales with your product.
 
-To do so, you need to become an Independent Software Vendor by submitting this [form]() or reach us at integration@azion.com.
+To do so, you need to become an Independent Software Vendor by submitting this [form](https://forms.gle/GBVxKnE6JeKEzuhTA) or reach us at integration@azion.com.
 
 We will evaluate your request and get in touch to guide you through the ISV process.
 
