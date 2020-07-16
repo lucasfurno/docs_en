@@ -194,7 +194,7 @@ Response for IP/CIDR type list:
         "last_editor": "Azion",
         "last_modified": "2019-09-12T14:07:26.871995Z",
         "list_type": "ip_cidr",
-        "name": " Azion IP Origin Shield",
+        "name": " Azion Origin Shield",
         "items_values": [
             "149.56.116.123/32",
             "149.56.148.202/32",
