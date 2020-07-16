@@ -96,16 +96,14 @@ To see your Edge Function  effectively in production you just need to write, ins
 3. In Language, select ***JavaScript***.
 
    ~~~
-   {
-       let a = Math.floor(Math.random() * 10);
-       if (a > 5) {
-           let coin = JSON.parse('{ "flip a coin": "heads"}');
-           AzionSetResponse(JSON.stringify(coin));
-       } else {
-           let coin = JSON.parse('{ "flip a coin": "tails" }');
-           AzionSetResponse(JSON.stringify(coin));
-       }
-   }
+    let a = Math.floor(Math.random() * 10);
+    if (a > 5) {
+        let coin = JSON.parse('{ "flip a coin": "heads"}');
+        AzionSetResponse(JSON.stringify(coin));
+    } else {
+        let coin = JSON.parse('{ "flip a coin": "tails" }');
+        AzionSetResponse(JSON.stringify(coin));
+    }
    ~~~
 
 
