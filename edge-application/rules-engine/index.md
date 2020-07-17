@@ -1,4 +1,4 @@
-# Rules **Engine**
+# Rules Engine for Edge Application
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-application/rules-engine/index.md)
 
@@ -62,9 +62,13 @@ In the Criteria you define the conditions for executing the rule. You can use a 
 | ${device_group} | User device group. Device groups are customized through the User Agent in the Device Groups tab of Real-Time Manager. | Request Phase <br>Response Phase | Adaptive Delivery |
 | ${geoip_city_continent_code} | 2-letter continent code, using the geolocation base geoip_city. For example: EU for Europe, NA for North America, SA for South America etc. | Request Phase <br>Response Phase | Application Acceleration |
 | ${geoip_city_country_code} | 2-letter country code, using the geolocation base geoip_city. For example: RU for Russia, BR for Brazil, US for United States etc.	| Request Phase <br>Response Phase | Application Acceleration |
+| ${geoip_city} | Name of the city, using the geolocation base geoip_city. Sao Paulo, London, New York, Porto Alegre etc.	| Request Phase <br>Response Phase | Application Acceleration |
+| ${geoip_continent_code} | 2-letter continent code. For example: EU for Europe, NA for North America, SA for South America etc.	| Request Phase <br>Response Phase | Application Acceleration |
 | ${geoip_city_country_name} | Name of the country, using the geolocation base geoip_city. For example: United States, Brazil, Russian Federation etc. | Request Phase <br>Response Phase | Application Acceleration |
 | ${geoip_country_code} | 2-letter country code, using the geolocation base geoip_country. For example: RU for Russia, BR for Brazil, US for United States etc. | Request Phase <br>Response Phase | Application Acceleration |
 | ${geoip_country_name} | Name of the country, using the geolocation base geoip_country. For example: United States, Brazil, Russian Federation etc. | Request Phase <br>Response Phase | Application Acceleration |
+| ${geoip_region_name} | Name of the country, using the geolocalization base geoip_region. For sample: Ontario, Delaware, Sao Paulo etc. | Request Phase <br>Response Phase | Application Acceleration |
+| ${geoip_region} | 2-letter region code. For exemple: RS for Rio Grande do Sul, DE for Delaware, ON for Toronto etc. | Request Phase <br/>Response Phase | Application Acceleration |
 | ${host} | In order of precedence: the host name of the request line, or the value of the Host header field of the request, or the name of the server serving the request. | Request Phase <br>Response Phase | Application Acceleration |
 | ${http_name} | The value of the request name header field. The name argument must be converted to lowercase and the hyphens must be converted to underscore. For example: ${http_accept} will take the value of the Accept footer of the HTTP request field. | Request Phase <br>Response Phase | Application Acceleration |
 | ${remote_addr} | The IP address of the client performing the HTTP request. | Request Phase <br>Response Phase | Application Acceleration |
