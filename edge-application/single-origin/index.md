@@ -1,5 +1,7 @@
 # Single **Origin**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-application/single-origin/index.md)
+
 Through Single Origin you may set up the address of your origin and adjust parameters.
 
 > 1. [Single Origin Features](#single-origin-features)
@@ -11,7 +13,7 @@ Through Single Origin you may set up the address of your origin and adjust param
 
 With Single Origin you add an origin for your content and customize Host Header, connection method and authentication credentials.
 
-**Host Header**
+### Host Header {#host-header}
 
 The Host header is used by your origin to identify the *virtualhost* and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.
 
@@ -21,7 +23,7 @@ You can fill in a custom value for Host Header to be sent to your origin. For ex
 
 Or, you can use the variable *$host* in the Host Header field, to instruct the edge nodes to pass on to the origin the same Host header received from your visitors. Use this set up if you multiple *virtualhosts* being replied by the same origin.
 
-**Origin Path**
+### Origin Path  {#origin-path}
 
 If you need that the Edge Nodes of Azion request the content of your origin in a different URL path, you may define an Origin Path. Azion will concatenate the Origin Path with the URI requested by the user.
 
@@ -29,7 +31,7 @@ The definition of the Origin Path is optional. If it is not defined, it will onl
 
 For example, if in your origin the whole content is under the path */secure*, though this path is not shown in the URL for your users, you may define the */secure* as the Origin Path in your origin settings. The rest of the path will be preserved, in accordance with the user’s request.
 
-**Origin Protocol Policy**
+### Origin Protocol Policy {#origin-protocol-policy}
 
 Azion’s delivery architecture allows you to customize the desired type of connection of the Edge Nodes to your origin:
 
@@ -41,19 +43,19 @@ Azion’s delivery architecture allows you to customize the desired type of conn
 
   
 
-**Address**
+### Address {#address}
 
 After the definition of the fields above, add an origin informing the IP address or hostname (FQDN – Full Qualified Domain Name) of your origin.
 
 You may also customize the origin port, if you defined the *Origin Protocol Policy* in the *Enforce HTTP* or *Enforce HTTPS*, using the notation *host:port.*
 
-
-
-**HMAC Authentication**
+### HMAC Authentication {#hmac-authentication}
 
 You may include a Single Origin where the origin is found in an Object Storage with private access, with authentication through HMAC.
 
 <p style="background-color:#ddeef8; color:#1574ba"> When enabling HMAC Authentication, your private content will begin to be delivered to your users through Edge Application.</p>
+
+<p style="background-color:#ddeef8; color:#1574ba"> Unfortunately, this feature is not yet available for use in conjunction with the Azion Image Processor. We will soon correct this lack.</p>
 
 You should include in the access credentials HMAC, Region, Access Key and Secret Key provided by your Object Storage provider. 
 
@@ -65,7 +67,7 @@ _©2020 Google LLC All rights reserved. Google Cloud Storage is a trademark of G
 
 
 
-**Timeouts**
+### Timeouts {#timeouts}
 
 Displays timeout setting in seconds pre-defined by Azion. Timeout values cannot be customized.
 
@@ -85,4 +87,3 @@ To set up a Single Origin:
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/single-origin/index.md) on GitHub.

@@ -1,5 +1,7 @@
 # Edge **Caching**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-caching/index.md)
+
 Speed up the delivery by keeping your content cached at the edge of the network, closer to your users.
 
 [Edge Caching](https://www.azion.com/pt-br/produtos/edge-caching/) is a standard module for all of your edge applications at Azion. This product reduces the latency and has a high rate of transfer through the *edge network global* and highly distributed of Azion.
@@ -62,9 +64,11 @@ CDN Cache Settings is the amount of time the Azion’s Edge Applications take to
 
 ## 5. L2 Caching {#l2-caching}
 
-L2 Caching is the module that performs the role of intermediary between Azion's global network of Edge Nodes and their Origin. 
+L2 Caching is an additional layer of cache between the Azion Edge and its origin that helps to further reduce the load on your infrastructure. When accessing your applications on Azion, your user accesses our highly distributed network capable of performing edge caching. When you activate L2 Caching in your edge applications, you have a second layer of cache that will be responsible for feeding the edge, keeping your content in the cache for as long as you determine.
 
-An additional layer of cache that reduces traffic to its origin, while increasing performance, availability and decreasing the number of requests at the origin.
+L2 Caching was designed principally for objects that can be cached for a long time. So, you can only activate it in cache policies with time-to-live (TTL) equal to or greater than 30 days (2592000 seconds).
+
+Whenever necessary, you can use Real-Time Purge to expire your L2 Caching content before the estimated TTL time. Remember to expire first on L2 Caching and then later on Edge Caching, to avoid edge feedback with outdated L2 content.
 
 > Attention, the L2 Caching module works with a minimum “TTL” of 2592000 seconds.
 
@@ -78,7 +82,6 @@ To use the L2 Caching module, follow these steps:
 6. Set up the field ******Default TTL (seconds)** to the value bigger or equal to **2592000 seconds**
 7. .Following, enable the option **L2 Caching** and save the settings.
 8. That’s it, the **L2 Caching** module is enabled.
-
 
 ---
 
@@ -121,5 +124,3 @@ Use this functionality to segment your content by user profile, browsing session
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-caching/index.md) on GitHub.

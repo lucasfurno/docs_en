@@ -1,16 +1,41 @@
 # **Changelog**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/changelog/index.md)
+
 This page lists the latest changes to Azion products and services. Here you will find a summary of information about the release of new features or changes in the behavior of the products.
+
+---
+
+**jun/2020**
+
+* Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
+* Bugfix of synchronization of the serial number of the SOA record in the Intelligent DNS product.
+* Azion Online Sales Channel released.
+* Additional feature Sampling in the Data Streaming product (in Early Access).
+* Option to activate / deactivate the Edge Functions product through account subscriptions.
+* Bug fix Network Lists UI adjustment to prevent saving empty Network Lists.
+* Bug fix adjustment in Edge Functions to allow creating and instantiating using special characters.
+
+---
+
+**may/2020**
+
+* Additional qtype support for CAA (Certification Authority Authorization) in the Intelligent DNS product.
+* Now you can view the content of Network Lists provided by Azion through Real-Time Manager user interface or Network Lists API.
+* Real-Time Analytics renamed to Real-Time Metrics
+* Added graphics referring to "L2 Caching" metrics, in the Real-Time Metrics interface
+* Bug fix performance Data Streaming
+* Bug fix Real-Time Metrics supporting larger number of domains Edge Application
 
 ---
 
 **apr/2020**
 
 *  Azion Edge Firewall's General Availability.
-* Bug fix in the Intelligent DNS product interface.
-* Bug fix in the Real-Time Metrics product interface.
-* Bug Fix in the Edge Application product at Cache error pages.
-* Integration with Radware Bot Manager.
+*  Bug fix in the Intelligent DNS product interface.
+*  Bug fix in the Real-Time Metrics product interface.
+*  Bug Fix in the Edge Application product at Cache error pages.
+*  Integration with Radware Bot Manager.
 
 ---
 
@@ -457,6 +482,4 @@ Note: Just as the interface has been updated to require the purge type, the [Pur
 
 ---
 
-Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/).
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/changelog/index.md) on GitHub.
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

@@ -1,5 +1,7 @@
 # Image **Processor**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/image-processor/index.md)
+
 The Azion Image Processor automates your workflow for processing images.
 
 Optimizing your images reduces their size, but without any perceivable loss of visual quality. This reduces their transfer time and improves the user’s experience. This makes your pages load better and speeds up navigation, without you needing to do practically anything.
@@ -51,7 +53,10 @@ To configure Azion Image Processor, take the following steps and, when necessary
 **Step 3: Set up Image Processor**
 
 1.  In the Rules Engine tab, add or edit a customized rule for one or more image paths.
-2.  In the Path field, enter the path for your images or use the regex recommended by Azion *\.(jpg|jpeg|gif|png|bmp)$*
+2.  In the Path field, enter the path for your images or use the regex recommended by Azion:
+~~~
+\.(jpg|jpeg|gif|bmp|png)$
+~~~
 3.  Choose the logical operator **Matches**, if you used the regular expression in the Path field.
 4.  In the Behavior field **Set Cache Settings**, select the preset used in Stage 2.
 5.  Also select **Image Processor** in the Behavior field.
@@ -268,5 +273,3 @@ __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(gray):quality(
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/image-processor/index.md) on GitHub.

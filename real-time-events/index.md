@@ -1,5 +1,7 @@
 # Real-Time **Events**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/real-time-events/index.md)
+
 Real-Time Events is an Edge Orchestration module that allows you to view data on your Azion products and services in real time.
 You can use Real-Time Events to perform complex searches and explore your application data on Azion, which are organized in Data Origins.
 
@@ -64,5 +66,3 @@ You can use the Refresh button to update the returned data, repeating the last s
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/real-time-events/index.md) on GitHub.

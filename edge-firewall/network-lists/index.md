@@ -1,5 +1,7 @@
 # Network **Lists**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/network-lists/index.md)
+
 Network Lists is the Azion platform feature that allows you to create and manage whitelists *, *blacklists* or even *greylists* based on the user's network or location. With it, it is possible to prevent different types of attacks to your network, as well as to prevent users with malicious behavior from having access to your applications.
 
 Through restrictions rules by IPs, ASN or *geolocation*. Network Lists are used in the business rules of the Edge Firewall Rules Engine, mitigating security risks and optimizing the performance of your resources.
@@ -54,6 +56,4 @@ To provide even more agility to your processes, Azion provides and maintains som
 
 ---
 
-Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-firewall/network-lists/index.md) on GitHub.
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

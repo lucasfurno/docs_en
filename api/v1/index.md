@@ -1,0 +1,102 @@
+# API **V1**
+
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v1/index.md)
+
+The Azion API is a RESTful API, based on HTTPS requests, that allow you to integrate your systems with our platform, simply, quickly and securely.
+
+This technical guidance is aimed at clients and developers. Here you will find instructions on how the API works and what functionality is available. This guidance is being constantly updated and we recommend that you check it before any doing any development on your application, even if you are already familiar with our API.
+
+> 1. [First steps](#primeiros-passos)
+> 2. [Endpoints](#endpoints)
+
+---
+
+## 1. First steps {#primeiros-passos}
+
+Both HTTPS requests and responses must be in JavaScript Object Notation (JSON) format. All HTTPS requests and responses must follow these conventions.
+
+**Base URL**
+
+The base URL of the API , which must be used is:
+
+#### [https://api.azionapi.net/](https://api.azionapi.net/)
+
+**HTTP Methods**
+
+| HTTP Method | CRUD | Whole Collection (e.g. /items) | Specific Item (e.g. /items/:item_id) |
+|-------------|------|--------------------------------|--------------------------------------|
+| GET | Read | Look up the list of items in a Collection | Look up a specific item in a Collection |
+| POST | Create | Create a new item in the Collection | - |
+| PUT | Update/Replace | Replace a whole Collection with a new one | Replace an item in a Collection with a new one |
+| PATCH | Update/Modify | Partially update a Collection | Partially update an item in a Collection |
+| DELETE | Delete | Delete a whole Collection | Delete an item in a Collection |
+
+**Status Codes**
+
+The HTTP return code defines the status (successful or not) when the requested operation is run.
+
+| Status Code | Significado |
+|-------------|-------------|
+| 200 OK | General Status for a successful operation. |
+| 201 CREATED | Successfully created a collection or item, by means of POST or PUT. |
+| 204 NO CONTENT | Successful operation, but without any content to be return to the Body. Generally used for DELETE or PUT operations. |
+| 207 MULTI-STATUS | A batch of operations were triggered by a single request, which resulted in different return codes when it was run, for some of the operations. The codes are displayed in the “status” field, in the body of the response, for each sub-batch of operations for whichever are applicable. |
+| 400 BAD REQUEST | Request error, such as invalid parameters, missing mandatory parameters or others. |
+| 401 UNAUTHORIZED | Error caused by a missing HTTP Authentication header. |
+| 403 FORBIDDEN | User does not have the permissions to run the requested operation. |
+| 404 NOT FOUND | The requested resource does not exist. |
+| 405 METHOD NOT ALLOWED | The requested method is not applicable with the URL. |
+| 406 NOT ACCEPTABLE | Accept header missing from the HTTP request or the header contains formatting or the version is not supported by the API. |
+| 409 CONFLICT | Conflict generated in running the request, such as a request to create an already existing record. |
+| 429 TOO MANY REQUESTS | The request was temporarily rejected, due to exceeding the limit on operations. Wait for the time defined in the X-Ratelimit-Reset header and try again. |
+| 500 INTERNAL SERVER ERROR | Unintentional error, due to an unidentified failure in the request process. |
+
+
+**HTTP Headers**
+
+All requests must be generated with the HTTP header specifying the desired code format for responses and the API version used. The current version of the API is 1 and the format is application/json.
+
+~~~
+Accept: application/json; version=1
+~~~
+
+**Rate Limit**
+
+The amount of operations that can be run via the API is set by 3 HTTP response headers:
+
+* X-ratelimit-limit: number of operations allowed in one time-frame.
+* X-ratelimit-remaining: number of operations still available in one time-frame.
+* X-ratelimit-reset: is the date and time, in IOS 8601 format, which represents the point in the future when the time-frame will be closed and when the limits will, therefore, be reset.
+
+Example of HTTP response headers and a request:
+
+~~~
+Date: Thu, 02 Nov 2017 12:30:28 GMT
+X-ratelimit-remaining: 199
+X-ratelimit-limit: 200
+X-ratelimit-reset: 2017-11-02T12:31:28.675446
+~~~
+
+In the example provided, 200 operations are allowed within a 1-minute time frame. Of those, there are 199 still available, because one has already been run. The total limit will be reset after 1 minute.
+
+When the X-ratelimit-limit is reached, or in other words, when the X-ratelimit-remaining reaches zero, the API will give the error, HTTP 429 TOO MANY REQUESTS. If your application receives this error, you will need to wait until the time defined in X-ratelimit-reset has passed, to make another request.
+
+---
+
+## 2. Endpoints {#endpoints}
+
+The endpoints define the function available in the API.
+
+You must begin by creating an Authentication Token, so you can then use the functions available.
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg>Authentication]({% tl api_v1_authentication %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Real-Time Metrics]({% tl api_v1_real_time_analytics %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Cloud Security]({% tl api_v1_cloud_security %})
+
+[<svg width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-list" viewBox="0 0 60 60"><g stroke="#333" fill="#333" stroke-width="0"><g stroke="none"><path d="M42.5 22h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm-25-6h10a1 1 0 1 0 0-2h-10a1 1 0 1 0 0 2zm25 14h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2zm0 8h-25a1 1 0 1 0 0 2h25a1 1 0 1 0 0-2z"/><path d="M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z"/></g></g></svg> Real-Time Purge]({% tl api_v1_real_time_purge %})
+
+---
+
+Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)

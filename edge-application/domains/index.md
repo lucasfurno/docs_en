@@ -1,5 +1,7 @@
 # **Domains**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-application/domains/index.md)
+
 Speed up the delivery by keeping your content cached at the edge of the network, closer to your users.
 
 When using Azion Domains you have our SSL certificate for HTTPS traffic, at no additional cost, when using Azion's shared domain.
@@ -44,6 +46,4 @@ To set up the Azion Domains:
 
 ---
 
-Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/domains/index.md) on GitHub.
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)

@@ -1,5 +1,6 @@
-
 # Rules Engine for Edge Firewall
+
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/rules-engine/index.md)
 
 The Rules Engine is designed for you to be able to implement your security logic at the edge. Based on programmable criteria, you choose what you want to do: block, ignore the request, limit the access rate, apply a WAF policy, perform an edge function with your own security code or simply monitor traffic to identify threats.
 
@@ -230,5 +231,3 @@ Remember: WAF only blocks threats if it is configured in Blocking Mode.
 ---
 
 Didn't find what you were looking for? [Open a support ticket](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-firewall/rules-engine/index.md) on GitHub.

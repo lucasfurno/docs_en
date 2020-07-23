@@ -1,5 +1,7 @@
 # Edge **Firewall**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/index.md)
+
 Azion Edge Firewall is a security product that gives protection from the network layer to the application layer. Your Azion security team presents you with the most advanced resources for protecting your applications against all types of attack, all in one place.
 
 With Edge Firewall, you can extend your security perimeter to the edge of the network, as your access control rules are processed directly through the Azion Edge Network, closer to users, which helps prevent undesirable requests from reaching your origin or getting access to your applications.
@@ -44,9 +46,11 @@ Which criteria and behaviors are available in Edge Firewall, depends on which mo
 
 The Azion Edge Firewall has the following modules, so that you can build high performance, scalable, safe edge applications, much more simply and without heavy maintenance.
 
-### [DDoS Protection](https://www.azion.com/en/documentation/products/ddos-protection/) 
+### DDoS Protection
 
 The DDoS Protection module secures your content and applications against *Distributed Denial of Service* (*DDoS*) type attacks. By using a modern approach to detect and mitigate attacks on the network, transport and application layers, we reduce the downtime without affecting your service’s performance.
+
+[See more](https://www.azion.com/en/documentation/products/ddos-protection/)
 
 ---
 
@@ -60,21 +64,25 @@ You can still use *third-party* security solutions to protect sensitive data and
 
 ---
 
-### [Network Layer Protection](https://www.azion.com/en/documentation/products/network-layer-protection/)
+### Network Layer Protection
 
 This module gives you the option to create filters for IP/CIDR addresses, ASNs or countries (*geolocation*), by configuring Network Lists and setting up business rules to check criteria and block or release, as needed, which are specified in the Rules Engine of Edge Firewall.
 
 Network Layer Protection works within layers 3 and 4 of the OSI model and it is a powerful tool that is a secure and efficient option when it comes to protecting your business against attacks and undesirable user access.
 
-####  **Origin Shield Add-on**
+[See more](https://www.azion.com/en/documentation/products/network-layer-protection/)
+
+####  Origin Shield Add-on
 
 With this Azion Edge Firewall add-on you can set up a security perimeter around your origin infrastructure, whether that be in the cloud, hosted or your own datacenter. The service enables your origin to be able to restrict access to specific IP addresses from our network and block any other access to your origin.
 
 ---
 
-### [Web Application Firewall](https://www.azion.com/en/documentation/products/web-application-firewall/)
+### Web Application Firewall
 
 Web Application Firewall (WAF) protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and many others. The WAF analyses HTTP and HTTPS requests, detects and blocks threats before they can reach your infrastructure and affect your applications performance.
+
+[See more](https://www.azion.com/en/documentation/products/web-application-firewall/)
 
 ---
 
@@ -88,5 +96,3 @@ Web Application Firewall (WAF) protects your applications against threats such a
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-firewall/index.md) on GitHub.

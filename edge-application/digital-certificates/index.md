@@ -1,14 +1,13 @@
 # Digital **Certificates**
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-application/digital-certificates/index.md)
+
 You will need a SSL Certificate to traffic data over HTTPS. The use of HTTPS guarantees you security in the transmission of your customers' data over the internet, demonstrates the reliability of your website and the authenticity of your domain, in addition to improving the position of your website in search engines like Google. You will also need HTTPS if you want to use the HTTP/2 protocol, which brings important performance improvements compared to HTTP/1.1.
 
 At Azion, you can count on the following SSL Certificate options for HTTPS traffic:
 
 > 1. _[Shared Domain](#shared-domain)_
 > 2. _[Custom Certificate](#custom-certificate)_
-> 3. _RSA_
-> 4. _ECC/ECDSA_
-> 5. _How to use Custom Certificate_
 
 ---
 
@@ -37,19 +36,19 @@ To use your domain in HTTPS you will need your own SSL Certificate (X.509). You 
 
 Azion currently works with two types of certificates, which are: “RSA” and “ECC/ECDSA”. Each certificate has its characteristics and its security level, and Azion allows you to choose the option that best fits your scenario.
 
-## 3. RSA
+### RSA {#rsa}
 
 It is one of the first public key cryptography systems and is widely used for the secure transmission of data. In this encryption system, the encryption key is public and is different from the decryption key that is secret (private). Any message encrypted using a public key can only be decrypted using the respective private key.  
 
 RSA is a relatively slow algorithm and is therefore less used to directly encrypt user data. Most often, RSA passes shared encrypted keys to symmetric key encryption, which in turn can perform mass encryption-decryption operations at a much greater speed.
 
-## 4. ECC/ECDSA
+### ECC/ECDSA  {#ecc-ecdsa}
 
 Elliptical Curve Cryptography is an approach to public key cryptography based on the algebraic structure of elliptical curves. Public key cryptography is based on the creation of mathematical puzzles that are difficult to solve, therefore it becomes much more secure than other types of certificates such as RSA.
 
 Smaller keys are less computationally intensive to generate signatures because they involve smaller mathematical numbers. ECC is faster in generating signatures and has better performance than RSA.
 
-## 5. How to use Custom Certificate
+### How to use Custom Certificate {#how-to-use-custom-certificate}
 
 To add your Custom Certificate, you will need the Certificate pair (X.509) in [ASCII PEM](https://www.google.com.br/search?q=Como+converter+um+certificado+PFX+para+PEM&cad=h) format and the respective private key, which cannot be protected by *passphrase*.
 
@@ -89,6 +88,5 @@ To use your own certificate:
 
 ---
 
-Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
 
-[Edit this page](https://github.com/aziontech/docs_en/edit/master/edge-application/digital-certificates/index.md) on GitHub.
