@@ -71,7 +71,7 @@ You can find all the features of the [Enterprise Plan](#enterprise-plan) and mor
 | Technical Support | | 24×7 access to Support Engineers via ticket and phone        | 24×7 access to Support Engineers, 8am to 5pm for R&D Engineers via ticket and phone and Access to Azion's Slack Channel (for an additional fee) |
 | Who can open cases                  | | Unlimited contacts/unlimited cases                           | Unlimited contacts/unlimited cases                           |
 | Severity of cases/Response times    | | *General guidance:* < 24 hours (business hours*)<br />*System impaired:* < 12 hours<br />*Production system impaired:* < 4 hours<br />*Production system down:* < 1 hour | *General guidance:* < 24 hours (business hours*)<br />*System impaired:* < 12 hours<br />*Production system impaired:* < 4 hours<br />*Production system down:* < 1 hour<br />*Business-critical system down:* < 15 minutes |
-| Go Live Support | | Access to Support Engineers (for an additional fee)          | Access to Support Engineers (including up to 3 Go Live events per year) |
+| Go Live Support | | Access to Support Engineers (for an additional fee)          | Access to Support Engineers (including up to 5 Go Live events per year) |
 | Training | | Access to Azion Day (for an additional fee)                  | Access to Azion Day (including 2 Azion Days per year)        |
 | Custom Configurations | | Access to creating custom configurations (for an additional fee) | Access to creating custom configurations (including up to 5 sites) |
 | Best Practices Review | | Designation of a Trusted Advisor (for an additional fee)     | Designation of a Trusted Advisor (including up to 5 reviews per year) |
