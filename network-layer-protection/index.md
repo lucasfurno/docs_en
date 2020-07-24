@@ -33,7 +33,7 @@ Network Lists enables you to create, look up or update Network Lists that are be
 
 Origin Shield is an Azion Network Layer Protection add-on. You will be able to create a security perimeter for your source infrastructure, whether a cloud, hosting provider, or even your own data center. With this service, your origin will be able to restrict access only to specific IP addresses of our network and block any other access to your origin.
 
-Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on, **seven days** after publication.
+Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on, **seven days** after publication. It is also possible to follow and track the changes made to the list through the *History* of the Real-Time Manager, through the History you can find which IP's have been added or deleted from the list.
 
 Origin Shield is available through Real-Time Manager or our API. To learn more and how to use our API, consult the documentation on How to Consult Network List data - Origin Shield.
 
