@@ -83,7 +83,7 @@ Read more about [Real-Time Metrics](https://www.azion.com/en/documentation/produ
 
 ---
 
-## 4. Hands-On Step by step guide to creating an Edge Function{# hands-on}
+## 4. Hands-On Step by step guide to creating an Edge Function{#hands-on}
 
 To see your Edge Function in effectively operation you just need to write, instantiate and associate it with a Behavior _Run Function_, using a Rule in the Rules Engine:
 
