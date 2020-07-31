@@ -6,7 +6,7 @@ Edge Pulse is a product from Edge Analytics, based on the RUM  market solution, 
 
 > 1. [What is RUM?](#what-is-rum)
 > 2. [How does it work?](#how-does-work)
-> 3. [How to use](#how-to-use)
+> 3. [How to set up?](#how-to-setup)
 > 4. [Collected Data](#collected-data)
 
 ---
@@ -34,7 +34,7 @@ The tracking done by Edge Pulse respects the following settings of the user’s 
 
 ---
 
-## 3. How to set up? {#how-to-use}
+## 3. How to set up? {#how-to-setup}
 
 To monitor the page, it is necessary to insert the Edge Pulse JavaScript tag.
 
