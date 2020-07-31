@@ -26,7 +26,7 @@ Using Edge Functions written in **Lua** and **JavaScript** on Azion's Edge Compu
 See more ways to use Edge Functions in [Use Cases](https://www.azion.com/en/documentation/use-cases/).
 
 > 1. [How do they work?](#how-do-they-work)
-> 2. [How to use them?](#how-to-use-them)
+> 2. [How to use?](#how-to-use)
 > 3. [Hands-on](#hands-on)
 > 4. [Support Documentation](#support-documentation)
 
@@ -46,7 +46,7 @@ Edge Functions are performed directly on Azion Edges infrastructure. To use them
 
 ---
 
-## 2. How do use them? {#how-do-use-them}
+## 2. How to use? {#how-to-use}
 
 Write your own custom functions or use any of the ready-to-use ones provided by Azion or Independent Software Vendors. Using Real-Time Manager, in the Libraries, you can create Edge Functions and maintain a repository of functions that can be used in the Edge Application or Edge Firewall. Consult the Runtime API according to the Runtime chosen for writing the Edge Function.
 
@@ -56,7 +56,7 @@ Use the Runtime API of your preferred language to write Edge Functions.
 
 Using the JavaScript Runtime Environment, Edge Functions written by the user go directly into effect without undergoing an internal review because the code runs on limited to isolated resources.
 
-The Edge Functions that use code written in Lua do undergo a thorough review by our software engineers before going into effect. Our goal is to ensure the security and correct use of the Edge Computing platform. We review your code according to the following criteria:
+The Edge Functions that use code written in Lua do undergo thorough a review by our software engineers before going into effect. Our goal is to ensure the security and correct use of the Edge Computing platform. We review your code according to the following criteria:
 
 - Use of any global variables that are not allowed. Due to the multi-tenant environment, the Edge Function Lua code should avoid using global variables and shared memory
 - blocking HTTP calls. Every call to an external service must use the HTTP protocol through asynchronous APIs so that the process is not blocked
@@ -64,7 +64,7 @@ The Edge Functions that use code written in Lua do undergo a thorough review by 
 
 For more details of each Runtime API and code samples, see the documentation for [Runtime APIs](https://www.azion.com/en/documentation/products/edge-functions/runtime-apis/).
 
-### Edge Function Instances
+### Edge Functions Instances
 
 According to its initiator type, before associating an execution trigger with Edge Function, it must be instantiated in Edge Application or Edge Firewall. With the Edge Functions module enabled, you can instantiate your Edge Functions for later use in a Rules Engine Rule, through the **Functions** tab.
 
@@ -126,9 +126,9 @@ To see your Edge Function in effectively operation you just need to write, insta
 
 ## 4. Support Documentation{#documentacao-de-suporte}
 
-- Edge Application - Edge Function Instances
+- Edge Application - Edge Functions Instances
 - [Edge Application Rules Engine](https://www.azion.com/en/documentation/products/edge-application/rules-engine/)
-- Edge Firewall - Edge Function Instances
+- Edge Firewall - Edge Functions Instances
 - [Edge Firewall Rules Engine](https://www.azion.com/en/documentation/products/edge-firewall/rules-engine/)
 
 ---
