@@ -6,6 +6,12 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**jul/2020**
+
+* Bugfix in the Intelligent DNS product.
+
+---
+
 **jun/2020**
 
 * Support for adding a response starting with "_" for CNAME type records in the Intelligent DNS product.
