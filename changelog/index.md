@@ -13,6 +13,7 @@ This page lists the latest changes to Azion products and services. Here you will
 * Added functionality for sending email notification when the Origin Shield product Network List changes.
 * Added functionality to view the changes that occurred in the Origin Shield product's Network List through the RTM History.
 * Bugfix in the Digital Certificate product.
+* Launch of the Single Sign-On.
 
 ---
 
