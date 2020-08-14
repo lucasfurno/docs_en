@@ -1,4 +1,4 @@
-# Custome **Agreement**
+# Customer **Agreement**
 
 *Last updated September 29, 2017.*
 
