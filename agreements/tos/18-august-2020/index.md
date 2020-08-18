@@ -112,7 +112,7 @@ Azion follows ISO/IEC 80000 standards and, therefore, traffic unit factors are a
 
 **MB:** megabyte(s), 1 MB = 1,000 KB.
 
-**KB ou kB:** kilobyte(s), 1KB = 1,000 bytes.
+**KB or kB:** kilobyte(s), 1KB = 1,000 bytes.
 
 ##  5. Product Release Stages
 
