@@ -107,8 +107,11 @@ All Azion products and services are offered as Edge Services and are accessible 
 Azion follows ISO/IEC 80000 standards and, therefore, traffic unit factors are always converted times 1,000.
 
 **TB:** terabyte(s), 1 TB = 1.000 GB.
+
 **GB:** gigabyte(s), 1 GB = 1.000 MB.
+
 **MB:** megabyte(s), 1 MB = 1.000 KB.
+
 **KB ou kB:** kilobyte(s), 1KB = 1.000 bytes.
 
 ##  5. Product Release Stages
