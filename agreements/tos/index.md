@@ -96,3 +96,4 @@ Azion follows ISO/IEC 80000 standards and, therefore, traffic unit factors are a
 **GB:** gigabyte(s), 1 GB = 1.000 MB.
 **MB:** megabyte(s), 1 MB = 1.000 KB.
 **KB ou kB:** kilobyte(s), 1KB = 1.000 bytes.
+
