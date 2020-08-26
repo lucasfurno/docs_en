@@ -214,7 +214,7 @@ Response for IP/CIDR type list:
 
 Returns details of the Tor Exit Nodes Network List. The information that is returned in this call refers to the Tor Exit Nodes Network List which contains the list of all IPs that can be used in the Rules Engine in Edge Firewall, to prevent requests from these addresses from the list.
 
-#### **GET** */network_lists/66*
+#### **GET** */network_lists/2*
 
 Required permission: **View Network Lists**
 
@@ -229,7 +229,7 @@ Required permission: **View Network Lists**
 **Request Example**
 
 ~~~
-GET /network_lists/66
+GET /network_lists/2
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 ~~~
