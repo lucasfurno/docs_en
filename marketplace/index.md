@@ -4,7 +4,7 @@
 
 The Azion Marketplace is the place to find, deploy, and manage third-party software that you need to build solutions and accelerate go-to-market for your business.
 
-You can quickly launch software with just a few clicks choosing software solutions in Azion Cells Package (ACP) and software as a service (SaaS).
+You can quickly launch software with just a few clicks choosing software solutions in Azion Cells Package (ACP) and Software as a Service (SaaS).
 
 Also, you can create your ACP or SaaS, publish your solution at Azion Marketplace, and have a new revenue stream. 
 
@@ -17,7 +17,7 @@ Also, you can create your ACP or SaaS, publish your solution at Azion Marketplac
 
 ## 1. How does it work?
 
-The Azion Marketplace offers you products that can be launched to your edge resources at the Azion Platform. After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
+The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/index.md) or [Edge Application](../edge-application/index.md) at the Azion Platform. After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
 
 At this stage, you will find Free and Bring Your Own License products, products that you buy a license directly with an Independent Software Vendor (ISV) and instantiate in your Edge Application. 
 
@@ -31,15 +31,15 @@ To launch a new product you can browse through Azion Marketplace's several categ
 
 To be able to use a product you might need to fulfill the product requirement. You can find a product requirement at the Overview tab.
 
-You have to agree with Azion Terms of Service to launch a product, after that, just launched it and the product will be available in your account at Azion Platform. 
+You have to agree with Azion's Customer Agreement. to launch a product, after that, just launched it and the product will be available in your account at Azion Platform. 
 
 Where to go:
 
 1. Access [Real-Time Manager](https://manager.azion.com/) and click the dropdown menu on your left and select **Marketplace**.
 2. Search for a product or choose from our featured and new releases list.
-3. You must agree with Azion's Terms of Services.
+3. You must agree with Azion's Customer Agreement.
 4. Then click the Launch Button.
-5. The selected product will be launched in your account and will be available to be instantiated at your Edge Application.
+5. The selected product will be launched in your account and will be available to be instantiated at your edge resource.
 
 
 
