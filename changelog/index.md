@@ -6,6 +6,13 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Aug/2020**
+
+* Domain availability ** ns3.aziondns.org ** in the Intelligent DNS product extending our * Anycast * network.
+* ...
+
+---
+
 **jul/2020**
 
 * Bugfix in the Intelligent DNS product.
