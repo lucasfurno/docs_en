@@ -9,7 +9,9 @@ This page lists the latest changes to Azion products and services. Here you will
 **Aug/2020**
 
 * Domain availability ** ns3.aziondns.org ** in the Intelligent DNS product extending our * Anycast * network.
-* ...
+* Graph and metric of the **Invocations** of the Edge Functions product were added. 
+* Graph and metric of the **Queries**, of the Intelligent DNS were added.
+* Bugfix timezone in the Real-Time Metrics.
 
 ---
 
