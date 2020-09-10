@@ -4,13 +4,13 @@
 
 By activating the Edge Functions module, you can instantiate serverless functions in your Edge Application at Azion, as well as set up the conditions for its execution. Available for Edge Application and Edge Firewall products, its use allows you to run serveless functions in our robust distributed network of Edge Nodes, responding to events closer to the end user, ensuring greater scalability and availability
 
-> 1. [How does it work?](#como-funciona)
-> 2. [How to set up?](#como-configurar)
-> 3. [Support Documents](#documentacao-de-suporte)
+> 1. [How does it work?](#how-does-it-work)
+> 2. [How to set up?](#how-to-set-up)
+> 3. [Support Documents](#support-documents)
 
 ---
 
-## 1. How does it work? {#como-funciona}
+## 1. How does it work? {#how-does-it-work}
 
 In Edge Application, you will have to activate the Edge Functions module, so it is possible to use existing functions provided by Azion. For example:
 
@@ -29,7 +29,7 @@ To learn more about how they work and how to apply some of these Edge Functions,
 
 ---
 
-## 2. How to set up? {#como-configurar}
+## 2. How to set up? {#how-to-set-up}
 
 To instantiate and execute the functions in your Edge Application:
 
@@ -47,7 +47,7 @@ To follow the invocations of your functions, access Real-Time Metrics, there we 
 
 ---
 
-## 3. Support Documents {#documentacao-de-suporte}
+## 3. Support Documents {#support-documents}
 
 - [Edge Functions](https://www.azion.com/en/documentation/products/edge-functions/)
 - [Rules Engine](https://www.azion.com/en/documentation/products/edge-application/rules-engine/)
