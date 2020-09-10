@@ -12,6 +12,7 @@ This page lists the latest changes to Azion products and services. Here you will
 * Graph and metric of the **Invocations** of the Edge Functions product were added. 
 * Graph and metric of the **Queries**, of the Intelligent DNS were added.
 * Bugfix timezone in the Real-Time Metrics.
+* Bugfix in SameSite Cookie with value "None".
 
 ---
 
