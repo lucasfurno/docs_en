@@ -109,7 +109,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 
 ---
 
-## 2. Endpoints
+## 2. Endpoints {#endpoints}
 
 The endpoints define the function available in the API.
 
