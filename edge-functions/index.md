@@ -96,14 +96,15 @@ To see your Edge Function in effectively operation you just need to write, insta
 3. In Language, select ***JavaScript***.
 
    ~~~
-    let a = Math.floor(Math.random() * 10);
-    if (a > 5) {
-        let coin = JSON.parse('{ "flip a coin": "heads"}');
-        AzionSetResponse(JSON.stringify(coin));
-    } else {
-        let coin = JSON.parse('{ "flip a coin": "tails" }');
-        AzionSetResponse(JSON.stringify(coin));
-    }
+   async function handleRequest(request) {
+    return new Response("Hello World!",
+      {
+          status:200
+      })
+   }
+   addEventListener("fetch", event => {
+    event.respondWith(handleRequest(event.request))
+   })
    ~~~
 
 
