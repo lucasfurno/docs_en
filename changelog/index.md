@@ -8,7 +8,9 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Sep/2020**
 
-* ...
+* Added a new menu and footer.
+* Added a new feature to evaluate password strength.
+* Bugfix at the reseller's user list.
 
 ---
 
