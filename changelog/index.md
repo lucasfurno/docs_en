@@ -12,6 +12,9 @@ This page lists the latest changes to Azion products and services. Here you will
 * Added a new feature to evaluate password strength.
 * Bugfix at the reseller's user list.
 * Bugfix in the feature of duplicate an Edge Application with Error Responses.
+* Added metric **Invocations** in reports.
+* Added metric **Standard Queries** in reports.
+* Bugfix in Data Streaming;
 
 ---
 
