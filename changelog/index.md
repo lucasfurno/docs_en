@@ -8,8 +8,8 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Sep/2020**
 
-* Added a new menu and footer.
-* Added a new feature to evaluate password strength.
+* Added a new menu and footer at Real-Time Manager.
+* Added a new feature to evaluate password strength at User Preferences.
 * Bugfix at the reseller's user list.
 * Bugfix in the feature of duplicate an Edge Application with Error Responses.
 * Added consumption information of the metric **Invocations of the Edge Functions product** in the billing interface.
