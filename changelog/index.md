@@ -6,6 +6,18 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Sep/2020**
+
+* Added a new menu and footer at Real-Time Manager.
+* Added a new feature to evaluate password strength at User Preferences.
+* Bugfix at the reseller's user list.
+* Bugfix in the feature of duplicate an Edge Application with Error Responses.
+* Added consumption information of the metric **Invocations of the Edge Functions product** in the billing interface.
+* Added consumption information of the metric **Standard Queries of the Intelligent DNS product** in the billing interface.
+* Bugfix in the Data Streaming product interface;
+
+---
+
 **Aug/2020**
 
 * Domain availability ** ns3.aziondns.org ** in the Intelligent DNS product extending our * Anycast * network.
