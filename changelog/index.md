@@ -11,7 +11,8 @@ This page lists the latest changes to Azion products and services. Here you will
 * Added a new menu and footer.
 * Added a new feature to evaluate password strength.
 * Bugfix at the reseller's user list.
-
+* Bugfix in the feature of duplicate an Edge Application with Error Responses.
+* Bugfix for handling invalid IP's in Edge Function ShieldSquare Bot Manager.
 ---
 
 **Aug/2020**
