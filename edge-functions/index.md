@@ -127,11 +127,13 @@ To see your Edge Function in effectively operation you just need to write, insta
 
 ## 4. Support Documentation{#documentacao-de-suporte}
 
-- Edge Application - Edge Functions Instances
+- [Edge Application - Edge Functions Instances](https://www.azion.com/en/documentation/products/edge-application/edge-functions-instances/)
 - [Edge Application Rules Engine](https://www.azion.com/en/documentation/products/edge-application/rules-engine/)
-- Edge Firewall - Edge Functions Instances
+- [Edge Firewall - Edge Functions Instances](https://www.azion.com/en/documentation/products/edge-firewall/edge-functions-instances/)
 - [Edge Firewall Rules Engine](https://www.azion.com/en/documentation/products/edge-firewall/rules-engine/)
+- [Edge Functions - JavaScript Runtime APIs](https://www.azion.com/en/documentation/products/edge-functions/runtime-apis/javascript/)
 
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
