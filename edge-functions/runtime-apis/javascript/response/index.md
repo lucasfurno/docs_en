@@ -1,7 +1,5 @@
 # **Response**
 
-ENGLISH
-
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-functions/runtime-apis/javascript/response/index.md)
 
 The `Response` interface represents an HTTP response and integrates the [Fetch API](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/javascript/fetch/).
@@ -54,7 +52,7 @@ Response implements Body, so it also has the following properties available:
 `body` - A simple" getter "to read body content via the ReadableStream interface.
 `bodyUsed` Stores a Boolean that indicates whether the body has already used on a response.
 
-### Métodos
+### Methods
 
 `clone() `- Creates a copy of the `Response` object.
 
