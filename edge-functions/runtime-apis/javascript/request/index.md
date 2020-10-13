@@ -68,4 +68,4 @@ Todas as propriedades de um objeto Request inicial em event.request são somente
 
 ---
 
-Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
