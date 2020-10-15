@@ -6,13 +6,13 @@ To check the cache time of the page/object and how much time is left until expir
 
 1. Install the Modify Headers plugin for Chrome
 
-![Modify Headers Plugin]({{ site.url }}/images/docs/verify-cache/Modify-Headers-Plugin1.png)
+![Modify Headers Plugin]({{ site.url }}/static/images/docs/verify-cache/Modify-Headers-Plugin1.png)
 
-2. Click on the icon for the plugin that was added to Chrome: ![Modify Headers Plugin]({{ site.url }}/images/docs/verify-cache/icone-plugin-modify-headers.png)
+2. Click on the icon for the plugin that was added to Chrome: ![Modify Headers Plugin]({{ site.url }}/static/images/docs/verify-cache/icone-plugin-modify-headers.png)
 
 3. Click on Add New to add a new Rule:
 
-![Adicionar regra]({{ site.url }}/images/docs/verify-cache/Adicionar-regra.png)
+![Adicionar regra]({{ site.url }}/static/images/docs/verify-cache/Adicionar-regra.png)
 
 4. Add the following information:
 
@@ -26,19 +26,19 @@ To check the cache time of the page/object and how much time is left until expir
 
 Afterwards, click on Save and then on the play icon
 
-![Adicionar regra]({{ site.url }}/images/docs/verify-cache/Adiciona-regra1.png)
+![Adicionar regra]({{ site.url }}/static/images/docs/verify-cache/Adiciona-regra1.png)
 
 5. Click on Enable All and then confirm.
 
-![Enable All]({{ site.url }}/images/docs/verify-cache/enable-all.png)
+![Enable All]({{ site.url }}/static/images/docs/verify-cache/enable-all.png)
 
 6. Next, activate the Developer Tools function in Chrome
 
-![ativando developer tools]({{ site.url }}/images/docs/verify-cache/ativando-developer-tools.png)
+![ativando developer tools]({{ site.url }}/static/images/docs/verify-cache/ativando-developer-tools.png)
 
 7. In Developer Tools, go to Network – Load the page that you want analyzed – Find the html of the page or object - click on Headers
 
-![developer tools]({{ site.url }}/images/docs/verify-cache/developertools.png)
+![developer tools]({{ site.url }}/static/images/docs/verify-cache/developertools.png)
 
 8. You will see the Cache information in the following form:
 

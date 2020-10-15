@@ -6,7 +6,7 @@ In this document, we will indicate the features used in the deprecated versions,
 
 Rule Sets deprecated from Edge Firewall show the following banner:  *"**This Edge Firewall rule set is deprecated. Please upgrade to the new version.**"*.
 
-[![banner]({{ site.url }}/images/docs/update-edge-firewall/banner.jpg)]({{ site.url }}/images/docs/update-edge-firewall/banner.jpg)
+[![banner]({{ site.url }}/static/images/docs/update-edge-firewall/banner.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/banner.jpg)
 
 > 1. [What has changed?](#what-has-changed?)
 > 2. [Assigning your Rule Sets to the latest version of Edge Firewall](#assigning-rule-sets)
@@ -41,7 +41,7 @@ First, you need to create a Rule Set and new rules based on pre-existing rules. 
 
 #### Referrer Blocking
 
-[![referer-blocking]({{ site.url }}/images/docs/update-edge-firewall/referer-blocking.jpg)]({{ site.url }}/images/docs/update-edge-firewall/referer-blocking.jpg)
+[![referer-blocking]({{ site.url }}/static/images/docs/update-edge-firewall/referer-blocking.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/referer-blocking.jpg)
 
 If you used **Referer Block** in your deprecated rule set, in the new rule set:
 
@@ -53,7 +53,7 @@ If you used **Referer Block** in your deprecated rule set, in the new rule set:
 
 #### Geo-Blocking
 
-[![geo-blocking]({{ site.url }}/images/docs/update-edge-firewall/geo-blocking.jpg)]({{ site.url }}/images/docs/update-edge-firewall/geo-blocking.jpg)
+[![geo-blocking]({{ site.url }}/static/images/docs/update-edge-firewall/geo-blocking.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/geo-blocking.jpg)
 
 If you used **Geo-Blocking** in your deprecated rule set, in the new rule set:
 
@@ -69,7 +69,7 @@ If you used **Geo-Blocking** in your deprecated rule set, in the new rule set:
 
 #### Secure Token
 
-[![secure-token]({{ site.url }}/images/docs/update-edge-firewall/secure-token.jpg)]({{ site.url }}/images/docs/update-edge-firewall/secure-token.jpg)
+[![secure-token]({{ site.url }}/static/images/docs/update-edge-firewall/secure-token.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/secure-token.jpg)
 
 If you used **Secure Token** in your deprecated rule set, in the new rule set:
 
@@ -81,7 +81,7 @@ If you used **Secure Token** in your deprecated rule set, in the new rule set:
 
 #### IP Blocking
 
-[![ip-blocking]({{ site.url }}/images/docs/update-edge-firewall/ip-blocking.jpg)]({{ site.url }}/images/docs/update-edge-firewall/ip-blocking.jpg)
+[![ip-blocking]({{ site.url }}/static/images/docs/update-edge-firewall/ip-blocking.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/ip-blocking.jpg)
 
 If you used **IP Blocking** in your deprecated rule set, in the new rule set:
 
@@ -97,7 +97,7 @@ If you used **IP Blocking** in your deprecated rule set, in the new rule set:
 
 #### Rate Limiting
 
-[![rate-limiting]({{ site.url }}/images/docs/update-edge-firewall/rate-limiting.jpg)]({{ site.url }}/images/docs/update-edge-firewall/rate-limiting.jpg)
+[![rate-limiting]({{ site.url }}/static/images/docs/update-edge-firewall/rate-limiting.jpg)]({{ site.url }}/static/images/docs/update-edge-firewall/rate-limiting.jpg)
 
 If you used **Rate Limiting** in your deprecated rule set, in the new rule set:
 

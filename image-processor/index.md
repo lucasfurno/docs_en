@@ -97,25 +97,25 @@ Use the value *orig* for any of the image dimensions, if you wish to keep them a
 
 _http://yourdomain.com/image.jpg?ims=880x_ (880 pixels in width, automatic height)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=880x)
 
 
 _http://yourdomain.com/image.jpg?ims=880xorig_ (880 pixels in width, original height)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=880xorig)
 
 
 _http://yourdomain.com/image.jpg?ims=400x_ (400 pixels in width, automatic height)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x)
 
 _http://yourdomain.com/image.jpg?ims=400x400_ (400 pixels in width, 400 pixels in height)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=400x400)
 
 _http://yourdomain.com/image.jpg?ims=x100_ (automatic width, 100 pixels in height)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=x100)
 
 ---
 
@@ -138,7 +138,7 @@ Should the specified area be greater than the image’s size, the image will be 
 
 _https://yourdomain.com/image.jpg?ims=fit-in/400x400_ (maximum width of 400 pixels and maximum height of 400 pixels)
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400)
 
 ---
 
@@ -159,7 +159,7 @@ ims=AxB:CxD
 
 _http://yourdomain.com/image.jpg?ims=430x20:910x730_
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=430x20:910x730)]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=430x20:910x730)
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=430x20:910x730)]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=430x20:910x730)
 
 ---
 
@@ -179,15 +179,15 @@ Where Number must be a whole number between 0 and 100, that equals the level of 
 
 __http://yourdomain.com/image.jpg?ims=filters:quality(100)__
 
-[![bulldog]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(100))]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(100))
+[![bulldog]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(100))]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(100))
 
 __http://yourdomain.com/image.jpg?ims=filters:quality(85)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(85))
 
 __http://yourdomain.com/image.jpg?ims=filters:quality(15)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))]({{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))]({{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:quality(15))
 
 ---
 
@@ -226,7 +226,7 @@ To convert a jpeg image to a gif:
 
 __http://yourdomain.com/image.jpg?ims=filters:format(gif)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:format(gif))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:format(gif))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:format(gif))]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=filters:format(gif))
 
 ---
 
@@ -244,15 +244,15 @@ Where *Color* is the color to be used for the fill, using the nomenclature and c
 
 __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(gray)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(gray))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(gray))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(gray))]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(gray))
 
 __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(008080)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(008080))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(008080))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(008080))]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(008080))
 
 __http://yourdomain.com/image.jpg?ims=fit-in/400x400/filters:fill(00ffff)__
 
-[![bulldog]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(00ffff))]({{ {{ site.url }}/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(00ffff))
+[![bulldog]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(00ffff))]({{ {{ site.url }}/static/images/docs/image-optimization/bulldog-1280px.jpg?ims=fit-in/400x400/filters:fill(00ffff))
 
 ---
 

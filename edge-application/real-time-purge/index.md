@@ -85,7 +85,7 @@ The Wildcard expression is automatically converted to multiple objects in the sa
 www.yourdomain.com/*
 static.yourdomain.com/include/*.css
 static.yourdomain.com/*/site.js
-static.yourdomain.com/images/image_1.jpg?ims=*
+static.yourdomain.com/static/images/image_1.jpg?ims=*
 dynamic.yourdomain.com/app.py@@*
 ~~~
 
@@ -131,8 +131,8 @@ Examples of Cache Key Purge:
 www.yourdomain.com/@@ www.yourdomain.com/@@Mobile 
 static.yourdomain.com/include/site.css 
 static.yourdomain.com/include/site.js 
-static.yourdomain.com/images/image_1.jpg?ims=880x@@ 
-static.yourdomain.com/images/image_1.jpg?ims=880x@@webp
+static.yourdomain.com/static/images/image_1.jpg?ims=880x@@ 
+static.yourdomain.com/static/images/image_1.jpg?ims=880x@@webp
 ~~~
 
 ---
@@ -199,10 +199,10 @@ When using Image Optimization, you will be using an advanced cache key. In addit
 Examples of cache keys using Image Optimization:
 
 ~~~
-static.yourdomain.com/images/image.jpg@@ 
-static.yourdomain.com/images/image.jpg@@webp 
-static.yourdomain.com/images/image.jpg?ims=88x@@ 
-static.yourdomain.com/images/image.jpg?ims=88x@@webp
+static.yourdomain.com/static/images/image.jpg@@ 
+static.yourdomain.com/static/images/image.jpg@@webp 
+static.yourdomain.com/static/images/image.jpg?ims=88x@@ 
+static.yourdomain.com/static/images/image.jpg?ims=88x@@webp
 ~~~
 
 To purge images processed by Image Optimization, you can use a Cache Key Purge, reporting all variations individually, or a Wildcard Purge, using * at the end.
