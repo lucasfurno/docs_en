@@ -6,7 +6,7 @@ The `Request` interface represents an HTTP request and integrates the [Fetch API
 
 ### How it works
 
-The Request object can be built and also seen as the property of a [fetchevent](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/javascript/fetch-event /) received by Edge Function.
+The Request object can be built and also seen as the property of a [fetchevent](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/javascript/fetch-event/) received by Edge Function.
 
 ```javascript
 addEventListener("fetch", event => {

@@ -10,7 +10,7 @@ Fetch provides a generic definition of objects [`Request`](https://developer.moz
 
 It also defines related concepts like CORS and the HTTP source header semantics, supplanting its separate definitions elsewhere.
 
-See more about using fetch() on MDN web docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+See more about using fetch() on MDN web docs: [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/javascript/response)
 
 ### Constructor 
 
