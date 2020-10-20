@@ -29,7 +29,7 @@ init: `requestInit`  - The content of the request.
 ~~~javascript
 addEventListener("fetch", event => {
   return event.respondWith(
-    new Response("Hello world")
+    fetch("https://example.com")
   )
 })
 ~~~
