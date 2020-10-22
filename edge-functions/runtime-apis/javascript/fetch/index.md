@@ -4,7 +4,7 @@
 
 ### How it works
 
-The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) provides an interface for fetching resources from the edge network (for exemple, across the network)
+The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) provides an interface for fetching resources from the edge network (for exemple, external resources across the network)
 
 Fetch provides a generic definition of objects [`Request`](https://developer.mozilla.org/pt-BR/docs/Web/API/Request) and [`Response`](https://developer.mozilla.org/pt-BR/docs/Web/API/Response). It allows them to manipulate or modify requests and responses or any use case that may require you to generate your responses programmatically.
 
