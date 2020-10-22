@@ -2,9 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ master, stage ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, stage ]
+    branches: [ master ]
 
 jobs:
   build:
