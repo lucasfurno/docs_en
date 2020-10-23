@@ -1,87 +1,85 @@
 # Edge **Services**
 
-[Edite no GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-orchestrator/edge-services/index.md)
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-orchestrator/edge-services/index.md)
 
-O Azion Edge Services é um módulo do produto Edge Orchestrator que permite o gerenciamento de serviços para rodarem em uma infraestrutura de edge própria, habilitando o cadastro de recursos e demais configurações via Real-Time Manager. Com ele, é possível criar e customizar serviços para que possam ser orquestrados em todos os devices da sua infraestrutura.
+Azion Edge Services is an Edge Orchestrator product module that allows the management of orchestrated services in its own edge infrastructure, enabling the registration of resources and other configurations via Real-Time Manager and the creation and customization of services so that they can be orchestrated on the defined Edge Nodes.
 
-Por meio de gatilhos para instalação, desinstalação e recarregamento, defina as dependências entre os recursos necessários para a execução de seu serviço na sua rede edge.
+Configure the triggers for installation, uninstallation, reload and define the dependencies between the resources needed to run your service on your edge network.
 
-> 1. [Como funciona](#como-funciona)
+> 1. [How it works](#how-it-works)
 > 2. [Hands-on](#hands-on)
-> 5. [Documentação de suporte](#documentacao-suporte)
+> 5. [Support documentation](#support-documentation)
 
 ---
 
-## 1. Como funciona {#como-funciona}
+## 1. How it works {#how-it-works}
 
-Ao utilizar a Azion como sua plataforma de Edge Computing, você pode criar serviços e customizar serviços para rodarem na sua rede edge privada.
+By using Azion as your Edge platform, you can create and customize services to run on your private and hybrid edge network. Azion Edge Services works through triggers for installation, uninstallation and reloading, with definition of dependencies between resources and natively implements a set of Azion features, such as Edge Applications, Edge Firewalls and Edge Functions, using as a base Azion Cells technology from Azion. And in this way, build Edge Applications for a wide range of use cases, ranging from a high-quality, high-scale CDN, to hosting web applications, AI, VR applications and many others. To do this, activate Azion Cells and define the Edge Nodes that should receive certain applications, all controlled by the control panel or APIs, in a centralized interface and with different access controls.
 
 ### Resources
 
-Para a orquestração e instalação dos serviços no seu Device, você deve configurar os Resources necessários para a instalação, desinstalação e recarregamento.
+For the orchestration of services on your device, you must configure the Resources necessary for installation, uninstallation and reloading.
 
-Um Resource do tipo "Shell Script" indica que o recurso será instalado como script. O Client da Azion que é executado no seu device e responsável pela orquestração de serviços, utiliza o sh-bang informado no cabeçalho do conteúdo do Resource e na ausência de um, é utilizado o shell compatível com o padrão POSIX disponível no device.
+A resource of the type "Shell Script" indicates that the resource will be installed and executed according to the selected trigger. The Edge Orchestrator agent uses the *sh-bang* informed in the content header to execute the script and, in the absence of one, the POSIX-compatible shell on the device (*/bin/sh*) is used.
 
-Um Resource do tipo "Text" indica que o conteúdo do resource será copiado como plain/text para o device. Resources do tipo "Text" normalmente são utilizados para arquivos de configuração.
+A resource of type "Text" indicates that the content will be copied as plain/text to the device. Resources of type "Text" are usually used for configuration files.
 
-Todos os recursos são executados a partir do caminho informado no cadastro. O campo "Path" é referente ao caminho absoluto do arquivo. Portanto são aceitos apenas diretórios iniciados e finalizados com "/". Caminhos que iniciem com "." ou ".." não serão aceitos e não são compatíveis com a solução.
+All resources are executed from the path informed in the registration. The "Path" field refers to the file's absolute path. Therefore, only directories starting and ending with "/" are accepted. Paths beginning with ".", ".." or "~" will not be accepted and are not supported.
 
-Ao informar o conteúdo do seu resource, o mesmo pode conter um script, quando executado como "Shell Script" ou conteúdo de arquivos de configurações para o resource, quando do tipo "Text". Ambos são compatíveis com a utilização de variáveis, se acrescentado a tag "{{ VARNAME }}".
+When informing the content of your resource, it can contain a script, when executed as "Shell Script" or content of configuration files for the resource, when of type "Text". Both are compatible with the use of variables, if the tag "{{VARNAME}}" is added.
+
+It is possible to use variables in the content of resources using the tag "{{VARNAME}}", such as:
+`port = {{PORT_HTTP}}`
 
 ### Triggers
 
-Ao configurar Resources do tipo "Shell Script" é necessário definir quais serão os gatilhos (triggers) que farão com que o recurso seja executado. 
+When configuring "Shell Script" resources, it is necessary to define which triggers will cause the resource to be executed.
 
-As Triggers são separadas em "Install", "Reload" e "Uninstall", tendo cada uma delas, uma função, ordem de execução e dependência distintas na orquestação dos serviços.
+There are triggers "Install", "Reload" and "Uninstall", each having a function and order of execution:
+1) Install: it is the first to be executed and must have in its content, the script necessary for the installation of the service.
 
-Um resource com a Trigger de "Install" é o primeiro a ser executado e deve ter em seu conteúdo, o script necessário para a instalação do serviço.
+2) Reload: when configured, it will be executed at the end of the installation of all resources and also whenever there is a change in the links between Edge Service and Edge Node, such as, for example, a change in the values of the variables.
 
-Um resource com a Trigger de “Reload”, quando configurado, será executado ao final da instalação de todos os resources e também sempre que houver alteração nos vínculos entre Service e Edge Node, como por exemplo, uma alteração nos valores de variáveis.
-
-Um resource com a Trigger de "Uninstall" é executado toda vez que o vínculo entre Service e Edge Node é desfeito, ou seja, sempre que o Service for apagado dos Edge Nodes os quais está vinculado.
+3) Uninstall: it is executed whenever the link between Edge Services and Edge Node is broken, that is, whenever the service is deleted from the Edge Nodes for which it is provisioned.
 
 ### Variables
 
-As variáveis são valores dinâmicos que afetam os Services que serão orquestrados e executados nos Edge Nodes. São espaços reservados para informações armazenadas dentro do sistema que repassa dados para os scripts de orquestração dos serviços. Ou seja, é possível orquestrar e executar o mesmo serviço, em devices diferentes, com valores distintos para as configurações, como por exemplo, um serviço na porta 3306 em um device e, o mesmo serviço, na porta 3307, em outro device.
+Variables are dynamic values that affect Edge Services that will be orchestrated and executed on Edge Nodes. That is, it is possible to orchestrate and run the same service, on different devices, with different values for the settings, such as configuring a service on port 3306 on one device and on port 3307 on another device.
 
 ### Vínculo ao Edge Node
 
-Todos os serviços cadastrados podem ser orquestrados e executados em um ou mais Edge Nodes existentes na sua rede privada. 
+All registered services can be orchestrated and run on one or more Edge Nodes on your private network.
 
-Apenas os serviços ativos estarão disponíveis para orquestração no Edge Node e, após o seu vínculo, você pode alterar o valor das variáveis existentes, apagar ou adicionar novos serviços ao device.
-
----
-
-## 2. Hands-on. Passo a Passo para criar um Edge Service {#hands-on}
-
-### Criando um Service
-
-1- Acessar o [Real-Time Manager](https://manager.azion.com/);
-
-2- No menu superior esquerdo, acessar o item *Libraries* e selecionar a página [Services]();
-
-3- Clicar no botão "Add Service";
-
-Observação: seu serviço será criado automaticamente. Você pode alterar o nome do Service clicando em cima de "My New Service", na barra de identificação do Real-Time Manager.
-
-### Criando Recursos no seu serviço
-
-Crie e edite recursos para seus serviços de acordo com a necessidade.
-
-A partir do [Real-Time Manager](https://manager.azion.com/), acesse o menu *Libraries > Services*. Selecione o serviço que deseja administrar. Você visualizará a aba "Resources", onde poderá criar e editar seus recursos.
-
-### Configurando Variáveis no seu serviço
-
-A partir do [Real-Time Manager](https://manager.azion.com/), acesse o menu *Libraries > Services*. Selecione o serviço que deseja administrar. Você visualizará a aba "Environment", onde poderá definir valores padrão para as variáveis.
-
-As variáveis devem seguir o padrão "Variável = Valor", onde "Variável" tenha sido utilizada em conteúdos de resources já cadastrados.
+Only active services will be available for orchestration in Edge Node and, after linking, you can change the value of existing variables, delete or add new services to the device.
 
 ---
 
-## 3. Documentação de suporte {#documentacao-suporte}
+## 2. Hands-on. Step by Step to create an Edge Service {#hands-on}
 
-- [Edge Orchestrator](https://www.azion.com/pt-br/documentacao/produtos/edge-orchestrator)
-- [Edge Node](https://www.azion.com/pt-br/documentacao/produtos/edge-orchestrator/edge-node)
+### Creating a Service
+
+1- Access the [Real-Time Manager](https://manager.azion.com/);
+
+2- In the upper left menu, access the item *Edge Libraries*, and select the page *Edge Services*;
+
+3- Click on the "Add Service" button;
+Note: Your service will be created automatically. You can change the name of the service by clicking on "My New Service" in the identification bar.
+
+4- In the Resources list, click on "Add Resource";
+
+5- Configure the necessary resources for your service, using the triggers "*Install*", "*Reload*", and "*Uninstall*";
+
+6- Optional: If you have used variables in the content of one or more resources, set the default values for the variables in the "*Environment*" tab.
+Note: The variables must follow the pattern "Variable = Value", where "Variable" has been used in content of resources already registered.
+
+7- Activate the service. There, now your service can be used on one or more edge nodes.
+
+---
+
+## 3. Support documentation {#support-documentation}
+
+- [Edge Node](https://www.azion.com/en/documentation/products/edge-orchestrator/edge-node)
+- [Edge Orchestrator](https://www.azion.com/en/documentation/products/edge-orchestrator)
 
 ---
 
