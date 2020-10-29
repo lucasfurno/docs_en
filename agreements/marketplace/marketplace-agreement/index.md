@@ -2,7 +2,7 @@
 
 *Last updated: August 7, 2020.*
 
-These Terms and Conditions for Azion Marketplace Sellers (this "Agreement") govern your listing or offer of Your Marketplace Content in Azion Marketplace and are an agreement between Azion Technologies, Inc. ("Azion," "we," "us," or "our") and you or the entity you represent ("you" or "your"). This Agreement takes effect when you click an “I Accept” button or check box presented with these terms or, if earlier, when you use any of the Service Offerings (the "Effective Date"). You represent to us that you are lawfully able to enter into contracts (e.g., you are not a minor). If you are entering into this Agreement for an entity, such as the company you work for, you represent to us that you have legal authority to bind that entity. Please see Section 10 for definitions of certain capitalized terms used in this Agreement.
+These Terms and Conditions for Azion Marketplace Sellers (this "Agreement") govern your listing or offer of Your Marketplace Content in Azion Marketplace and are an agreement between Azion Technologies, Inc. and its subsidiaries ("Azion," "we," "us," or "our") and you or the entity you represent ("you" or "your"). This Agreement takes effect when you click an “I Accept” button or check box presented with these terms or, if earlier, when you use any of the Service Offerings (the "Effective Date"). You represent to us that you are lawfully able to enter into contracts (e.g., you are not a minor). If you are entering into this Agreement for an entity, such as the company you work for, you represent to us that you have legal authority to bind that entity. Please see Section 10 for definitions of certain capitalized terms used in this Agreement.
 
 **1. Eligibility.** You must meet the following eligibility requirements to offer Your Marketplace Content through Azion Marketplace.
 
@@ -146,7 +146,7 @@ These Terms and Conditions for Azion Marketplace Sellers (this "Agreement") gove
 
 **“Authorized Reseller”** has the meaning assigned in Section 4.1.
 
-**“Azion Experts”** means the service operated by Azion located at [https://Azion.amazon.com/iq/](https://aws.amazon.com/iq/), as it may be updated by us from time to time.
+**“Azion Experts”** means the service operated by Azion, as it may be updated by us from time to time.
 
 **“Azion Marketplace”** means the marketplace operated by Azion located at https://marketplace.azion.com/, as it may be updated by us from time to time.
 
