@@ -6,6 +6,12 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Oct/2020**
+
+* ...
+
+---
+
 **Sep/2020**
 
 * Added a new menu and footer at Real-Time Manager.
