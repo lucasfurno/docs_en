@@ -1,8 +1,8 @@
 # Massive Redirect for Domain Migration
 
-[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/massive-redirect/index.md)
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/apis-performance-sites-application-acceleration/index.md)
 
-Edge Function Massive Redirect is a serverless solution from Azion's Edge Computing platform for processing large numbers of redirects, which can be employed where there is a need to alter a significant number of addresses, as domain migrations for example.
+Edge Function Massive Redirect is a serverless solution from Azion's Edge Computing platform for processing large numbers of redirects, which can be employed where there is a need to alter a significant number of addresses, as domain migrations for example. 
 
 This application allows you to control redirects directly at the edge of the network, centralizing the management of several settings in one place. This allows you to handle different situations, such as migrating a CMS or e-commerce platform, website updates, etc.
 
@@ -13,22 +13,21 @@ Some of the other advantages of using Edge Function Massive Redirect to deal wit
 * Reduce the risk to your search engine ranking for the affected pages; and
 * Allows processing to be executed on the Edge, freeing up resources from the origin infrastructure.
 
+
 Next, let's see how Edge Function Massive Redirect works and how to use it.	
 
-## How it works
-
-The function deals with the redirection of traffic according to settings established using _Args_ parameters and validation criteria defined in the **_Rules Engine_** of **_Edge Application_**.
+The function deals with the redirection of traffic according to settings established using _Args_  parameters and validation criteria defined in the **_Rules Engine_** of **_Edge Application_**.
 
 When a request to an address, for which settings have been configured in the parameters, reaches any of the Azion Edge Nodes, the function identifies that it must be redirected and forwards it to the new address. The originating application, in turn, receives the request and returns the content so that the Edge node can send it to the user with the corresponding HTTP status (301 or 302, depending on the setting).
 
-Redirects that need to be executed by the function, are defined using a list of parameters in JSON format, formed of pairs containing the old address and the destination address (the Args), as shown here:
+Redirects that need to be executed by the function, are defined using a list of parameters in JSON format, formed of pairs containing the old address and the destination address (the _Args_), as shown here:
 
 * old address: this can be listed exactly or by using a regular expression from the options below:
-    * _**From**_: full address;
-    * _**from_regex**_: regular expression to represent a standard URL format, allowing you to configure more than one address using a single rule. These expressions must be in the form of Perl Compatible Regular Expressions (PCRE) patterns
+    * From:  full address,
+    * from_regex: regular expression to represent a standard URL format, allowing you to configure more than one address using a single rule. These expressions must be in the form of Perl Compatible Regular Expressions (PCRE) patterns,
 * destination address: can be written in two ways:
-    * _**moved**_: destination location (Url) to which it is going to be permanently redirected (HTTP status 301);
-    * _**found**_: destination location (Url) to which it is going to be temporarily redirected (HTTP status 302);
+    * moved: destination location (Url) to which it is going to be permanently redirected (HTTP status 301);
+    * found: destination location (Url) to which it is going to be temporarily redirected (HTTP status 302);
 
 Therefore, the configuration of a list of redirects would have the following format:
 
@@ -58,15 +57,15 @@ Based on the information contained in the Args, the function will carry out an i
 
 The Edge Function Massive Redirect is available from the functions library of Azion's Edge Computing platform and can be accessed through Real-Time Manager (RTM), from the _Libraries_ menu.
 
-The function can only be executed when it has been **instanced** in the **Edge Application that you intend to work in and when  the activation criteria and behaviors have been defined in the  Rules Engine.**.
+The function can only be executed when it has been **_instanced_** in the **_Edge Application_** **that you intend to work in and when  the activation criteria and behaviors have been defined in the**  **_Rules Engine_**.
 
 ## Creating an Instance
 
 **Path**: Real-Time Manager > Edge Computing > Edge Application > Functions.
 
-Enter RTM and select the Edge Application that is going to run the function and activate the Edge Functions module, on the **Main Settings**. Then, on the **Functions tab**, add a new function, ensuring that you give it a memorable name.
+Enter RTM and select the Edge Application that is going to run the function and activate the Edge Functions module, on the **Main Settings tab**. Then, on the Functions tab, add a new function, ensuring that you give it a memorable name.
 
-**Parameters**: You need to include the type of function for your instance, in this case choose Massive Redirect. Note that the function code that appears in the **_Code_** field, is just for information. On the **_Args_** tab enter a list of the addresses to be redirected and their respective destinations, as in the example below, and save this function.
+**Parameters**: You need to include the type of function for your instance, in this case choose Massive Redirect. Note that the function code that appears in the **_Code_** field, is just for information. On the **_Args_** tab enter a list of the addresses to be redirected and their respective destinations, as in the example below, and save this function
 
 ~~~
 [{
@@ -83,20 +82,19 @@ Example of the configuration of Args parameters
 
 ## Defining the Execution criteria (Rules Engine)
 
-**Path**: Real-Time Manager > Edge Computing > Edge Application > Rules Engine.
+**Path:** Real-Time Manager > Edge Computing > Edge Application > Rules Engine.
 
 The rules (Rules Engine) determine the set of conditions that need to be met for Behaviors to be executed. You can either use the Default Rule or create a new one to set the parameters for validating and the behaviors that the Edge Application will execute.
 
-**Defining validation criteria (criteria)**: choose the variables, comparison operators and strings to create your business rule, as in the example below:
+**_Defining validation criteria (criteria):_** choose the variables, comparison operators and strings to create your business rule, as in the example below:
 
 ~~~
-**If**: _${domain}_ **is equal** _old-site.com_
+**If:** _${domain}_ **is equal** _old-site.com_
 (next: logical operator, variable, comparison operator, string)
 ~~~
-
 In this example, if the domain accessed is the same as the string “old-site.com”, the rule will be executed.
 
-**Defining Behaviors (behaviors)**: add the behaviors you want to be carried out when the rule's conditions are met, as in the example below:
+**_Defining Behaviors (behaviors):_** add the behaviors you want to be carried out when the rule's conditions are met, as in the example below:
 
 ~~~
 **Then:** _Run Function_ **MyMassiveRedirect**
