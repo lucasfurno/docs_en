@@ -54,7 +54,7 @@ Alternatively, you can download it using the Command line. In the example, the d
 
 After downloading, you must follow the steps below, in order to install the Edge Orchestrator agent to your device:
 
-1- Install the Edge Orchestrator agent:
+1- Install the Edge Orchestrator agent:<br />
 `chmod +x edge-orchestrator`<br />
 `./edge-orchestrator install`
 
