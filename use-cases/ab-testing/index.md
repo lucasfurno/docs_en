@@ -124,7 +124,7 @@ The rules in the Rules Engine determine the set of conditions that need to be me
 **Defining validation criteria (criteria):** choose the variables, comparison operators and strings to create your business rule, as in the following example:
 
 ~~~
-**If:** _${uri}_  **is equal** _/home_
+If: ${uri}  is equal /home
 (next: logical operator, variable, comparison operator, string)
 ~~~
 
@@ -133,7 +133,7 @@ Here, the rule is executed if the URL accessed is equal to the string "_mypageto
 **Defining Behaviors:** add the behaviors you want to be carried out when the rule's conditions are met. Example:
 
 ~~~
-**Then:** _Run Function_ **MyABTestFunction**
+Then: Run Function MyABTestFunction
 (next: logical operator, action, function)
 ~~~
 
