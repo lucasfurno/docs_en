@@ -89,19 +89,15 @@ The rules (Rules Engine) determine the set of conditions that need to be met for
 
 **Defining validation criteria (criteria)**: choose the variables, comparison operators and strings to create your business rule, as in the example below:
 
-~~~
-If: ${domain} is equal old-site.com
+**If**: ***${domain}*** **is equal** ***old-site.com***
 (next: logical operator, variable, comparison operator, string)
-~~~
 
 In this example, if the domain accessed is the same as the string “old-site.com”, the rule will be executed.
 
 **Defining Behaviors (behaviors)**: add the behaviors you want to be carried out when the rule's conditions are met, as in the example below:
 
-~~~
-Then: Run Function MyMassiveRedirect
+* **Then**: ***Run Function*** **MyMassiveRedirect**
 (next: logical operator, action, function)
-~~~
 
 In this example, if the conditions defined in the rules are satisfied, then the function MyMassiveRedirect will be executed.
 

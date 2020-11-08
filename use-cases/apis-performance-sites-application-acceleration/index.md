@@ -1,109 +1,72 @@
-# Massive Redirect for Domain Migration
+# Accelerate API and Website performance using Azion Application Acceleration
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/apis-performance-sites-application-acceleration/index.md)
 
-Edge Function Massive Redirect is a serverless solution from Azion's Edge Computing platform for processing large numbers of redirects, which can be employed where there is a need to alter a significant number of addresses, as domain migrations for example. 
+Application Acceleration is a service from Azion's Edge Computing platform developed to accelerate the performance of web applications and APIs, by optimizing protocols and managing the different requirements of dynamic content.
 
-This application allows you to control redirects directly at the edge of the network, centralizing the management of several settings in one place. This allows you to handle different situations, such as migrating a CMS or e-commerce platform, website updates, etc.
+Application Acceleration allows advanced rules to be created for the request and response phases based on geolocation, type of device, HTTP headers, cookies, path, etc. This means that it is possible to set business rules that can be directly run on the Edge, closer to users, which significantly increases the performance of APIs and decreases the complexity required at the backend.
 
-Some of the other advantages of using Edge Function Massive Redirect to deal with a domain migration:
+Some other advantages from using Application Acceleration:
 
-* Manage multiple redirects centrally, without needing to create a Request Phase Rule for each redirect;
-* Reduce the negative impact on your SEO;
-* Reduce the risk to your search engine ranking for the affected pages; and
-* Allows processing to be executed on the Edge, freeing up resources from the origin infrastructure.
+* It improves the response time with unstable or overloaded network connections;
+* Policies can be applied to divide or bypass the cache;
+* Can create rewriting rules directly on the Edge, based directly on the user-agent;
+* Support for the HTTP2 protocol;
+
+Next, let's look at how to implement advanced rules using Application Acceleration.	
+
+## How it works
+
+Application Acceleration provides a set of advanced options for configuring the Rules Engine, which allows customers to create business logical conditions directly on the Edge. Therefore, every time a request arrives at one of Azion's Edge Nodes, the Edge Applications rules engine that is configured for that domain will be activated.
+
+Application Acceleration enables the configuration of rules by path for:
+
+* **Advanced Cache Key:** configure custom cache key rules based on Cookies or  Query String, with which you can define how the content in your application is divided and which enables dynamic content caching;
+* **Bypass Cache:** define Bypass Cache rules for the paths for your website that cannot be cached on our infrastructure;
+* **Forward Cookies:** if you wish, you can configure Azion so that the Set-Cookie is passed on to your users. By default, Azion filters the Response Header Set-Cookie sent by your origin;
+* **Supports POST/PUT and other methods:** Application Acceleration extends the functionalities of Edge Application to support POST, PUT, PATCH, DELETE methods, as well as those that are already natively supported, GET, HEAD and OPTIONS.
+
+## Creating rules in Edge with Application Acceleration
+
+_**Path**_: Real-Time Manager > Edge Computing > Edge Application
+
+To activate Application Acceleration, simply select it from the list of available services from the Main Settings tab, within the desired Edge Application, from the Real-Time Manager (RTM). Once it’s active, a series of options for configuring the rules will be available in the **Rules Engine** and **Cache Settings**.
+
+## Creating advanced cache rules for dynamic content using query strings
+
+As an example, let's use an API of a regional news site that lists the content of recent news, depending on the city, updated every five minutes. URL example: api.regionalnews.com/updated_news?city=_city_name_.
 
 
-Next, let's see how Edge Function Massive Redirect works and how to use it.	
+### Defining the cache configurations
 
-The function deals with the redirection of traffic according to settings established using _Args_  parameters and validation criteria defined in the **_Rules Engine_** of **_Edge Application_**.
+The first step is to define an advanced cache rule to alter the content using the string "city". Using the RTM, choose the Edge Application for which the rule will be configured and, in the Cache Settings section, add a new cache setting, giving it an identifiable name (for example "CacheByCity").
 
-When a request to an address, for which settings have been configured in the parameters, reaches any of the Azion Edge Nodes, the function identifies that it must be redirected and forwards it to the new address. The originating application, in turn, receives the request and returns the content so that the Edge node can send it to the user with the corresponding HTTP status (301 or 302, depending on the setting).
+**Define the cache setting (cache setting):** choose the cache settings for the Browser and the CDN and set the TTL to 300 (5 minutes).
 
-Redirects that need to be executed by the function, are defined using a list of parameters in JSON format, formed of pairs containing the old address and the destination address (the _Args_), as shown here:
+**Define the Advanced Cache Key:** for the attribute "Cache by Query String", choose the option "Content varies by some Query String fields (Whitelist)". In the "Query String fields" field, enter the value "city". This will create a cache object with the string "city" for the path indicated in the Edge Application Rules Engine.
 
-* old address: this can be listed exactly or by using a regular expression from the options below:
-    * From:  full address,
-    * from_regex: regular expression to represent a standard URL format, allowing you to configure more than one address using a single rule. These expressions must be in the form of Perl Compatible Regular Expressions (PCRE) patterns,
-* destination address: can be written in two ways:
-    * moved: destination location (Url) to which it is going to be permanently redirected (HTTP status 301);
-    * found: destination location (Url) to which it is going to be temporarily redirected (HTTP status 302);
+If you wish, you can still choose to manage the cache by cookies and by type of device, but these settings are not mandatory. Next, save your settings. 
 
-Therefore, the configuration of a list of redirects would have the following format:
+### Define Validation criteria
 
-~~~
-[{
-   "from": "https://www.old-site.com",
-   "moved": "https://www.new-site.com"
-},
-{
-    "from": "https://www.old-site.com/shoes-snekears.html",
-    "moved": "https://www.new-site.com/category/shoes/sneakers"
-},
-{
-    "from": "https://www.old-site.com/users-login.html",
-    "found": "https://www.new-site.com/login.html"
-},
-{
-    "from_regex": "https://(api|store|checkout)\\.old-site\\.com$",
-    "moved": "https://www.new-site.com/%1$"
-}]
-~~~
-List with multiple redirects in a single Args configuration.
+Next, on the Rules Engine tab, add or edit a rule for the **Request Phase** to define the behavior for one or more paths. The rules (or Rules Engine) determine the set of conditions that need to be met for Behaviors to be executed.
 
-Based on the information contained in the Args, the function will carry out an interpretation of addresses and redirects, as we will see in detail next.
+**Defining validation criteria (criteria):** choose the variables, comparison operators and strings to create your business rule, as in the following example:
 
-## Configuring the Massive Redirect function
 
-The Edge Function Massive Redirect is available from the functions library of Azion's Edge Computing platform and can be accessed through Real-Time Manager (RTM), from the _Libraries_ menu.
-
-The function can only be executed when it has been **_instanced_** in the **_Edge Application_** **that you intend to work in and when  the activation criteria and behaviors have been defined in the**  **_Rules Engine_**.
-
-## Creating an Instance
-
-**Path**: Real-Time Manager > Edge Computing > Edge Application > Functions.
-
-Enter RTM and select the Edge Application that is going to run the function and activate the Edge Functions module, on the **Main Settings tab**. Then, on the Functions tab, add a new function, ensuring that you give it a memorable name.
-
-**Parameters**: You need to include the type of function for your instance, in this case choose Massive Redirect. Note that the function code that appears in the **_Code_** field, is just for information. On the **_Args_** tab enter a list of the addresses to be redirected and their respective destinations, as in the example below, and save this function
-
-~~~
-[{
-    "from": "https://www.old-site.com",
-    "moved": "https://www.new-site.com"
-},
-{
-    "from_regex": "https://(api|store|checkout)\\.old-site\\.com$",
-    "moved": "https://www.new-site.com/%1$"
-
-}]
-~~~
-Example of the configuration of Args parameters
-
-## Defining the Execution criteria (Rules Engine)
-
-**Path:** Real-Time Manager > Edge Computing > Edge Application > Rules Engine.
-
-The rules (Rules Engine) determine the set of conditions that need to be met for Behaviors to be executed. You can either use the Default Rule or create a new one to set the parameters for validating and the behaviors that the Edge Application will execute.
-
-**_Defining validation criteria (criteria):_** choose the variables, comparison operators and strings to create your business rule, as in the example below:
-
-~~~
-If: ${domain} is equal old-site.com
+* **If**: _${uri}_ **starts with** ***/updated_news***
 (next: logical operator, variable, comparison operator, string)
-~~~
-In this example, if the domain accessed is the same as the string “old-site.com”, the rule will be executed.
 
-**_Defining Behaviors (behaviors):_** add the behaviors you want to be carried out when the rule's conditions are met, as in the example below:
+Here, the rule is executed if the URL accessed starts with the string  "_/updated_news_".
 
-~~~
-Then: Run Function MyMassiveRedirect
+**Defining Behaviors:** add the behaviors you want to be carried out when the rule's conditions are met. Example:
+
+* **Then**: ***Set Cache Policy*** **CacheByCity**
 (next: logical operator, action, function)
-~~~
 
-In this example, if the conditions defined in the rules are satisfied, then the function MyMassiveRedirect will be executed.
+In this example, if the conditions defined in the rules are satisfied, then the cache policy  **CacheByCity** will be run.
 
-Just save and your Edge Application will be ready to run this new function.
+Finally, save your Edge Application and the new rule will be ready.
 
 ---
 
