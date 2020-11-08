@@ -28,8 +28,8 @@ All resources are run using the path referred to in the registration. The "Path"
 
 When entering the content of your resource, it can contain a script, to be run as "Shell Script", or a “Text” type, when it is content for the resource’s configuration files. Both are compatible with using variables, as long as the tag "{{VARNAME}}" is included.
 
-Variables in the resources’ content may be used if they use the tag "{{VARNAME}}", for example:
-`port = {{PORT_HTTP}}`
+Variables in the resources’ content may be used if they use the tag "{% raw %}{{ VARNAME }}{% endraw %}". For example:<br />
+{% raw %}`port = {{ PORT_HTTP }}`{% endraw %}
 
 ### Triggers
 
