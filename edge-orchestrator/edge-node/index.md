@@ -121,8 +121,8 @@ The Edge Orchestrator agent has additional commands and options to make it easie
 
 |                      | Description                                                  |
 | :------------------- | :----------------------------------------------------------- |
-| --debug ou -d        | Sets the agent logs to debug mode.                           |
-| --help ou -h         | Help on the commands that the agent can execute.             |
+| --debug or -d        | Sets the agent logs to debug mode.                           |
+| --help or -h         | Help on the commands that the agent can execute.             |
 | install              | Install the agent to the client’s device. Copies the binary to the installation location; adds the Edge Orchestrator agent to the device's service manager (if any) and; sets up credentials to authenticate the Edge Node. |
 | start [--foreground] | Initializes the Edge Orchestrator agent through the device's service manager.<br /> **Note:** The foreground option is used to run it in the foreground. |
 | status               | Reports on the status of the execution of the Edge Orchestrator agent. |
