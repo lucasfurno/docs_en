@@ -8,7 +8,8 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Oct/2020**
 
-* ...
+* Added a new feature HMAC with Query String support. 
+* Improvements in Network Layer Protection, Web Application Firewall, and Edge Functions to support a larger number of Domains per Edge Firewall.
 
 ---
 
