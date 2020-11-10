@@ -43,12 +43,12 @@ To begin installing Edge Node, you must download the Edge Orchestrator installat
 
 Check the list of compatible platforms for Azion Edge Node and download:
 
-| Sistema Operacional | Arquitetura | Arquivo                                                      |
-| :------------------ | :---------: | ------------------------------------------------------------ |
-| Linux               |   x86_32    | [edge-orchestrator](https://downloads.azion.com/linux/x86_32/edge-orchestrator) |
-| Linux               |   x86_64    | [edge-orchestrator](https://downloads.azion.com/linux/x86_64/edge-orchestrator) |
-| Linux               |    ARM32    | [edge-orchestrator](https://downloads.azion.com/linux/arm32/edge-orchestrator) |
-| Linux               |    ARM64    | [edge-orchestrator](https://downloads.azion.com/linux/arm64/edge-orchestrator) |
+| Operating System | Architecture | File                                                         |
+| :--------------- | :----------: | ------------------------------------------------------------ |
+| Linux            |    x86_32    | [edge-orchestrator](https://downloads.azion.com/linux/x86_32/edge-orchestrator) |
+| Linux            |    x86_64    | [edge-orchestrator](https://downloads.azion.com/linux/x86_64/edge-orchestrator) |
+| Linux            |    ARM32     | [edge-orchestrator](https://downloads.azion.com/linux/arm32/edge-orchestrator) |
+| Linux            |    ARM64     | [edge-orchestrator](https://downloads.azion.com/linux/arm64/edge-orchestrator) |
 
 Alternatively, you can download it using the Command line. In the example, the download link refers to the Linux/x86_64 agent. If you want to download another version, just change the url for the required operating system or architecture:
 
