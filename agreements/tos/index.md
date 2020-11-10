@@ -1,6 +1,6 @@
 # Terms of **Service**
 
-*Last updated: August 25, 2020.*
+*Last updated: November 10, 2020.*
 
 The following definitions related to Products and Services, billing methods, and other terms apply to the purchase and use of Azion Products and Services. We are constantly looking to improve our solutions. Consequently, this document may be updated and you should always look at its latest version.
 
