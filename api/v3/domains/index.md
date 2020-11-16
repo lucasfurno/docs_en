@@ -5,11 +5,12 @@
 Through the Digital Certificates API you can consult, create, remove or update Domains used by Edge Applications
 
 > 1. [Consult list of domains](#consultar-lista-de-domains)
-> 2. [Consults data from a domain](#consultar-dados-de-um-domains)
-> 3. [Delete a domain](#deletar-um-domains)
-> 4. [Create a new domain](#criar-um-novo-domains)
-> 5. [Overwrite a domain](#sobrescrever-um-domains)
-> 6. [Update fields in a domain](#atualizar-campos-de-um-domains)
+> 2. [Consults data from a domain id](#consultar-dados-de-um-domains-id)
+> 3. [Consults data from a domain name](#consultar-dados-de-um-domains-name)
+> 4. [Delete a domain](#deletar-um-domains)
+> 5. [Create a new domain](#criar-um-novo-domains)
+> 6. [Overwrite a domain](#sobrescrever-um-domains)
+> 7. [Update fields in a domain](#atualizar-campos-de-um-domains)
 
 ---
 
@@ -120,7 +121,53 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 }
 ~~~
 
-## 3. Delete a domain {#deletar-um-domains}
+## 3. Consults data from a domain by name{#consults-data-from-domains-name}
+
+Returns details of a domain using the GET method as a filter through the Domain Name.
+
+> **Attention**, this endpoint uses Filtering logic, so if your query doesn't match, an empty list will be returned.
+
+#### **GET** */domains/?name=DomainName
+
+Required permission: ***View Domains***
+
+**Mandatory parameters**
+
+| Parameter | Description | Type | Type of Data |
+|-----------|-----------|------|--------------|
+| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
+| :domain_name *(required)* | The name of the domain to be consulted. | URI | Integer |
+
+**Request Example**
+
+~~~
+GET /domains/1536580019
+Accept: application/json; version=3
+Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
+~~~
+
+**Answer Example**
+
+~~~
+{
+    "results": {
+        "id": 1536580019,
+        "name": "Domain HLS Test",
+        "cnames": [
+            "www.getthiscname.com"
+        ],
+        "cname_access_only": false,
+        "digital_certificate_id": null,
+        "edge_application_id": 1536580781,
+        "is_active": true,
+        "domain_name": "101918m.ha.azioncdn.net"
+    },
+    "schema_version": 3
+}
+~~~
+
+## 4. Delete a domain {#deletar-um-domains}
 
 Returns details of a domain
 
@@ -149,7 +196,7 @@ Content-Type: application/json
 HTTP/2 204
 ~~~
 
-## 4. Create a new domain {#criar-um-novo-domains}
+## 5. Create a new domain {#criar-um-novo-domains}
 
 Include a new domain in an account.
 
@@ -206,7 +253,7 @@ Content-Type: application/json
 }
 ~~~
 
-## 5. Overwrite a domain {#sobrescrever-um-domains}
+## 6. Overwrite a domain {#sobrescrever-um-domains}
 
 Overwrite all fields of a domain, while preserving the id. Optional fields not filled in will be replaced by the default values. 
 
@@ -264,7 +311,7 @@ Content-Type: application/json
 }
 ~~~
 
-## 6. Update fields in a domain {#atualizar-campos-de-um-domains}
+## 7. Update fields in a domain {#atualizar-campos-de-um-domains}
 
 Update one or more fields in a Domain, preserving the value of the fields not informed. 
 
