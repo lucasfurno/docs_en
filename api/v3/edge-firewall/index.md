@@ -4,6 +4,8 @@
 
 The API of Edge Firewall allows you to check, remove or update your existing settings, as well as creating new ones.
 
+Also associate your domains with an Edge Firewall, to create your domains consult the documentation for [Domains API](https://www.azion.com/en/documentation/products/api/v3/domains/)
+
 > 1. [Look up a list of Edge Firewall](#look-up-a-list-edge-firewall)
 > 2. [Look up details of an Edge Firewall](#consultar-dados-de-um-edge-firewall)
 > 3. [Delete an Edge Firewall](#delete-an-edge-firewall)
