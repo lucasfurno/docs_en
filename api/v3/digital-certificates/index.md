@@ -7,7 +7,7 @@ Through the Digital Certificates API you can consult, create, remove or update y
 > 1. [Check the list of Digital Certificates](#list-digital-certficates)
 > 2. [Check the data of a Digital Certificate by id](#check-digital-certificate-id)
 > 3. [Check the data of a Digital Certificate by name](#check-digital-certificate-name)
-> 4. [Deleting a Digital Certificate](#deletar-um-digital-certificate)
+> 4. [Deleting a Digital Certificate](#delete-digital-certificate)
 > 5. [Create a new Digital Certificate](#create-digital-certificate)
 > 6. [Overwrite a Digital Certificate](#sobrescrever-um-digital-certificate)
 > 7. [Update fields of a Digital Certificate](#atualizar-campos-de-um-digital-certificate)
