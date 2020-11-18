@@ -6,7 +6,7 @@ Through the Digital Certificates API you can consult, create, remove or update D
 
 > 1. [Consult list of domains](#consultar-lista-de-domains)
 > 2. [Consults data from a domain id](#consultar-dados-de-um-domains-id)
-> 3. [Consults data from a domain name](#consultar-dados-de-um-domains-name)
+> 3. [Consults data from a domain name](#consult-domains-name)
 > 4. [Delete a domain](#deletar-um-domains)
 > 5. [Create a new domain](#criar-um-novo-domains)
 > 6. [Overwrite a domain](#sobrescrever-um-domains)
