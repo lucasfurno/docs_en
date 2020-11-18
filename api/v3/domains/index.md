@@ -5,7 +5,7 @@
 Through the Digital Certificates API you can consult, create, remove or update Domains used by Edge Applications
 
 > 1. [Consult list of domains](#consultar-lista-de-domains)
-> 2. [Consults data from a domain id](#consultar-dados-de-um-domains-id)
+> 2. [Consults data from a domain id](#consult-domains-id)
 > 3. [Consults data from a domain name](#consult-domains-name)
 > 4. [Delete a domain](#delete-domain)
 > 5. [Create a new domain](#create-domain)
