@@ -10,7 +10,7 @@ Through the Digital Certificates API you can consult, create, remove or update y
 > 4. [Deleting a Digital Certificate](#delete-digital-certificate)
 > 5. [Create a new Digital Certificate](#create-digital-certificate)
 > 6. [Overwrite a Digital Certificate](#overwrite-digital-certificate)
-> 7. [Update fields of a Digital Certificate](#atualizar-campos-de-um-digital-certificate)
+> 7. [Update fields of a Digital Certificate](#update-fields-digital-certificate)
 
 ---
 
