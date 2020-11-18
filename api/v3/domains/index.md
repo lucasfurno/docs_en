@@ -10,7 +10,7 @@ Through the Digital Certificates API you can consult, create, remove or update D
 > 4. [Delete a domain](#delete-domain)
 > 5. [Create a new domain](#criar-um-novo-domains)
 > 6. [Overwrite a domain](#overwrite-domain)
-> 7. [Update fields in a domain](#atualizar-campos-de-um-domains)
+> 7. [Update fields in a domain](#update-fields-domain)
 
 ---
 
