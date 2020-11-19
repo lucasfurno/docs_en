@@ -7,14 +7,14 @@ Through the Digital Certificates API you can consult, create, remove or update y
 > 1. [Check the list of Digital Certificates](#list-digital-certficates)
 > 2. [Check the data of a Digital Certificate by id](#check-digital-certificate-id)
 > 3. [Check the data of a Digital Certificate by name](#check-digital-certificate-name)
-> 4. [Deleting a Digital Certificate](#delete-digital-certificate)
+> 4. [Delete a Digital Certificate](#delete-digital-certificate)
 > 5. [Create a new Digital Certificate](#create-digital-certificate)
 > 6. [Overwrite a Digital Certificate](#overwrite-digital-certificate)
 > 7. [Update fields of a Digital Certificate](#update-fields-digital-certificate)
 
 ---
 
-## 1. Check the list of Digital Certificates {#consultar-lista-de-digital-certificates}
+## 1. Check the list of Digital Certificates {#list-digital-certficates}
 
 Returns the list of Digital Certificates of an account.
 
@@ -27,7 +27,7 @@ Required permission: **View Security Settings**
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 
 **Request Example**
 
@@ -63,7 +63,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 
 ---
 
-## 2. Check the data of a Digital Certificate {#consultar-dados-de-um-digital-certificate}
+## 2. Check the data of a Digital Certificate {#check-digital-certificate-id}
 
 Return the details of a Digital Certificate
 
@@ -76,7 +76,7 @@ Required permission: **View Security Settings**
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 | :id (required) | The id of the digital certificate to be consulted. | path | number |
 
 **Request Example**
@@ -101,7 +101,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 
 ---
 
-## 3. Check the data of a Digital Certificate by Name {#consultar-dados-de-um-digital-certificate-name}
+## 3. Check the data of a Digital Certificate by Name {#check-digital-certificate-name}
 
 Return the details of a Digital Certificate using the GET method as a filter through the Certificate Name.
 
@@ -116,7 +116,7 @@ Required permission: **View Security Settings**
 | Parameter | Description | Type | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 | :certificate_name (required) | The name of the digital certificate to be consulted. | path | string |
 
 **Request Example**
@@ -141,7 +141,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 
 ---
 
-## 4. Deleting a Digital Certificate {#deletar-um-digital-certificate}
+## 4. Delete a Digital Certificate {#delete-digital-certificate}
 
 Remove a Digital Certificate. To be able to be removed the certificate cannot be in use.
 
@@ -152,7 +152,7 @@ Required permission: **Edit Security Settings**
 | Parameter | Description | Tipo | Type of Data |
 |-----------|-----------|------|--------------|
 | Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}/#criacao-de-token}) endpoint | header | string |
-| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* | 
+| Accept | Information about the return type and version | header | String;<br><br>mandatory:<br>*application/json;version=3* |
 | :id (required) | The id of the digital certificate to be removed. | path | number |
 
 **Request Example**
@@ -171,7 +171,7 @@ HTTP/2 204
 
 ---
 
-## 5. Create a new Digital Certificate {#criar-um-novo-digital-certificate}
+## 5. Create a new Digital Certificate {#create-digital-certificate}
 
 Upload a digital certificate to Azion.
 
@@ -217,7 +217,7 @@ Content-Type: application/json
 
 ---
 
-## 6. Overwrite a Digital Certificate {#sobrescrever-um-digital-certificate}
+## 6. Overwrite a Digital Certificate {#overwrite-digital-certificate}
 
 Overwrite all fields of a Digital Certificate, while preserving the id. Consider using the PATCH method instead of PUT, to update only some fields of a Digital Certificate, without changing the value of the others.
 
@@ -261,7 +261,7 @@ Content-Type: application/json
 
 ---
 
-## 7. Update fields of a Digital Certificate {#atualizar-campos-de-um-digital-certificate}
+## 7. Update fields of a Digital Certificate {#update-fields-digital-certificate}
 
 Update one or more fields of a Digital Certificate, preserving the value of the fields not informed. The “certificate” and “private_key” fields cannot be updated separately, they are always sent in pairs.
 
