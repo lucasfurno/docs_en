@@ -4,9 +4,9 @@
 
 Through the Digital Certificates API you can consult, create, remove or update Domains used by Edge Applications
 
-> 1. [Consult list of domains](#consultar-lista-de-domains)
+> 1. [Consult list of domains](#consult-list-of-domains)
 > 2. [Consults data from a domain id](#consult-domains-id)
-> 3. [Consults data from a domain name](#consult-domains-name)
+> 3. [Consults data from a domain name](#consults-data-from-domains-name)
 > 4. [Delete a domain](#delete-domain)
 > 5. [Create a new domain](#create-domain)
 > 6. [Overwrite a domain](#overwrite-domain)
@@ -14,7 +14,7 @@ Through the Digital Certificates API you can consult, create, remove or update D
 
 ---
 
-## 1. Consult list of domains {#consultar-lista-de-domains}
+## 1. Consult list of domains {#consult-list-of-domains}
 
 Returns the list of domains of an account.
 
@@ -77,7 +77,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 }
 ~~~
 
-## 2. Consults data from a domain {#consultar-dados-de-um-domains}
+## 2. Consults data from a domain {#consult-domains-id}
 
 Returns details of a domain
 
@@ -167,7 +167,7 @@ Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 }
 ~~~
 
-## 4. Delete a domain {#deletar-um-domains}
+## 4. Delete a domain {#delete-domain}
 
 Returns details of a domain
 
@@ -196,7 +196,7 @@ Content-Type: application/json
 HTTP/2 204
 ~~~
 
-## 5. Create a new domain {#criar-um-novo-domains}
+## 5. Create a new domain {#create-domain}
 
 Include a new domain in an account.
 
@@ -253,7 +253,7 @@ Content-Type: application/json
 }
 ~~~
 
-## 6. Overwrite a domain {#sobrescrever-um-domains}
+## 6. Overwrite a domain {#overwrite-domain}
 
 Overwrite all fields of a domain, while preserving the id. Optional fields not filled in will be replaced by the default values. 
 
@@ -311,7 +311,7 @@ Content-Type: application/json
 }
 ~~~
 
-## 7. Update fields in a domain {#atualizar-campos-de-um-domains}
+## 7. Update fields in a domain {#update-fields-domain}
 
 Update one or more fields in a Domain, preserving the value of the fields not informed. 
 
