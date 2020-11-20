@@ -85,6 +85,7 @@ Intelligent DNS supports the following types of entries, for creating records.
 | A | [RFC1035](https://tools.ietf.org/html/rfc1035) |
 | AAAA | [RFC3596](https://tools.ietf.org/html/rfc3596) |
 | ANAME | [draft-ietf-dnsop-aname-04](https://tools.ietf.org/html/draft-ietf-dnsop-aname-04) |
+| CAA | [RFC8659](https://tools.ietf.org/html/rfc8659) |
 | CNAME | [RFC1035](https://tools.ietf.org/html/rfc1035) |
 | MX | [RFC1035](https://tools.ietf.org/html/rfc1035) e [RFC7505](https://tools.ietf.org/html/rfc7505) |
 | NS | [RFC2782](https://tools.ietf.org/html/rfc2782) |
