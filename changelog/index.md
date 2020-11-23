@@ -6,6 +6,14 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Oct/2020**
+
+* Added support for Query String when using HMAC authentication in Edge Application.
+* Improvements in Network Layer Protection, Web Application Firewall, and Edge Functions to support a larger number of Domains per Edge Firewall.
+* Launch of the Early Access Program for [Edge Functions using JavaScript](https://www.azion.com/en/blog/javascript-azion-edge-functions/)
+
+---
+
 **Sep/2020**
 
 * Added a new menu and footer at Real-Time Manager.
