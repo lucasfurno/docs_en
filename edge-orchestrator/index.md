@@ -10,7 +10,7 @@ Edge Orchestrator can be used with most network architecture, including local an
 
 > 1. [How does it works?](#how-it-works)
 > 2. [Edge Orchestrator modules](#modules)
-> 5. [Supporting documentation](#support-documentation)
+> 3. [Supporting documentation](#support-documentation)
 
 ---
 
