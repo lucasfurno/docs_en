@@ -17,7 +17,7 @@ Also, you can create your ACP or SaaS, publish your solution at Azion Marketplac
 
 ## 1. How does it work?
 
-The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/index.md) or [Edge Application](../edge-application/index.md) at the Azion Platform. After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
+The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/) or [Edge Application](../edge-application/) at the Azion Platform. After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
 
 At this stage, you will find Free and Bring Your Own License products, products that you buy a license directly with an Independent Software Vendor (ISV) and instantiate in your Edge Application. 
 
@@ -49,11 +49,11 @@ Each product has its features and purposes, and you can get more information at 
 
 If you purchased a Software as a Service product you will find it available as an Edge Function to be instantiated in your existing Edge Application. 
 
-You can get more information about the Edge Functions module [here](../edge-functions/index.md).
+You can get more information about the Edge Functions module [here](../edge-functions/).
 
 If you purchased an Azion Cell Package, you will find it the purchased product as a new Edge Application to be used in your account. 
 
-You can get more information about Edge Application [here](../edge-application/index.md). 
+You can get more information about Edge Application [here](../edge-application/). 
 
 
 
@@ -61,7 +61,7 @@ You can get more information about Edge Application [here](../edge-application/i
 
 You can plug your SaaS or develop your own product at Azion Platform, publish it at Azion Marketplace and start making sales with your product.
 
-To do so, you need to become an Independent Software Vendor by following the process [here](./isv-signup/index.md) or reach us at integration@azion.com.
+To do so, you need to become an Independent Software Vendor by following the process [here](./isv-signup/) or reach us at integration@azion.com.
 
 We will evaluate your request and get in touch to guide you through the ISV process.
 
