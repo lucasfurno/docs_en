@@ -1,5 +1,9 @@
 # Introduction
 
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/marketplace/marketplace-seller-guide/index.md)
+
+
+
 Azion Marketplace is a curated digital catalog that makes it easy for customers to find, subscribe, deploy, and manage third-party software that they need to build solutions, accelerate go-to-market and run their businesses.
 
 Customers can quickly launch software with just a few clicks, and choose software solutions in Azion Cells Package (ACP) and software as a service (SaaS) formats. Flexible pricing options include BYOL (bring your own licence), per requests, compute time, data transfer, no charge and more. Azion handles billing and payments, and charges appear on customers’ Azion bill, drastically reducing procurement time.
