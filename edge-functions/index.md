@@ -117,7 +117,7 @@ To see your Edge Function in effectively operation you just need to write, insta
 6. Example of response when running the Behavior Run Function:
 
    ~~~
-   {"flip a coin":"heads"}
+   Hello World!
    ~~~
 
 
