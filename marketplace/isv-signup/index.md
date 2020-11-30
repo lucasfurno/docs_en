@@ -58,7 +58,7 @@ Tell us how the consumer can get more information and answer questions.
 
 #### Detailed information
 
-You can find detailed information about Azion Marketplace at [Seller Guide documentation](../../agreements/marketplace/marketplace-seller-guide/index.md) 
+You can find detailed information about Azion Marketplace at [Seller Guide documentation](../marketplace-seller-guide/) 
 
 
 
