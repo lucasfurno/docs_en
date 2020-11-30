@@ -12,20 +12,18 @@ To publish your product at Azion Marketplace, you must become an Independent Sof
 
 You must create your Azion Account, where you will be able to build your product and publish your SaaS product integrated with our Edge Computing Platform.
 
-You can create your Azion Azion account at https://manager.azion.com/signup/.
+You can create your Azion Azion account at [https://manager.azion.com/signup/](https://manager.azion.com/signup/).
 
 After that, you just need to reach us by filling the Azion Marketplace ISV Signup form and share your products(s) info, and we'll guide you through the integration process.
 
-1. Azion Marketplace ISV Signup at https://forms.gle/98E1AhsQAEoWBKSq9
-2. Filling out the product(s) registration form https://forms.gle/MfJQXFaAbHyFERSq8
+1. Azion Marketplace ISV Signup at [https://forms.gle/98E1AhsQAEoWBKSq9](https://forms.gle/98E1AhsQAEoWBKSq9)
+2. Filling out the product(s) registration form [https://forms.gle/MfJQXFaAbHyFERSq8](https://forms.gle/MfJQXFaAbHyFERSq8)
 
 
 
 ### About the product registration form
 
-In order for your product to be published on the marketplace, you must fill the form at the link  https://forms.gle/MfJQXFaAbHyFERSq8. This information will be kept as a draft in our database while the integration process is carried out. No data will be published without your final approval.
-
-### 
+In order for your product to be published on the marketplace, you must fill the form at the link [https://forms.gle/MfJQXFaAbHyFERSq8](https://forms.gle/MfJQXFaAbHyFERSq8). This information will be kept as a draft in our database while the integration process is carried out. No data will be published without your final approval.
 
 The following fields will be used to create the showcase and the page of your product in the marketplace, with supporting content and sufficient details for the consumer to evaluate and make the decision to launch your product.
 
@@ -38,8 +36,6 @@ Tell us how the consumer can get more information and answer questions.
 
 
 **Product Name**: Name of your product. This information will be displayed on the card and on the product detail page.
-
-**Product Slug:** Name that will be used in the url to arrive at the product. Follow the best SEO optimization practices and create a "friendly" url for your product. See https://support.google.com/webmasters/answer/7451184?hl=en
 
 **Product Version:** Text that will detail which version of the product.
 
