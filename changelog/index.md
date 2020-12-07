@@ -6,6 +6,14 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Nov/2020**
+
+* Added Hosted Zone metric of the Intelligent DNS's product on Billing UI.
+* Azion Intelligent DNS's General Availability.
+* Launch of the Early Access Program for [Edge Orchestrator](https://www.azion.com/en/blog/provision-orchestrate-applications-edge-infrastructure/)
+
+---
+
 **Oct/2020**
 
 * Added support for Query String when using HMAC authentication in Edge Application.
