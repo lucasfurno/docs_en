@@ -41,8 +41,7 @@ Tell us how the consumer can get more information and answer questions.
 
 **Categories:** Categories to which this product fits. This product can be filtered by these categories in the home of the marketplace.
 
-**Pricing Models: **Mark which business model this product will be sold on.
-
+**Pricing Models:** Mark which business model this product will be sold on.
 * Free
 * Bring Your Own License
 
@@ -55,14 +54,9 @@ Tell us how the consumer can get more information and answer questions.
 **Support for your product**: Text-area to include text describing how to obtain support for the product. Describe your service channels.
 
 
-
-#### Detailed information
+**Detailed information**
 
 You can find detailed information about Azion Marketplace at [Seller Guide documentation](../marketplace-seller-guide/) 
-
-
-
-
 
 ---
 
