@@ -10,7 +10,7 @@ This page lists the latest changes to Azion products and services. Here you will
 
 * Added Hosted Zone metric of the Intelligent DNS's product on Billing UI.
 * Azion Intelligent DNS's General Availability.
-* Launch of the Early Access Program for [Edge Orchestrator](https://www.azion.com/en/blog/provision-orchestrate-applications-edge-infrastructure/)
+* Launch of the Early Access Program for [Edge Orchestrator](https://www.azion.com/en/blog/provision-orchestrate-applications-edge-infrastructure/).
 * New User Interface released for features:
    * Welcome to Real-Time Manager
    * Account Info
