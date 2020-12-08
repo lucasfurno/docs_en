@@ -22,8 +22,8 @@ This page lists the latest changes to Azion products and services. Here you will
    * WAF Rules
  * New feature Talk to Sales.
  * New feature to send Invoice by email.
-* [Bugfix] Real-Time Metrics UI and API.
-* Improvements in Real-Time Manager - UI Billing - Presentation of the consumption of the metrics separated per region. 
+* Bugfix in Real-Time Metrics UI and API.
+* Improvements at UI Billing: presentation of the consumption of the metrics separated per region. 
 
 ---
 
