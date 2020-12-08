@@ -22,11 +22,8 @@ This page lists the latest changes to Azion products and services. Here you will
    * WAF Rules
  * New feature Talk to Sales.
  * New feature to send Invoice by email.
-* [Bugfix] Metrics-API First point of the graph is empty 
-* [Bugfix] Error 500 when changing solution parameter without real-time metrics
-* [Bugfix] Metrics-API - Division by zero
-* [Bugfix] Real-Time Metrics - Load the metrics page the Configuration field loads open
-* Improvements in Real-Time Manager - Billing to Regular Clients
+* [Bugfix] Real-Time Metrics UI and API.
+* Improvements in Real-Time Manager - UI Billing - Presentation of the consumption of the metrics separated per region. 
 
 ---
 
