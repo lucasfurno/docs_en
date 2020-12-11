@@ -1,32 +1,77 @@
-# Build dynamic rules on static sites on Edge
+# Create dynamic rules for static Websites with Azion Edge Application
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/hosting-edge-website/index.md)
 
-Landing page, error page, test page, institutional and campaign sites, are some examples of pages that can be built directly in Edge Computing architecture, the so-called Edge Sites, thereby dispensing with processing at the origin by applications, such as Wix or Wordpress, as a Service or hosted on clouds like Amazon EC2, Azure, etc. 
+Edge Application is a service that allows the customer to build their web applications to run on Azion's Edge Computing platform. It provides a set of resources and functionality, such as Edge Caching, Edge Functions and Network for creating business rules at the edge, for handling Cookies, Redirects, Match groups, A / B Tests and other functions.
 
-Edge sites because they are built and processed using serverless functions (Edge Functions), offer a series of benefits, such as freeing up infrastructure resources, decentralized operations, high availability, low latency, high transfer capacities, all this to provide the best user experience.
+This way, you can implement dynamic rules on static pages that will be processed and delivered directly to our Edge Nodes. Landing pages, error pages, institutional or campaign websites are some examples of pages that can be created using this approach.
 
-## Edge Sites in the Azion platform
+Some of the other advantages from using the Edge Application service are:
 
-Through Azion's Edge Computing platform and its serverless functions, you can create Edge Sites that will be processed and delivered directly to our Edge Nodes It is also possible to create push scripts (JSON, XML or configurations) for remote devices (IoT Devices), all with low latency and attending to hundreds of thousands of simultaneous requests.
-
-It is also possible, when combining Azion's Edge Sites with Edge Services, to implement security logics for availability, bot mitigation and authentication, in addition to allowing real time events to be consulted (Real Time Events), among other possibilities. With Data Streaming services, it is possible to send access logs to the Edge Site for SIEM and Big Data systems, including log servers (Kafka, Logstash for example), on a local infrastructure or cloud storage service (for example Amazon S3, Google Cloud).
+* Gives the client flexibility when developing applications;
+* You can look up information on accesses in real time (***Real Time Events***); and
+* Combine security logic systems to manage availability, bot mitigation and authentication, through the Edge Firewall service.
 
 ## How it works
 
-For the creation of an Edge Site in Azion, it is necessary to define a repository (Origin) through the Edge Application, as well as the business rules of the application. From there, Azion takes care of processing the business rules defined in the Edge Application (Cookies, Redirects, Match groups, A/B Test, Multi language, etc.), security (Geo Block, CORS, Network lists, WAF, Captcha, Bot mitigation, etc.) and delivering your website. For a better understanding, we will explain how the Azion website you are now viewing is published.
+When an Edge Application is set up for your website, Azion is responsible for delivering the content and processing the business rules. Therefore, when a request to the website reaches any of Azion's Edge Nodes, the Edge Application rules engine handles the request and delivers the content based on the settings.
 
-Our portal (https://www.azion.com) is published from an automated process of integration with GitHub, basically composed of three elements: a repository on GitHub to control the version of the site, a repository (bucket) in a Cloud Storage and an Edge Application at Azion which is executing all the business and security rules, originating from that bucket.
+First, you need to define the *Origin* for the website (local infrastructure or cloud storage service), where Edge Application will go to, to check the files. 
 
-The contents of the website are published via automation with GitHub, which in turn propagates changes to the file bucket, which is configured within an Azion Edge Application. Thus, when any portal page is accessed, it is the Edge Application that handles the request and delivers the requested content.
+Next, configure the business rules required, using the available modules:
 
-## Setting up the configurations of your Edge Site on Azion
+* *Application Acceleration:* accelerates the performance of applications and APIs by optimizing protocols and building advanced request and response rules;
+* *Edge Caching:* a standard module for all of your Edge Applications in Azion. Reduces latency and has a high transfer rate, using Azion's global and highly distributed Edge network;
+* *Edge Functions:* a module that allows the customer to program their own Edge Functions to be run on Azion's Edge;
+* *Image Processor:* automates the processing of images in the workflow, allowing you to resize, crop and apply filters to large quantities of images;
+* *Load Balancer:* a module that allows you to balance the traffic going to the origin servers.
 
-To configure your Edge Site, you will first need to create a new Edge Application. Access the *Edge Application* menu in the Real-Time Manager (RTM), click the *Add Application* button and enter a name of your choice. In the *Main Settings* section, under *Origins* enter the address of your repository in the Address field and in the Host Header field, type the variable ${host} to inform the host header that should be passed to the repository. Fill in the other information and click on **Save**. If the repository requires authentication, access the *Origins* tab, click on "Default Origin", select the *HMAC* option and fill in the Region name, Access key and Secret key fields with the data provided by your service provider.
+Finally, in order for the Edge Website to be accessed by users, a Domain needs to be created and linked to the Edge Application. 
 
-Now, we will add a rule so that addresses that do not contain a specific page (such as https://www.azion.com/) are directed to a pre-established page in the repository, without changing the user's browsing address. To perform this configuration, it will be necessary first to enable the Application Acceleration module in the *Main Settings* tab and save this change (thus making, among others, the *Behavior* option "Rewrite Request” available). Once enabled, access the *Rules Engine* tab and click on *New Rule*, using the option "Request Phase". The criterion to be used is to select the accesses to addresses ending in "/" and, for that, select the option *matches* in the options box in the center and fill in the field on the right with the expression "\/$". Below, add a *Behavior* with the option *Rewrite Request* and fill in, on the right, the expression "*${uri}index.html*". Click on ***Save***. 
+## How are Azion Websites Published?
 
-Finally, so that the Edge Site can be accessed by the users, it is also necessary to configure a Domain which is linked to the Edge Application within the Real-Time Manager (RTM). Access the *Domain* menu, click on the *Add Domain* button and enter a name of your choice, just used for identification. By default, an Azion certificate is pre-selected, which we will use in our test. Leave the *CNAMEs* field blank, select the Edge Application created previously to connect it with the domain and then click ***Save***. Note that a list of registered domains will appear on the screen below. The information contained in the Domain Name column is the name of the domain created by Azion (something similar to 12345t.ha.azioncdn.net) and it is through this that the test Edge Site will be accessed.
+Our portal (https://www.azion.com) is published through an automated integration process with GitHub, basically composed of three elements: a repository on GitHub to control the version of the website, a repository (*Origin*) in cloud storage and an Edge Application at Azion executing all the business and security rules.
+
+The contents of the website are published automatically through GitHub, which in turn propagates the changes to the file bucket, which is configured within an Azion Edge Application. This way, when any page of the website is accessed, the Edge Application handles the request and delivers the requested content.
+
+The following is an example of how an Edge Website is configured with Azion’s Edge Application.
+
+## Configuring an Edge Application
+
+**Path:** Real-Time Manager > Edge Computing > Edge Applications
+
+In Real-Time Manager (RTM), access the Edge Application menu, click on the "*Add Application*" button, enter an identifiable name of your choice and then configure the other settings as follows:
+
+**Origin:** in the Main Settings section, under Origins, enter the address of your repository in the Address field, and in the Host Header field, type the variable ${host} to define the host header that must be sent to the repository. Complete the rest of the information and click on Save.
+*Note: if the repository requires HMAC authentication, check the "HMAC" option and fill in the additional fields with the data provided by your service provider.*
+
+**Application Acceleration:** the module that enables the necessary Rules Engine settings. On the Main Settings tab, activate the option Application Acceleration and click on Save.
+
+**Rules Engine:** this is where the validation *Criteria* and *Behaviors* that the Edge Application needs to execute are configured. Open the Rules Engine tab and click on "*New Rule*", option "*Request Phase*", and set the validation criteria and preferred behaviors.
+
+**Defining validation criteria:** choose the variables, comparison operators and strings to create your business rule, as in the following example:
+
+* **If**: _${uri}_ **matches** \/$
+(In order: logical operator, variable, comparison operator, string)
+
+Here, the rule will be executed for the root page of the website, exclusively (such as https://www.azion.com/).
+
+**Defining Behaviors:** add the behaviors you want to be carried out when the rule's conditions are met. For Example:
+
+* **Then**: *Rewrite Request * **"${uri}index.html"**
+(In order: logical operator, action, function)
+
+In this example, if the conditions set by the rules are met, then there will be a rewrite of the index page of the website. Click on **Save** to save your changes. 
+
+## Configuring a Domain
+
+**Path:** Real-Time Manager > Edge Computing > Domains
+
+Finally, so that the Edge Website can be accessed by users, you also need to configure a *Domain* linked to the Edge Application previously created.
+
+Open the Domain menu, click on the "Add Domain" button and enter a name of your choice, so you can identify it. An Azion certificate is selected by default - this is what we will use in our example. 
+
+Leave the *CNAMEs* field blank, select the *Edge Application* previously created, to link it to the domain, and click Save. Note that a list of registered domains will appear on the next screen. The information contained in the *Domain Name* column is the name of the domain created by Azion (along the lines of 12345t.ha.azioncdn.net), and the test *Edge Website* will be accessed through this.
 
 ---
 

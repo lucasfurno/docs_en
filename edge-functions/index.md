@@ -83,7 +83,7 @@ Read more about [Real-Time Metrics](https://www.azion.com/en/documentation/produ
 
 ---
 
-## 4. Hands-On Step by step guide to creating an Edge Function{#hands-on}
+## 4. Hands-On Step by step guide to creating an Edge Function {#hands-on}
 
 To see your Edge Function in effectively operation you just need to write, instantiate and associate it with a Behavior _Run Function_, using a Rule in the Rules Engine:
 
@@ -117,7 +117,7 @@ To see your Edge Function in effectively operation you just need to write, insta
 6. Example of response when running the Behavior Run Function:
 
    ~~~
-   {"flip a coin":"heads"}
+   Hello World!
    ~~~
 
 
@@ -125,7 +125,7 @@ To see your Edge Function in effectively operation you just need to write, insta
 
 ---
 
-## 4. Support Documentation{#documentacao-de-suporte}
+## 4. Support Documentation {#support-documentation}
 
 - [Edge Application - Edge Functions Instances](https://www.azion.com/en/documentation/products/edge-application/edge-functions-instances/)
 - [Edge Application Rules Engine](https://www.azion.com/en/documentation/products/edge-application/rules-engine/)

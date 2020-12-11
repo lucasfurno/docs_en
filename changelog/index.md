@@ -6,6 +6,35 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Nov/2020**
+
+* Added Hosted Zone metric of the Intelligent DNS's product on Billing UI.
+* Azion Intelligent DNS's General Availability.
+* Launch of the Early Access Program for [Edge Orchestrator](https://www.azion.com/en/blog/provision-orchestrate-applications-edge-infrastructure/).
+* New User Interface released for features:
+   * Welcome to Real-Time Manager
+   * Account Info
+   * Users
+   * Teams
+   * History
+   * User Preferences
+   * Digital Certificates
+   * WAF Rules
+ * New feature Talk to Sales.
+ * New feature to send Invoice by email.
+* Bugfix in Real-Time Metrics UI and API.
+* Improvements at UI Billing: presentation of the consumption of the metrics separated per region. 
+
+---
+
+**Oct/2020**
+
+* Added support for Query String when using HMAC authentication in Edge Application.
+* Improvements in Network Layer Protection, Web Application Firewall, and Edge Functions to support a larger number of Domains per Edge Firewall.
+* Launch of the Early Access Program for [Edge Functions using JavaScript](https://www.azion.com/en/blog/javascript-azion-edge-functions/)
+
+---
+
 **Sep/2020**
 
 * Added a new menu and footer at Real-Time Manager.
