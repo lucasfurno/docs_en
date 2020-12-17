@@ -89,7 +89,7 @@ Returns details of an Edge Application. The information returned by this command
 
 #### **GET** */edge_applications/:id*
 
-Permission necessary: **View Security Settings**
+Permission necessary: ***View Security Settings***
 
 **Mandatory parameters**
 
