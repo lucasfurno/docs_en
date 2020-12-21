@@ -27,7 +27,7 @@ In order for your product to be published on the marketplace, you must fill the 
 
 The following fields will be used to create the showcase and the page of your product in the marketplace, with supporting content and sufficient details for the consumer to evaluate and make the decision to launch your product.
 
-The gold is to create a low touch service for the final consumer, facilitating the understanding of your product and consequently increasing its conversion.
+The goal is to create a low touch service for the final consumer, facilitating the understanding of your product and consequently increasing its conversion.
 
 So the supporting content must be qualified, clear and objective.
 
