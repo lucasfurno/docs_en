@@ -12,7 +12,7 @@ To publish your product at Azion Marketplace, you must become an Independent Sof
 
 You must create your Azion Account, where you will be able to build your product and publish your SaaS product integrated with our Edge Computing Platform.
 
-You can create your Azion Azion account at [https://manager.azion.com/signup/](https://manager.azion.com/signup/).
+You can create your Azion account at [https://manager.azion.com/signup/](https://manager.azion.com/signup/).
 
 After that, you just need to reach us by filling the Azion Marketplace ISV Signup form and share your products(s) info, and we'll guide you through the integration process.
 
