@@ -6,6 +6,14 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Dec/2020**
+
+* [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
+* Added edge node authorization with bulk actions.
+* ...
+
+---
+
 **Nov/2020**
 
 * Added Hosted Zone metric of the Intelligent DNS's product on Billing UI.
