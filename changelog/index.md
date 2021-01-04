@@ -10,6 +10,8 @@ This page lists the latest changes to Azion products and services. Here you will
 
 * [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
 * Added edge node authorization with bulk actions.
+* Added option to Request Trial at Talk to Sales.
+* New User Interface for Real-Time Metrics.
 * ...
 
 ---
