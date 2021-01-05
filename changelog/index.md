@@ -8,6 +8,7 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Dec/2020**
 
+* [Edge Functions with JavaScript](https://www.azion.com/en/products/edge-functions/) Beta's launch.
 * [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
 * Added edge node authorization with bulk actions.
 * Added option to Request Trial at Talk to Sales.
