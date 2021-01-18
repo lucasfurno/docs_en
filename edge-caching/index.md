@@ -11,7 +11,8 @@ Speed up the delivery by keeping your content cached at the edge of the network,
 > 3. [Browser Cache Settings](#browser-cache-settings)
 > 4. [CDN Cache Settings](#cdn-cache-settings)
 > 5. [L2 Caching](#l2-caching)
-> 6. [Advanced Cache Key](#advanced-cache-key)
+> 6. [Slice Settings](#slice-settings)
+> 7. [Advanced Cache Key](#advanced-cache-key)
 
 ---
 
@@ -85,7 +86,26 @@ To use the L2 Caching module, follow these steps:
 
 ---
 
-## 6. Advanced Cache Key {#advanced-cache-key}
+## 6. Slice Settings {#slice-settings}
+
+Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is reduced to small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that might not be finalized by the end-user. The data is cached on demand whenever the user requires it.
+
+Slice is not only restricted to Azion's Edge Nodes. It is possible to apply the feature on L2 modules, which allows data to be cached longer, delivering on-demand data to the end-user, increasing performance and availability.
+
+> *By definition, Slice operates with the Edge Caching Layer. However, it is also possible to activate an extra layer of caching by enabling the [L2 Caching](https://www.azion.com/en/documentation/products/edge-caching/#l2-caching).*
+
+This feature is activated in the Edge Application section of the Real-Time Manager menu:
+
+1. Access [Real-Time Manager](https://manager.azion.com/) with your login information.
+2. Within the **Edge Computing** section of the Menu, select **Edge Application**.
+3. Click on the desired existing Edge Application or [create one](https://www.azion.com/en/documentation/products/first-steps/#create-new-edge-application).
+4. Select the **Cache Settings** tab and click on the determined Cache Settings list.
+5. On that page, look for the **Slice Settings** section. Once you've located it, **enable it**. The Edge Caching box will be automatically ticked.
+6. In case you'd like to enable **L2 Caching**, tick the box.
+
+---
+
+## 7. Advanced Cache Key {#advanced-cache-key}
 
 You can use Azion to deliver your dynamic or static content. Even the dynamic part of a website can often be cached for a user profile, grouped according to the specific needs of your application, whether by city, browsing profile, or shopping profile. If you want your dynamic content to be cached on Azion's Edge Nodes, you can define advanced cache key rules based on Cookies or Query String.
 
