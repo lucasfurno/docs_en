@@ -90,7 +90,7 @@ To use the L2 Caching module, follow these steps:
 
 Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is reduced to small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that might not be finalized by the end-user. The data is cached on demand whenever the user requires it.
 
-Slice is not only restricted to Azion's Edge Nodes. It is possible to apply the feature on L2 modules, which allows data to be cached longer, delivering on-demand data to the end-user, increasing performance and availability.
+Slice is not only restricted to Azion's Edge Nodes. It is possible to apply the feature on L2 modules, which allows content to be cached longer, delivering on-demand content to the end-user, increasing performance and availability.
 
 > *By definition, Slice operates with the Edge Caching Layer. However, it is also possible to activate an extra layer of caching by enabling the [L2 Caching](https://www.azion.com/en/documentation/products/edge-caching/#l2-caching).*
 
