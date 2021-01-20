@@ -88,7 +88,7 @@ To use the L2 Caching module, follow these steps:
 
 ## 6. Slice Settings {#slice-settings}
 
-Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is reduced to small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that might not be finalized by the end-user. The data is cached on demand whenever the user requires it. When the request is established, Slice begins to operate.
+Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is reduced to small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that the end-user might not finalize. The data is cached on demand whenever the user requires it. When the request is established, Slice begins to operate.
 
 The feature operates with a standard of 1024kB slice-range. In case you'd like to change that slice range, make sure to contact our [Sales Team](https://www.azion.com/en/contact-sales/) for a custom dimension.
 
