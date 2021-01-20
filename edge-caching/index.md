@@ -92,7 +92,7 @@ Slice is an Edge Application feature that allows the processing of large amounts
 
 The feature operates with a standard of 1024kb slice-range of content. In case you'd like to change that slice range, make sure to contact our [Sales Team](https://www.azion.com/en/contact-sales/) for a custom dimension.
 
-Slice is not only restricted to Azion's Edge Nodes. It is possible to apply the feature on L2 modules, which allows content to be cached longer, delivering on-demand content to the end-user, increasing performance and availability.
+Slice is not only restricted to Edge Caching module. It is possible to apply the feature on L2 modules, which allows content to be cached longer, delivering on-demand content to the end-user, increasing performance and availability.
 
 > *By definition, Slice operates with the Edge Caching Layer. However, it is also possible to activate an extra layer of caching by enabling the [L2 Caching](https://www.azion.com/en/documentation/products/edge-caching/#l2-caching).*
 
