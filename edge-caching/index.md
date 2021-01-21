@@ -88,7 +88,9 @@ To use the L2 Caching module, follow these steps:
 
 ## 6. Slice Settings {#slice-settings}
 
-Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is reduced to small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that the end-user might not finalize. The data is cached on demand whenever the user requires it. When the request is established, Slice begins to operate.
+Slice is an Edge Application feature that allows the processing of large amounts of data in a more effective way, reducing latency and saving bandwidth. By activating this feature, the file or media itself is split into small pieces. Such fragments are gradually delivered to the end-user according to the data consumption, avoiding a transfer rush that the end-user might not finalize. The data is cached on demand whenever the user requires it. When the request is established, Slice begins to operate.
+
+> *Once Slice is activated, the current object cache key will be ignored and a new Slice cache key will be composed.*
 
 The feature operates with a standard of 1024kB slice-range. In case you'd like to change that slice range, make sure to contact our [Sales Team](https://www.azion.com/en/contact-sales/) for a custom dimension.
 
@@ -102,8 +104,8 @@ This feature is activated in the Edge Application section of the Real-Time Manag
 2. Within the **Edge Computing** section of the Menu, select **Edge Application**.
 3. Click on the desired existing Edge Application or [create one](https://www.azion.com/en/documentation/products/first-steps/#create-new-edge-application).
 4. Select the **Cache Settings** tab and click on the determined Cache Settings list.
-5. On that page, look for the **Slice Settings** section. Once you've located it, **enable it**. The Edge Caching box will be automatically ticked.
-6. In case you'd like to enable **L2 Caching**, tick the box.
+5. On that page, look for the **Slice Settings** section. Once you've located it, **enable it**. The Edge Caching box will be automatically checked.
+6. In case you'd like to enable **L2 Caching**, check the box.
 
 ---
 
