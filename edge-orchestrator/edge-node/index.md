@@ -91,7 +91,7 @@ To view the list of edge nodes created for your account, follow the steps below:
 
 ---
 
-## 3. Aurtorizing {#authorize}
+## 3. Authorizing {#authorize}
 
 You must authorize your edge nodes to begin orchestrating them. To authorize an edge node, follow the steps below:
 
