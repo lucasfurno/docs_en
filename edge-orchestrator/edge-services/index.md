@@ -53,6 +53,7 @@ In the case of other Operating Systems the value will always be empty.
 When configuring "Shell Script" type resources, you need to define which triggers will cause the resource to run.
 
 The triggers are "Install", "Reload" and "Uninstall” and each has a function and order of execution:
+
 **1) Install:** this is the first to be run and must include the script needed to install the service.
 
 **2) Reload:** when configured, this will be run at the end of the installation of all the resources and also whenever there is any change to the links between the Edge Service and Edge Node, such as a change to the values of the variables.
@@ -88,7 +89,7 @@ Only active services will be available for orchestration on the Edge Node and, a
 
 4- On the Resources list, click on *"Add Resource"*;
 
-5- Configure the resources you need for your service, using triggers "*Install*", "*Reload*" and "*Uninstall*";
+5- Configure the resources you need for your service, using the triggers: "*Install*", "*Reload*" and "*Uninstall*";
 
 6- Optional: where you have used variables in the content of one or more resources, you can set the default values for them in the "*Environment*" tab. **Note:** The variables must be in the format "Variable = Value", where "Variable" has been used in the content of resources that are already registered.
 
