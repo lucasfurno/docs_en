@@ -2,7 +2,7 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-orchestrator/edge-services/index.md)
 
-Azion Edge Services is a module for the Edge Orchestrator product that allows orchestrated services to be managed within your own edge infrastructure. it allows resources and other configurations to be registered through Real-Time Manager and services to be created and customized, so that they can be orchestrated at specified Edge Nodes.
+Azion Edge Services is a module for the Edge Orchestrator product that allows orchestrated services to be managed within your own edge infrastructure. It allows resources and other configurations to be registered through Real-Time Manager and services to be created and customized, so that they can be orchestrated at specified Edge Nodes.
 
 You can configure the triggers for installing, uninstalling, reloading and defining the dependencies between the resources needed to run your service on your edge network.
 
@@ -42,7 +42,7 @@ ARCH: Processor architecture, which may be the following values -> arm or; amd (
 
 - name: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux.
 
-- release: first obtaining via LSB Release, if there is no search in / etc / os-release the value of VERSION_ID or DISTRIB_RELEASE.
+- release: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE.
 
 In the case of other Operating Systems the value will always be empty.
 
