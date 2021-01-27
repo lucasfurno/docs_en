@@ -104,9 +104,13 @@ After the authorization, the Edge Node can take up to 10 seconds before services
 You can also authorize all the edge nodes you want at once. To start using  this option, follow the steps below:
 
 1 - Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+
 2 - Select the items you want to authorize or, if you prefer, select all items by checking the first check box on the left;
+
 3 - On the top right corner, click on the Actions button and select Authorize.
+
 4 - A message to confirm your action will be shown, click on the Confirm button to save your selection.
+
 5 - You will see the following confirmation message:  "X nodes were successfully authorized!"
 
 ---
