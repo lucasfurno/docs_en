@@ -33,26 +33,24 @@ Variables in the resources’ content may be used if they use the tag "{% raw %}
 
 In addition to the variables defined, you can also use the **Facts**, which are the information available in your node. They can be used in case you prefer to use a multiplatform. The available **Facts** are: 
 
-**CLIENT_VERSION:** Edge Orchestrator agent version, according to this format: MAJOR.MINOR.PATCH, for example: 1.10.3, where 1 is MAJOR, 10 is MINOR and 3 is PATCH.
-ARCH: Processor architecture, which may be the following values -> arm or; amd (x86), both with 32 or 64 bits.
 
-**OS_NAME:** Operating System Name, which may be the following values-> macOS; Linux; FreeBSD; OpenBSD; DragonFlyBSD; NetBSD; or Solaris.
 
-**OS_DISTRO:**  Operating System distribution name, only for systems based on Linux. Following the pattern: name + release, where:
+|       Facts        |                         Description                          |                            Value                             |                            Notes                             |
+| :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **CLIENT_VERSION** |               Edge Orchestrator agent version                |                      MAJOR.MINOR.PATCH                       | For example: 1.10.3, where 1 is MAJOR, 10 is MINOR and 3 is PATCH |
+|      **ARCH**      |                    Processor architecture                    |          ARM or; AMD (x86), both with 32 or 64 bits          |                                                              |
+|    **OS_NAME**     |              Operating System distribution name              | macOS; Linux; FreeBSD; OpenBSD; DragonFlyBSD; NetBSD; or Solaris |                                                              |
+|   **OS_DISTRO**    | Operating System distribution name, only for systems based on Linux |                        NAME + RELEASE                        | NAME: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux <pt> <pt> RELEASE: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE <pt> <pt> In the case of other Operating Systems the value will always be empty. |
+|   **OS_VERSION**   |       Version of the operating system, only for MacOS        |                         MAJOR.MINOR                          | Example: 10.5. For other Operating Systems it will always be empty. |
 
-- name: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux.
-
-- release: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE.
-
-In the case of other Operating Systems the value will always be empty.
-
-**OS_VERSION:** VOS_VERSION: Version of the operating system, only for MacOS, in this case according to the format MAJOR.MINOR, example: 10.5. For other Operating Systems it will always be empty. 
+Like variables, **facts** can be used on resources using the {{FACT_NAME}} tag. For example: {{CLIENT_VERSION}}
 
 ### Triggers
 
 When configuring "Shell Script" type resources, you need to define which triggers will cause the resource to run.
 
 The triggers are "Install", "Reload" and "Uninstall” and each has a function and order of execution:
+
 **1) Install:** this is the first to be run and must include the script needed to install the service.
 
 **2) Reload:** when configured, this will be run at the end of the installation of all the resources and also whenever there is any change to the links between the Edge Service and Edge Node, such as a change to the values of the variables.
@@ -88,7 +86,7 @@ Only active services will be available for orchestration on the Edge Node and, a
 
 4- On the Resources list, click on *"Add Resource"*;
 
-5- Configure the resources you need for your service, using triggers "*Install*", "*Reload*" and "*Uninstall*";
+5- Configure the resources you need for your service, using the triggers: "*Install*", "*Reload*" and "*Uninstall*";
 
 6- Optional: where you have used variables in the content of one or more resources, you can set the default values for them in the "*Environment*" tab. **Note:** The variables must be in the format "Variable = Value", where "Variable" has been used in the content of resources that are already registered.
 
