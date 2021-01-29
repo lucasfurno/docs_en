@@ -33,20 +33,17 @@ Variables in the resources’ content may be used if they use the tag "{% raw %}
 
 In addition to the variables defined, you can also use the **Facts**, which are the information available in your node. They can be used in case you prefer to use a multiplatform. The available **Facts** are: 
 
-**CLIENT_VERSION:** Edge Orchestrator agent version, according to this format: MAJOR.MINOR.PATCH, for example: 1.10.3, where 1 is MAJOR, 10 is MINOR and 3 is PATCH.
-ARCH: Processor architecture, which may be the following values -> arm or; amd (x86), both with 32 or 64 bits.
 
-**OS_NAME:** Operating System Name, which may be the following values-> macOS; Linux; FreeBSD; OpenBSD; DragonFlyBSD; NetBSD; or Solaris.
 
-**OS_DISTRO:**  Operating System distribution name, only for systems based on Linux. Following the pattern: name + release, where:
+|       Facts        |                         Description                          |                            Value                             |                            Notes                             |
+| :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **CLIENT_VERSION** |               Edge Orchestrator agent version                |                      MAJOR.MINOR.PATCH                       | For example: 1.10.3, where 1 is MAJOR, 10 is MINOR and 3 is PATCH |
+|      **ARCH**      |                    Processor architecture                    |          ARM or; AMD (x86), both with 32 or 64 bits          |                                                              |
+|    **OS_NAME**     |              Operating System distribution name              | macOS; Linux; FreeBSD; OpenBSD; DragonFlyBSD; NetBSD; or Solaris |                                                              |
+|   **OS_DISTRO**    | Operating System distribution name, only for systems based on Linux |                        NAME + RELEASE                        | NAME: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux <pt> <pt> RELEASE: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE <pt> <pt> In the case of other Operating Systems the value will always be empty. |
+|   **OS_VERSION**   |       Version of the operating system, only for MacOS        |                         MAJOR.MINOR                          | Example: 10.5. For other Operating Systems it will always be empty. |
 
-- name: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux.
 
-- release: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE.
-
-In the case of other Operating Systems the value will always be empty.
-
-**OS_VERSION:** VOS_VERSION: Version of the operating system, only for MacOS, in this case according to the format MAJOR.MINOR, example: 10.5. For other Operating Systems it will always be empty. 
 
 ### Triggers
 
