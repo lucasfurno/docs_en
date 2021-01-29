@@ -4,11 +4,9 @@
 
 Azion Edge Orchestrator is an end-to-end encrypted orchestration service with cloud management and zero-touch provisioning, created for large-scale Edge networks. Manage and control resources on the edge in real time and orchestrate your services quickly and easily to meet your needs.
 
-## Getting to know it
+## Getting to know Edge Orchestrator
 
-- It allows you to manage and control Edge resources in real time, including:
-
-  - Provisioning, updating and managing Edge Applications, Edge Firewalls, Edge Functions, Digital Certificates, Edge Nodes, Edge Services and third party services via Marketplace.
+- It allows you to manage and control Edge resources in real time, including: provisioning, updating and managing Edge Applications, Edge Firewalls, Edge Functions, Digital Certificates, Edge Nodes, Edge Services and third party services via Marketplace.
 
 - It was designed to operate and run on different types of architecture: microprocessors, like x86 and ARM and different sizes of equipment, including Raspberry PI, network equipment such as switches and SD-WAN routers as well as corporate servers.
 
@@ -16,7 +14,6 @@ Azion Edge Orchestrator is an end-to-end encrypted orchestration service with cl
 
 - It is compiled with all required libraries and core dependencies, making software installation and update simpler.
 
-  
 
 > 1. [How it works](#how-it-works)
 > 2. [Edge Orchestrator modules](#modules)
@@ -29,7 +26,7 @@ Azion Edge Orchestrator is an end-to-end encrypted orchestration service with cl
 An Azion Edge Orchestrator agent is installed on the edge nodes and provides end-to-end encrypted remote node management from the control panel ([Real-Time Manager](https://manager.azion.com/)) based in the cloud and API. It can be deployed in two different ways: 
 
 1. Through manual installation on each edge node; or 
-2. Automatic installation along with the operating system (a Linux distro or the image of a client's OS) or hardware supplier (an SD-WAN router, a network switch or a Linux server). Customers can use an automatic registration mode, which makes it simpler to deploy (new node locations or using automatic node scaling), update and manage a large number of scaling edge nodes.
+2. Automatic installation along with the operating system: a Linux distro or the image of a client's OS or hardware supplier, for example: an SD-WAN router, a network switch or a Linux server. Customers can use an automatic registration mode, which makes it simpler to deploy (for example: new node locations or using automatic node scaling), update and manage a large number of scaling edge nodes.
 
 All services linked to edge nodes will be orchestrated and configured from the moment the device is authorized via the control panel. The orchestration is done sequentially and respects the dependencies between resources and triggers needed for its configuration.
 
