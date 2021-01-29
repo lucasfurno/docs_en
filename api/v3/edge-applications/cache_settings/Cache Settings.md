@@ -15,11 +15,11 @@ With the API of Cache Settings, you can check, remove or update existing setting
 
 ## 1. Looking up a list of Cache Settings {#looking-up-a-list-of-cache-settings}
 
-This command results in a list of Cahce Settings.
+This return results in a list of Cache Settings.
 
 #### **GET** */edge_applications/:edge_application_id:/cache_settings*
 
-Necessary permission: **View Security Settings**
+Necessary permission: **View Edge Application**
 
 **Mandatory parameters**
 
@@ -33,7 +33,7 @@ Necessary permission: **View Security Settings**
 **Request Example**
 
 ~~~
-GET /edge_applications 
+GET /edge_applications/3790128/cache_settings 
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 ~~~
@@ -42,42 +42,34 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ~~~
 {
-    "count": 36,
-    "total_pages": 18,
+    "count": 3,
+    "total_pages": 1,
     "schema_version": 3,
     "links": {
         "previous": null,
-        "next": "https://api.azionapi.net/edge_applications?page=2&page_size=2"
+        "next": null
     },
     "results": [
         {
-            "id": 1528990724,
-            "name": "Edge Cloud Storage Google",
-            "active": true,
-            "origins": [
-                {
-                    "name": "Default Origin",
-                    "origin_type": "single_origin",
-                    "origin_id": "c2434ff9-b9a9-4937-8721-60d58ac54976"
-                }
-            ]
-        },
-        {
-            "id": 1528990725,
-            "name": "Edge Application",
-            "active": true,
-            "origins": [
-                {
-                    "name": "Default Origin",
-                    "origin_type": "single_origin",
-                    "origin_id": "25fe91c0-1a2c-4ce1-9e3f-a109d2cd3204"
-                },
-                {
-                    "name": "Z1",
-                    "origin_type": "single_origin",
-                    "origin_id": "0924c04d-b00a-4653-8575-92053e0d0e2f"
-                }
-            ]
+            "id": 6734,
+            "name": "Default Cache Settings",
+            "browser_cache_settings": "honor",
+            "browser_cache_settings_maximum_ttl": 0,
+            "cdn_cache_settings": "honor",
+            "cdn_cache_settings_maximum_ttl": 0,
+            "cache_by_query_string": "all",
+            "query_string_fields": null,
+            "enable_query_string_sort": false,
+            "cache_by_cookies": "all",
+            "cookie_names": [""],
+            "adaptive_delivery_action": "ignore",
+            "device_group": [],
+            "enable_caching_for_post": false,
+            "l2_caching_enabled": false,
+            "is_slice_configuration_enabled": false,
+            "is_slice_edge_caching_enabled": false,
+            "is_slice_l2_caching_enabled": false,
+            "slice_configuration_range": 1024
         }
     ]
 }
@@ -87,11 +79,11 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ## 2. Looking up details of Cache Settings {#looking-up-details-of-cache-settings}
 
-Results in details of Cache Settings. The information resulted by this command refers to the main settings of an Application.
+Results in details of Cache Settings. The information resulted by this return refers to the cache setting of an Edge Application.
 
-#### **GET** */edge_applications/:edge_application_id:/cache_settings*
+#### **GET** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
-Necessary permission: ***View Security Settings***
+Necessary permission: ***View Edge Application***
 
 **Mandatory parameters**
 
@@ -106,7 +98,7 @@ Necessary permission: ***View Security Settings***
 **Request Example**
 
 ~~~
-GET /edge_applications/1528990724
+GET /edge_applications/3790128/cache_settings/1528990724
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 ~~~
@@ -115,19 +107,36 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ~~~
 {
-    "results": {
-        "id": 1528990724,
-        "name": "Edge Application",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": false,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": false,
-        "image_optimization": false,
-        "load_balancer": false
+    "count": 3,
+    "total_pages": 1,
+    "schema_version": 3,
+    "links": {
+        "previous": null,
+        "next": null
     },
-    "schema_version": 3
+    "results": [
+        {
+            "id": 6734,
+            "name": "Default Cache Settings",
+            "browser_cache_settings": "honor",
+            "browser_cache_settings_maximum_ttl": 0,
+            "cdn_cache_settings": "honor",
+            "cdn_cache_settings_maximum_ttl": 0,
+            "cache_by_query_string": "all",
+            "query_string_fields": null,
+            "enable_query_string_sort": false,
+            "cache_by_cookies": "all",
+            "cookie_names": [""],
+            "adaptive_delivery_action": "ignore",
+            "device_group": [],
+            "enable_caching_for_post": false,
+            "l2_caching_enabled": false,
+            "is_slice_configuration_enabled": false,
+            "is_slice_edge_caching_enabled": false,
+            "is_slice_l2_caching_enabled": false,
+            "slice_configuration_range": 1024
+        }
+    ]
 }
 ~~~
 
@@ -135,15 +144,15 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ## 3. Deleting Cache Settings {#deleting-cache-settings}
 
-This request removes a Cache Setting. This operation is final: there is no way to roll back the information after it has been confirmed by the user.
+This return removes a Cache Setting. This operation is final: there is no way to roll back the information after it has been confirmed by the user.
 
-All information associated with this Edge Application will also be removed.
+All information associated with this cache setting will also be removed.
 
 The API does not require confirmation in order to run this instruction.
 
-#### **DELETE** */edge_applications/:edge_application_id:/cache_settings*
+#### **DELETE** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
@@ -156,7 +165,7 @@ Necessary permission: **Edit Security Settings**
 **Request Example**
 
 ~~~
-DELETE /edge_applications/1548170897
+DELETE /edge_applications/3790128/cache_settings/1528990724
 Accept: application/json; version=3
 Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 ~~~
@@ -171,7 +180,7 @@ HTTP/2 204
 
 ## 4. Creating new Cache Settings {#creating-new-cache-settings}
 
-This order nables the creation of new Cache Settings within an Edge Application.
+This return enables the creation of new Cache Settings within an Edge Application.
 
 #### **POST** */edge_applications/:edge_application_id:/cache_settings*
 
@@ -196,17 +205,23 @@ Content-Type: application/json
 
 ~~~
 {
-    "name": "Test Cache Settings 2",
-    "browser_cache_settings": "honor",
-    "cdn_cache_settings": "honor",
-    "cdn_cache_settings_maximum_ttl": "60",
-    "cache_by_query_string": "all",
-    "cache_by_cookies": "all",
-    "l2_caching_enabled": false,
-    "is_slice_configuration_enabled": true,
-    "is_slice_edge_caching_enabled": true,
-    "is_slice_l2_caching_enabled": false,
-    "slice_configuration_range": false
+        "name": "Cache Settings",
+        "browser_cache_settings": "honor",
+        "browser_cache_settings_maximum_ttl": 0,
+        "cdn_cache_settings": "honor",
+        "cdn_cache_settings_maximum_ttl": 60,
+        "cache_by_query_string": "all",
+        "query_string_fields": null,
+        "enable_query_string_sort": false,
+        "cache_by_cookies": "all",
+        "cookie_names": null,
+        "device_group": [],
+        "enable_caching_for_post": false,
+        "l2_caching_enabled": false,
+        "is_slice_configuration_enabled": true,
+        "is_slice_edge_caching_enabled": true,
+        "is_slice_l2_caching_enabled": false,
+        "slice_configuration_range": null
 }
 ~~~
 
@@ -216,7 +231,7 @@ Content-Type: application/json
 {
     "results": {
         "id": 8908,
-        "name": "Test Cache Settings 2",
+        "name": "Cache Settings",
         "browser_cache_settings": "honor",
         "browser_cache_settings_maximum_ttl": 0,
         "cdn_cache_settings": "honor",
@@ -243,13 +258,13 @@ Content-Type: application/json
 
 ## 5. Overwriting Cache Settings {#overwriting-cache-settings}
 
-This command overwrites all the fields of a Cache Setting, retaining the id.
+This return overwrites all the fields of a Cache Setting, retaining the id.
 
 If you only want to update some fields, without changing the values of the rest, consider using the PATCH method, instead of PUT.
 
-#### **PUT** */edge_applications/:edge_application_id:/cache_settings*
+#### **PUT** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
-Necessary Permission: **Edit Security Settings**
+Necessary Permission: **Edit Edge Application**
 
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
@@ -263,7 +278,7 @@ Necessary Permission: **Edit Security Settings**
 **Request Example**
 
 ~~~
-PUT /edge_applications/1555421177
+PUT /edge_applications/3790128/cache_settings/1528990724
 Accept: application/json; version=3
 Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f24
 Content-Type: application/json
@@ -271,15 +286,23 @@ Content-Type: application/json
 
 ~~~
 {
-	"name": "Edge application alterada pela API",
-    "delivery_protocol": "http",
-    "active": true,
-    "application_acceleration": true,
-    "caching": true,
-    "device_detection": false,
-    "edge_functions": false,
-    "image_optimization": false,
-    "load_balancer": false
+        "name": "Cache Settings - Overwrite",
+        "browser_cache_settings": "honor",
+        "browser_cache_settings_maximum_ttl": 0,
+        "cdn_cache_settings": "honor",
+        "cdn_cache_settings_maximum_ttl": 60,
+        "cache_by_query_string": "all",
+        "query_string_fields": null,
+        "enable_query_string_sort": false,
+        "cache_by_cookies": "all",
+        "cookie_names": null,
+        "device_group": [],
+        "enable_caching_for_post": false,
+        "l2_caching_enabled": false,
+        "is_slice_configuration_enabled": true,
+        "is_slice_edge_caching_enabled": true,
+        "is_slice_l2_caching_enabled": false,
+        "slice_configuration_range": null
 }
 ~~~
 
@@ -288,16 +311,24 @@ Content-Type: application/json
 ~~~
 {
     "results": {
-        "id": 1555421177,
-        "name": "Edge application alterada pela API",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": true,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": false,
-        "image_optimization": false,
-        "load_balancer": false
+        "id": 8907,
+        "name": "Cache Settings - Overwrite",
+        "browser_cache_settings": "honor",
+        "browser_cache_settings_maximum_ttl": 0,
+        "cdn_cache_settings": "honor",
+        "cdn_cache_settings_maximum_ttl": 60,
+        "cache_by_query_string": "all",
+        "query_string_fields": null,
+        "enable_query_string_sort": false,
+        "cache_by_cookies": "all",
+        "cookie_names": null,
+        "device_group": [],
+        "enable_caching_for_post": false,
+        "l2_caching_enabled": false,
+        "is_slice_configuration_enabled": true,
+        "is_slice_edge_caching_enabled": true,
+        "is_slice_l2_caching_enabled": false,
+        "slice_configuration_range": null
     },
     "schema_version": 3
 }
@@ -307,11 +338,11 @@ Content-Type: application/json
 
 ## 6. Updating the fields Cache Settings {#updating-the-fields-of-cache-settings}
 
-This request updates one or more fields of an Edge Application, retaining the value of those fields not included.
+This return updates one or more fields of a cache setting, retaining the value of those fields not included.
 
-#### **PATCH** */edge_applications/:edge_application_id:/cache_settings*
+#### **PATCH** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
@@ -325,7 +356,7 @@ Necessary permission: **Edit Security Settings**
 **Request Example**
 
 ~~~
-PATCH /edge_applications/1555421177 
+PATCH /edge_applications/3790128/cache_settings/1528990724
 Accept: application/json; version=3
 Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f24
 Content-Type: application/json
@@ -333,9 +364,11 @@ Content-Type: application/json
 
 ~~~
 {
-    "application_acceleration": true,
-    "edge_functions": true,
-    "image_optimization": false
+        "browser_cache_settings_maximum_ttl": 0,
+        "cdn_cache_settings": "honor",
+        "cdn_cache_settings_maximum_ttl": 60,
+        "cache_by_query_string": "all",
+        "query_string_fields": null
 }
 ~~~
 
@@ -344,16 +377,24 @@ Content-Type: application/json
 ~~~
 {
     "results": {
-        "id": 1555421177,
-        "name": "Edge application alterada pela API",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": true,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": true,
-        "image_optimization": false,
-        "load_balancer": false
+        "id": 8907,
+        "name": "Cache Settings - Update",
+        "browser_cache_settings": "honor",
+        "browser_cache_settings_maximum_ttl": 0,
+        "cdn_cache_settings": "honor",
+        "cdn_cache_settings_maximum_ttl": 60,
+        "cache_by_query_string": "all",
+        "query_string_fields": null,
+        "enable_query_string_sort": false,
+        "cache_by_cookies": "all",
+        "cookie_names": null,
+        "device_group": [],
+        "enable_caching_for_post": false,
+        "l2_caching_enabled": false,
+        "is_slice_configuration_enabled": true,
+        "is_slice_edge_caching_enabled": true,
+        "is_slice_l2_caching_enabled": false,
+        "slice_configuration_range": null
     },
     "schema_version": 3
 }
