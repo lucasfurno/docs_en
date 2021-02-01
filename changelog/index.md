@@ -9,7 +9,7 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Jan/2021**
 
-* ..
+* New layout in Real-Time Manager emails.
 
 ---
 
