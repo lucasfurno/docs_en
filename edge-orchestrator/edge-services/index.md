@@ -43,9 +43,7 @@ In addition to the variables defined, you can also use the **Facts**, which are 
 |   **OS_DISTRO**    | Operating System distribution name, only for systems based on Linux |                        NAME + RELEASE                        | <p> NAME: Debian; Ubuntu; openSUSE; Mint Linux; Gentoo; Fedora; CentOS; Arch Linux or; Kali Linux </p>  <p> RELEASE: first obtaining via LSB Release, if there is no search in /etc/os-release the value of VERSION_ID or DISTRIB_RELEASE </p> <p> In the case of other Operating Systems the value will always be empty. </p> |
 |   **OS_VERSION**   |       Version of the operating system, only for MacOS        |                         MAJOR.MINOR                          | Example: 10.5. For other Operating Systems it will always be empty. |
 
-Like variables, facts can be used on resources using the tag {% raw %}{{FACT_NAME}}{% endraw %}. For example: 
-
-{% raw %}{{CLIENT_VERSION}}{% endraw %}
+Like variables, facts can be used on resources using the tag {% raw %}{{FACT_NAME}}{% endraw %}. For example: {% raw %}{{CLIENT_VERSION}}{% endraw %}.
 
 ### Triggers
 

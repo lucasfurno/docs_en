@@ -4,44 +4,47 @@
 
 Azion Edge Node enables you to create your own edge infrastructure, allowing you to install services and resources in real time.
 
-It is open software and can be run on different types of microprocessor architecture such as x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers, as well as corporate servers.
+It is an open software and can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
 
-> 1. [To install](#install)
-> 2. [To view](#View)
-> 3. [To authorize](#authorize)
+> 1. [Installing](#install)
+> 2. [Viewing your nodes](#View)
+> 3. [Authorizing](#authorize)
 > 5. [Services](#services)
 > 5. [Agent commands and options](#commands)
 > 6. [Supporting documentation](#support-documentation)
 
 ---
 
-## 1. To install {#install}
+## 1. Installing {#install}
 
-Edge Node is installed in 3 stages: 1- Generate a credential to carry out the actions; 2- Install the Edge Orchestrator agent on the devices and; 3- Authenticate the device (after installation).
+Edge Node is installed in 3 stages: 
+1- Generate a credential to carry out the actions; 
+2- Install the Edge Orchestrator agent on the devices; 
+3- Authenticate the device after installation.
 
 ### 1.1 Generating a credential {#credential-generation}
 
-To generate the credential needed to authenticate your edge nodes, you need to carry out the following steps:	
+You can generate the credential needed to authenticate your edge nodes following these steps:	
 
 1- Go to [Real-Time Manager](https://manager.azion.com/);
 
-2- From the top right menu, open the *Credentials* page;
+2- Open the *Credentials* page on the top right menu;
 
 3- Click on the "Add Credential" button;
 
-4- Fill in the required fields and click the "Save” button:
+4- Fill in the required fields and click the "Save” button.
 
-​	**Description:** describe, for example, how or by whom the credential will be used;
+​	**Description:** describe, for example, how or who will use the credential;
 
-​	**Teams:** link actions that the credential will allow, to permissions.
+​	**Teams:** link actions permissions that the credential will be allowed to.
 
 **Note:** the token will be created after the credential has been saved.
 
 ### 1.2 Installation {#installation}
 
-To begin installing Edge Node, you must download the Edge Orchestrator installation binary.
+To install Edge Node, you must download the Edge Orchestrator installation binary.
 
-Check the list of compatible platforms for Azion Edge Node and download:
+Check the list of compatible platforms for Azion Edge Node and download the one of your preference:
 
 | Operating System | Architecture | File                                                         |
 | :------------------ | :---------: | ------------------------------------------------------------ |
@@ -74,47 +77,59 @@ After downloading, you must follow the steps below, in order to install the Edge
 
 ---
 
-## 2. To view {#view}
+## 2. Viewing your nodes {#view}
 
 Whenever the installation code is run for any device and it has been authenticated by the Token, the edge nodes will be listed in [Real-Time Manager](https://manager.azion.com/).
 
-To view the list of edge nodes created for your account, carry out the following steps:
+To view the list of edge nodes created for your account, follow the steps below:
 
 1- Go to [Real-Time Manager](https://manager.azion.com/);
 
-2- In the upper left menu, open the *Edge Orchestration* item and select the *Edge Node* page;
+2- On the top left menu, open the *Edge Orchestration* item and select the *Edge Node* page;
 
-**Note:** The listed items can be verified by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
+**Note:** You can verify the listed items can be verified by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
 
 ---
 
-## 3. To authorize {#authorize}
+## 3. Authorizing {#authorize}
 
-To begin orchestrating your edge nodes, they will need to have been authorized. To authorize an edge node, the following steps must be carried out:
+You must authorize your edge nodes to begin orchestrating them. To authorize an edge node, follow the steps below:
 
 1- Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
 
 2- Click on the icon (key) and accept the confirmation window.
 
-After authorization, the Edge Node can take up to 10 seconds before services can be orchestrated.
+After the authorization, the Edge Node can take up to 10 seconds before services can be orchestrated.
+
+You can also authorize all the edge nodes you want at once. To start using  this option, follow the steps below:
+
+1 - Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+
+2 - Select the items you want to authorize or, if you prefer, select all items by checking the first check box on the left;
+
+3 - On the top right corner, click on the Actions button and select Authorize.
+
+4 - A message to confirm your action will be shown, click on the Confirm button to save your selection.
+
+5 - You will see the following confirmation message:  "X nodes were successfully authorized!"
 
 ---
 
 ## 4. Services {#services}
 
-To provision the services registered in your library, carry out the following steps:
+You can provision the services registered in your library, carry out the following steps:
 
 1- Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
 
 2- Select the Edge Node that you want to configure;
 
-3- Open the "Services" tab and click on the "Add Service” button;
+3- Open the *"Services"* tab and click on the *"Add Service”* button;
 
-4- Link it to the service you want and, if necessary, configure the variables it will be executed under.
+4- Link it to the service you want and, if necessary, cou can configure the variables required by the service.
 
 Services that are due to be orchestrated via Edge Node, must be registered in *Edge Libraries> Edge Services* and marked as active.
 
-Once it has provided the service, Edge Node can begin orchestrating it based on resource priorities. You can monitor the service installation process via logs in the Edge Orchestrator agent.
+Once the service is provided, Edge Node can begin orchestrating it based on resource priorities. You can monitor the service installation process via logs in the Edge Orchestrator agent.
 
 ---
 
@@ -124,14 +139,14 @@ The Edge Orchestrator agent has additional commands and options to make it easie
 
 |                      | Description                                                  |
 | :------------------- | :----------------------------------------------------------- |
-| --debug or -d        | Sets the agent logs to debug mode.                           |
-| --help or -h         | Help on the commands that the agent can execute.             |
-| install              | Install the agent to the client’s device. Copies the binary to the installation location; adds the Edge Orchestrator agent to the device's service manager (if any) and; sets up credentials to authenticate the Edge Node. |
-| start [--foreground] | Initializes the Edge Orchestrator agent through the device's service manager.<br /> **Note:** The foreground option is used to run it in the foreground. |
-| status               | Reports on the status of the execution of the Edge Orchestrator agent. |
+| --debug or -d        | It sets the agent logs to debug mode.                           |
+| --help or -h         | It helps on the commands that the agent can execute.             |
+| install              | It installs the agent to the client’s device, copies the binary to the installation location; adds the Edge Orchestrator agent to the device's service manager (if any) and; sets up credentials to authenticate the Edge Node. |
+| start [--foreground] | It initializes the Edge Orchestrator agent through the device's service manager.<br /> **Note:** The foreground option is used to run it in the foreground. |
+| status               | It reports on the status of the execution of the Edge Orchestrator agent. |
 | stop                 | This is to run the Edge Orchestrator agent through the device's service manager. |
-| uninstall            | Uninstall the agent from the client’s device. Removes the binary from the installation location; removes the Edge Orchestrator agent from the device's service manager (if any).<br />**Note:** authentication credentials remain on the device and can be removed using the Azion control panel. |
-| --version or -v      | Display the installed version of the agent.                  |
+| uninstall            | It uninstalls the agent from the client’s device, removes the binary from the installation location; removes the Edge Orchestrator agent from the device's service manager (if any).<br />**Note:** authentication credentials remain on the device and can be removed using the Azion control panel. |
+| --version or -v      | It displays the installed version of the agent.                  |
 
 ---
 

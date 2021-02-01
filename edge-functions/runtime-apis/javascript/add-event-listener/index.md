@@ -4,7 +4,7 @@
 
 ### How it works
 
-The _addEventListener_ function defines the trigger for the execution of JavaScript code, receiving the request data. The event listener type is `fetch` and gets the [fetchevent](https://www.azion.com/pt-br/documentacao/produtos/edge-functions/runtime-apis/javascript/fetch-event/).
+The _addEventListener_ function defines the trigger for the execution of JavaScript code, receiving the request data. The event listener type is `fetch` and gets the [fetchevent](https://www.azion.com/en/documentation/products/edge-functions/runtime-apis/javascript/fetch-event/).
 
 ### Sintax
 

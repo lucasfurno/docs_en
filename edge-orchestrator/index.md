@@ -17,7 +17,7 @@ Azion Edge Orchestrator is an end-to-end encrypted orchestration service with cl
 
 > 1. [How it works](#how-it-works)
 > 2. [Edge Orchestrator modules](#modules)
-> 5. [Supporting documentation](#support-documentation)
+> 3. [Supporting documentation](#support-documentation)
 
 ---
 

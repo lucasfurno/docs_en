@@ -50,29 +50,29 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
     "results": [
         {
             "id": 1528990724,
-            "name": "Edge Cloud Storage",
+            "name": "Edge Cloud Storage Google",
             "active": true,
             "origins": [
                 {
                     "name": "Default Origin",
-                    "origin_type": "cloud_storage",
+                    "origin_type": "single_origin",
                     "origin_id": "c2434ff9-b9a9-4937-8721-60d58ac54976"
                 }
             ]
         },
         {
             "id": 1528990725,
-            "name": "Edge Media Packager",
+            "name": "Edge Application",
             "active": true,
             "origins": [
                 {
                     "name": "Default Origin",
-                    "origin_type": "media_packager",
+                    "origin_type": "single_origin",
                     "origin_id": "25fe91c0-1a2c-4ce1-9e3f-a109d2cd3204"
                 },
                 {
                     "name": "Z1",
-                    "origin_type": "media_packager",
+                    "origin_type": "single_origin",
                     "origin_id": "0924c04d-b00a-4653-8575-92053e0d0e2f"
                 }
             ]
@@ -89,7 +89,7 @@ Returns details of an Edge Application. The information returned by this command
 
 #### **GET** */edge_applications/:id*
 
-Permission necessary: **View Security Settings**
+Permission necessary: ***View Security Settings***
 
 **Mandatory parameters**
 
@@ -113,18 +113,15 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 {
     "results": {
         "id": 1528990724,
-        "name": "Edge Cloud Storage",
+        "name": "Edge Application",
         "delivery_protocol": "http",
         "active": true,
         "application_acceleration": false,
         "caching": true,
         "device_detection": false,
-        "edge_firewall": false,
         "edge_functions": false,
         "image_optimization": false,
-        "load_balancer": false,
-        "raw_logs": false,
-        "web_application_firewall": false
+        "load_balancer": false
     },
     "schema_version": 3
 }
@@ -216,12 +213,9 @@ Content-Type: application/json
         "application_acceleration": false,
         "caching": true,
         "device_detection": false,
-        "edge_firewall": false,
         "edge_functions": false,
         "image_optimization": false,
-        "load_balancer": false,
-        "raw_logs": false,
-        "web_application_firewall": false
+        "load_balancer": false
     },
     "schema_version": 3
 }
@@ -263,12 +257,9 @@ Content-Type: application/json
     "application_acceleration": true,
     "caching": true,
     "device_detection": false,
-    "edge_firewall": false,
     "edge_functions": false,
     "image_optimization": false,
-    "load_balancer": false,
-    "raw_logs": false,
-    "web_application_firewall": false
+    "load_balancer": false
 }
 ~~~
 
@@ -284,12 +275,9 @@ Content-Type: application/json
         "application_acceleration": true,
         "caching": true,
         "device_detection": false,
-        "edge_firewall": false,
         "edge_functions": false,
         "image_optimization": false,
-        "load_balancer": false,
-        "raw_logs": false,
-        "web_application_firewall": false
+        "load_balancer": false
     },
     "schema_version": 3
 }
@@ -323,9 +311,9 @@ Content-Type: application/json
 
 ~~~
 {
-    "edge_firewall": true,
+    "application_acceleration": true,
     "edge_functions": true,
-    "web_application_firewall": true
+    "image_optimization": false
 }
 ~~~
 
@@ -341,12 +329,9 @@ Content-Type: application/json
         "application_acceleration": true,
         "caching": true,
         "device_detection": false,
-        "edge_firewall": true,
         "edge_functions": true,
         "image_optimization": false,
-        "load_balancer": false,
-        "raw_logs": false,
-        "web_application_firewall": true
+        "load_balancer": false
     },
     "schema_version": 3
 }
