@@ -7,7 +7,7 @@ This page lists the latest changes to Azion products and services. Here you will
 ---
 
 
-**Jan/2020**
+**Jan/2021**
 
 * ..
 
