@@ -6,6 +6,13 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+
+**Jan/2020**
+
+* ..
+
+---
+
 **Dec/2020**
 
 * [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
