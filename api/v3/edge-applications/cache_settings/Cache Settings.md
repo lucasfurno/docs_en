@@ -83,7 +83,7 @@ Results in details of Cache Settings. The information resulted by this return re
 
 #### **GET** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
-Necessary permission: ***View Edge Application***
+Necessary permission: **View Edge Application**
 
 **Mandatory parameters**
 
@@ -154,6 +154,8 @@ The API does not require confirmation in order to run this instruction.
 
 Necessary permission: **Edit Edge Application**
 
+**Mandatory parameters**
+
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
@@ -185,6 +187,8 @@ This return enables the creation of new Cache Settings within an Edge Applicatio
 #### **POST** */edge_applications/:edge_application_id:/cache_settings*
 
 Necessary permission: **Edit Security Settings**
+
+**Mandatory parameters**
 
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
@@ -266,6 +270,8 @@ If you only want to update some fields, without changing the values of the rest,
 
 Necessary Permission: **Edit Edge Application**
 
+**Mandatory parameters**
+
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
@@ -336,13 +342,15 @@ Content-Type: application/json
 
 ---
 
-## 6. Updating the fields Cache Settings {#updating-the-fields-of-cache-settings}
+## 6. Updating the fields of Cache Settings {#updating-the-fields-of-cache-settings}
 
 This return updates one or more fields of a cache setting, retaining the value of those fields not included.
 
 #### **PATCH** */edge_applications/:edge_application_id:/cache_settings/:cache_settings_id:*
 
 Necessary permission: **Edit Edge Application**
+
+**Mandatory parameters**
 
 | Parameter                   | Description                                                  | Type   | Type of Data                            |
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
