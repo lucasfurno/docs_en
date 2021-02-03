@@ -7,7 +7,7 @@ Azion Edge Node enables you to create your own edge infrastructure, allowing you
 It is an open software and can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
 
 > 1. [Installing](#install)
-> 2. [Viewing your nodes](#View)
+> 2. [Viewing your nodes](#Viewing-nodes)
 > 3. [Authorizing](#authorize)
 > 5. [Services](#services)
 > 5. [Agent commands and options](#commands)
@@ -77,7 +77,7 @@ After downloading, you must follow the steps below, in order to install the Edge
 
 ---
 
-## 2. Viewing your nodes {#view}
+## 2. Viewing your nodes {#Viewing-nodes}
 
 Whenever the installation code is run for any device and it has been authenticated by the Token, the edge nodes will be listed in [Real-Time Manager](https://manager.azion.com/).
 
