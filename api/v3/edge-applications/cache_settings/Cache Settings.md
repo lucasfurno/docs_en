@@ -357,7 +357,7 @@ Necessary permission: **Edit Edge Application**
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
 | Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
 | Content-Type *(mandatory)*  | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
-| :id *(mandatory)*           | The Id of the Edge Application to be overwritten.            | path   | number                                  |
+| :id *(mandatory)*           | The Id of the Cache Settings to be overwritten.            | path   | number                                  |
 
 
 
