@@ -14,6 +14,10 @@ This page lists the latest changes to Azion products and services. Here you will
 * Improvements in Edge Services and Edge Nodes UIs.
 * Now users can modify Edge Services that are running on Edge Nodes.
 * Users can create their own credentials.
+* New feature Slice configuration on Edge Application.
+* Bugfix for resource limit on Network List API.
+* Bugfix on exception when change name inside of rules Engine - Edge Firewall and Edge Application.
+* Bugfix treatment on RTM for Duplicate Behaviors on Rules Engine - Edge Firewall.
 
 ---
 
