@@ -11,6 +11,9 @@ This page lists the latest changes to Azion products and services. Here you will
 
 * New layout in Real-Time Manager emails.
 * Bugfix - updated Link "Content Delivery" to "Real-Time Metrics".
+* Improvements in Edge Services and Edge Nodes UIs.
+* Now users can modify Edge Services that are running on Edge Nodes.
+* Users can create their own credentials.
 
 ---
 
