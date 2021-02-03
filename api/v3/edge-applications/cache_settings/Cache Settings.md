@@ -91,7 +91,7 @@ Necessary permission: **View Edge Application**
 | --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
 | Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| :id *(mandatory)*           | The id of the edge application that you plan to query.       | path   | number                                  |
+| :id *(mandatory)*           | The id of the cache settings that you plan to query.       | path   | number                                  |
 
 
 
