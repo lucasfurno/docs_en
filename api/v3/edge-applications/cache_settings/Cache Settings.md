@@ -229,7 +229,7 @@ Content-Type: application/json
 }
 ~~~
 
-**Response Example **
+**Response Example**
 
 ~~~
 {
