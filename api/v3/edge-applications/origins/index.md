@@ -1,6 +1,6 @@
 # **Origins**
 
-[Edit on GitHub  <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v3/edge-applications/index.md)
+[Edit on GitHub  <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v3/edge-applications/origins/index.md)
 
 With the API of Origins you can check, remove or update existing settings, besides creating new ones.
 
@@ -17,9 +17,9 @@ With the API of Origins you can check, remove or update existing settings, besid
 
 This return results in a list of Origins.
 
-#### **GET** */edge_applications*
+#### **GET** */edge_applications/:edge_application_id:/origins*
 
-Necessary permission: **View Security Settings**
+Necessary permission: **View Edge Application**
 
 **Mandatory parameters**
 
@@ -33,7 +33,7 @@ Necessary permission: **View Security Settings**
 **Request Example**
 
 ~~~
-GET /edge_applications 
+GET /edge_applications/06101992/origins 
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 ~~~
@@ -42,45 +42,37 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ~~~
 {
-    "count": 36,
-    "total_pages": 18,
+    "count": 5,
+    "total_pages": 1,
     "schema_version": 3,
     "links": {
         "previous": null,
-        "next": "https://api.azionapi.net/edge_applications?page=2&page_size=2"
+        "next": null
     },
     "results": [
         {
-            "id": 1528990724,
-            "name": "Edge Cloud Storage Google",
-            "active": true,
-            "origins": [
+            "origin_id": "235e8fac-8619-453d-83ef-240ffc3da70e",
+            "name": "Origins test",
+            "origin_type": "single_origin",
+            "addresses": [
                 {
-                    "name": "Default Origin",
-                    "origin_type": "single_origin",
-                    "origin_id": "c2434ff9-b9a9-4937-8721-60d58ac54976"
+                    "address": "httpbin.org",
+                    "weight": null,
+                    "server_role": "primary",
+                    "is_active": true
                 }
-            ]
-        },
-        {
-            "id": 1528990725,
-            "name": "Edge Application",
-            "active": true,
-            "origins": [
-                {
-                    "name": "Default Origin",
-                    "origin_type": "single_origin",
-                    "origin_id": "25fe91c0-1a2c-4ce1-9e3f-a109d2cd3204"
-                },
-                {
-                    "name": "Z1",
-                    "origin_type": "single_origin",
-                    "origin_id": "0924c04d-b00a-4653-8575-92053e0d0e2f"
-                }
-            ]
+            ],
+            "origin_protocol_policy": "http",
+            "host_header": "${host}",
+            "method": "",
+            "origin_path": "/requests",
+            "connection_timeout": 60,
+            "timeout_between_bytes": 120,
+            "hmac_authentication": false,
+            "hmac_region_name": "",
+            "hmac_access_key": "",
+            "hmac_secret_key": ""
         }
-    ]
-}
 ~~~
 
 ---
@@ -89,9 +81,9 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 This return provides details of Origins. The information returned by this command refers to the Origins of an Application.
 
-#### **GET** */edge_applications/:id*
+#### **GET** */edge_applications/:edge_application_id:/origins/:origin_id:*
 
-Necessary permission: ***View Security Settings***
+Necessary permission: **View Edge Application**
 
 **Mandatory parameters**
 
@@ -99,14 +91,14 @@ Necessary permission: ***View Security Settings***
 |-----------|-----------|------|--------------|
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string |
 | Accept *(mandatory)* | Details about the type of return and version | header | string;<br>*application/json;version=3* |
-| :id *(mandatory)* | The id of the edge application that you plan to query. | path | number |
+| :id *(mandatory)* | The id of the Origin that you plan to query. | path | number |
 
 
 
 **Request Example**
 
 ~~~
-GET /edge_applications/1528990724
+GET /edge_applications/06101992/origins/52adb0b2-4b78-474d-93c6-25f5f4320c3d
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 ~~~
@@ -116,16 +108,27 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 ~~~
 {
     "results": {
-        "id": 1528990724,
-        "name": "Edge Application",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": false,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": false,
-        "image_optimization": false,
-        "load_balancer": false
+        "origin_id": "52adb0b2-4b78-474d-93c6-25f5f4320c3d",
+        "name": "Default Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "s3.amazonaws.com",
+                "weight": null,
+                "server_role": "primary",
+                "is_active": true
+            }
+        ],
+        "origin_protocol_policy": "preserve",
+        "host_header": "s3.amazonaws.com",
+        "method": "",
+        "origin_path": "/azion-hmac-test",
+        "connection_timeout": 60,
+        "timeout_between_bytes": 120,
+        "hmac_authentication": true,
+        "hmac_region_name": "sa-east-1",
+        "hmac_access_key": "AKIAV2SSWEBHTDH23BW2",
+        "hmac_secret_key": "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"
     },
     "schema_version": 3
 }
@@ -141,9 +144,9 @@ All information associated with this Origin will be removed.
 
 The API does not require confirmation in order to run this instruction.
 
-#### **DELETE** */edge_applications/:id*
+#### **DELETE** */edge_applications/:edge_application_id:/origins/:origin_id:*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
@@ -151,14 +154,14 @@ Necessary permission: **Edit Security Settings**
 |-----------|-----------|------|--------------|
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string |
 | Accept *(mandatory)* | Details about the type of return and version | header | string;<br>*application/json;version=3* |
-| :id *(mandatory)* | The id of the edge application that you plan to delete. | path | number |
+| :id *(mandatory)* | The id of the Origin that you plan to delete. | path | number |
 
 
 
 **Request Example**
 
 ~~~
-DELETE /edge_applications/1548170897
+DELETE /edge_applications/06101992/origins/235e8fac-8619-453d-83ef-240ffc3da70e
 Accept: application/json; version=3
 Authorization: token 2909f3932069047f4736dc87e72baaddd19c9f75
 ~~~
@@ -175,9 +178,9 @@ HTTP/2 204
 
 This return enables the creation of Origins.
 
-#### **POST** */edge_applications*
+#### **POST** */edge_applications/:edge_application_id:/origins*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
@@ -192,7 +195,7 @@ Necessary permission: **Edit Security Settings**
 **Request Example**
 
 ~~~
-POST /edge_applications
+POST /edge_applications/06101992/origins
 Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 Content-Type: application/json
@@ -200,16 +203,20 @@ Content-Type: application/json
 
 ~~~
 {
-    "name": "Nova Edge Application",
-    "delivery_protocol": "http",
-    "origin_type": "single_origin",
-    "address": "www.new.api",
-    "origin_protocol_policy": "preserve",
-    "host_header": "www.new.api",
-    "browser_cache_settings": "override",
-    "browser_cache_settings_maximum_ttl": 20,
-    "cdn_cache_settings": "honor",
-    "cdn_cache_settings_maximum_ttl": 60
+        "name": "Create New Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org"
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "origin_path": "/requests",
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
 }
 ~~~
 
@@ -218,16 +225,27 @@ Content-Type: application/json
 ~~~
 {
     "results": {
-        "id": 1555421179,
-        "name": "Nova Edge Application",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": false,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": false,
-        "image_optimization": false,
-        "load_balancer": false
+        "origin_id": "1ba5d8f8-12c8-4174-b814-5a02a62a3ad9",
+        "name": "Create New Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org",
+                "weight": null,
+                "server_role": "primary",
+                "is_active": true
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "method": "",
+        "origin_path": "/requests",
+        "connection_timeout": 60,
+        "timeout_between_bytes": 120,
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
     },
     "schema_version": 3
 }
@@ -241,9 +259,9 @@ This command overwrites all the fields of Origins, retaining the id.
 
 If you only want to update some fields, without changing the values of the rest, consider using the PATCH method, instead of PUT.
 
-#### **PUT** */edge_applications/:id*
+#### **PUT** */edge_applications/:edge_application_id:/origins/:origin_id:*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
@@ -252,14 +270,14 @@ Necessary permission: **Edit Security Settings**
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string |
 | Accept *(mandatory)* | Details about the type of return and version | header | string;<br>*application/json;version=3* |
 | Content-Type *(mandatory)* | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string |
-| :id *(mandatory)* | The Id of the Edge Application to be overwritten. | path | number |
+| :id *(mandatory)* | The Id of the Origin to be overwritten. | path | number |
 
 
 
 **Request Example**
 
 ~~~
-PUT /edge_applications/1555421177
+PUT /edge_applications/06101992/origins/52adb0b2-4b78-474d-93c6-25f5f4320c3d
 Accept: application/json; version=3
 Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f24
 Content-Type: application/json
@@ -267,15 +285,20 @@ Content-Type: application/json
 
 ~~~
 {
-	"name": "Edge application alterada pela API",
-    "delivery_protocol": "http",
-    "active": true,
-    "application_acceleration": true,
-    "caching": true,
-    "device_detection": false,
-    "edge_functions": false,
-    "image_optimization": false,
-    "load_balancer": false
+        "name": "Overwrite Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org"
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "origin_path": "/anything",
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
 }
 ~~~
 
@@ -284,16 +307,27 @@ Content-Type: application/json
 ~~~
 {
     "results": {
-        "id": 1555421177,
-        "name": "Edge application alterada pela API",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": true,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": false,
-        "image_optimization": false,
-        "load_balancer": false
+        "origin_id": "52adb0b2-4b78-474d-93c6-25f5f4320c3d",
+        "name": "Overwrite Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org",
+                "weight": null,
+                "server_role": "primary",
+                "is_active": true
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "method": "",
+        "origin_path": "/anything",
+        "connection_timeout": 60,
+        "timeout_between_bytes": 120,
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
     },
     "schema_version": 3
 }
@@ -305,9 +339,9 @@ Content-Type: application/json
 
 This return updates one or more fields of Origins, retaining the value of those fields not included.
 
-#### **PATCH** */edge_applications/:id*
+#### **PATCH** */edge_applications/:edge_application_id:/origins/:origin_id:*
 
-Necessary permission: **Edit Security Settings**
+Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
@@ -316,14 +350,14 @@ Necessary permission: **Edit Security Settings**
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string |
 | Accept *(mandatory)* | Details about the type of return and version | header | string;<br>*application/json;version=3* |
 | Content-Type *(mandatory)* | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string |
-| :id *(mandatory)* | The Id of the Edge Application to be overwritten. | path | number |
+| :id *(mandatory)* | The Id of the Origin to be overwritten. | path | number |
 
 
 
 **Request Example**
 
 ~~~
-PATCH /edge_applications/1555421177 
+PATCH /edge_applications/06101992/origins/52adb0b2-4b78-474d-93c6-25f5f4320c3d
 Accept: application/json; version=3
 Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f24
 Content-Type: application/json
@@ -331,9 +365,20 @@ Content-Type: application/json
 
 ~~~
 {
-    "application_acceleration": true,
-    "edge_functions": true,
-    "image_optimization": false
+        "name": "Update Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org"
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "origin_path": "/anything",
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
 }
 ~~~
 
@@ -342,16 +387,27 @@ Content-Type: application/json
 ~~~
 {
     "results": {
-        "id": 1555421177,
-        "name": "Edge application alterada pela API",
-        "delivery_protocol": "http",
-        "active": true,
-        "application_acceleration": true,
-        "caching": true,
-        "device_detection": false,
-        "edge_functions": true,
-        "image_optimization": false,
-        "load_balancer": false
+        "origin_id": "52adb0b2-4b78-474d-93c6-25f5f4320c3d",
+        "name": "Update Origin",
+        "origin_type": "single_origin",
+        "addresses": [
+            {
+                "address": "httpbin.org",
+                "weight": null,
+                "server_role": "primary",
+                "is_active": true
+            }
+        ],
+        "origin_protocol_policy": "http",
+        "host_header": "${host}",
+        "method": "",
+        "origin_path": "/anything",
+        "connection_timeout": 60,
+        "timeout_between_bytes": 120,
+        "hmac_authentication": false,
+        "hmac_region_name": "",
+        "hmac_access_key": "",
+        "hmac_secret_key": ""
     },
     "schema_version": 3
 }
