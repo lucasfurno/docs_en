@@ -42,7 +42,7 @@ The template represents a selection of variables to be collected and a format fo
 
 * **Custom Template:** Choose the *Custom Template* option to create your own customized *Data Set*, in JSON format, and select the variables that best suit your needs. 
 
-  **Learn more:** In **[Fields](https://www.azion.com/en/documentation/products/data-streaming/fields/)** you'll find a description of all the available variables. Give it a try.
+  > **Learn more:** In **[Fields](https://www.azion.com/en/documentation/products/data-streaming/fields/)** you'll find a description of all the available variables. Give it a try.
 
 Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever occurs first.
 
