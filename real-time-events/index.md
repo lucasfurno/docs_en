@@ -2,28 +2,142 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/real-time-events/index.md)
 
-Real-Time Events is an Edge Orchestration module that allows you to view data on your Azion products and services in real time.
-You can use Real-Time Events to perform complex searches and explore your application data on Azion, which are organized in Data Origins.
 
-> 1. [Data Origins](#DataSources)
+
+Real-Time Events is an Edge Orchestration module that allows you to display data from your Azion Products and Services in real time.
+
+You can use Real-Time Events to perform complex searches and explore data from your Azion applications, which are organized in Data Sources.
+
+To access Real-Time Events, open [Real-Time Manager](https://manager.azion.com/). Click on the top left menu, scroll down to Edge Analytics and click on *Real-Time Events*. You will find the following fields:
+
+> 1. [Data Sources](#DataSources)
 > 2. [Time Filter](#TimeFilter)
 > 3. [Search](#Search)
 > 4. [Refresh](#Refresh)
 
 ---
 
-## 1. Data Origins {#DataSources}
+## 1. Data Sources {#DataSources}
 
-The first step for you to explore your data is choosing the Data Origin, which represents the Azion product or service that generated the events.
+The first step  to explore your data is choosing the Data Source, which represents the Azion product or service that generated the events.
 
-When submitting a search, the Data Origin represents the index from where you want to collect data.
+When submitting a search, the Data Source represents the index from where you want to collect data.
 
-Azion makes available the following Data Origins:
+Azion provides the following Data Sources:
 
-*   **Edge Applications:** presents the data of requests made to your Edge Applications at Azion.
-*   **WAF Events:** if you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data origin will present the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
-*   **Edge Pulse:** if you are using Edge Pulse on your pages, this data origin will present their performance data, measured from the user's browser (RUM).
-*   **Data Streaming:** if you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/produtos/data-streaming/) product, this data origin will present the event records of sending the data to your endpoints.
+*   **Edge Applications:** It displays the data of requests made to your Edge Applications at Azion.
+*   **WAF Events:** if you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data source will display the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
+*   **Data Streaming:** if you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/produtos/data-streaming/) product, this data source will display the event records of sending the data to your endpoints.
+*   **Edge Pulse:**  If you are using the Azion Pulse in your Edge Applications, the Edge Pulse data source will display the performance data measured from the user's browser (RUM).
+
+### Fields 
+
+From the filters returned in the data sources above you can see the following fields:
+
+#### *Edge Application*
+
+| Variables                            | Description                                                  |
+| ------------------------------------ | ------------------------------------------------------------ |
+| **$bytes_sent**                      | Bytes sent to the user, including header and body.           |
+| **$client**                          | Unique Azion customer identifier.                            |
+| **$configuration**                   | Unique Azion configuration identifier.                       |
+| **$country**                         | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| **$host**                            | Host information sent on the request line; or HTTP header Host field. |
+| **$http_referrer**                   | Information from the last page the user was on before making the request. |
+| **$http_user_agent**                 | The identification of the application that made the request, for example: Mozilla/5.0 (Windows NT 10.0; Win64; x64). |
+| **$remote_addr**                     | IP address of the request.                                   |
+| **$remote_port**                     | Remote port of the request.                                  |
+| **$request_length**                  | Request size, including request line, headers and body.      |
+| **$request_method**                  | Request method; usually “GET” or “POST”.                     |
+| **$request_time**                    | Request processing time with resolution in milliseconds.     |
+| **$request_uri**                     | URI of the request made by the user, without the Host and Protocol information. |
+| **$requestPath**                     | The request URI without Query String, Host and Protocol information. |
+| **$requestQuery**                    | Only the URI parameters of the request.                      |
+| **$scheme**                          | Request scheme “http” or “https.                             |
+| **$sent_http_content_type**          | “Content-Type” header sent in the origin’s response.         |
+| **$sent_http_x_original_image_size** | “X-Original-Image-Size” header sent in the origin’s response (used by IMS to inform original image size). |
+| **$server_protocol**                 | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
+| **$ssl_cipher**                      | Cipher string used to establish SSL connection.              |
+| **$ssl_protocol**                    | The protocol for an established SSL connection, for example “TLS v1.2”. |
+| **$state**                           | Name of the remote client’s state, for example: “RS”, “SP”. Geolocation detection of IP address. |
+| **$status**                          | The status code of the request, for example: 200.            |
+| **$tcpinfo_rtt**                     | The RTT time in microseconds measured by Edge for the user.  |
+| **$time**                            | Timestamp of the start of the request.                       |
+| **$upstream_bytes_received**         | Number of bytes received by the origin’s Edge, if the content is not cached. |
+| **$upstream_cache_status**           | Status of the Edge cache. It can assume the values “MISS”, “BYPASS”, “EXPIRED”, “STALE”, “UPDATING”, “REVALIDATED” or “HIT”. |
+| **$upstream_connect_time**           | Time in milliseconds for Edge to establish a connection with the origin (“0” in case of KeepAlive and “-“ in case of cache). |
+| **$upstream_header_time**            | Time in milliseconds for Edge to receive the origin’s response headers ( “-“ in case of cache). |
+| **$upstream_response_time**          | Time in milliseconds for Edge to receive all of the response from the origin, including headers and body (“-“ in case of cache). |
+| **$upstream_status**                 | HTTP Status Code of the origin (“-“ in case of cache).       |
+| **$version**                         | The version of Azion Log used.                               |
+| **$waf_attack_action**               | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
+| **$waf_attack_family**               | It informs the classification of the WAF infraction detected in the request (SQL, XSS, TRAVERSAL, among others) |
+
+#### *WAF*
+
+| Variable               | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| **$blocked**           | It informs whether the WAF blocked the action or not; 0 when not blocked and 1 when blocked. When in “Learning Mode”, it will not be blocked, regardless of the return. |
+| **$client**            | Unique Azion customer identifier.                            |
+| **$configuration**     | Unique Azion configuration identifier.                       |
+| **$country**           | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| **$headers**           | Request headers analyzed by WAF.                             |
+| **$host**              | Host information sent on the request line; or Host field of the HTTP header. |
+| **$remote_addr**       | IP address of the request.                                   |
+| **$requestPath**       | The request URI without Query String, Host and Protocol information. |
+| **$requestQuery**      | Only the URI parameters of the request.                      |
+| **$server_protocol**   | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
+| **$time**              | Timestamp of the start of the request.                       |
+| **$version**           | The version of Azion Log used.                               |
+| **$waf_args**          | The request arguments.                                       |
+| **$waf_attack_action** | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
+| **$waf_attack_family** | It informs the classification of the WAF infraction detected in the request (SQL, XSS, TRAVERSAL, among others) |
+| **$waf_learning**      | It informs if WAF is in learning mode, usually 0 or 1.       |
+| **$waf_match**         | List of infractions found in the request, it is formed by key-value elements; the key refers to the type of violation detected; the value shows the string that generated the infraction. |
+| **$waf_score**         | It reports the score that will be increased in case of match. |
+| **$waf_server**        | Hostname used in the request.                                |
+| **$waf_uri**           | URI used in the request.                                     |
+
+#### *Data Streaming*
+
+| Variable            | Description                                                 |
+| ------------------- | ----------------------------------------------------------- |
+| **$version**        | The version of Azion Log used.                              |
+| **$client_id**      | Unique Azion customer identifier.                           |
+| **$endpoint**       | Application access communication point.                     |
+| **$endpoint_type**  | Application access communication point type.                |
+| **$global_id**      | Define a unique identifier (ID).                            |
+| **$host.name**      | Hostname of the current URL.                                |
+| **$status**         | The status code of the request, for example: 200.           |
+| **$streamed_bytes** | It shows the data downloaded from the main web stream unit. |
+| **$timestamp**      | Timestamp of the start of the request.                      |
+| **$ts**             |                                                             |
+
+#### *Edge Pulse*
+
+| Variable                        | Description                                                  |
+| ------------------------------- | ------------------------------------------------------------ |
+| **$version**                    | The version of Azion Log used.                               |
+| **$hostname**                   | Hostname of the current URL.                                 |
+| **$locationHref**               | It returns the complete URL of the current page.             |
+| **$navigation.contentDownload** | Time used to download the content.                           |
+| **$navigation.dns**             | DNS resolution time.                                         |
+| **$navigation.networkDuration** | Duration without query browser waiting.                      |
+| **$navigation.PageLoadTime**    | Time from the start of navigation to the full page load.     |
+| **$navigation.redirectCount**   | It returns the number of redirects since the last navigation without redirection in the context of the current navigation. |
+| **$navigation.renderTime**      | Time the browser was rendered after browsing.                |
+| **$navigation.ssl**             | Standard protocol used to maintain a secure traffic connection. |
+| **$navigation.tcp**             | Internet protocol that returns the data that makes up the page. |
+| **$navigation.ttfb**            | Time until the arrival of the first byte of the requested page. |
+| **$navigation.type**            | It returns the type of navigation without redirection.       |
+| **$navigation.typeBackForward** | Type of navigation through the session history.              |
+| **$navigation.typeNavigate**    | It returns the type of the last navigation without redirection, for example: by clicking on a link, entering the URL in the address bar or submitting a form. |
+| **$navigation.typeReload**      | Type of navigation for the reload operation, that is, when the page was reloaded. |
+| **$navigation.typeReserved**    | Any type of navigation not defined by those previously mentioned (typeNavigate, typeReload). |
+| **$networkApi.downlink**        | It returns the average volume of data received (Mb/s).       |
+| **$referrer**                   | It returns the previous url to the current page. That is, the url by which the user arrived at “locationHref”. If the access originated directly from the current page (not through a link, but for example, through a bookmark), its value will be an empty string. It does not provide DOM access to the reference page. |
+| **$timestamp**                  |                                                              |
+| **$userAgent**                  | It identifies the client UA browser.                         |
 
 ---
 
