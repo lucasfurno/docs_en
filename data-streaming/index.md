@@ -40,7 +40,7 @@ The first step is choosing the Data Source, which represents the application at 
 
 The template represents a selection of variables to be collected and a format for transfer. You can select templates created and maintained by Azion or customize your own selection.
 
-* **Custom Template:** Choose the *Custom Template* option to create your own customized Data Set, in JSON format, and select the variables that best suit your needs. 
+* **Custom Template:** Choose the *Custom Template* option to create your own customized *Data Set*, in JSON format, and select the variables that best suit your needs. 
 
   **Learn more:** In **[Fields](https://www.azion.com/en/documentation/products/data-streaming/fields/)** you'll find a description of all the available variables. Give it a try.
 
@@ -126,7 +126,7 @@ You will find the following buttons at the bottom of the screen:
 
 * **Active:** Turn on the *Active* button to enable your settings on the system. 
 
-* **Cancel:** With this option, you return to the Data Streaming home page, discarding your edits. 
+* **Cancel:** With this option, you return to the Data Streaming home page, also discard your edits. 
 
 * **Save:** Once your selections are complete, save your settings by clicking the *Save* button. 
 
