@@ -28,7 +28,7 @@ Now enjoy real-time data integration. Configure your Data Streaming according to
 
 ## 2. Selecting Data Sources {#selecting-data-sources}
 
-The first step is choosing the Data Source, which represents the application at Azion that generated the event logs. For doing so, you must select where your data will be collected from. You have the following options:
+The first step is choosing the Data Source, which represents the application at Azion that generated the event logs. By doing so, you must select where your data will be collected from. You have the following options:
 
 
 * **Edge Applications**: requests from your users to your Edge Applications at Azion.
