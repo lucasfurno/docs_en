@@ -4,11 +4,11 @@
 
 
 
-Real-Time Events is an Edge Orchestration module that allows you to display data from your Azion Products and Services in real time.
+Real-Time Events is an Edge Analytics module that allows you to display data from your Azion Products and Services in real time.
 
 You can use Real-Time Events to perform complex searches and explore data from your Azion applications, which are organized in Data Sources.
 
-To access Real-Time Events, open [Real-Time Manager](https://manager.azion.com/). Click on the top left menu, scroll down to Edge Analytics and click on *Real-Time Events*. You will find the following fields:
+To access Real-Time Events, open [Real-Time Manager](https://manager.azion.com/). Click on the top left menu  and select on *Real-Time Events*. You will find the following fields:
 
 > 1. [Data Sources](#DataSources)
 > 2. [Time Filter](#TimeFilter)
@@ -34,7 +34,7 @@ Azion provides the following Data Sources:
 
 From the filters returned in the data sources above you can see the following fields:
 
-#### *Edge Application*
+#### *Edge Application*s
 
 | Variables                            | Description                                                  |
 | ------------------------------------ | ------------------------------------------------------------ |
@@ -62,7 +62,7 @@ From the filters returned in the data sources above you can see the following fi
 | **$state**                           | Name of the remote client’s state, for example: “RS”, “SP”. Geolocation detection of IP address. |
 | **$status**                          | The status code of the request, for example: 200.            |
 | **$tcpinfo_rtt**                     | The RTT time in microseconds measured by Edge for the user.  |
-| **$time**                            | Timestamp of the start of the request.                       |
+| **$time**                            | Request date and time.                                       |
 | **$upstream_bytes_received**         | Number of bytes received by the origin’s Edge, if the content is not cached. |
 | **$upstream_cache_status**           | Status of the Edge cache. It can assume the values “MISS”, “BYPASS”, “EXPIRED”, “STALE”, “UPDATING”, “REVALIDATED” or “HIT”. |
 | **$upstream_connect_time**           | Time in milliseconds for Edge to establish a connection with the origin (“0” in case of KeepAlive and “-“ in case of cache). |
@@ -103,15 +103,15 @@ From the filters returned in the data sources above you can see the following fi
 | Variable            | Description                                                 |
 | ------------------- | ----------------------------------------------------------- |
 | **$version**        | The version of Azion Log used.                              |
-| **$client_id**      | Unique Azion customer identifier.                           |
+| **$client_id**      | Internal domain identifier.                                 |
 | **$endpoint**       | Application access communication point.                     |
 | **$endpoint_type**  | Application access communication point type.                |
 | **$global_id**      | Define a unique identifier (ID).                            |
 | **$host.name**      | Hostname of the current URL.                                |
 | **$status**         | The status code of the request, for example: 200.           |
 | **$streamed_bytes** | It shows the data downloaded from the main web stream unit. |
-| **$timestamp**      | Timestamp of the start of the request.                      |
-| **$ts**             |                                                             |
+| **$timestamp**      | Request date and time.                                      |
+| **$ts**             | Request date and time.                                      |
 
 #### *Edge Pulse*
 
@@ -136,14 +136,14 @@ From the filters returned in the data sources above you can see the following fi
 | **$navigation.typeReserved**    | Any type of navigation not defined by those previously mentioned (typeNavigate, typeReload). |
 | **$networkApi.downlink**        | It returns the average volume of data received (Mb/s).       |
 | **$referrer**                   | It returns the previous url to the current page. That is, the url by which the user arrived at “locationHref”. If the access originated directly from the current page (not through a link, but for example, through a bookmark), its value will be an empty string. It does not provide DOM access to the reference page. |
-| **$timestamp**                  |                                                              |
+| **$timestamp**                  | Request date and time.                                       |
 | **$userAgent**                  | It identifies the client UA browser.                         |
 
 ---
 
 ## 2. Time Filter {#TimeFilter}
 
-Real-Time Events keeps the events from the last 24 hours for you and you can choose to filter only the most recent events. The Time Filter restricts the event search result, and is selected by default for Last 15 minutes, but you can change the scope of the search by selecting:
+Real-Time Events keeps the events from the last 3 days. The Time Filter allows you to refine the event search result, and is selected by default for Last 15 minutes, but you can change the scope of the search  by selecting:
 
 * Last 15 minutes
 * Last 30 minutes
