@@ -6,7 +6,7 @@
 
 Real-Time Events is an Edge Analytics module that allows you to display data from your Azion Products and Services in real time.
 
-You can use Real-Time Events to perform complex searches and explore data from your Azion applications, which are organized in Data Sources.
+You can use Real-Time Events to perform complex searches and explore data from your Azion applications.
 
 To access Real-Time Events, open [Real-Time Manager](https://manager.azion.com/). Click on the top left menu  and select on *Real-Time Events*. You will find the following fields:
 
