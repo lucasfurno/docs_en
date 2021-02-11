@@ -70,7 +70,7 @@ It displays the data of requests made to your Edge Applications at Azion.
 
 #### *Data Streaming*
 
-if you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/produtos/data-streaming/) product, this data source will display the event records of sending the data to your endpoints.
+If you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/produtos/data-streaming/) product, this data source will display the event records of sending the data to your endpoints.
 
 | Variable            | Description                                                 |
 | ------------------- | ----------------------------------------------------------- |
@@ -115,7 +115,7 @@ if you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/pro
 
 #### *WAF*
 
-if you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data source will display the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
+If you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data source will display the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
 
 | Variable               | Description                                                  |
 | ---------------------- | ------------------------------------------------------------ |
@@ -168,7 +168,7 @@ Records are indexed as key: value. If you use only one keyword, such as www, you
 
 You can also restrict the search to a particular field, using the notation: *key:value*, such as *status:200*. In this case, you will filter only the records which have a value specified for this key.
 
-You may search for more complex field compositions. Use the notations AND and OR, in the search field to combine the fields, such as **status:200 AND scheme:https**.
+You may search for more complex field compositions. Use the notations AND and OR, in the search field to combine the fields, such as 'status:200 AND scheme:https'. 
 
 ---
 
