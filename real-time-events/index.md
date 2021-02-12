@@ -27,7 +27,7 @@ When submitting a search, the Data Source represents the index from where you wa
 
 Azion provides the following Data Sources:
 
-####*Edge Applications*
+#### *Edge Applications*
 
 It displays the data of requests made to your Edge Applications at Azion.
 
