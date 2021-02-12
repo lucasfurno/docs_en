@@ -30,9 +30,73 @@ Now enjoy real-time data integration. Configure your Data Streaming according to
 
 The first step is choosing the Data Source, which represents the application at Azion that generated the event logs. By doing so, you must select where your data will be collected from. You have the following options:
 
+####*Edge Applications*
 
-* **Edge Applications**: requests from your users to your Edge Applications at Azion.
-* **WAF Events**: if you have contracted the [Web Application Firewall](https://www.azion.com/en/documentation/products/web-application-firewall/) product, the data source WAF Events will present the requests analysed by WAF.
+It displays the data of requests made to your Edge Applications at Azion.
+
+| Variables                            | Description                                                  |
+| ------------------------------------ | ------------------------------------------------------------ |
+| **$bytes_sent**                      | Bytes sent to the user, including header and body.           |
+| **$client**                          | Unique Azion customer identifier.                            |
+| **$configuration**                   | Unique Azion configuration identifier.                       |
+| **$country**                         | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| **$host**                            | Host information sent on the request line; or HTTP header Host field. |
+| **$http_referrer**                   | Information from the last page the user was on before making the request. |
+| **$http_user_agent**                 | The identification of the application that made the request, for example: Mozilla/5.0 (Windows NT 10.0; Win64; x64). |
+| **$remote_addr**                     | IP address of the request.                                   |
+| **$remote_port**                     | Remote port of the request.                                  |
+| **$request_length**                  | Request size, including request line, headers and body.      |
+| **$request_method**                  | Request method; usually “GET” or “POST”.                     |
+| **$request_time**                    | Request processing time with resolution in milliseconds.     |
+| **$request_uri**                     | URI of the request made by the user, without the Host and Protocol information. |
+| **$requestPath**                     | The request URI without Query String, Host and Protocol information. |
+| **$requestQuery**                    | Only the URI parameters of the request.                      |
+| **$scheme**                          | Request scheme “http” or “https".                            |
+| **$sent_http_content_type**          | “Content-Type” header sent in the origin’s response.         |
+| **$sent_http_x_original_image_size** | “X-Original-Image-Size” header sent in the origin’s response (used by IMS to inform original image size). |
+| **$server_protocol**                 | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
+| **$ssl_cipher**                      | Cipher string used to establish SSL connection.              |
+| **$ssl_protocol**                    | The protocol for an established SSL connection, for example “TLS v1.2”. |
+| **$state**                           | Name of the remote client’s state, for example: “RS”, “SP”. <br/>Geolocation detection of IP address. |
+| **$status**                          | The status code of the request, for example: 200.            |
+| **$tcpinfo_rtt**                     | The RTT time in microseconds measured by Edge for the user.  |
+| **$time**                            | Request date and time.                                       |
+| **$upstream_bytes_received**         | Number of bytes received by the origin’s Edge, if the content is not cached. |
+| **$upstream_cache_status**           | Status of the Edge cache. It can assume the values “MISS”, “BYPASS”, “EXPIRED”, “STALE”, “UPDATING”, “REVALIDATED” or “HIT”. |
+| **$upstream_connect_time**           | Time in milliseconds for Edge to establish a connection with the origin (“0” in case of KeepAlive and “-“ in case of cache). |
+| **$upstream_header_time**            | Time in milliseconds for Edge to receive the origin’s response headers ( “-“ in case of cache). |
+| **$upstream_response_time**          | Time in milliseconds for Edge to receive all of the response from the origin, including headers and body (“-“ in case of cache). |
+| **$upstream_status**                 | HTTP Status Code of the origin (“-“ in case of cache).       |
+| **$version**                         | The version of Azion Log used.                               |
+| **$waf_attack_action**               | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
+| **$waf_attack_family**               | It informs the classification of the WAF infraction detected in the request (SQL, XSS, TRAVERSAL, among others). |
+
+#### *WAF*
+
+If you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data source will display the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
+
+| Variable               | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| **$blocked**           | It informs whether the WAF blocked the action or not; 0 when not blocked and 1 when blocked. When in “Learning Mode”, it will not be blocked, regardless of the return. |
+| **$client**            | Unique Azion customer identifier.                            |
+| **$configuration**     | Unique Azion configuration identifier.                       |
+| **$country**           | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| **$headers**           | Request headers analyzed by WAF.                             |
+| **$host**              | Host information sent on the request line; or Host field of the HTTP header. |
+| **$remote_addr**       | IP address of the request.                                   |
+| **$requestPath**       | The request URI without Query String, Host and Protocol information. |
+| **$requestQuery**      | Only the URI parameters of the request.                      |
+| **$server_protocol**   | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
+| **$time**              | Timestamp of the start of the request.                       |
+| **$version**           | The version of Azion Log used.                               |
+| **$waf_args**          | The request arguments.                                       |
+| **$waf_attack_action** | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
+| **$waf_attack_family** | It informs the classification of the WAF infraction detected in the request (SQL, XSS, TRAVERSAL, among others) |
+| **$waf_learning**      | It informs if WAF is in learning mode, usually 0 or 1.       |
+| **$waf_match**         | List of infractions found in the request, it is formed by key-value elements; the key refers to the type of violation detected; the value shows the string that generated the infraction. |
+| **$waf_score**         | It reports the score that will be increased in case of match. |
+| **$waf_server**        | Hostname used in the request.                                |
+| **$waf_uri**           | URI used in the request.                                     |
 
 ---
 
@@ -42,7 +106,7 @@ The template represents a selection of variables to be collected and a format fo
 
 * **Custom Template:** Choose the *Custom Template* option to create your own customized *Data Set*, in JSON format, and select the variables that best suit your needs. 
 
-  > **Learn more:** In **[Fields](https://www.azion.com/en/documentation/products/data-streaming/fields/)** you'll find a description of all the available variables. Give it a try.
+  > **Learn more:** In the Data Sources list shown in item 2,  you'll find a description of all the available variables. Give it a try.
 
 Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever occurs first.
 
