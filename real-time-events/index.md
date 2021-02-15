@@ -72,18 +72,15 @@ It displays the data of requests made to your Edge Applications at Azion.
 
 If you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/produtos/data-streaming/) product, this data source will display the event records of sending the data to your endpoints.
 
-| Variable            | Description                                                 |
-| ------------------- | ----------------------------------------------------------- |
-| **$client_id**      | Internal domain identifier.                                 |
-| **$endpoint**       | Application access communication point.                     |
-| **$endpoint_type**  | Application access communication point type.                |
-| **$global_id**      | Define a unique identifier (ID).                            |
-| **$host.name**      | Hostname of the current URL.                                |
-| **$status**         | The status code of the request, for example: 200.           |
-| **$streamed_bytes** | It shows the data downloaded from the main web stream unit. |
-| **$timestamp**      | Request date and time.                                      |
-| **$ts**             | Request date and time.                                      |
-| **$version**        | The version of Azion Log used.                              |
+| Variable            | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| **$client_id**      | Unique Azion customer identifier.                            |
+| **$endpoint**       | Endpoint used to send data.                                  |
+| **$endpoint_type**  | Endpoint type used to send data. It can be HTTP / HTTPS Post, Kafka, S3, etc. |
+| **$status**         | Return code of the data sent to the configured endpoint.     |
+| **$streamed_bytes** | Total, in bytes, of the data sent to the configured endpoint. |
+| **$timestamp**      | Date and time when the data is sent to the configured endpoint. |
+| **$version**        | The version of Azion Log used.                               |
 
 #### *Edge Pulse*
 
