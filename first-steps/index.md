@@ -2,51 +2,97 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/first-steps/index.md)
 
-Welcome to Azion!
+**Welcome to Azion!**
 
-Here you will find information on the first steps you need to take to set up your account. Whenever necessary, consult the detailed documentation of Azion products in the side menu.
+Would you like to receive a **US$300 credit** to use over **12 months** and experience the full potential of our products?
 
-> 1. [Activate your account](#active-your-account)
-> 2. [Create a new Edge Application](#create-new-edge-application)
-> 3. [Create a new Domain associated with your Edge Application](#create-new-domain-associated-edge-application)
-> 4. [Change your application's DNS to the Domain created](#change-your-application-dns)
+At AZION you can!
+
+To help you in your decision-making process, we offer you a trial period to experience our products. We know that to choose the products that best meet your needs, you need to experience them first hand.
+
+To start exploring the features of our platform, simply create a **free account** on our website to access the control panel and benefit from our products. You are our guest!
+
+You and your team will have a 100% online, automated, real-time experience! Let's get started!
+
+> 1. [How to benefit](#how-to-benefit)
+> 2. [Getting to know Real-Time Manager](#getting-to-know)
+> 3. [Creating a new Edge Application](#create-new-edge-application)
+> 4. [Creating a new Domain linked to your Edge Application](#create-new-domain-associated-edge-application)
+> 5. [Changing your applications's DNS to the Domain created](#change-your-application-DNS)
+> 6. [Keeping your account after the trial period](#keep-your-account)
 
 ---
 
-## 1. Activate your account {#active-your-account}
+## 1. How to benefit {#how-to-benefit}
 
-When you register with Azion you will receive an email to activate your account. In this email you will find instructions for confirming your email address and generating your password. Your email address will be used as a user name to access Azion's web control panel, the [Real-Time Manager](https://manager.azion.com/), where you will be able to manage your account and product settings.
+To create your account and start experiencing our products follow the steps below:
 
-If you do not receive the email, please check your Spam folder. The email should be sent with the following headers.
+1. Go to our [website](https://www.azion.com/en/), and click on **Free Account**. The form - *Create your Azion account* - will be shown on the screen.
 
->From: noreply@azion.com
+2. Fill in the following information: *Full Name, Email and Password*.
+
+   > Fields marked with an asterisk are mandatory(*).
+
+3. By proceeding with the registration process, you automatically agree to *the Customer Agreement Terms and Privacy Policy*. Click the - *Sign up with email* button to continue.
+
+4. A new page will be displayed telling you that your account has been created. When you register at Azion you will receive an email to activate your account. In this email you will find instructions to confirm your email address. Click on the URL to activate your account.
+
+   > The activation of this URL will expire in 14 days after you receive the email.
+
+5. Your email address will be used as your login to Azion's control panel, the  [Real-Time Manager](https://manager.azion.com/), where you can manage your account settings and products.
+
+If you do not receive the email, check your Spam folder. The email should be sent with the following headers:
+
+>From: [noreply@azion.com](mailto:noreply@azion.com)
 >
 >Subject: Please Verify Your Azion Account
 
+If you have any questions, contact our [sales team](https://www.azion.com/en/contact-sales/). It will be a pleasure to help you.
+
+6. Fill in the following fields to update your account: *Company Name, Mobile, Country, Region, City, Address, Complement* and *Postal Code*. Click on *Submit*.
+7. You are now ready to start enjoying our products through  [Real-Time Manager](https://manager.azion.com/).
+
 ---
 
-## 2. Create a new Edge Application {#create-new-edge-application}
+## 2. Getting to know Real-Time Manager {#getting-to-know}
 
-After activating your account, you must create your first Edge Application. To create a new configuration, perform the following steps:
+By accessing the [Real-Time Manager](https://manager.azion.com/) , Azion's control panel, you will be able to set it according to your and your company's interests and start enjoying all the benefits that each of our products can provide you.
 
-1. Access [Real-Time Manager](https://manager.azion.com/) using your email and password.
-2. Fill in the requested fields and save your first Edge Application.
+In RTM you can make the following settings:
 
-You need to fill in the following fields.
+- **Account Settings**: Add users and teams.
+- **Edge Analytics**: Create your first Data Streaming and begin to stream the generated data from your site ans control your traffic with the Real-Time Metrics.
+- **Edge Computing**: With Edge Applications, add your edge applications, your Domains. With Edge Firewall create your first Edge Firewall rule set to protect your content and applications from unwanted access. And, mprove the performance of your site, add your Edge Functions.
+- **Edge Libraries**: Add Digital Certificates, Network Lists and add WAF Rules.
 
-**Name for Application**
+### 3. Criating a new Edge Application{#create-new-edge-application}
 
-Give your Edge Application a suggestive name. This name will be used to identify your configuration. You can use your web application's own domain as a name.
+After activating your account, you must create your first edge application. To create a new configuration, following the steps below:
 
-*E.g.: www.azion.com*
+1. Access [Real-Time Manager](https://manager.azion.com/)  with your email and password;
+
+2. In **Edge Computing**, select **Edge Application**;
+
+3. Click on *Add Application* on the top right corner menu;
+
+4. Fill in the requested fields;
+
+   > Check below the fields to be filled and after filling them in click on *Save*, to save your edge application.
+
+Enter the following fields:
+
+Give your edge application a suggestive name. This name will be used to identify your settings. You can use the domain name of your web application itself as a name.
+
+*For example: www.azion.com*
 
 **Main Settings**
 
-In this section, the main fields related to the delivery of your applications are defined.
+In this section, the main fields related to the delivery of your applications are defined. And, also, the field *Minimum TLS version*.
 
 | Field | Description |
 |-------|-----------|
 | **Delivery Protocol** | Choose the delivery protocol supported by your web application:<br>**HTTP:** if your application only supports the HTTP protocol.<br><br>**HTTP & HTTPS:** f your application supports both HTTP and HTTPS protocols. To use HTTPS, you will need [Digital Certificates]({% tl documentation_products_edge_applications_digital_certificates %}). |
+| **Minimum TLS version** | Transport Layer Security (TLS) guarantees encrypted communications between a client and a web server via HTTPS.<br/>PCI standards recommend the use of TLS 1.2 or higher. Remember, if you use newer versions, some older client devices or browsers will not be able to connect. |
 
 **Origins**
 
@@ -71,28 +117,33 @@ In this section, the cache options for your content will be defined. There are t
 | **Browser Cache Settings** | Use the *Honor Origin Cache Headers* option if you want Azion to send its users the same cache control headers received from their origin.<br><br>You can also customize the Browser Cache control by selecting the *Override Cache Settings* option. In this case, you must define a **Maximum TTL**, which is the maximum lifetime (in seconds) that the content can be cached in your users' browser. |
 | **CDN Cache Settings** | Use the *Honor Origin Cache Headers* option if you want Azion to respect the cache control headers received from your origin, for managing the cache on Azion's Edge Nodes. You can also customize the CDN Cache control by selecting the *Override Cache Settings* option. In this case, you must define a **Maximum TTL**, which is the maximum lifetime (in seconds) that the content can be cached in Azion’s Edge Nodes. You can, at any time, purge the content in real time. |
 
-Don't forget to save your configuration by clicking the **Save**.
+Click on the *Save* button before leaving the page.
 
->If desired, you can edit your newly created Edge Application to see the advanced options.
+>If you wish, you can edit your newly created Edge Application to see the advanced options.
 
 ---
 
-## 3. Create a new Domain associated with your Edge Application {#create-new-domain-associated-edge-application}
+## 4. Creating a new Domain associated with your Edge Application {#create-new-domain-associated-edge-application}
 
 After creating your first edge application, you must associate one or more domains so that your users can have access:
 
 1. Access [Real-Time Manager](https://manager.azion.com/) using your email and password.
-2. Click on the menu > Edge Services > Domains.
-3. Click on the Add Domain button.
-4. Fill in the requested fields and save your configuration.
 
-You need to fill in the following fields.
+2. In **Edge Computing**, select *My Domains*.
+
+3. Click on the *Add Domain* button;
+
+4. Fill in the requested fields;
+
+   >Check below the fields to be filled and after filling them in click on *Save*, to save your settings.
+
+Fill in the following fields.
 
 **Add Name Configuration**
 
 Give your Edge Application a suggestive name. This name will be used to identify your configuration. You can use your web application's own domain as a name.
 
-*Ex.: www.azion.com*
+*Example: www.azion.com*
 
 **Settings**
 
@@ -100,12 +151,14 @@ In this section, the main fields related to the delivery of your applications ar
 
 | Field | Description |
 |-------|-----------|
-| **Digital Certificate** | If you selected *HTTP & HTTPS* during the creation of your edge application, you must select the SSL certificate that will be used to encrypt your HTTPS traffic. Azion provides the certificate *Azion (SAN)* that can be used for the domains below *azioncdn.net.*<br>You can also upload your Custom Certificate at any time. Consult the [technical documents]({% tl documentation_products_edge_applications_digital_certificates %}#custom-certificate) on how to do it. |
-| **CNAMEs** | Configure the list of delivery domains (CNAMEs) for your content or application. If necessary, you can use Wildcard Domain (* *.yourdomain.com*).<br>*E.g.: www.azion.com* |
+| **Digital Certificate** | If you selected *HTTP & HTTPS* during the creation of your edge application, you must select the SSL certificate that will be used to encrypt your HTTPS traffic. Azion provides the certificate *Azion (SAN)* that can be used for the domains below *azioncdn.net.*<br>You can also upload your Custom Certificate at any time. Consult the [Digital Certificates](https://www.azion.com/en/documentation/products/edge-application/digital-certificates/) doccuments and learn how to do it. |
+| **CNAMEs** | Configure the list of delivery domains (CNAMEs) for your content or application. If necessary, you can use Wildcard Domain (* *.yourdomain.com*).<br>*Example: www.azion.com* <br> <br> List the domains you want to use as a URL for your files.<br/>Thus, you replace the address supplied by Azion (e.g. 10001a.hc.azioncdn.net) with the listed domains.<br/>In this case you should register the CNAMEs in your DNS service to redirect any routes of your CNAME to those indicated by Azion.<br/>For example, replace www.example.com with 10001a.hc.azioncdn.net |
 | **CNAME Access Only** | By default, all Domain configurations are automatically assigned a domain name below *azioncdn.net*.<br>By checking this option, you will be configuring the Edge Application to deliver your content or applications only through the domains listed in the CNAME field. |
 | **Edge Application** | In this field you select the edge application that you want to associate with this delivery domain. |
 
-## 4. Change your application's DNS to the Domain created {#change-your-application-dns}
+> Click on the *Save* button after filling in all the fields to save your changes.
+
+## 5.Changing your applications's DNS to the Domain created{#change-your-application-DNS}
 
 After associating a Domain to your Edge Application, you will see a list of existing settings in your account.
 
@@ -117,7 +170,19 @@ You will need this domain to approve the operation of your new configuration. To
 
 ---
 
-To continue learning about Azion products, consult the navigation menu on the left hand side and in the header, or perform a search using the keywords on the [Azion for Developers]({% tl documentation %})home page.
+To continue learning about Azion's products, check our [documentation](https://www.azion.com/en/documentation/) or search using the keywords in the Search field at the top of the page.
+
+### 6. Keeping your account after the trial period{#keep-your-account}
+
+To avoid interruption of your services after the trial period, follow the steps below:
+
+1. Access your account and click on the hyperlink [*right here*](https://manager.azion.com/account/1017/payment_method/add/) on the green strip at the top of the page.
+2. The Billing screen will be displayed for you to enter your credit card information for billing.
+3. Click the *Save* button to save your billing details and continue having access to our products!
+
+Take the journey with us and enjoy the benefits of our products by hiring the plan that best suits your company's needs. We are honored to be part of your success story.
+
+Count on Azion!
 
 ---
 
