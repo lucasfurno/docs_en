@@ -27,7 +27,7 @@ You and your team will have a 100% online, automated, real-time experience! Let'
 
 ####To create your account and start experiencing our products follow the steps below:
 
-1. Go to our [website](https://www.azion.com/en/), and click on **Free Account**. The form - *Create your Azion account* - will be displayed.
+1. Go to our [website](https://www.azion.com/en/), and click the **Free Account** button. The form - *Create your Azion account* - will be displayed.
 
 2. Fill in the following information: *Full Name, Email and Password*.
 
@@ -77,7 +77,7 @@ After activating your account, you must create your first edge application. To c
 
 4. Fill in the requested fields;
 
-   > Check below the fields to be filled and after filling them in click on *Save*, to save your edge application.
+   > Check the fields to be filled and after filling them in click on *Save*, to save your edge application.
 
 Enter the following fields:
 
@@ -121,7 +121,7 @@ In this section, the cache options for your content will be defined. There are t
 
 Click on the *Save* button before leaving the page.
 
->If you wish, you can edit your newly created Edge Application to see the advanced options.
+>If you wish, you can edit your newly created edge application to see the advanced options.
 
 ---
 
@@ -137,7 +137,7 @@ After creating your first edge application, you must associate one or more domai
 
 4. Fill in the requested fields;
 
-   >Check below the fields to be filled and then click on *Save*, to save your settings.
+   >Check the fields to be filled and then click on *Save*, to save your settings.
 
 Enter the following fields:
 
