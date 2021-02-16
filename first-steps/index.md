@@ -25,15 +25,15 @@ You and your team will have a 100% online, automated, real-time experience! Let'
 
 ## 1. How to benefit {#how-to-benefit}
 
-To create your account and start experiencing our products follow the steps below:
+####To create your account and start experiencing our products follow the steps below:
 
-1. Go to our [website](https://www.azion.com/en/), and click on **Free Account**. The form - *Create your Azion account* - will be shown on the screen.
+1. Go to our [website](https://www.azion.com/en/), and click on **Free Account**. The form - *Create your Azion account* - will be displayed.
 
 2. Fill in the following information: *Full Name, Email and Password*.
 
    > Fields marked with an asterisk are mandatory(*).
 
-3. By proceeding with the registration process, you automatically agree to *the Customer Agreement Terms and Privacy Policy*. Click the - *Sign up with email* button to continue.
+3. By proceeding with the registration process, you automatically agree to *the Customer Agreement Terms and Privacy Policy*. Click the *Sign up with email* button to continue.
 
 4. A new page will be displayed telling you that your account has been created. When you register at Azion you will receive an email to activate your account. In this email you will find instructions to confirm your email address. Click on the URL to activate your account.
 
@@ -65,9 +65,9 @@ In RTM you can make the following settings:
 - **Edge Computing**: With Edge Applications, add your edge applications, your Domains. With Edge Firewall create your first Edge Firewall rule set to protect your content and applications from unwanted access. And, mprove the performance of your site, add your Edge Functions.
 - **Edge Libraries**: Add Digital Certificates, Network Lists and add WAF Rules.
 
-### 3. Criating a new Edge Application{#create-new-edge-application}
+## 3. Criating a new Edge Application{#create-new-edge-application}
 
-After activating your account, you must create your first edge application. To create a new configuration, following the steps below:
+After activating your account, you must create your first edge application. To create a new configuration, follow the steps below:
 
 1. Access [Real-Time Manager](https://manager.azion.com/)  with your email and password;
 
@@ -81,31 +81,33 @@ After activating your account, you must create your first edge application. To c
 
 Enter the following fields:
 
+####Name for Appliction 
+
 Give your edge application a suggestive name. This name will be used to identify your settings. You can use the domain name of your web application itself as a name.
 
 *For example: www.azion.com*
 
-**Main Settings**
+####**Main Settings**
 
-In this section, the main fields related to the delivery of your applications are defined. And, also, the field *Minimum TLS version*.
+In this section, the main fields related to the delivery of your applications are defined. And, also, the *Minimum TLS version* field.
 
 | Field | Description |
 |-------|-----------|
 | **Delivery Protocol** | Choose the delivery protocol supported by your web application:<br>**HTTP:** if your application only supports the HTTP protocol.<br><br>**HTTP & HTTPS:** f your application supports both HTTP and HTTPS protocols. To use HTTPS, you will need [Digital Certificates]({% tl documentation_products_edge_applications_digital_certificates %}). |
 | **Minimum TLS version** | Transport Layer Security (TLS) guarantees encrypted communications between a client and a web server via HTTPS.<br/>PCI standards recommend the use of TLS 1.2 or higher. Remember, if you use newer versions, some older client devices or browsers will not be able to connect. |
 
-**Origins**
+####**Origins**
 
-Origins defines the data from its origin. To understand more about how Edge Applications works, what the origins is for, or how to perform more advanced origin settings, see the product's technical documentation.
+Origins is where you define your origin data. To understand more about how the **Edge Applications** works, what the origins is for, or how to make more advanced origin settings, see the product's technical documentation.
 
 | Field | Description |
 |-------|-----------|
-| **Origin Type** | Choose the type of origin:<br>**Single Origin:** if Azion needs to connect to an external origin to fetch data that is not cached.<br><br>**Media Packager:** if Azion needs to connect to Azion Media Packager to deliver, via HLS, its media (audio and video) stored on Azion.<br><br>The fields that follow refer to the origin of the Single Origin type. |
-| **Address** | Define the origin address of your application, in FQDN (Full Qualified Domain Name) format, for example origin.azion.com, or IP address.<br><br>By default, Azion will connect at its origin to port 80, for HTTP, or 443, for HTTPS. If you want to configure a different port to connect to your origin, you can use the host:port notation in this field, for example origin.azion.com:8080. See the field below to understand the connection options with your origin.<br><br>You cannot configure as the origin, the same delivery domain used for your content delivery. The origin must have its own address. |
-| **Origin Protocol Policy** | In the reverse proxy architecture adopted by Azion, its users connect to Intelligent Edge over HTTP or HTTPS and you choose how you want Azion to connect at your origin:<br><br>**Preserve HTTP/HTTPS protocol:** will keep the same connection protocol (HTTP or HTTPS) and ports used by your user when accessing your content on Azion to connect to your origin.<br><br>**Enforce HTTP:** the connection between Azion’s Edge Nodes and your origin will be through HTTP, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (80 for HTTP) if you wish.<br><br>**Enforce HTTPS:** the connection between Azion’s Edge Nodes and your origin will be through HTTPS, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (443 for HTTPS) if you wish. |
+| **Origin Type** | The following fields refer to the Single Origin type. |
+| **Address** | Define the origin address of your application, in FQDN (Full Qualified Domain Name) format, for example origin.azion.com, or IP address.<br><br>By default, Azion will connect to your origin through port 80, for HTTP, or 443, for HTTPS. If you want to configure a different port to connect to your origin, you can use the host:port notation in this field, for example origin.azion.com:8080. See the field below to understand options for connecting to your origin..<br><br>You cannot configure as the origin the same delivery domain used for your content delivery. The origin must have its own address. |
+| **Origin Protocol Policy** | In the reverse proxy architecture adopted by Azion, its users connect to Intelligent Edge via HTTP or HTTPS and you choose how you want Azion to connect to your origin:<br><br>**Preserve HTTP/HTTPS protocol:** it will keep the same connection protocol (HTTP or HTTPS) and ports used by your user when accessing your content on Azion to connect to your origin.<br><br>**Enforce HTTP:** the connection between Azion’s Edge Nodes and your origin will be through HTTP, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (80 for HTTP) if you wish.<br><br>**Enforce HTTPS:** the connection between Azion’s Edge Nodes and your origin will be through HTTPS, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (443 for HTTPS) if you wish. |
 | **Host Header** |The Host header is used by your origin to identify the virtualhost and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.<br><br>Use the value *${host}*, in the Host Header field, if your origin is configured to answer to virtualhost for the same domain that is used by its users to access the content on Azion. This way, you will be instructing Edge Nodes to forward the same Host header that is received from your visitors to their origin.<br><br>If necessary, you can fill in a custom value for Host Header to be sent to your origin. For example, origin.domain.com. You must customize the Host Header if your origin is configured to respond to a virtualhost at a domain different than the one used by its users. |
 
-**Cache Settings**
+####**Cache Settings**
 
 In this section, the cache options for your content will be defined. There are two types of cache:
 
@@ -125,7 +127,7 @@ Click on the *Save* button before leaving the page.
 
 ## 4. Creating a new Domain associated with your Edge Application {#create-new-domain-associated-edge-application}
 
-After creating your first edge application, you must associate one or more domains so that your users can have access:
+After creating your first edge application, you must associate one or more domains for your users to access:
 
 1. Access [Real-Time Manager](https://manager.azion.com/) using your email and password.
 
@@ -135,24 +137,24 @@ After creating your first edge application, you must associate one or more domai
 
 4. Fill in the requested fields;
 
-   >Check below the fields to be filled and after filling them in click on *Save*, to save your settings.
+   >Check below the fields to be filled and then click on *Save*, to save your settings.
 
-Fill in the following fields.
+Enter the following fields:
 
-**Add Name Configuration**
+####**Add Name Configuration**
 
 Give your Edge Application a suggestive name. This name will be used to identify your configuration. You can use your web application's own domain as a name.
 
 *Example: www.azion.com*
 
-**Settings**
+####**Settings**
 
 In this section, the main fields related to the delivery of your applications are defined.
 
 | Field | Description |
 |-------|-----------|
 | **Digital Certificate** | If you selected *HTTP & HTTPS* during the creation of your edge application, you must select the SSL certificate that will be used to encrypt your HTTPS traffic. Azion provides the certificate *Azion (SAN)* that can be used for the domains below *azioncdn.net.*<br>You can also upload your Custom Certificate at any time. Consult the [Digital Certificates](https://www.azion.com/en/documentation/products/edge-application/digital-certificates/) doccuments and learn how to do it. |
-| **CNAMEs** | Configure the list of delivery domains (CNAMEs) for your content or application. If necessary, you can use Wildcard Domain (* *.yourdomain.com*).<br>*Example: www.azion.com* <br> <br> List the domains you want to use as a URL for your files.<br/>Thus, you replace the address supplied by Azion (e.g. 10001a.hc.azioncdn.net) with the listed domains.<br/>In this case you should register the CNAMEs in your DNS service to redirect any routes of your CNAME to those indicated by Azion.<br/>For example, replace www.example.com with 10001a.hc.azioncdn.net |
+| **CNAMEs** | Configure the list of delivery domains (CNAMEs) for your content or application. If necessary, you can use Wildcard Domain (* *.yourdomain.com*).<br>*Example: www.azion.com* <br> <br> List the domains you want to use as a URL for your files.<br/>Thus, you replace the address provided by Azion (e.g. 10001a.hc.azioncdn.net) with the listed domains.<br/>In this case you should register the CNAMEs in your DNS service to redirect any routes of your CNAME to those indicated by Azion.<br/>For example, replace www.example.com with 10001a.hc.azioncdn.net |
 | **CNAME Access Only** | By default, all Domain configurations are automatically assigned a domain name below *azioncdn.net*.<br>By checking this option, you will be configuring the Edge Application to deliver your content or applications only through the domains listed in the CNAME field. |
 | **Edge Application** | In this field you select the edge application that you want to associate with this delivery domain. |
 
@@ -160,24 +162,24 @@ In this section, the main fields related to the delivery of your applications ar
 
 ## 5.Changing your applications's DNS to the Domain created{#change-your-application-DNS}
 
-After associating a Domain to your Edge Application, you will see a list of existing settings in your account.
+After associating a Domain to your edge application, you will see a list of existing settings in your account.
 
-For each configuration created, a **Domain Name** is automatically assigned below the * *.ha.azioncdn.net*.
+For each configuration created, a **Domain Name** is automatically assigned below the  * *.ha.azioncdn.net* domain.
 
-You will need this domain to approve the operation of your new configuration. To put your configuration into production, you will have to make a note of the domain of your content to the Domain Name assigned to your configuration, through a CNAME type record on your DNS server.
+You will need this domain to approve the operation of your new configuration. To make your configuration run, you will have to point the domain of your content to the Domain Name assigned to your configuration, through a CNAME type record in your DNS server.
 
 >You must carefully approve your content and web application before directing the DNS to Azion's Domain Name.
 
 ---
 
-To continue learning about Azion's products, check our [documentation](https://www.azion.com/en/documentation/) or search using the keywords in the Search field at the top of the page.
+To continue learning about Azion's products, check our [documentation](https://www.azion.com/en/documentation/) or search using the keywords in the *Search field* at the top of the page.
 
-### 6. Keeping your account after the trial period{#keep-your-account}
+## 6. Keeping your account after the trial period{#keep-your-account}
 
 To avoid interruption of your services after the trial period, follow the steps below:
 
 1. Access your account and click on the hyperlink [*right here*](https://manager.azion.com/account/1017/payment_method/add/) on the green strip at the top of the page.
-2. The Billing screen will be displayed for you to enter your credit card information for billing.
+2. The *Billing* screen will be displayed for you to enter your credit card information for billing.
 3. Click the *Save* button to save your billing details and continue having access to our products!
 
 Take the journey with us and enjoy the benefits of our products by hiring the plan that best suits your company's needs. We are honored to be part of your success story.
