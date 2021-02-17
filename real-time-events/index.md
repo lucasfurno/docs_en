@@ -76,9 +76,9 @@ If you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/pro
 | ------------------- | ------------------------------------------------------------ |
 | **$client_id**      | Unique Azion customer identifier.                            |
 | **$endpoint**       | Endpoint used to send data.                                  |
-| **$endpoint_type**  | Endpoint type used to send data. It can be HTTP / HTTPS Post, Kafka, S3, etc. |
-| **$status**         | Return code of the data sent to the configured endpoint.     |
-| **$streamed_bytes** | Total, in bytes, of the data sent to the configured endpoint. |
+| **$endpoint_type**  | Endpoint type configured for sending data, such as: HTTP / HTTPS Post, Kafka, S3, etc. |
+| **$status**         | The status code of the request, for example: 200.            |
+| **$streamed_bytes** | Total amount of data in bytes sent to the selected endpoint. |
 | **$timestamp**      | Date and time when the data is sent to the configured endpoint. |
 | **$version**        | The version of Azion Log used.                               |
 
