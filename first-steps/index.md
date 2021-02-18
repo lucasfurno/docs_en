@@ -56,7 +56,9 @@ If you have any questions, contact our [sales team](https://www.azion.com/en/con
 
 ## 2. Getting to know Real-Time Manager {#getting-to-know}
 
-By accessing the [Real-Time Manager](https://manager.azion.com/) , Azion's control panel, you will be able to set it according to your and your company's interests and start enjoying all the benefits that each of our products can provide you.
+By accessing the [Real-Time Manager](https://manager.azion.com/) , Azion's control panel, you will be able to set it according to the desired architecture and use cases and obtain all the benefits that each of our products can provide you.
+
+By entering the Real-Time Manager, the Azion control panel, you will be able to configure according to the desired architecture and use cases and obtain all the benefits that each of our products can provide.
 
 You can find the following information in **RTM**:
 
