@@ -58,12 +58,17 @@ If you have any questions, contact our [sales team](https://www.azion.com/en/con
 
 By accessing the [Real-Time Manager](https://manager.azion.com/) , Azion's control panel, you will be able to set it according to your and your company's interests and start enjoying all the benefits that each of our products can provide you.
 
-In RTM you can make the following settings:
+You can find the following information in **RTM**:
 
-- **Account Settings**: Add users and teams.
-- **Edge Analytics**: Create your first Data Streaming and begin to stream the generated data from your site ans control your traffic with the Real-Time Metrics.
-- **Edge Computing**: With Edge Applications, add your edge applications, your Domains. With Edge Firewall create your first Edge Firewall rule set to protect your content and applications from unwanted access. And, mprove the performance of your site, add your Edge Functions.
-- **Edge Libraries**: Add Digital Certificates, Network Lists and add WAF Rules.
+- *Getting Started*: Edge Computing, Edge Analytics, Edge Libraries e Account Settings.
+
+- *Documentation*: First Steps, Products, Use Cases e API.
+
+- *Products menu*: list of all Azion products.
+
+- *Account menu*: Account Info, Billing, Users, Credentials, Teams, History, User Preferences, Logout.
+
+  > For more information about a product go to its specific documentation.
 
 ## 3. Criating a new Edge Application{#create-new-edge-application}
 
