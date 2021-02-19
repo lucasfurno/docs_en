@@ -53,7 +53,7 @@ Security settings
 
 **Teams:** if the new user isn't an Account owner, you must select a team to allocate the user. Real-Time Manager creates a Default Team if there is no Team available/created beforehand. You can choose multiple teams to assign the user.
 
-**Multi-factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
+**Multi-Factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
 
 
 
@@ -117,7 +117,7 @@ Security settings
 
 **New password confirmation:** confirm the new password.
 
-**Multi-factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
+**Multi-Factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
 
 4. Click **Save** to finish the process. 
 
