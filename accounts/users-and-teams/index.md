@@ -119,6 +119,8 @@ Security settings
 
 **Multi-Factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
 
+
+
 4. Click **Save** to finish the process. 
 
    
