@@ -62,7 +62,7 @@ Azion Edge Firewall has the following modules, so that you can build high-perfor
 
 The DDoS Protection module protects your content and applications against attacks of the *Distributed Denial of Service (DDoS)* type, as it detects attacks using advanced algorithms that run on Azion's distributed network. This distributed network is connected to several mitigation centers to guarantee mitigation during large-scale attacks, both at the network and application levels. 
 
-Through a modern approach to detect and mitigate attacks from the network, transport and application layers, we reduce downtime without impacting the performance of your service.
+Through a modern approach to detect and mitigate attacks from the network, transport, and application layers, we reduce downtime without impacting your service's performance.
 
 [See more](https://www.azion.com/en/documentation/products/ddos-protection/)
 
