@@ -8,7 +8,7 @@ With **Edge Firewall**, you can extend your security perimeter to the network ed
 
 > Because it is a programmable, modular and extendible firewall, it allows you to choose the modules that suit your needs.
 
-You can make your own protection source code available and run directly on the Azion distributed network. This benefits both the end user and the application itself, as the user has access to a protected application with low latency. Complex attacks can be prevented by extending the protection perimeter to the edge. 
+You can make your own protection source code available and run it directly on the Azion distributed network. This benefits both the end-user and the application itself, as the user has access to a protected application with low latency. Protect against complex attacks by extending the protection perimeter to the edge. 
 
 #### With the Edge Firewall you can: 
 
