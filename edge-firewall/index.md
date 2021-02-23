@@ -56,7 +56,7 @@ Each rule is made up of conditions - *Criteria* -  and *Behaviors*. The *Behavio
 
 ## 2. Edge Firewall Modules {#edge-firewall-modules}
 
-Azion Edge Firewall has the following modules, so that you can build high performance, scalable, safe edge applications, much more simply and without heavy maintenance.
+Azion Edge Firewall has the following modules, so that you can build high-performance, scalable, safe edge applications, much more simply and without the heavy maintenance.
 
 ### DDoS Protection
 
