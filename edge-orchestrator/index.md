@@ -59,4 +59,4 @@ The Edge Services module enables the customer to create their own services. You 
 
 ---
 
-Didn't find what you were looking for? [Start a ticket with our support team.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
