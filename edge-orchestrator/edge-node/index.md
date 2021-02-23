@@ -157,4 +157,4 @@ The Edge Orchestrator agent has additional commands and options to make it easie
 
 ---
 
-Didn't find what you were looking for? [Start a ticket with our support team.](https://tickets.azion.com/)
+Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
