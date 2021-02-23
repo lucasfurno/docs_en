@@ -86,7 +86,7 @@ You can still use *third-party* security solutions to protect sensitive data and
 
 This module allows the creation of filters by IP / CIDR, ASN addresses or by countries (geolocation), through the configuration of Network Lists and the definition of business rules that will validate blocking or release *criteria*, according to your need, specified on your Edge Firewall's *Rules Engine*.
 
-Operating within layers 3 and 4 of the OSI model, Network Layer Protection is a powerful tool that is a safe and efficient option to protect your business against attacks and unwanted user access. It extends the protection period from the edge network, closer to the end user.
+Operating within layers 3 and 4 of the OSI model, Network Layer Protection is a powerful tool that is a safe and efficient option to protect your business against attacks and unwanted user access. It extends the protection period from the edge network, closer to the end-user.
 
 [See more](https://www.azion.com/en/documentation/products/network-layer-protection/)
 
