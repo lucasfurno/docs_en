@@ -2,7 +2,7 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/index.md)
 
-Azion **Edge Firewall** is a security product that protects from the network layer to the application layer. In a single place, your security team finds the most advanced features to protect your applications from all types of attacks.
+Azion **Edge Firewall** is a security product that protects from the network layer to the application layer. Your security team finds the most advanced features to protect your applications from all types of attacks in a single place.
 
 With **Edge Firewall**, you can extend your security perimeter to the network edge, since your access control rules are processed directly through the Azion Edge Network, closer to users, preventing unwanted requests from reaching your origin or accessing your applications.
 
