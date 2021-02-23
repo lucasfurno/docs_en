@@ -44,7 +44,7 @@ An **Edge Firewal**l *Rule Set* consists of a selection of domains where it shou
 >
 > Web Application Firewall
 
-You need at least one activated module to be able to use the product and, to ensure the security of your applications at all layers, we recommend that you *activate them all*.
+You need at least one activated module to use the product and, to ensure the security of your applications at all layers, we recommend that you *activate them all*.
 
 After activating the modules you want, you must configure your security rules in *Rules Engine*. The rules  you configure will run sequentially until the request is blocked or restricted, or until or all your rules are processed, at which point the request is released. The request's data stream only passes into your edge application if none of your Edge Firewall rules block or reject the request, ensuring that malicious requests don't reach your application.
 
