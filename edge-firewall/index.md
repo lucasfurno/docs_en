@@ -92,7 +92,7 @@ Operating within layers 3 and 4 of the OSI model, Network Layer Protection is a 
 
 ####  Origin Shield Add-on
 
-With this Azion Edge Firewall add-on you can create a security perimeter for your origin infrastructure, be it a cloud provider, hosting or even your own datacenter. With this service, your origin can restrict access only from specific IP addresses on our network and block any other access to your origin.
+With this Azion Edge Firewall add-on, you can create a security perimeter for your origin infrastructure, be it a cloud provider, hosting, or even your own datacenter. With this service, your origin can restrict access only from specific IP addresses on our network and block any other access to your origin.
 
 It allows that access can only be made through Azion edge nodes, because they will bring the application closer to the end user with full performance and security.
 
