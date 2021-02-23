@@ -18,7 +18,7 @@ You can make your own protection source code available and run directly on the A
 - Mitigate Denial of Service attacks (*DDoS*);
 - Protect applications from *OWASP* Top 10 threats;
 - Add your own source code protection or content access controls, to be run from Edge Firewall;
-- Integrate third-party software to be run in the Edge Firewall. For example, market leading solutions against *credential stuffing*, *account takeover attempts*, *price* and *contact scraping* etc.
+- Integrate third-party software to be run in the Edge Firewall. For example, market-leading solutions against *credential stuffing*, *account takeover attempts*, *price*, and *contact scraping*, etc.
 
 > 1. [How it works](#how-does-it-work)
 > 2. [Edge Firewall Modules](#edge-firewall-modules)
