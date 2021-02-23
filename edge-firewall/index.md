@@ -46,7 +46,7 @@ An **Edge Firewal**l *Rule Set* consists of a selection of domains where it shou
 
 You need at least one activated module to use the product and, to ensure the security of your applications at all layers, we recommend that you *activate them all*.
 
-After activating the modules you want, you must configure your security rules in *Rules Engine*. The rules  you configure will run sequentially until the request is blocked or restricted, or until or all your rules are processed, at which point the request is released. The request's data stream only passes into your edge application if none of your Edge Firewall rules block or reject the request, ensuring that malicious requests don't reach your application.
+After activating the modules you want, you must configure your security rules in *Rules Engine*. The rules you configure will run sequentially until the request is blocked or restricted, or until or all your rules are processed, at which point the request is released. The request's data stream only passes into your edge application if none of your Edge Firewall rules block or reject the request, ensuring that malicious requests don't reach your application.
 
 Each rule is made up of conditions - *Criteria* -  and *Behaviors*. The *Behaviors* are only run if the conditions are met. For example, you can set up rules to block requests that come from IPs that are in a *Blacklist*, or even make up rules to exclude IPs that are in a *Whitelist*. In this example, “block” is the *Behavior*, while the IP of the request is in the BlackList and not present in the WhilteList is the condition - *Criteria*.
 
