@@ -17,6 +17,18 @@ Multi-Factor Authentication (MFA) is an electronic verification method used to s
 
 You can enable MFA when creating a new user, set it up to active users, or secure access to the main account (Account owner). 
 
+Enabling MFA to your account:
+
+1. Access Real-Time Manager with the main account (Account owner). 
+
+2. Click the account menu and select **User Preferences.** 
+
+3. Enable the MFA switch.
+
+4. Click **Save** to finish the process. 
+
+   
+
 Enabling MFA to existing users:
 
 1. Access Real-Time Manager with the main account (Account owner). 
@@ -24,15 +36,6 @@ Enabling MFA to existing users:
 3. Select the desired user to access their profile.
 4. Enable the MFA switch. 
 5. Click **Save** to finish the process. 
-
-
-
-Enabling MFA to the main account (Account owner):
-
-1. Access Real-Time Manager with the main account (Account owner). 
-2. Click the account menu and select **User Preferences.** 
-3. Enable the MFA switch.
-4. Click **Save** to finish the process. 
 
 
 
@@ -81,7 +84,7 @@ To do so, you can ask for an Account owner user to deactivate your MFA function:
 4. Disable the MFA switch.
 5. Click **Save** to finish the process. 
 
-If you are the only Account owner within the account, it is necessary to contact the support team to have the MFA reset.
+If you are the only Account owner within the account, it is necessary to contact the [support]([support@azion.com](mailto:support@azion.com) ) team to have the MFA reset.
 
 
 
