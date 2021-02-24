@@ -93,19 +93,19 @@ Follow the step-by-step below to change any information or password from your us
 
 User profile
 
-**First name:** account owner name.
+**First name:** your name.
 
-**Last name:**  account owner last name.
+**Last name:**  your last name.
 
-**Timezone:** select the timezone where the Account owner is located. Choosing the correct timezone guarantees precision in accessing data and metrics on RTM.
+**Timezone:** select the timezone where you are located. Choosing the correct timezone guarantees precision in accessing data and metrics on RTM.
 
 **Language:** the standard language for RTM is English.
 
 Contact information
 
-**E-mail:** account owner e-mail address. The user will apply the provided email address as a login credential.
+**E-mail:** your e-mail address. You will apply the provided email address as a login credential.
 
-**Mobile:** account owner mobile number.
+**Mobile:** your mobile number.
 
 
 
