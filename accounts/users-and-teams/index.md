@@ -9,8 +9,8 @@ To ensure data protection and confidentiality, do not share any login informatio
 
 
 > 1. *[Adding users to the account](#adding-users-to-the-account)*
-> 2. *[Changing user information](#changing-user-information)*
-> 3. *[Changing main account (Account owner) information](#changing-account-owner-information)*
+> 2. *[Changing users information](#changing-users-information)*
+> 3. *[Changing your account information](#changing-your-account-information)*
 > 4. *[Deleting users](#deleting-users)*
 > 5. *[Adding teams](#adding-teams)*
 > 6. *[Changing team permissions](#changing-team-permissions)*
@@ -22,9 +22,11 @@ To ensure data protection and confidentiality, do not share any login informatio
 
 ## 1. Adding users to the account {#adding-users-to-the-account}
 
-Read the instructions below to add a new user to the RTM main account.
+Read the instructions below to add a new user to RTM.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+> To add a new user to Real-Time Manager, it is necessary to be an Account owner or have the permission "Edit User".
+
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account. 
 2. Click the account menu and select **Users**. 
 3. On the new screen, click **Add user**.
 4. Fill out the following fields:
@@ -63,11 +65,11 @@ Security settings
 
 ---
 
-## 2. Changing user information{#changing-user-information}
+## 2. Changing users information{#changing-users-information}
 
 Read the instructions below to change a dependent user's profile in RTM.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account.
 2. Click the account menu and select **Users.** 
 3. Select the desired user to access their profile.
 4. Modify any information from the account fields
@@ -77,11 +79,11 @@ It is possible to deactivate a user by turning off the **Active** switch.
 
 ---
 
-## 3. Changing main account (Account owner) information{#changing-account-owner-information}
+## 3. Changing your account information{#changing-your-account-information}
 
-Follow the step-by-step below to change any information or password from the Account owner.
+Follow the step-by-step below to change any information or password from your user.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account. 
 
 2. Click the account menu and select **User Preferences.** 
 
@@ -131,7 +133,7 @@ Security settings
 
 Read the instructions below to delete a dependent user's profile on RTM.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account.
 2. Click the account menu and select **Users.** 
 3. Hover over the user you want to delete and click on the trash bin that appears as you move the cursor.
 4. Follow the procedure to confirm the order.
@@ -144,7 +146,7 @@ Read the instructions below to delete a dependent user's profile on RTM.
 
 Read the instructions below to add a new team to the RTM account.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account.
 
 2. Click the account menu and select **Teams.** 
 
@@ -164,7 +166,7 @@ Read the instructions below to add a new team to the RTM account.
 
 Read the instructions below to change teams permissions on RTM.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account. 
 2. Click the account menu and select **Teams.** 
 3. Select the specified team.
 4. Change the permissions by selecting or deselecting the targeted options.
@@ -178,9 +180,9 @@ It is possible to deactivate a team by turning off the **Active** switch.
 
 ## 5. Deleting teams{#deleting-teams}
 
-Read the instructions below to delete a team on RTM.
+Read the instructions below to delete teams on RTM.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access [Real-Time Manager](https://sso.azion.com/login) with your account.
 2. Click the account menu and select **Teams.** 
 3. Hover over the team you want to delete and click on the trash bin that appears as you move the cursor.
 4. Follow the procedure and finish the instructions to confirm the order.
