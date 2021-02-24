@@ -6,7 +6,7 @@ This document will provide you with information on adding, deleting, or changing
 
 To ensure data protection and confidentiality, do not share any login information with other users.
 
-
+> To edit or add a new user to Real-Time Manager, it is necessary to be an Account owner or have the permission "Edit User".
 
 > 1. *[Adding users to the account](#adding-users-to-the-account)*
 > 2. *[Changing users information](#changing-users-information)*
@@ -23,8 +23,6 @@ To ensure data protection and confidentiality, do not share any login informatio
 ## 1. Adding users to the account {#adding-users-to-the-account}
 
 Read the instructions below to add a new user to RTM.
-
-> To add a new user to Real-Time Manager, it is necessary to be an Account owner or have the permission "Edit User".
 
 1. Access [Real-Time Manager](https://sso.azion.com/login) with your account. 
 2. Click the account menu and select **Users**. 
