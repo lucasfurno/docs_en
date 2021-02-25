@@ -172,7 +172,9 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 Results in details of Rules Engine. The information originated by this return refers to the Rules Engine of an Edge Application.
 
-#### **GET** /edge_applications/:edge_application_id:/rules_engine/:phase:/rules/rules_engine_id:  INVENTEI 
+#### **GET** /edge_applications/:edge_application_id:/rules_engine/:phase:/rules/:rules_engine_id:  INVENTEI !!!!!!!! 
+
+#### e não sei como continuar na request e response pq não achei o GET/id no Postman.
 
 Necessary permission: **View Edge Application**
 
