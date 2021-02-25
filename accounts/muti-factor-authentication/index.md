@@ -15,11 +15,11 @@ Multi-Factor Authentication (MFA) is an electronic verification method used to s
 
 ## 1. Enabling MFA on Real-Time Manager {#enabling-mfa-on-rtm}
 
-You can enable MFA when creating a new user, set it up to active users, or secure access to the main account (Account owner). 
+You can enable MFA when creating a new user, set it up to active users, or secure access to your account. 
 
 Enabling MFA to your account:
 
-1. Access Real-Time Manager with the main account (Account owner). 
+1. Access Real-Time Manager. 
 
 2. Click the account menu and select **User Preferences.** 
 
@@ -31,7 +31,7 @@ Enabling MFA to your account:
 
 Enabling MFA to existing users:
 
-1. Access Real-Time Manager with the main account (Account owner). 
+1. Access Real-Time Manager. 
 2. Click the account menu and select **Users.** 
 3. Select the desired user to access their profile.
 4. Enable the MFA switch. 
@@ -74,11 +74,11 @@ Read below to login to RTM with Multi-Factor Authentication activated.
 
 ## 4. Resetting Multi-Factor Authentication {#resetting-mfa}
 
-In case of loss or theft of your mobile phone, you will not be able to login to RTM unless you reset the MFA function. 
+In case of loss or theft of your mobile phone, you will not be able to login to RTM unless an Account owner resets the MFA function. 
 
 To do so, you can ask for an Account owner user to deactivate your MFA function: 
 
-1. Access Real-Time Manager as Account owner.
+1. Access Real-Time Manager.
 2. Click the account menu and select **Users**. 
 3. Select the desired user to access their profile.
 4. Disable the MFA switch.
