@@ -35,8 +35,7 @@ It displays the data of requests made to your Edge Applications at Azion.
 | ------------------------------------ | ------------------------------------------------------------ |
 | **$bytes_sent**                      | Bytes sent to the user, including header and body.           |
 | **$client**                          | Unique Azion customer identifier.                            |
-| **$configuration**                   | Unique Azion configuration identifier.                       |
-| **$country**                         | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| **$country_name**                    | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
 | **$host**                            | Host information sent on the request line; or HTTP header Host field. |
 | **$http_referrer**                   | Information from the last page the user was on before making the request. |
 | **$http_user_agent**                 | The identification of the application that made the request, for example: Mozilla/5.0 (Windows NT 10.0; Win64; x64). |
@@ -61,7 +60,6 @@ It displays the data of requests made to your Edge Applications at Azion.
 | **$upstream_bytes_received**         | Number of bytes received by the origin’s Edge, if the content is not cached. |
 | **$upstream_cache_status**           | Status of the Edge cache. It can assume the values “MISS”, “BYPASS”, “EXPIRED”, “STALE”, “UPDATING”, “REVALIDATED” or “HIT”. |
 | **$upstream_connect_time**           | Time in milliseconds for Edge to establish a connection with the origin (“0” in case of KeepAlive and “-“ in case of cache). |
-| **$upstream_header_time**            | Time in milliseconds for Edge to receive the origin’s response headers ( “-“ in case of cache). |
 | **$upstream_response_time**          | Time in milliseconds for Edge to receive all of the response from the origin, including headers and body (“-“ in case of cache). |
 | **$upstream_status**                 | HTTP Status Code of the origin (“-“ in case of cache).       |
 | **$version**                         | The version of Azion Log used.                               |
@@ -105,6 +103,7 @@ If you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/pro
 | **$navigation.typeReload**      | Type of navigation for the reload operation, that is, when the page was reloaded. |
 | **$navigation.typeReserved**    | Any type of navigation not defined by those previously mentioned (typeNavigate, typeReload). |
 | **$networkApi.downlink**        | It returns the average volume of data received (Mb/s).       |
+| **$platform**                   | Operating system architecture (for example Linux x86_64, Iphone, etc). |
 | **$referrer**                   | It returns the previous url to the current page. That is, the url by which the user arrived at “locationHref”. If the access originated directly from the current page (not through a link, but for example, through a bookmark), its value will be an empty string. It does not provide DOM access to the reference page. |
 | **$timestamp**                  | Request date and time.                                       |
 | **$userAgent**                  | It identifies the client UA browser.                         |
@@ -114,28 +113,27 @@ If you have contracted the [Data Streaming](https://www.azion.com/pt-br/docs/pro
 
 If you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the WAF Events data source will display the requests analyzed by WAF to allow you to map the score assigned to the request, the WAF rules that matched, the reason for the block and more.
 
-| Variable               | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| **$blocked**           | It informs whether the WAF blocked the action or not; 0 when not blocked and 1 when blocked. When in “Learning Mode”, it will not be blocked, regardless of the return. |
-| **$client**            | Unique Azion customer identifier.                            |
-| **$configuration**     | Unique Azion configuration identifier.                       |
-| **$country**           | Country name of the remote client, for example “Russian Federation”, “United States”. <br>Geolocation detection of IP address. |
-| **$headers**           | Request headers analyzed by WAF.                             |
-| **$host**              | Host information sent on the request line; or Host field of the HTTP header. |
-| **$remote_addr**       | IP address of the request.                                   |
-| **$requestPath**       | The request URI without Query String, Host and Protocol information. |
-| **$requestQuery**      | Only the URI parameters of the request.                      |
-| **$server_protocol**   | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
-| **$time**              | Timestamp of the start of the request.                       |
-| **$version**           | The version of Azion Log used.                               |
-| **$waf_args**          | The request arguments.                                       |
-| **$waf_attack_action** | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
-| **$waf_attack_family** | It informs the classification of the WAF infraction detected in the request (SQL, XSS, TRAVERSAL, among others) |
-| **$waf_learning**      | It informs if WAF is in learning mode, usually 0 or 1.       |
-| **$waf_match**         | List of infractions found in the request, it is formed by key-value elements; the key refers to the type of violation detected; the value shows the string that generated the infraction. |
-| **$waf_score**         | It reports the score that will be increased in case of match. |
-| **$waf_server**        | Hostname used in the request.                                |
-| **$waf_uri**           | URI used in the request.                                     |
+| Variable                 | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| **$attack_family**       | It tells you the attack families, categories where our Web Application Firewall identifies the attack and classifies it according to the OWASP Top 10. |
+| **$blocked**             | It informs whether the WAF blocked the action or not; 0 when not blocked and 1 when blocked. When in “Learning Mode”, it will not be blocked, regardless of the return. |
+| **$client_id**           | Unique Azion customer identifier.                            |
+| **$geoloc_country_name** | Name of the remote client's country, for example "Russian Federation", "United States". <br/>Detection by IP address geolocation. |
+| **$headers**             | Request headers analyzed by WAF.                             |
+| **$host**                | Host information sent on the request line; or Host field of the HTTP header. |
+| **$remote_address**      | IP address of the request.                                   |
+| **$server_protocol**     | The protocol of the connection established, usually “HTTP/1.1” or “HTTP/2.0”. |
+| **$timestamp**           | Request date and time.                                       |
+| **$total_blocked**       | It informs the total number of blocked requests.             |
+| **$total_processed**     | It informs the total number of processed requests..          |
+| **$version**             | The version of Azion Log used.                               |
+| **$waf_action**          | It reports WAF’s action regarding the action ($BLOCK, $PASS, $LEARNING_BLOCK, $LEARNING_PASS). |
+| **$waf_args**            | The request arguments.                                       |
+| **$waf_learning**        | It informs if WAF is in learning mode, usually 0 or 1.       |
+| **$waf_match**           | List of infractions found in the request, it is formed by key-value elements; the key refers to the type of violation detected; the value shows the string that generated the infraction. |
+| **$waf_score**           | It reports the score that will be increased in case of match. |
+| **$waf_server**          | Hostname used in the request.                                |
+| **$waf_uri**             | URI used in the request.                                     |
 
 ---
 
