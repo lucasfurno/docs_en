@@ -76,8 +76,6 @@ Only active services will be available for orchestration on the Edge Node and, a
 
 ## 2. Creating an Edge Service Step by Step {#hands-on}
 
-### Creating a Service
-
 1- Go to [Real-Time Manager](https://manager.azion.com/);
 
 2- On the top left menu, choose the *Edge Libraries* item and select the *Edge Services* page;
