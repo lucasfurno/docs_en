@@ -183,6 +183,8 @@ Necessary permission: **View Edge Application**
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
 | Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
 | :id *(mandatory)*           | The id of Rules Engine that you plan to query.               | path   | number                                  |
+| :phase                      |                                                              |        |                                         |
+| :rule_id                    |                                                              |        |                                         |
 
 
 
@@ -364,9 +366,9 @@ Content-Type: application/json
 
 ## 5. Overwriting a rule in Rules Engine {#overwriting-rules-engine}
 
-This return overwrites all the fields of a rule im Rules Engine, retaining the id.
+This return overwrites all the fields of a rule in Rules Engine, retaining the id.
 
-If you only want to update some fields, without changing the values of the rest, consider using the PATCH method, instead of PUT.
+If you only want to update some fields without changing the values of the rest, consider using the PATCH method, instead of PUT.
 
 #### **PUT** */edge_applications/:edge_application_id:/rules_engine/:phase:/rules/:rule_id:*
 
