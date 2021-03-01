@@ -25,7 +25,7 @@ Permission necessary: **Analytics**
 | Parameter | Description | Type of Parameter | Type of Data |
 |-----------|-------------|-------------------|--------------|
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation](% tl api_v3_authentication %}/#criacao-de-token)<br><br>For example:<br><br>Authorization:<br>583f8a9ca8d6d5ff2cb50f1d3c4d35cb8939f1bf | header | string |
-| :prod_id<br> **mandatory* | Product ID to be consulted<BR><BR>Edge Applications = 1441740010<br/>Data Streaming = 1498670028<br/>Edge Functions = 1531930033<br/>Intelligent DNS = 1563390045 <br/>L2 Caching = 1564082375 | path | number |
+| :prod_id<br> **mandatory* | Product ID to be consulted:<BR><BR>Application Acceleration  = 1441740021<BR>Edge Applications = 1441740010<br/>Data Streaming = 1498670028<br/>Edge Functions = 1531930033<br/>Image Processor = 1441110021 <br/>Intelligent DNS = 1563390045 <br/>L2 Caching = 1564082375<br>Live Streaming = 1441740004 <br>Load Balancer = 1441740012 | path | number |
 
 
 
