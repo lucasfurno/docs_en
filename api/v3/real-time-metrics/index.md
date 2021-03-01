@@ -27,6 +27,8 @@ Permission necessary: **Analytics**
 | Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation](% tl api_v3_authentication %}/#criacao-de-token)<br><br>For example:<br><br>Authorization:<br>583f8a9ca8d6d5ff2cb50f1d3c4d35cb8939f1bf | header | string |
 | :prod_id<br> **mandatory* | Product ID to be consulted<BR><BR>Edge Applications = 1441740010<br/>Data Streaming = 1498670028<br/>Edge Functions = 1531930033<br/>Intelligent DNS = 1563390045 <br/>L2 Caching = 1564082375 | path | number |
 
+
+
 **Example Request**
 
 ~~~
@@ -88,6 +90,8 @@ Permission necessary: **Analytics**
 | date_from **mandatory* | Date and time of the start of the query in the format “YYYY-MM-DDThh:mm” (Local Time) or “YYYY-MM-DDThh:mmZ” (UTC). You can also specify a duration by using one of the following values, and in this case the *date_to* parameter is left out.<br/> <br/>last-hour<br>last-3-days<br/>last-3-hours<br/>last-7-days<br/>last-6-hours <br/>last-15-days<br/>last-24-hours<br/>last-30-days<br/> | query | string |
 | date_to<br/> *opcional* | Date and time of the end of the query in the format “YYYY-MM-DDThh:mm” (Local Time) or “YYYY-MM-DDThh:mmZ” (UTC). You can also specify a duration by using the value “now”, and in the case of omission it will be considered the default value. | query | string |
 
+
+
 **Example Request**
 
 ~~~
@@ -141,6 +145,8 @@ Permission necessary: **Analytics**
 | :dim_name<BR> **mandatory* | Dimension name of the metric to be consulted. |  |  |
 | date_from **mandatory* | Date and time of the start of the query in the format “YYYY-MM-DDThh:mm” (Local Time) or “YYYY-MM-DDThh:mmZ” (UTC). You can also specify a duration by using one of the following values, and in this case the *date_to* parameter is left out.<br/> <br/>last-hour<br>last-3-days<br/>last-3-hours<br/>last-7-days<br/>last-6-hours <br/>last-15-days<br/>last-24-hours<br/>last-30-days<br/> | query | string |
 | date_to<br/> *opcional* | Date and time of the end of the query in the format “YYYY-MM-DDThh:mm” (Local Time) or “YYYY-MM-DDThh:mmZ” (UTC). You can also specify a duration by using the value “now”, and in the case of omission it will be considered the default value. | query | string |
+
+
 **Example Request**
 
 ~~~
