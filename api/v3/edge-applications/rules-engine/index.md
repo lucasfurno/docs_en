@@ -178,13 +178,13 @@ Necessary permission: **View Edge Application**
 
 **Mandatory parameters**
 
-| Parameter                   | Description                                                  | Type   | Type of Data                            |
-| --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
-| Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
-| Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| :id *(mandatory)*           | The id of Rules Engine that you plan to query.               | path   | number                                  |
-| :phase                      |                                                              |        |                                         |
-| :rule_id                    |                                                              |        |                                         |
+| Parameter                          | Description                                                  | Type   | Type of Data                            |
+| ---------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
+| Authorization *(mandatory)*        | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
+| Accept<br /> *(mandatory)*         | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
+| :edge_application_id *(mandatory)* | The id of the edge application you plan to query.            | path   | number                                  |
+| :phase<br /> *(mandatory)*         | The processing phase you can manipulate on Rules Engine.     | path   | string                                  |
+| :rule_id <br />*(mandatory)*       | The id of the rule you plan to query.                        | path   | number                                  |
 
 
 
@@ -241,17 +241,19 @@ All information associated with this rule will also be removed.
 
 The API does not require confirmation in order to run this instruction.
 
-#### **DELETE** */edge_applications/:edge_application_id:/rules_engine/:phase:/rules*
+#### **DELETE** */edge_applications/:edge_application_id:/rules_engine/:phase:/rules/:rule_id:*
 
 Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
-| Parameter                   | Description                                                  | Type   | Type of Data                            |
-| --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
-| Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
-| Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| :id *(mandatory)*           | The id of Rules Engine that you plan to delete.              | path   | number                                  |
+| Parameter                          | Description                                                  | Type   | Type of Data                            |
+| ---------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
+| Authorization *(mandatory)*        | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
+| Accept <br />*(mandatory)*         | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
+| :edge_application_id *(mandatory)* | The id of the edge application you plan to query.            | path   | number                                  |
+| :phase <br />*(mandatory)*         | The processing phase you can manipulate on Rules Engine      | path   | string                                  |
+| :rule_id<br /> *(mandatory)*       | The id of the rule you plan to query.                        | path   | number                                  |
 
 
 
@@ -281,11 +283,14 @@ Necessary permission: **Edit Security Settings**
 
 **Mandatory parameters**
 
-| Parameter                   | Description                                                  | Type   | Type of Data                            |
-| --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
-| Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
-| Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| Content-Type *(mandatory)*  | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
+| Parameter                          | Description                                                  | Type   | Type of Data                            |
+| ---------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
+| Authorization *(mandatory)*        | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
+| Accept <br />*(mandatory)*         | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
+| Content-Type *(mandatory)*         | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
+| :edge_application_id *(mandatory)* | The id of the edge application you plan to query.            | path   | number                                  |
+| :phase<br /> *(mandatory)*         | The processing phase you can manipulate on Rules Engine.     | path   | string                                  |
+| :rule_id <br />*(mandatory)*       | The id of the rule you plan to query.                        | path   | number                                  |
 
 
 
@@ -376,12 +381,14 @@ Necessary Permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
-| Parameter                   | Description                                                  | Type   | Type of Data                            |
-| --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
-| Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
-| Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| Content-Type *(mandatory)*  | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
-| :id *(mandatory)*           | The Id of Rules Engine to be overwritten.                    | path   | number                                  |
+| Parameter                          | Description                                                  | Type   | Type of Data                            |
+| ---------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
+| Authorization *(mandatory)*        | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
+| Accept *(mandatory)*               | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
+| Content-Type *(mandatory)*         | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
+| :edge_application_id *(mandatory)* | The id of the edge application you plan to query.            | path   | number                                  |
+| :phase *(mandatory)*               | The processing phase you can manipulate on Rules Engine.     | path   | string                                  |
+| :rule_id *(mandatory)*             | The id of the rule you plan to query.                        | path   | number                                  |
 
 
 
@@ -470,12 +477,14 @@ Necessary permission: **Edit Edge Application**
 
 **Mandatory parameters**
 
-| Parameter                   | Description                                                  | Type   | Type of Data                            |
-| --------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
-| Authorization *(mandatory)* | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
-| Accept *(mandatory)*        | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| Content-Type *(mandatory)*  | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
-| :id *(mandatory)*           | The Id of Rules Engine to be overwritten.                    | path   | number                                  |
+| Parameter                          | Description                                                  | Type   | Type of Data                            |
+| ---------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
+| Authorization *(mandatory)*        | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
+| Accept *(mandatory)*               | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
+| Content-Type *(mandatory)*         | The type of coding used in the Body (application/json).<br><br>e.g.:<br><br>Content-Type: application/json | header | string                                  |
+| :edge_application_id *(mandatory)* | The id of the edge application you plan to query.            | path   | number                                  |
+| :phase<br /> *(mandatory)*         | The processing phase you can manipulate on Rules Engine.     | path   | string                                  |
+| :rule_id  <br />*(mandatory)*      | The id of the rule you plan to query.                        | path   | number                                  |
 
 
 
