@@ -99,8 +99,8 @@ Necessary permission: **View Edge Application**
 | ------------------------------------- | ------------------------------------------------------------ | ------ | --------------------------------------- |
 | Authorization *(mandatory)*           | Authentication through the Token, previously created through the endpoint of [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) | header | string                                  |
 | Accept *(mandatory)*                  | Details about the type of return and version                 | header | string;<br>*application/json;version=3* |
-| :edge_application_id *(mandatory)*    | The id of the edge application you plan to consult           | path   | number                                  |
-| :functions_instances_id *(mandatory)* | The id of the edge function instance you plan to consult     | path   | number                                  |
+| :edge_application_id *(mandatory)*    | The id of the edge application you plan to query           | path   | number                                  |
+| :functions_instances_id *(mandatory)* | The id of the edge function instance you plan to query     | path   | number                                  |
 
 
 
