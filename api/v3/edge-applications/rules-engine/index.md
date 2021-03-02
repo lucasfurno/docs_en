@@ -51,33 +51,6 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
     },
     "results": [
         {
-            "id": 9523,
-            "name": "Default Rule",
-            "phase": "default",
-            "behaviors": [
-                {
-                    "name": "set_origin",
-                    "target": "7226"
-                },
-                {
-                    "name": "bypass_cache_phase",
-                    "target": null
-                }
-            ],
-            "criteria": [
-                [
-                    {
-                        "variable": "${uri}",
-                        "operator": "starts_with",
-                        "conditional": "if",
-                        "input_value": "/"
-                    }
-                ]
-            ],
-            "is_active": true,
-            "order": 1
-        },
-        {
             "id": 9539,
             "name": "Image",
             "phase": "request",
@@ -106,7 +79,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
         },
         {
             "id": 14086,
-            "name": "The Rule 2",
+            "name": "The Rule",
             "phase": "request",
             "behaviors": [
                 {
@@ -132,35 +105,6 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
             ],
             "is_active": true,
             "order": 2
-        },
-        {
-            "id": 14714,
-            "name": "The Rule",
-            "phase": "request",
-            "behaviors": [
-                {
-                    "name": "deliver",
-                    "target": null
-                }
-            ],
-            "criteria": [
-                [
-                    {
-                        "variable": "${uri}",
-                        "operator": "starts_with",
-                        "conditional": "if",
-                        "input_value": "/"
-                    },
-                    {
-                        "variable": "${uri}",
-                        "operator": "does_not_start_with",
-                        "conditional": "and",
-                        "input_value": "/if"
-                    }
-                ]
-            ],
-            "is_active": true,
-            "order": 3
         }
     ]
 }
@@ -204,16 +148,6 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
         "id": 9539,
         "name": "Image",
         "phase": "request",
-        "behaviors": [
-            {
-                "name": "bypass_cache_phase",
-                "target": null
-            },
-            {
-                "name": "optimize_images",
-                "target": null
-            }
-        ],
         "criteria": [
             [
                 {
@@ -223,6 +157,16 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
                     "input_value": "\\.(jpg|jpeg|gif|bmp|png)"
                 }
             ]
+        ],
+        "behaviors": [
+            {
+                "name": "bypass_cache_phase",
+                "target": null
+            },
+            {
+                "name": "optimize_images",
+                "target": null
+            }
         ],
         "is_active": true,
         "order": 1
@@ -365,7 +309,7 @@ Content-Type: application/json
 {
     "results": {
         "id": 15116,
-        "name": "New Rule 1",
+        "name": "New Rule",
         "phase": "request",
         "behaviors": [
             {
@@ -432,7 +376,7 @@ Content-Type: application/json
 
 ~~~
 {
-    "name": "The Rule 3",
+    "name": "Overwriting The Rule",
     "criteria": [
               		[
                     	{
@@ -463,7 +407,7 @@ Content-Type: application/json
 {
     "results": {
         "id": 9539,
-        "name": "The Rule 3",
+        "name": "Overwriting The Rule",
         "phase": "request",
         "behaviors": [
             {
@@ -528,7 +472,7 @@ Content-Type: application/json
 
 ~~~
 {
-    "name": "The Rule 3",
+    "name": "Updating The Rule",
     "criteria": [
               		[
                     	{
@@ -559,7 +503,7 @@ Content-Type: application/json
 {
     "results": {
         "id": 9539,
-        "name": "The Rule 3",
+        "name": "Updating The Rule",
         "phase": "request",
         "behaviors": [
             {
