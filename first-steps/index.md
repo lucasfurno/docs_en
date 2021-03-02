@@ -25,7 +25,7 @@ You and your team will have a 100% online, automated, real-time experience! Let'
 
 ## 1. How to benefit {#how-to-benefit}
 
-####To create your account and start experiencing our products follow the steps below:
+#### To create your account and start experiencing our products follow the steps below:
 
 1. Go to our [website](https://www.azion.com/en/), and click the **Free Account** button. The form - *Create your Azion account* - will be displayed.
 
@@ -88,13 +88,13 @@ After activating your account, you must create your first edge application. To c
 
 Enter the following fields:
 
-####Name for Appliction 
+#### **Name for Appliction** 
 
 Give your edge application a suggestive name. This name will be used to identify your settings. You can use the domain name of your web application itself as a name.
 
 *For example: www.azion.com*
 
-####**Main Settings**
+#### **Main Settings**
 
 In this section, the main fields related to the delivery of your applications are defined. And, also, the *Minimum TLS version* field.
 
@@ -103,7 +103,7 @@ In this section, the main fields related to the delivery of your applications ar
 | **Delivery Protocol** | Choose the delivery protocol supported by your web application:<br>**HTTP:** if your application only supports the HTTP protocol.<br><br>**HTTP & HTTPS:** f your application supports both HTTP and HTTPS protocols. To use HTTPS, you will need [Digital Certificates]({% tl documentation_products_edge_applications_digital_certificates %}). |
 | **Minimum TLS version** | Transport Layer Security (TLS) guarantees encrypted communications between a client and a web server via HTTPS.<br/>PCI standards recommend the use of TLS 1.2 or higher. Remember, if you use newer versions, some older client devices or browsers will not be able to connect. |
 
-####**Origins**
+#### **Origins**
 
 Origins is where you define your origin data. To understand more about how the **Edge Applications** works, what the origins is for, or how to make more advanced origin settings, see the product's technical documentation.
 
@@ -114,7 +114,7 @@ Origins is where you define your origin data. To understand more about how the *
 | **Origin Protocol Policy** | In the reverse proxy architecture adopted by Azion, its users connect to Intelligent Edge via HTTP or HTTPS and you choose how you want Azion to connect to your origin:<br><br>**Preserve HTTP/HTTPS protocol:** it will keep the same connection protocol (HTTP or HTTPS) and ports used by your user when accessing your content on Azion to connect to your origin.<br><br>**Enforce HTTP:** the connection between Azion’s Edge Nodes and your origin will be through HTTP, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (80 for HTTP) if you wish.<br><br>**Enforce HTTPS:** the connection between Azion’s Edge Nodes and your origin will be through HTTPS, regardless of the connection protocol (HTTP or HTTPS) and ports used by your user to access Azion’s content. With this new option, you may customize a port to your origin in the Address field different from the default port (443 for HTTPS) if you wish. |
 | **Host Header** |The Host header is used by your origin to identify the virtualhost and locate your content or application. When setting up an origin in Real-Time Manager, you can customize the value that must be sent by Azion in the Host header.<br><br>Use the value *${host}*, in the Host Header field, if your origin is configured to answer to virtualhost for the same domain that is used by its users to access the content on Azion. This way, you will be instructing Edge Nodes to forward the same Host header that is received from your visitors to their origin.<br><br>If necessary, you can fill in a custom value for Host Header to be sent to your origin. For example, origin.domain.com. You must customize the Host Header if your origin is configured to respond to a virtualhost at a domain different than the one used by its users. |
 
-####**Cache Settings**
+#### **Cache Settings**
 
 In this section, the cache options for your content will be defined. There are two types of cache:
 
@@ -148,13 +148,13 @@ After creating your first edge application, you must associate one or more domai
 
 Enter the following fields:
 
-####**Add Name Configuration**
+#### **Add Name Configuration**
 
 Give your Edge Application a suggestive name. This name will be used to identify your configuration. You can use your web application's own domain as a name.
 
 *Example: www.azion.com*
 
-####**Settings**
+#### **Settings**
 
 In this section, the main fields related to the delivery of your applications are defined.
 
