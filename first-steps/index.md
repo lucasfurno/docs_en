@@ -88,7 +88,7 @@ After activating your account, you must create your first edge application. To c
 
 Enter the following fields:
 
-#### **Name for Appliction** 
+#### **Name for Application** 
 
 Give your edge application a suggestive name. This name will be used to identify your settings. You can use the domain name of your web application itself as a name.
 
