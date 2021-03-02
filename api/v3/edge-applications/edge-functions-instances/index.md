@@ -57,7 +57,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
             "name": "Hello World",
             "args": {
                 "param": {
-                    "body": "Washington Post",
+                    "body": "Azion - Move to the Edge",
                     "http_status": 200
                 }
             }
