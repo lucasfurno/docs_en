@@ -76,6 +76,8 @@ The condition for the execution of a rule must be the comparison of a variable w
 | exists              | The variable has a defined value. For example, Request Args exists if an argument is sent in the request's query string. | -                          |
 | does not exist      | The variable does not have a defined value. For example, Request Args does not exist if an argument is sent in the request's query string. | -                          |
 
+> **Note**: The options vary according to the selected *Criteria*.
+
 #### Logic Operators
 
 Multiple conditions can be defined using the logical operators "*and*" and "*or*”. The operator “and” has implicit precedence over the operator “or”.
