@@ -52,9 +52,10 @@ To provide even more agility to your processes, Azion provides and maintains som
 
 ## 3. Support Documentation {#support-documents}
 
-* [Network Lists API]({% tl api_v3_network_lists %})
-* [Edge Firewall]({% tl documentation_products_edge_firewall %})
+* [Network Lists API](https://www.azion.com/en/documentation/products/api/v3/network-lists/)
+* [Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/)
 
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
