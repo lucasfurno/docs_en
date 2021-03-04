@@ -6,6 +6,18 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Fev/2021**
+
+* New [API for Edge Application - Origins](https://www.azion.com/en/documentation/products/api/v3/edge-applications/origins/) ;
+
+- New [API for Edge Application - Cache Settings](https://www.azion.com/en/documentation/products/api/v3/edge-applications/cache-settings/) ;
+- Bugfix on Edge Firewall search field when the user search with special chars;
+- Bugfix error on cookie parser;
+- Bugfix error on use header without check if exists on edge application;
+- Bugfix on WAF search field;
+- Bugfix for prevent the creation of whitelists whose path contains special characters;
+
+
 
 **Jan/2021**
 
@@ -23,6 +35,7 @@ This page lists the latest changes to Azion products and services. Here you will
 
 **Dec/2020**
 
+* [Edge Functions with JavaScript](https://www.azion.com/en/products/edge-functions/) Beta's launch.
 * [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
 * Added edge node authorization with bulk actions.
 * Added option to Request Trial at Talk to Sales.
