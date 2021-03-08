@@ -16,6 +16,9 @@ This page lists the latest changes to Azion products and services. Here you will
 - Bugfix error on use header without check if exists on edge application;
 - Bugfix on WAF search field;
 - Bugfix for prevent the creation of whitelists whose path contains special characters;
+* New [API V3 of the Real-Time Metrics] https://www.azion.com/en/documentation/products/api/v3/real-time-metrics/
+* Bugfix in the Data Streaming Requests metric that was not being accounted for in the Billing interface;
+* Bugfix in the Real-Time Events filter to allow date searching; 
 
 
 
