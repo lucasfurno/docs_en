@@ -72,7 +72,7 @@ You can find the following information in **RTM**:
 
   > For more information about a product go to its specific documentation.
 
-## 3. Criating a new Edge Application{#create-new-edge-application}
+## 3. Criating a new Edge Application {#create-new-edge-application}
 
 After activating your account, you must create your first edge application. To create a new configuration, follow the steps below:
 
@@ -167,7 +167,7 @@ In this section, the main fields related to the delivery of your applications ar
 
 > Click on the *Save* button after filling in all the fields to save your changes.
 
-## 5.Changing your applications's DNS to the Domain created{#change-your-application-DNS}
+## 5.Changing your applications's DNS to the Domain created {#change-your-application-DNS}
 
 After associating a Domain to your edge application, you will see a list of existing settings in your account.
 
@@ -181,7 +181,7 @@ You will need this domain to approve the operation of your new configuration. To
 
 To continue learning about Azion's products, check our [documentation](https://www.azion.com/en/documentation/) or search using the keywords in the *Search field* at the top of the page.
 
-## 6. Keeping your account after the trial period{#keep-your-account}
+## 6. Keeping your account after the trial period {#keep-your-account}
 
 To avoid interruption of your services after the trial period, follow the steps below:
 
