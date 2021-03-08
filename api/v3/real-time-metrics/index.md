@@ -18,7 +18,7 @@ The data is grouped by Product, Domain, Metrics and Dimension.
 
 It returns the list of all domains related to the selected product.
 
-#### **GET** ***_/metrics/products/:prod_id/configurations _***
+#### **GET** */metrics/products/:prod_id/configurations*
 
 Permission necessary: **Analytics**
 
@@ -77,7 +77,7 @@ HTTP/2 200
 
 It returns the aggregate data of a metric by domain related to the selected product.
 
-#### **GET** *_/metrics/products/:prod_id/configurations/:conf_id/metrics/:metric_name _*
+#### **GET** */metrics/products/:prod_id/configurations/:conf_id/metrics/:metric_name*
 
 Permission necessary: **Analytics**
 
@@ -132,7 +132,7 @@ HTTP/2 200
 
 It returns the aggregate data for a specific dimension of a metric related to the selected product.
 
-#### **GET** _/metrics/products/:prod_id/configurations/:conf_id/metrics/:metric_name/dimensions/:dim_name _
+#### **GET** */metrics/products/:prod_id/configurations/:conf_id/metrics/:metric_name/dimensions/:dim_name*
 
 Permission necessary: **Analytics**
 
