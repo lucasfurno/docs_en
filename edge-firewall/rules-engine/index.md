@@ -6,7 +6,7 @@ The *Rules Engine* is designed for you to be able to implement your security log
 
 #### With *Rules Engine* you can:
 
-- Block;
+- Block the request;
 - Ignore the request;
 - Limit the access rate;
 - Apply a WAF policy;
@@ -157,7 +157,7 @@ In *Behavior* you add the behaviors you want to perform, if the rule's condition
    Define the action to be taken if the requisition matches the defined criteria. Select the attribute, and if necessary, select the condition and add the reference value. Some Actions do not require a complement, just select them so that their behavior is defined, for example, in the action *Deny (403 Forbidden)*, which will return a HTTP *Status Code 403* indicating that the server understood the request, but refuses to authorize it.
 
    - **Then**: Choose one of the available actions. The set of behaviors depends on the enabled Edge Firewall modules. Some options require the completion of complementary fields. 
-Example: *Then Set Rate Limit, Average Rate Limit (req/s)* 2, *Client IP Address*, *Maximum burst size 10*. In this example, for the *Set Rate Limit* action, the additional fields *Average Rate Limit (req/s)* and *Maximum Burst Size* will appear, in addition to the restriction selection option by IP or Global address, that is, if the request meets the criteria of the Rule, then a *rate limit* of 2 requests per second, per IP address will be set, with a burst limit of 10 requests.
+Example: *Then Set Rate Limit, Average Rate Limit (req/s or req/m)* 2, *Client IP Address*, *Maximum burst size 10*. In this example, for the *Set Rate Limit* action, the additional fields *Average Rate Limit (req/s or req/m)* and *Maximum Burst Size* will appear, in addition to the restriction selection option by IP or Global address, that is, if the request meets the criteria of the Rule, then a *rate limit* of 2 requests per second, per IP address will be set, with a burst limit of 10 requests.
    
 4. Select the field *Active* to activate the rule set;
 
@@ -190,7 +190,7 @@ Parameterize your Rule Engine with the criteria that will define how your rule w
 
 - **Then**: Choose *Set Rate Limit*
 
-    Example.: *Then* *Set Rate Limit*, *Average Rate* *Limit* *(req/s) 2*, *Client IP Address*, *Maximum burst size 10*. In this example, for the Set Rate Limit action, the additional fields Average Rate Limit (req/s) and Maximum Burst Size will appear, in addition to the restriction selection option by IP or Global address, that is, if the request meets the criteria of the Rule, then a rate limit of 2 requests per second, per IP address will be set, with a burst limit of 10 requests.
+    Example.: *Then* *Set Rate Limit*, *Average Rate* *Limit* *(req/s or req/m) 2*, *Client IP Address*, *Maximum burst size 10*. In this example, for the Set Rate Limit action, the additional fields Average Rate Limit (req/s or req/m) and Maximum Burst Size will appear, in addition to the restriction selection option by IP or Global address, that is, if the request meets the criteria of the Rule, then a rate limit of 2 requests per second, per IP address will be set, with a burst limit of 10 requests.
 
 4. Select the field *Active* to activate the rule set;
 5. Click the *Save* button.
