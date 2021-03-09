@@ -1,191 +1,90 @@
-# **Users and Teams**
+# **Multi-Factor Authentication**
 
-[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/accounts/users-and-teams/index.md)
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/accounts/multi-factor-authentication/index.md)
 
-This document will provide you with information on adding, deleting, or changing information from users and teams on Real-Time Manager (RTM).
+Multi-Factor Authentication (MFA) is an electronic verification method used to secure logins. With MFA, the user must provide at least two pieces of identity evidence to be able to login into their account. In this case, it is a combination of a password and a third-party authenticator application on a mobile device. 
 
-To ensure data protection and confidentiality, do not share any login information with other users.
+> > Before you enable this setting on Real-Time Manager (RTM), make sure your mobile device supports an MFA application, such as Google Authenticator or Microsoft Authenticator, by going into your app store (iOS' App Store or Android's Google Play, for example), searching and downloading it.
 
-
-
-> 1. *[Adding users to the account](#adding-users-to-the-account)*
-> 2. *[Changing user information](#changing-user-information)*
-> 3. *[Changing main account (Account owner) information](#changing-account-owner-information)*
-> 4. *[Deleting users](#deleting-users)*
-> 5. *[Adding teams](#adding-teams)*
-> 6. *[Changing team permissions](#changing-team-permissions)*
-> 7. *[Deleting teams](#deleting-teams)*
-
-
+> 1. [Enabling MFA on Real-Time Manager](#enabling-mfa-on-rtm)
+> 2. [Setting up an MFA mobile application](#setting-up-an-mfa-app)
+> 3. [Logging to Real-Time Manager using MFA](#logging-to-rtm-using-mfa)
+> 4. [Resetting Multi-Factor Authentication](#resetting-mfa)
 
 ---
 
-## 1. Adding users to the account {#adding-users-to-the-account}
+## 1. Enabling MFA on Real-Time Manager {#enabling-mfa-on-rtm}
 
-Read the instructions below to add a new user to the RTM main account.
+You can enable MFA when creating a new user, set it up to active users, or secure access to your account. 
 
-1. Access Real-Time Manager with a main account (Account owner). 
-2. Click the account menu and select **Users**. 
-3. On the new screen, click **Add user**.
-4. Fill out the following fields:
+Enabling MFA to your account:
 
-
-
-User profile
-
-**First name:** new user name.
-
-**Last name:** new user last name.
-
-**Timezone:** select the timezone where the new user is located. Choosing the correct timezone guarantees precision in accessing data and metrics on RTM.
-
-**Language:** the standard language for RTM is English.
-
-Contact information
-
-**E-mail:** new user e-mail address. The user will apply the provided e-mail address as a login credential.
-
-**Mobile:** new user mobile number.
-
-Security settings
-
-**Account owner:** by turning the switch on, the user will be defined as Account owner, having full access to all features, including account and solution management. By turning the switch off, the user will be designated as Non-owner, with restricted access, based on Teams permissions.
-
-**Teams:** if the new user isn't an Account owner, you must select a team to allocate the user. Real-Time Manager creates a Default Team if there is no Team available/created beforehand. You can choose multiple teams to assign the user.
-
-**Multi-Factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
-
-
-
-5. Click **Save** to finish the process. The new user will receive an activation e-mail that is valid for 14 days.
-
-   
-
----
-
-## 2. Changing user information{#changing-user-information}
-
-Read the instructions below to change a dependent user's profile in RTM.
-
-1. Access Real-Time Manager with a main account (Account owner). 
-2. Click the account menu and select **Users.** 
-3. Select the desired user to access their profile.
-4. Modify any information from the account fields
-5. Click **Save** to finish the process. 
-
-It is possible to deactivate a user by turning off the **Active** switch.
-
----
-
-## 3. Changing main account (Account owner) information{#changing-account-owner-information}
-
-Follow the step-by-step below to change any information or password from the Account owner.
-
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access Real-Time Manager. 
 
 2. Click the account menu and select **User Preferences.** 
 
-3. Change any of the following fields:
-
-   
-
-User profile
-
-**First name:** account owner name.
-
-**Last name:**  account owner last name.
-
-**Timezone:** select the timezone where the Account owner is located. Choosing the correct timezone guarantees precision in accessing data and metrics on RTM.
-
-**Language:** the standard language for RTM is English.
-
-Contact information
-
-**E-mail:** account owner e-mail address. The user will apply the provided email address as a login credential.
-
-**Mobile:** account owner mobile number.
-
-
-
-In case you'd like to change the password: 
-
-Security settings
-
-**Old password:** type the current password.
-
-**New password:** type a new password.
-
-**New password confirmation:** confirm the new password.
-
-**Multi-Factor Authentication:** turning the switch on enables Multi-factor Authentication (MFA). It is a verification method that grants extra security to the account.
-
-
+3. Enable the MFA switch.
 
 4. Click **Save** to finish the process. 
 
    
 
----
+Enabling MFA to existing users:
 
-## 4. Deleting users {#deleting-users}
-
-Read the instructions below to delete a dependent user's profile on RTM.
-
-1. Access Real-Time Manager with a main account (Account owner). 
+1. Access Real-Time Manager. 
 2. Click the account menu and select **Users.** 
-3. Hover over the user you want to delete and click on the trash bin that appears as you move the cursor.
-4. Follow the procedure to confirm the order.
+3. Select the desired user to access their profile.
+4. Enable the MFA switch. 
+5. Click **Save** to finish the process. 
 
 
 
 ---
 
-## 4. Adding teams{#adding-teams}
+## 2. Setting up an MFA mobile application {#setting-up-an-mfa-app}
 
-Read the instructions below to add a new team to the RTM account.
+To install an authenticator application on your mobile phone, consult your operational system's app store (such as iOS' App Store or Android's Google Play). You can use Google Authenticator or Microsoft Authenticator applications, for instance.
 
-1. Access Real-Time Manager with a main account (Account owner). 
+Once you have downloaded the application and logged in, follow these steps to connect Azion's account to your chosen authenticator application:
 
-2. Click the account menu and select **Teams.** 
+1. Look for the **+** button and click it.
+2. Select the account type you are going to add. The camera will start.
+3. Scan the QR code that appears when you login to RTM.
+4. Type the six-digit code and click **Verify Code**.
 
-3. On the new page, click **Add team**.
 
-4. Choose a name for the new team and fill out the blank space.
 
-5. Select the targeted permissions in the displayed boxes.
-
-6. Click **Save** to finish the process.
-
-   
-
----
-
-## 5. Changing team permissions{#changing-team-permissions}
-
-Read the instructions below to change teams permissions on RTM.
-
-1. Access Real-Time Manager with a main account (Account owner). 
-2. Click the account menu and select **Teams.** 
-3. Select the specified team.
-4. Change the permissions by selecting or deselecting the targeted options.
-5. Click **Save** to finish the process.
-
-It is possible to deactivate a team by turning off the **Active** switch.
+Because of MFA, it is necessary to have access to your mobile phone to login into RTM providing the 6-digit code.
 
 
 
 ---
 
-## 5. Deleting teams{#deleting-teams}
+## 3. Logging to Real-Time Manager using MFA {#logging-to-rtm-using-mfa}
 
-Read the instructions below to delete a team on RTM.
+Read below to login to RTM with Multi-Factor Authentication activated.
 
-1. Access Real-Time Manager with a main account (Account owner). 
-2. Click the account menu and select **Teams.** 
-3. Hover over the team you want to delete and click on the trash bin that appears as you move the cursor.
-4. Follow the procedure and finish the instructions to confirm the order.
+1. On RTM's login page, insert your login credentials (e-mail and password) and click **Sign In**.
+2. Start your authenticator application.
+3. Type the six-digit code in the specified space on RTM and click **Verify**.
 
-> *It is mandatory to remove all users from the team before deleting it.* 
+
+
+---
+
+## 4. Resetting Multi-Factor Authentication {#resetting-mfa}
+
+In case of loss or theft of your mobile phone, you will not be able to login to RTM unless an Account owner resets the MFA function. 
+
+To do so, you can ask for an Account owner user to deactivate your MFA function: 
+
+1. Access Real-Time Manager.
+2. Click the account menu and select **Users**. 
+3. Select the desired user to access their profile.
+4. Disable the MFA switch.
+5. Click **Save** to finish the process. 
+
+If you are the only Account owner within the account, it is necessary to contact the [support]([support@azion.com](mailto:support@azion.com) ) team to have the MFA reset.
 
 
 
