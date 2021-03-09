@@ -39,7 +39,7 @@ To learn more about how they work and how to apply some of these Edge Functions,
 5.  Select the *Args* tab, still in *Functions*, and fill in the necessary information.
 6.  Click the *Save* button and you will have instantiated the function.
 7.  Select the *Rules Engine* tab and click on *New Rule* to add a rule;
-8.  Fill in the fields in *Criteria* to stipulate your rule.
+8.  Fill in the fields in *Criteria* to condition your rule.
 9.  Set, in your rule, in the *Then* field in *Behavior* the option *Run Function* and select the desired option.
 10.  Click on  the *Save* button to save you rule and its function will run when there is a HTTP request.
 
