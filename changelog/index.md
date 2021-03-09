@@ -16,12 +16,12 @@ This page lists the latest changes to Azion products and services. Here you will
 - Bugfix error on use header without check if exists on edge application;
 - Bugfix on WAF search field;
 - Bugfix for prevent the creation of whitelists whose path contains special characters;
-* New [API V3 of the Real-Time Metrics](https://www.azion.com/en/documentation/products/api/v3/real-time-metrics/);
-* Added Data Streaming Requests metric at Billing interface;
-* Bugfix in the Real-Time Events filter to allow date searching; 
-* Changed Edge Orchestrator agent message to be more friendly;
-* Scripts logs (default and error outputs) of Edge Services are now saved on files inside Edge Nodes;
-* Bugfix for preventing the Edge Orchestrator agent reestablish communication with RTM when it recovers the internet;
+- New [API V3 of the Real-Time Metrics](https://www.azion.com/en/documentation/products/api/v3/real-time-metrics/);
+- Added Data Streaming Requests metric at Billing interface;
+- Bugfix in the Real-Time Events filter to allow date searching; 
+- Changed Edge Orchestrator agent message to be more friendly;
+- Scripts logs (default and error outputs) of Edge Services are now saved on files inside Edge Nodes;
+- Bugfix for preventing the Edge Orchestrator agent reestablish communication with RTM when it recovers the internet;
 
 
 
