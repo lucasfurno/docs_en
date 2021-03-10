@@ -1,6 +1,6 @@
 # Credentials
 
-You can generate the necessary credential to use and authenticate our services by following these steps:
+You can generate credentials to use and authenticate our services by following these steps:
 
 1. Access [Real-Time Manager](https://manager.azion.com/);
 
