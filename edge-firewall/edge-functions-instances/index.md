@@ -32,6 +32,8 @@ To learn more about how they work and how to apply some of these Edge Functions,
 
 #### Instantiate and run the functions in your Edge Firewall according to the following steps:
 
+**Note**: You must choose a security solution from Azion *Marketplace* to have access to the options available below.
+
 1.  Go to [Real-Time Manager](https://manager.azion.com/) and access the products menu *Edge Computing > Edge  Firewall*;
 2.  Select an *Edge Firewall*;
 3.  Activate the *Edge Functions* module in *Main Settings*;
