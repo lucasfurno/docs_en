@@ -4,12 +4,12 @@
 
 Web Application Firewall protects your applications against threats such as SQL Injections, Remote File Inclusion (RFI), Cross-Site Scripting (XSS) and more. WAF analyzes HTTP and HTTPS requests, detects and blocks malicious acts before they reach your infrastructure and without impacting the performance of your applications.
 
-> 1. *[How does it work?](#how-does-it-work)*
+> 1. *[How it works](#how-it-works)*
 > 2. *[Support Documents](#support-documents)*
 
 ---
 
-## 1. How does it work? {#how does it work}
+## 1. How it works {#howitworks}
 
 Web Application Firewall is an Azion Edge Firewall’s module, based on the request scoring methodology. Each *http/https* request is compared to a set of extremely restrictive blocking rules and receives a score for each family of threat.
 
