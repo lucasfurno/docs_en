@@ -12,13 +12,13 @@ You can make your own protection source code available and run it directly on th
 
 #### With the Edge Firewall you can: 
 
-- Create *whitelists*, *blacklists* and *greylists* based on either the IP/CIDR address or the ASN or location of the user;
-- Protect your applications from the *Tor* network; 
-- Limit the access rate to an application to avoid *brute force* attacks;
-- Mitigate Denial of Service attacks (*DDoS*);
-- Protect applications from *OWASP* Top 10 threats;
-- Add your own source code protection or content access controls, to be run from Edge Firewall;
-- Integrate third-party software to be run in the Edge Firewall. For example, market-leading solutions against *credential stuffing*, *account takeover attempts*, *price*, and *contact scraping*, etc.
+- create *whitelists*, *blacklists* and *greylists* based on either the IP/CIDR address or the ASN or location of the user;
+- protect your applications from the *Tor* network; 
+- limit the access rate to an application to avoid *brute force* attacks;
+- mitigate Denial of Service attacks (*DDoS*);
+- protect applications from *OWASP* Top 10 threats;
+- add your own source code protection or content access controls, to be run from Edge Firewall;
+- integrate third-party software to be run in the Edge Firewall. For example, market-leading solutions against *credential stuffing*, *account takeover attempts*, *price*, and *contact scraping*, etc.
 
 > 1. [How it works](#how-does-it-work)
 > 2. [Edge Firewall Modules](#edge-firewall-modules)
@@ -34,7 +34,7 @@ By using Azion as your edge computing platform, you can create security settings
 
 > You can share the same *Rule Set* among all applications that adopt the same security policy.
 
-An **Edge Firewal**l *Rule Set* consists of a selection of domains where it should be applied, modules that must be applied and the security rules configured in *Rules Engine*.
+An **Edge Firewall** *Rule Set* consists of a selection of domains where it should be applied, modules that must be applied and the security rules configured in *Rules Engine*.
 
 > DDoS Protection
 >
