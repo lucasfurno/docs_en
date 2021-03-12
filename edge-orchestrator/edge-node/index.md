@@ -73,7 +73,7 @@ After downloading, you must follow the steps below, in order to install the Edge
    **Note:** If your operating system does not have a service manager (systemd, for example), you must run it in the foreground.<br />
    `edge-orchestrator start --foreground`
    
-   > The logs to run the Edge Orchestrator agent are stored in:  <br>`/var/log/azion/edge-services.log`
+   > The logs to run the Edge Orchestrator agent are stored in:  <br>`/var/log/azion/edge-orchestrator.log`
 
 ---
 
