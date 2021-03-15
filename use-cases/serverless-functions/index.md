@@ -1,52 +1,71 @@
-# Serverless functions running on the **Edge**
+# Running Serverless Functions in **Edge**
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/use-cases/serverless-functions/index.md)
 
-With Edge Computing and its Serverless functions (Edge Functions), it is now possible to dispense with the configuration of servers and the use of computing clouds (or Cloud Computing). From a simple "Hello World" to complex scenarios, there are many case possibilities that can be built and processed directly in Edge Nodes.
+Edge Functions is a service of Azion's Edge Computing platform that allows you to program and execute serverless functions, without the need to provision or manage servers.
 
-From serverless functions running on the edge, it is possible to configure automatic responses to requests, create static sites with dynamic navigation and many other options, in a decentralized manner, with high availability, low latency, high transfer capacities and a better user experience as well as devices that trigger them (IoT's for example).
+With the Hello World Edge Function, for example, you can create a specific function to create a display for any page, for example, displaying an error or status, or even to deliver HTML containing a JSON object, that enables you to monitor the status of a particular service in real time.
 
-## Hello World! This is an Edge Function
+Here are some other uses for Edge Functions: 
 
-The Edge Function Hello World is a serverless function on Azion's Edge Computing platform. Create automated responses for API gateways, FAQs, landing pages, error pages, test pages and many other features that will execute the business rules directly on Edge Nodes, load client-side scripts and run functions locally, thereby freeing up precious computing resources for essential services for your business. 
-
-The page you are currently viewing is the result of running a Hello World edge function. Entirely built on Edge, this is an example of how static pages can be configured to respond to API requests, for example, thus reducing queries to the origin. Here we show an example of a query to the website *httpbin.org*, showing some information about the origin of the request, such as the origin IP and the user-agent.
-
-Your origin IP:
-
-~~~
-{
-  "origin": "201.48.49.113, 201.48.49.113"
-}
-~~~
-
-Your User-agent:
-
-~~~
-{
-  "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 
-(KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
-}
-~~~
+* Inspect Headers and Authorized Tokens, enabling Access Control before forwarding requests to the origin;
+* Manipulating cookies;
+* Sending different objects to your users based on the User-Agent header;
+* Generating responses without having to necessarily forward the request to the origin, and so on.
 
 ## How it works
 
-Before you start, make sure that the Edge Functions service is active in your Azion account and that you already have the **_Hello World_** function in your Edge Functions Libraries. If not, contact our sales team to enable the service. The operation is very simple, just instantiate a Hello World function inside your Edge Application and configure the desired response through the parameters that the function receives (Json Args).
+You can create your own functions or use any of those already available from the [Azion Marketplace](http://marketplace.azion.com/). To demonstrate how it works, we will explain the steps for creating a Hello World function. 
 
-To configure your Function Hello World, edit the Edge Application to which you want to assign this service, making sure that the Edge Function option is enabled in the *Main Settings* tab. Next, go to the *Functions* tab and add a new Hello World function, providing a meaningful name for your custom function (for example MyHelloWorld), because it is through this name that your Function will be identified later in the configuration of the Rules Engine behavior. Note that the function code will appear in the *Code* section, for reading and understanding only. 
+First install the Hello World function within your Edge Application and configure the desired response through the parameters of the relevant function (*Args*). When a request reaches the Edge, the validation criteria are assessed, and, if all requirements are met, the function will be run.
 
-In the *Json Args* tab, enter the function parameters in JSON format: Return message status (http_status) and message body (body), as in the example below. 
+Next, we are going to show you an example where we want to display a status page with a service temporarily unavailable notice (www.myapplication.com/api_service, for example), created by using the Hello World Edge Function. 
+
+## Configuring the Hello World function
+
+Edge Function Hello World is available from the function library of Azion's Edge Computing platform and can be accessed through Real-Time Manager (RTM), from the *Libraries* menu.
+
+To run the function, it must be installed in the relevant **Edge Application** and its activation criteria and behaviors must be defined within the **Rules Engine**.
+
+## Creating an Instance
+
+**Path:** Real-Time Manager > Edge Computing > Edge Applications > Sua Edge Application (Your Edge Application) > Functions.
+
+From the RTM, go to the Edge Application that will run your function and, within the Functions tab, add a new function and give it a distinctive name (MyHelloWorld, to illustrate our example). 
+
+**Parameters:** it is necessary to select which function to use for your instance; in this case, choose the Hello World option, in the "Edge Function" field. Note that the function code that appears in the Code field, is just for information. On the Args tab, enter the HTTP code and the desired response message - see example below - and save the function. 
 
 ~~~
 {
     "param":{
-        "http_status": 200,
-        "body": "Hello World! It works!"
+        "http_status": 503,
+        "body": "We are working hard to serve you better!"
     }
 }
 ~~~
+Example of the configuration of JSON Args parameters
 
-In the *Rules Engine* tab, use the Default Rule or create a new rule with a validation criterion (criteria) to activate your function, and in the *Behavior* section, select Run Function and choose the "MyHelloWorld" Function that you created.
+## Defining the Execution criteria (Rules Engine)
+
+**Path:** Real-Time Manager > Edge Computing > Edge Applications > Sua Edge Application (Your Edge Application) > Rules Engine.
+
+The rules (as defined in the Rules Engine) determine the set of conditions that need to be met for Behaviors to be executed. You can either use the Default Rule or create a new rule after setting the validation parameters and the behaviors that the Edge Application will execute.
+
+**Defining validation Criteria:** choose the variables, comparison operators and strings to create your business rule, as in the following example:
+
+* **If**: _${uri}_ **starts with** ***/api_service***
+(In order: logical operator, variable, comparison operator, string)
+
+Here, the rule is executed if the URL accessed starts with the string “/api_service”.
+
+**Defining Behaviors:** add the behaviors you want to be carried out when the rule's conditions are met. For Example:
+
+* **Then**: ***Run Function*** **MyHelloWorld**
+(In order: logical operator, action, function)
+
+In this example, if the conditions defined in the rules are satisfied, then the function MyHelloWorld will be executed. Therefore, when the user accesses the URL "www.myapplication.com/api_service", the function will run, and the message will be displayed as set.
+
+Finally, save your Edge Application and the new function will be ready.
 
 ---
 

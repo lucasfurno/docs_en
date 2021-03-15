@@ -6,6 +6,74 @@ This page lists the latest changes to Azion products and services. Here you will
 
 ---
 
+**Fev/2021**
+
+* New [API for Edge Application - Origins](https://www.azion.com/en/documentation/products/api/v3/edge-applications/origins/) ;
+
+- New [API for Edge Application - Cache Settings](https://www.azion.com/en/documentation/products/api/v3/edge-applications/cache-settings/) ;
+- Bugfix on Edge Firewall search field when the user search with special chars;
+- Bugfix error on cookie parser;
+- Bugfix error on use header without check if exists on edge application;
+- Bugfix on WAF search field;
+- Bugfix for prevent the creation of whitelists whose path contains special characters;
+- New [API V3 of the Real-Time Metrics](https://www.azion.com/en/documentation/products/api/v3/real-time-metrics/);
+- Added Data Streaming Requests metric at Billing interface;
+- Bugfix in the Real-Time Events filter to allow date searching; 
+- Changed Edge Orchestrator agent message to be more friendly;
+- Scripts logs (default and error outputs) of Edge Services are now saved on files inside Edge Nodes;
+- Bugfix for preventing the Edge Orchestrator agent reestablish communication with RTM when it recovers the internet;
+
+
+
+**Jan/2021**
+
+* New layout in Real-Time Manager emails.
+* Bugfix - updated Link "Content Delivery" to "Real-Time Metrics".
+* Improvements in Edge Services and Edge Nodes UIs.
+* Now users can modify Edge Services that are running on Edge Nodes.
+* Users can create their own Credentials.
+* New feature Slice configuration on Edge Application.
+* Bugfix for resource limit on Network List API.
+* Bugfix on exception when change name inside of rules Engine - Edge Firewall and Edge Application.
+* Bugfix treatment on RTM for Duplicate Behaviors on Rules Engine - Edge Firewall.
+
+---
+
+**Dec/2020**
+
+* [Edge Functions with JavaScript](https://www.azion.com/en/products/edge-functions/) Beta's launch.
+* [Edge Orchestrator](https://www.azion.com/en/products/edge-orchestrator/) Beta's launch.
+* Added edge node authorization with bulk actions.
+* Added option to Request Trial at Talk to Sales.
+* New User Interface for Real-Time Metrics.
+* Added support to prevent Loop CDN.
+* Bugfix for handling duplicate Behaviors in Edge Firewall Rules Engine.
+* Update UI behavior Rate Limit - Edge Firewall.
+* Bugfix for using HMAC authentication with Error Responses.
+
+---
+
+**Nov/2020**
+
+* Added Hosted Zone metric of the Intelligent DNS's product on Billing UI.
+* Azion Intelligent DNS's General Availability.
+* Launch of the Early Access Program for [Edge Orchestrator](https://www.azion.com/en/blog/provision-orchestrate-applications-edge-infrastructure/).
+* New User Interface released for features:
+   * Welcome to Real-Time Manager
+   * Account Info
+   * Users
+   * Teams
+   * History
+   * User Preferences
+   * Digital Certificates
+   * WAF Rules
+ * New feature Talk to Sales.
+ * New feature to send Invoice by email.
+* Bugfix in Real-Time Metrics UI and API.
+* Improvements at UI Billing: presentation of the consumption of the metrics separated per region. 
+
+---
+
 **Oct/2020**
 
 * Added support for Query String when using HMAC authentication in Edge Application.

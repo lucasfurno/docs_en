@@ -20,7 +20,7 @@ The first step is choosing the Data Source, which represents the application at 
 
 
 * **Edge Applications**: requests from your users to your Edge Applications at Azion.
-* **WAF Events**: if you have contracted the [Web Application Firewall](https://www.azion.com/pt-br/docs/produtos/web-application-firewall/) product, the data source WAF Events will present the requests analyzed by WAF.
+* **WAF Events**: if you have contracted the [Web Application Firewall](https://www.azion.com/en/documentation/products/web-application-firewall/) product, the data source WAF Events will present the requests analyzed by WAF.
 
 ---
 
@@ -30,7 +30,7 @@ The template represents a selection of variables to be collected and a format fo
 
 When selecting the "Custom Template" option, it is possible to create your own customized Data Set, in JSON format, and select the variables that best suit your needs.
 
-See the documentation that follows for a description of the available variables: [*Fields*](https://www.azion.com/pt-br/docs/produtos/data-streaming/fields/)
+See the documentation that follows for a description of the available variables: [*Fields*](https://www.azion.com/en/documentation/products/data-streaming/fields/)
 
 Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever is reached first.
 
