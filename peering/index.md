@@ -9,6 +9,17 @@ Azion's Edge Computing Platform is ideal for applications that require low laten
 ---
 
 **Peering**
+# Interconnection
+
+**About Azion**
+
+Founded in 2011, Azion enables you to build and run serverless applications at the edge of the network or your own premisses, closer to users and devices.
+
+Azion's Edge Computing Platform is ideal for applications that require low latency response times or real-time data processing and addresses some of the most complex computing and networking challenges, including availability, performance, scalability and security of mission-critical services. Considered by Gartner, Forrester and IDC as one of the top 10 technology trends impacting infrastructure and operations, Edge Computing delivers innovative mission-critical services needed to build the future of e-commerce, games, finance, media and applications such as IoT, AI , 5G, augmented reality (RA) and virtual reality (RV). Create fast and secure digital businesses without the hassles of deploying, maintaining, or scaling the infrastructure. Move to the Edge!
+
+---
+
+**Peering**
 
 Azion Network Settlement-Free Interconnection (“Peering”) Policy and Requirements:
 

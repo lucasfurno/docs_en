@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_service_terms.title 
+description:  pages.docs_service_terms.description 
+meta_tags:  pages.docs_service_terms.meta_tags 
+
+namespace:     documentation_agreements_service_terms_15_may_2019
+
+permalink:      /documentation/agreements/tos/15-may-2019/
+permalink_en:   /documentation/agreements/tos/15-may-2019/
+permalink_pt-br:   /documentacao/contratos/tds/15-maio-2019/
+---
 # Terms of **Service**
 
 *Last updated: May 15, 2019.*

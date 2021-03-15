@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_products_edge_functions_runtime_apis_javascript.title
+description: pages.docs_products_edge_functions_runtime_apis_javascript.description
+meta_tags: pages.docs_products_edge_functions_runtime_apis_javascript.meta_tags
+
+namespace:     documentation_products_edge_functions_runtime_apis_javascript
+
+permalink:      /documentation/products/edge-functions/runtime-apis/javascript/
+permalink_en:   /documentation/products/edge-functions/runtime-apis/javascript/
+permalink_pt-br:   /documentacao/produtos/edge-functions/runtime-apis/javascript/
+---
 # JavaScript Runtime **APIs**
 
 Check out the documentation for the JavaScript Runtime Environment on Azion's Edge Computing platform.

@@ -9,6 +9,17 @@ O log de acesso (access_log) traz informações que lhe permitirão conduzir aud
 > 1. [Como funciona](#como-funciona)
 > 2. [Formato do log](#formato-do-log)
 > 3. [Como configurar](#como-configurar)
+# Rawlogs
+
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/content-delivery/rawlogs/index.md)
+
+Você pode ter acesso aos logs de todas as requisições de seus usuários que passaram pela Azion por meio do produto Rawlogs.
+
+O log de acesso (access_log) traz informações que lhe permitirão conduzir auditorias, _troubleshooting_, análise de performance ou _data mining_.
+
+> 1. [Como funciona](#como-funciona)
+> 2. [Formato do log](#formato-do-log)
+> 3. [Como configurar](#como-configurar)
 
 ---
 
@@ -55,4 +66,3 @@ Use qualquer cliente de FTP para baixar os arquivos, utilizando as credenciais e
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-

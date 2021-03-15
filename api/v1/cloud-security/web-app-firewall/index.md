@@ -1,3 +1,15 @@
+---
+layout: page-api-md
+title:   pages.api_v1_web_app_firewall.title 
+description:  pages.api_v1_web_app_firewall.description 
+meta_tags:  pages.api_v1_web_app_firewall.meta_tags 
+
+namespace:     api_v1_cloud-security_web_app_firewall
+
+permalink:      /documentation/products/api/v1/web-application-firewall/
+permalink_en:   /documentation/products/api/v1/web-application-firewall/
+permalink_pt-br:   /documentacao/produtos/api/v1/web-application-firewall/
+---
 # WAF
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v1/cloud-security/web-app-firewall/index.md)

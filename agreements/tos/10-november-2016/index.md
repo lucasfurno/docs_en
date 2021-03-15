@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_service_terms.title 
+description:  pages.docs_service_terms.description 
+meta_tags:  pages.docs_service_terms.meta_tags 
+
+namespace:     documentation_agreements_service_terms_10_november_2016
+
+permalink:      /documentation/agreements/tos/10-november-2016/
+permalink_en:   /documentation/agreements/tos/10-november-2016/
+permalink_pt-br:   /documentacao/contratos/tds/10-novembro-2016/
+---
 # Termos de **Serviço**
 
 *Última atualização realizada em 10 de novembro de 2016.*

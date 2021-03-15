@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_customer_agreement.title 
+description:  pages.docs_customer_agreement.description 
+meta_tags:  pages.docs_customer_agreement.meta_tags 
+
+namespace:     documentation_agreements_customer_agreement_28_july_2016
+
+permalink:      /documentation/agreements/customer-agreement/28-july-2016/
+permalink_en:   /documentation/agreements/customer-agreement/28-july-2016/
+permalink_pt-br:   /documentacao/contratos/contrato-de-cliente/28-julho-2016/
+---
 # Contrato de Cliente
 
 ***Última atualização realizada em 28 de Julho de 2016.***

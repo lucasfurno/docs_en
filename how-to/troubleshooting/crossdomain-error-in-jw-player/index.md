@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.troubleshoot_crossdomain.title 
+description:  pages.troubleshoot_crossdomain.description 
+meta_tags:  pages.troubleshoot_crossdomain.meta_tags 
+
+namespace:     documentation_how_to_troubleshoot_crossdomain
+
+permalink:      /documentation/products/how-to/troubleshooting/crossdomain-error-in-jw-player/
+permalink_en:   /documentation/products/how-to/troubleshooting/crossdomain-error-in-jw-player/
+permalink_pt-br:   /documentacao/produtos/how-to/troubleshooting/erro-de-crossdomain-xml-no-jw-player/
+---
 # Crossdomain error with JW PLayer         
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/how-to/troubleshooting/crossdomain-error-in-jw-player/index.md)

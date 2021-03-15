@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_privacy_policy.title 
+description:  pages.docs_privacy_policy.description 
+meta_tags:  pages.docs_privacy_policy.meta_tags 
+
+namespace:     documentation_agreements_privacy_policy
+
+permalink:      /documentation/agreements/privacy-policy/
+permalink_en:   /documentation/agreements/privacy-policy/
+permalink_pt-br:   /documentacao/contratos/politica-de-privacidade/
+---
 # Privacy **Policy**
 
 *Last updated October 4, 2017.*

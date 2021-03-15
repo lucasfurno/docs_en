@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_agreements_acceptable_use_policy.title 
+description:  pages.docs_agreements_acceptable_use_policy.description 
+meta_tags:  pages.docs_agreements_acceptable_use_policy.meta_tags 
+
+namespace:     documentation_agreements_acceptable_use_policy
+
+
+permalink:      /documentation/agreements/acceptable-use-policy/
+permalink_en:   /documentation/agreements/acceptable-use-policy/
+permalink_pt-br:   /documentacao/contratos/politica-de-uso-aceitavel/
 # Acceptable **Use Policy**
 
 *Last updated November 11, 2016.*

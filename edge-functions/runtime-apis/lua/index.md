@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_products_edge_functions_runtime_apis_lua.title
+description: pages.docs_products_edge_functions_runtime_apis_lua.description
+meta_tags: pages.docs_products_edge_functions_runtime_apis_lua.meta_tags
+
+namespace:     documentation_products_edge_functions_runtime_apis_lua
+
+permalink:      /documentation/products/edge-functions/runtime-apis/lua/
+permalink_en:   /documentation/products/edge-functions/runtime-apis/lua/
+permalink_pt-br:   /documentacao/produtos/edge-functions/runtime-apis/lua/
+---
 # Lua Runtime **APIs**
 
 Confira a documentação do Runtime Enviroment JavaScript da plataforma de Edge Computing da Azion.
@@ -11,4 +23,3 @@ Confira a documentação do Runtime Enviroment JavaScript da plataforma de Edge 
 ---
 
 Não encontrou o que procurava? [Abra um ticket.](https://tickets.azion.com/)https://tickets.azion.com/)
-

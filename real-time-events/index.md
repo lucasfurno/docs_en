@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_real_time_events.title
+description: pages.docs_real_time_events.description
+meta_tags: pages.docs_real_time_events.meta_tags
+
+namespace:     documentation_products_real_time_events
+
+permalink:      /documentation/products/real-time-events/
+permalink_en:   /documentation/products/real-time-events/
+permalink_pt-br:   /documentacao/produtos/real-time-events/
+---
 
 
 # Real-Time **Events**

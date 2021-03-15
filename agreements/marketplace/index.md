@@ -1,3 +1,15 @@
+---		
+layout: page-documentation-md		
+title:   pages.docs_agreements_marketplace_agreement.title 		
+description:  pages.docs_agreements_marketplace_agreement.description 		
+meta_tags:  pages.docs_agreements_marketplace_agreement.meta_tags 		
+
+namespace:     docs_agreements_marketplace_agreement		
+
+permalink:      /documentation/agreements/marketplace/marketplace-agreement/	
+permalink_en:   /documentation/agreements/marketplace/marketplace-agreement/	
+permalink_pt-br:   /documentacao/contratos/marketplace/marketplace-agreement/
+---		
 # Azion Marketplace Agreement
 
 *Last updated: May 01, 2020.*

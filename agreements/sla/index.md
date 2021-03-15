@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_sla.title 
+description:  pages.docs_sla.description 
+meta_tags:  pages.docs_sla.meta_tags 
+
+namespace:     documentation_agreements_service_level_agreement
+
+
+permalink:      /documentation/agreements/sla/
+permalink_en:   /documentation/agreements/sla/
+permalink_pt-br:   /documentacao/contratos/sla/
 # Service Level **Agreement**
 
 *Last updated May 25, 2016.*

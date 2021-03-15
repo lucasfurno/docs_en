@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_use_case.title
+description: pages.docs_use_case.description
+meta_tags: pages.docs_use_case.meta_tags
+
+namespace:     docs_use_case
+
+permalink:      /documentation/use-cases/
+permalink_en:   /documentation/use-cases/
+permalink_pt-br:   /documentacao/casos-de-uso/
+---
 # Use **Cases**
 
 Check out the performance of Azion products and how to apply them as Edge Computing solutions in your company.

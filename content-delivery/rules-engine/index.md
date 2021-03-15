@@ -10,6 +10,18 @@ O Rules Engine foi elaborado para permitir a codificação de uma lógica de exe
 > 2. [Fases de Processamento](#fases-de-processamento)
 > 3. [Regras](#regras)
 > 4. [Funções](#funcoes)
+# Rules **Engine**
+
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/content-delivery/rules-engine/index.md)
+
+Você pode transferir parte da lógica das regras de negócio de sua aplicação para o Intelligent Edge da Azion utilizando as funcionalidades de _serverless_ computing do produto Application Acceleration. Dessa forma, você constrói uma arquitetura que entrega melhor performance para seus usuários e consome menos recursos e processamento em sua origem.
+
+O Rules Engine foi elaborado para permitir a codificação de uma lógica de execução condicional de comportamentos e ações diretamente no Intelligent Edge da Azion, mais próximo de seus usuários e, portanto, com melhor performance e taxa de transferência para sua aplicação.
+
+> 1. [Como funciona](#como-funciona)
+> 2. [Fases de Processamento](#fases-de-processamento)
+> 3. [Regras](#regras)
+> 4. [Funções](#funcoes)
 
 ---
 

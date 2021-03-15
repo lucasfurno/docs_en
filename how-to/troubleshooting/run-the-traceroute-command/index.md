@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.troubleshoot_traceroute.title 
+description:  pages.troubleshoot_traceroute.description 
+meta_tags:  pages.troubleshoot_traceroute.meta_tags 
+
+namespace:     documentation_how_to_troubleshoot_traceroute
+
+permalink:      /documentation/products/how-to/troubleshooting/run-the-traceroute-command/
+permalink_en:   /documentation/products/how-to/troubleshooting/run-the-traceroute-command/
+permalink_pt-br:   /documentacao/produtos/how-to/troubleshooting/executar-o-comando-traceroute/
+---
 # Run the Traceroute command       
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/how-to/troubleshooting/run-the-traceroute-command/index.md)

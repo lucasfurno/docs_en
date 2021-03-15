@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_products_edge_functions_runtime_apis.title
+description: pages.docs_products_edge_functions_runtime_apis.description
+meta_tags: pages.docs_products_edge_functions_runtime_apis.meta_tags
+
+namespace:     documentation_products_edge_functions_runtime_apis
+
+permalink:      /documentation/products/edge-functions/runtime-apis/
+permalink_en:   /documentation/products/edge-functions/runtime-apis/
+permalink_pt-br:   /documentacao/produtos/edge-functions/runtime-apis/
+---
 # Runtime **APIs**
 
 Check the documentation for each Runtime Environment available on the Azion Edge Computing platform.
@@ -11,4 +23,3 @@ Check the documentation for each Runtime Environment available on the Azion Edge
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
-

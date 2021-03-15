@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title:   pages.docs_marketplace_marketplace_seller_guide.title 
+description:  pages.docs_marketplace_marketplace_seller_guide.description 
+meta_tags:  pages.docs_marketplace_marketplace_seller_guide.meta_tags 
+
+namespace:     docs_marketplace_marketplace_seller_guide
+
+permalink:      /documentation/products/marketplace/marketplace-seller-guide/
+permalink_en:   /documentation/products/marketplace/marketplace-seller-guide/
+permalink_pt-br:   /documentacao/produtos/marketplace/marketplace-seller-guide/
+---
 # Introduction
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/marketplace/marketplace-seller-guide/index.md)
@@ -136,4 +148,3 @@ For Software running entirely on the Azion Edge Platform, the TLF calculation of
 | 4    | $250,000+            | 13%                  |
 
 >  For example, if a customer is billed \$19,000 for use of software in 1-month, the listing fee will be 20% for that transaction (Tier 1). If in month two the customer increases usage of your software and is billed $21,000, the Listing Fee will drop to 17% for that Transaction (Tier 2).
-

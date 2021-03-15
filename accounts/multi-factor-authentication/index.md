@@ -1,3 +1,15 @@
+# **Users and Teams**
+
+[Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/accounts/users-and-teams/index.md)
+
+This document will provide you with information on adding, deleting, or changing information from users and teams on Real-Time Manager (RTM).
+
+To ensure data protection and confidentiality, do not share any login information with other users.
+
+
+
+> 1. *[Adding users to the account](#adding-users-to-the-account)*
+> 2. *[Changing user information](#changing-user-information)*
 # **Multi-Factor Authentication**
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/accounts/multi-factor-authentication/index.md)
@@ -91,4 +103,3 @@ If you are the only Account owner within the account, it is necessary to contact
 ---
 
 Didn't find what you were looking for? [Start a ticket with our support team.](https://tickets.azion.com/)
-

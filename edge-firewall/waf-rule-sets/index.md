@@ -1,3 +1,15 @@
+---
+layout: page-documentation-md
+title: pages.docs_web_application_firewall_waf_rule_sets.title
+description: pages.docs_web_application_firewall_waf_rule_sets.description
+meta_tags: pages.docs_web_application_firewall_waf_rule_sets.meta_tags
+
+namespace:     documentation_products_web_application_firewall_waf_rule_sets
+
+permalink:      /documentation/products/edge-firewall/waf-rule-sets/
+permalink_en:   /documentation/products/edge-firewall/waf-rule-sets/
+permalink_pt-br:   /documentacao/produtos/edge-firewall/waf-rule-sets/
+---
 # WAF Rule Sets
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-firewall/waf-rule-sets/index.md)
