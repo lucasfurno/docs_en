@@ -1,0 +1,28 @@
+---
+label: Products documentation
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: meta_tags
+  label: meta_tags
+- type: text
+  name: namespace
+  label: namespace
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: permalink_en
+  label: permalink_en
+- type: text
+  name: permalink_pt-br
+  label: permalink_pt-br
