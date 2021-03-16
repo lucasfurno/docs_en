@@ -9,6 +9,7 @@ sections:
   label: Products
   create: all
   match: "**/*"
+  exclude: ".git*"
   templates:
   - products-documentation
 upload_dir: ''
