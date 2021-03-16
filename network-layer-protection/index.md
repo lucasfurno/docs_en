@@ -2,53 +2,60 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/network-layer-protection/index.md)
 
-Azion's Network Layer Protection allows you to create watch lists based on the network (IP / CIDR), users’ locations or ASNs, or use the automatic lists that are maintained and updated by Azion, such as the address lists of Tor networks. Thanks to this, you can block or monitor suspicious behavior or apply restrictions, e.g. access limits, giving your network layer protection at the edge from all inbound and outbound traffic. If your infrastructure includes a security tool, like SIEM, you can use the Network Lists API to keep you blacklists and whitelists up to date.
+Azion's **Network Layer Protection** allows you to create lists based on the network IP/CIDR, user location or ASN, or use automatic lists maintained and updated by Azion, such as a Tor network address list. With this, you can block , monitor suspicious behavior or apply restrictions, such as: access limit.
 
-> 1. *[How does it work?](#how-does-it-work)*
+> It is a programmable security perimeter where you get your network layer protection at the edge from all inbound and outbound traffic.
+
+If you have a SIEM or other security tools in your infrastructure, you can use the *Network Lists API* to keep your *blocklists* and *allowlists* always up to date.
+
+> 1. *[How it works](#how-it-works)*
 > 2. *[Network Lists](#network-lists)*
 > 3. *[Origin Shield](#origin-shield)*
-> 4. *[Support Documents](#support-documents)*
+> 4. *[Support Documentation](#support-documents)*
 
 ---
 
-## 1. How does it work? {#how-does-ir-work}
+## 1. How it works {#how-it-works}
 
-When you set up the Network Layer Protection module in the “Main Settings” of a Rule Set in Edge Firewall, the Criteria **“Network”** and the Behaviors **“Deny”**, “Drop” and **“Set Rate Limit”** will be enabled on the “Rules Engine” tab of the Rule Set.
+When activating the *Network Layer Protection* module in *Main Settings* of a Rule Set in **Edge Firewall**, the Conditions - *Criteria* - and *behaviors* will be enabled in the *Rules Engine* tab of the Rule Set.
 
-You can use the Criteria **“Network”** to create rules for watch lists based on the network, the user location or ASNs, or even, pre-prepared lists that Azion itself keeps up to date; like, for example, the outbound addresses of the Tor Network: **Azion IP Tor Exit Nodes.** In this way, you can block or monitor suspicious behavior or apply restrictions, such as access limits. 
+> The conditions - Criteria - available with the activation of the *Network Layer Protection* module are: *Hostname, Network, Request URI* and *Scheme*. And the *behaviors* are: *Deny (403 Forbidden), Drop (Close Witout Response)* and *Set Rate Limit*. 
 
-If you activate other modules through the Rule Set, you can access any number of combinations of criteria and behaviors in the Rules Engine. For example, Network Layer Protection and Web Application Firewall - If: **Network** *matches* My-Country-BlackList *And* **Header User Agent** (an exclusive Criteria from the Web Application Firewall module) *does not match* Googlebot Then: **Deny**. In this case, any requests that originate in countries that are on the blacklist will be blocked, unless the user-agent header contains the term "Googlebot".
+Use the *Network* Criteria  to create rules with lists based on the network, user location or ASN, or use ready-to-use lists that are kept up-to-date by Azion itself, such as the outbound addresses of the Tor Network *Azion IP Tor Exit Nodes*. You can block, monitor suspicious behavior or apply restrictions according to the chosen behavior.
 
-Which criteria and behaviors are available in Edge Firewall, depends on which modules have been activated in the Rule Set. If it has been set up in the Edge Firewall Rule Set, the Network Layer Protection module also enables the **Rules Engine Criteria**: Hostname, Request URI, and Scheme.
+Activate other modules in the *Rule Set* to get numerous combinations of condition and behavior in the *Rules Engine*. For example, *Network Layer Protection* and *Web Application Firewall* If: **Network** matches My-Country-BlockList *And* **Header User Agent** - Unique criteria of the *Web Application Firewall* module - *does not match* Googlebot Then: **Deny**. In this case requests originating from countries that are on the blocklist will be blocked unless the user-agent header contains "Googlebot". 
+
+> The conditions and behaviors available in *Edge Firewall* depend on the modules you enable in the *Rule Set*. You will have a greater number of protection combinations if the *Web Application Firewall module* is also enabled.
 
 ---
 
 ## 2. Network Lists {#network-lists}
 
-Network Lists enables you to create, look up or update Network Lists that are being used in the Rules Engine of Edge Firewall. You can add and maintain your own lists in Network Lists, using the Real-Time Manager or the API. Each Network List can also be linked to more than one Rule or Rule Set in Edge Firewall. Whenever the Network List is updated, the update will be automatically cascaded to all of the Rules that are linked to it. To find out more and learn how to use it, check the [Network Lists](https://www.azion.com/en/documentation/products/edge-firewall/network-lists) support documents.
+Through **Network Lists** you can create, search, or update the Network Lists used in the *Edge Firewall Rules Engine*. Add and maintain your own lists in **Network Lists** via  Real-Time Manager or API. A single Network List can be associated with more than one Edge Firewall Rule or Rule Set. Whenever the Network List is updated, it will automatically propagate to all the rules in the associated Network List. To find out more and learn how to use it, check the [Network Lists](https://www.azion.com/en/documentation/products/edge-firewall/network-lists) support documentation.
 
 ---
 
 ## 3. Origin Shield {#origin-shield}
 
-Origin Shield is an Azion Network Layer Protection add-on. You will be able to create a security perimeter for your source infrastructure, whether a cloud, hosting provider, or even your own data center. With this service, your origin will be able to restrict access only to specific IP addresses of our network and block any other access to your origin.
+Origin Shield is an Azion Network Layer Protection add-on. You will be able to create a security perimeter for your origin infrastructure, be it a *cloud*, *hosting* provider, or even your own *data center*. With this service, your origin will be able to restrict access only to specific IP addresses of our network and block any other access to your origin.
 
-Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on, **seven days** after publication. It is also possible to follow and track the changes made to the list through the *History* of the Real-Time Manager, through the History you can find which IP's have been added or deleted from the list.
+Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on 7 days after the list is published. You can also track and trace the changes made to the list through the *History* of the Real-Time Manager. There you can find which IP's have been added or deleted from the list.
 
-Origin Shield is available through Real-Time Manager or our API. To learn more and how to use our API, consult the documentation on How to Consult Network List data - Origin Shield.
+**Origin Shield** is available via Real-Time Manager or our API. To learn more and how to use our API, check the documentation on how to [Consult Network List data - Origin Shield.](https://www.azion.com/en/documentation/products/api/v3/network-lists/)
 
-How-to check the Origin Shield IP list through Real-Time Manager:
+Consult the list of Origin Shield IP's,  following these steps:
 
-1. From the **Real-Time Manager**, access the **Libraries** > **Network Lists** menu.
-2. To inspect the list, check the Network List **Azion IP Origin Shield**.
-3. The list can be consulted with **View Network Lists** permission.
+1. Go to [Real-Time Manager](https://manager.azion.com/), access the *Libraries > Network Lists* menu.
+2. Click on *Azion IP Origin Shield* Network List to see the list;
+3. The list can be viewed with the *View Network Lists* permission and the IP's are in the *List* field.
 
 ---
 
-## 4. Support Documents {#support-documents}
+## 4. Support Documentation {#support-documents}
 
 - [Edge Firewall](https://www.azion.com/en/documentation/products/edge-firewall/)
 
 ---
 
 Didn't find what you were looking for? [Open a support ticket.](https://tickets.azion.com/)
+
