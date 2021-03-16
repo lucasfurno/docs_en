@@ -9,7 +9,6 @@ sections:
   label: Products
   create: all
   match: "**/*"
-  exclude: ".github .git .forestry"
   templates:
   - products-documentation
 upload_dir: ''
