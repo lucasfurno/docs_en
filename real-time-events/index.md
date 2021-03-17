@@ -35,7 +35,7 @@ It displays the data from requests made to your Edge Applications at Azion.
 | -------------------------------- | ------------------------------------------------------------ |
 | $bytes_sent                      | Bytes sent to the user, including header and body.           |
 | $client                          | Unique Azion customer identifier.                            |
-| $country_name                    | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| $country_name                    | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection by IP address. |
 | $host                            | Host information sent on the request line; or HTTP header Host field. |
 | $http_referrer                   | Information from the last page the user was on before making the request. |
 | $http_user_agent                 | The identification of the application that made the request, for example: Mozilla/5.0 (Windows NT 10.0; Win64; x64). |
