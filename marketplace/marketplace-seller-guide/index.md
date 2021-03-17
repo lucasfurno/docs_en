@@ -2,8 +2,6 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/marketplace/marketplace-seller-guide/index.md)
 
-
-
 **Azion Marketplace** is a curated digital catalog that makes it easy for customers to find, subscribe, deploy, and manage third-party software that they need to build solutions, accelerate go-to-market and run their businesses.
 
 Customers can quickly launch software with just a few clicks, and choose software solutions in *Azion Cells Package (ACP)* and software as a service (SaaS) formats. Flexible pricing options include BYOL (Bring Your Own Licence), per requests, compute time, data transfer, no charge and more. Azion handles billing and payments, and charges appear on customers’ Azion bill, drastically reducing procurement time.
@@ -48,8 +46,6 @@ The following is general pricing information about products in Azion Marketplace
 	* For BYOL products, we realize that the online purchase of software is a departure from how some companies do business. In light of this, for the first 90 days after launch we will relax the requirement that this software is accompanied by a version available for purchase on the Azion Marketplace. During this time, the Azion Marketplace account management teams will work with you to address challenges and to determine if and how the software can be made available for purchase on the Azion Marketplace.
 * For Paid products, the seller defines the charges for using the software and Azion Marketplace collects software charges from the customer.
 * All seller's products will incur associated Azion charges depending on the services used. These rates and fees are defined and controlled by Azion. They are displayed separately on the Azion Marketplace detail pages to help customers understand the potential cost of using the products.
-
-
 
 #### A. Software free of charge
 
@@ -96,8 +92,6 @@ Azion Marketplace can bill your customers upfront or by the payment schedule tha
 For example, a customer might purchase a quantity of requests to your SaaS for a 1-month time period or for 1-year, 2-year, or 3-year time periods. For additional usage above their Saving Plans, Azion Marketplace bills your customers based on the pay-as-you-go price established by you.
 
 The customer can initiate negotiation of the product pricing with you within a private offer. You will negotiate pricing and usage privately with the customer, and the negotiated terms start as soon as the customer accepts the deal.
-
-
 
 ## Azion Marketplace Tiered Listing Fees
 

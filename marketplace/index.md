@@ -15,7 +15,7 @@ Also, you can create your ACP or SaaS, publish your solution at Azion Marketplac
 
 
 
-## 1. How it works{#1-how-it-works}
+## 1. How it works {#1-how-it-works}
 
 The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/) or [Edge Application](../edge-application/) at the Azion Platform. 
 
@@ -27,7 +27,7 @@ Once you have launched a product, you can create an instance of this product in 
 
 
 
-## 2. Launching a new product
+## 2. Launching a new product {#2-launch-a-new-product}
 
 To launch a new product you can browse through Azion Marketplace's several categories available to find the right product for you.
 
@@ -45,7 +45,7 @@ Follow the steps below to get started:
 
 
 
-## 3. Using a purchased product
+## 3. Using a purchased product {#3-use-a-purchased-product}
 
 Each product has its features and purposes, and you can get more information at the Usage Information and Support tabs.
 
@@ -59,7 +59,7 @@ You can get more information about *Edge Application* [here](../edge-application
 
 
 
-## 4. Becoming an Independent Software Vendor
+## 4. Becoming an Independent Software Vendor {#4-become-an-independent-software-vendor}
 
 You can plug your SaaS or develop your own product at Azion Platform, publish it at Azion Marketplace and start making sales with your product.
 

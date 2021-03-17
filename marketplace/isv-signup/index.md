@@ -2,8 +2,6 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/marketplace/isv-signup/index.md)
 
-
-
 **Azion Marketplace** is a curated digital catalog that helps companies to build their solution and accelerate go-to-market and you can bring your product a few clicks away from big companies that are building solutions at the Edge.
 
 To publish your product at Azion Marketplace, you must become an Independent Software Vendor (ISV) following the ISV Signup Process
