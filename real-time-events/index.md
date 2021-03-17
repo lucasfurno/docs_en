@@ -29,7 +29,7 @@ Azion provides the following Data Sources:
 
 ### **Edge Applications**
 
-It displays the data of requests made to your Edge Applications at Azion.
+It displays the data from requests made to your Edge Applications at Azion.
 
 | Variables                        | Description                                                  |
 | -------------------------------- | ------------------------------------------------------------ |
