@@ -20,7 +20,7 @@ This integration allows you to analyze the behavior of your users and the perfor
 
 Enter [Real-Time Manager](https://manager.azion.com/). Click on *Data Streaming* either under Edge Analytics or through the top left menu. 
 
-Now enjoy real-time data integration. Configure your Data Streaming according to the following possibilities. 
+Configure your Data Streaming settings according to the following possibilities. 
 
 > Fields marked with an asterisk are mandatory. 
 
@@ -30,14 +30,14 @@ The first step is choosing the Data Source, which represents the application at 
 
 ###**Edge Applications**
 
-It displays the data of requests made to your Edge Applications at Azion.
+It displays the data from requests made to your Edge Applications at Azion.
 
 | Variables                        | Description                                                  |
 | -------------------------------- | ------------------------------------------------------------ |
 | $bytes_sent                      | Bytes sent to the user, including header and body.           |
 | $client                          | Unique Azion customer identifier.                            |
 | $configuration                   | Unique Azion configuration identifier.                       |
-| $country                         | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| $country                         | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection by IP address. |
 | $host                            | Host information sent on the request line; or HTTP header Host field. |
 | $http_referrer                   | Information from the last page the user was on before making the request. |
 | $http_user_agent                 | The identification of the application that made the request, for example: Mozilla/5.0 (Windows NT 10.0; Win64; x64). |
@@ -78,7 +78,7 @@ If you have contracted the [Web Application Firewall](https://www.azion.com/pt-b
 | $blocked           | It informs whether the WAF blocked the action or not; 0 when not blocked and 1 when blocked. When in “Learning Mode”, it will not be blocked, regardless of the return. |
 | $client            | Unique Azion customer identifier.                            |
 | $configuration     | Unique Azion configuration identifier.                       |
-| $country           | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection of IP address. |
+| $country           | Country name of the remote client, for example “Russian Federation”, “United States”. Geolocation detection by IP address. |
 | $headers           | Request headers analyzed by WAF.                             |
 | $host              | Host information sent on the request line; or Host field of the HTTP header. |
 | $remote_addr       | IP address of the request.                                   |
@@ -104,7 +104,7 @@ The template represents a selection of variables to be collected and a format fo
 
 * **Custom Template:** Choose the *Custom Template* option to create your own customized *Data Set*, in JSON format, and select the variables that best suit your needs. 
 
-  > **Learn more:** In the Data Sources list shown in item 2,  you'll find a description of all the available variables. Give it a try.
+  > On the [Data Sources](#SelectingDataSources) list you'll find a description of all the available variables. Give it a try.
 
 Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever occurs first.
 
@@ -116,11 +116,14 @@ You can associate Data Streaming with one or more of your domains registered wit
 
 When associating a domain with Data Streaming, the events associated with that domain will be collected and sent to its endpoint.
 
-To streamline your analysis, you can even filter by *Sampling*. Ideal for companies with a large number of domains.
+You can also set the percentage of data you want to receive from your Data Streaming through the Sampling option. In addition to filtering by sampling, it can also reduce costs of data collection and analysis.
 
-* **Sampling:** Set the percentage of requests you want to receive from the total of your domains.
+* **Sampling:** 
 
-  Select the *All Domains* option. In the *Sampling* field, enter an integer to obtain the desired percentage.
+  1. Select the *All Domains* option to enable  *Sampling*.
+  2. Enter the number for the percentage of data you want to receive. This percentage will return the total data related to all your domains.
+  
+  > When the Sampling option is enabled, you are allowed to add only one Data Streaming. If this Data Streaming is disabled, the Add Data Streaming option will be enabled again.
 
 ---
 
@@ -128,7 +131,19 @@ To streamline your analysis, you can even filter by *Sampling*. Ideal for compan
 
 The Endpoint is the destination where you want to send the data collected by Azion.
 
-The endpoint type represents the method that your endpoint is configured to receive data from the Data Streaming. Get to know each of them as follows: Standard HTTP/HTTPS POST; Simple Storage Service - S3; and Apache Kafka.
+The endpoint type represents the method that your endpoint is configured to receive data from the Data Streaming. Get to know each of them as follows.
+
+### **Apache Kafka**
+
+By using this type of endpoint, the Data Streaming service sends data to a Kafka endpoint in your infrastructure.
+
+* **Bootstrap Servers:**  Refers to the servers in the Kafka cluster, in the format "host1: port1, host2: port2, ...". 
+
+  The list should have just a few servers that will be used for the initial connection. There is no need to include all the servers in your cluster.  
+
+  We recommend that you use more than one server to increase redundancy and availability.
+
+* **Kafka Topic:**  You have to define a Topic where you want Data Streaming to post messages to your cluster.
 
 ### **Standard HTTP/HTTPS POST**
 
@@ -170,17 +185,19 @@ By using this type of endpoint, the Data Streaming service sends data directly t
 
   You count on the *plain/text* and *application/gzip* options.
 
-### **Apache Kafka**
+### **Standard HTTP/HTTPS POST**
 
-By using this type of endpoint, the Data Streaming service sends data to a Kafka endpoint in your infrastructure.
+By using this type of endpoint, the Data Streaming service sends data in an HTTP POST payload to be  processed on your platform.
 
-* **Bootstrap Servers:**  Refers to the servers in the Kafka cluster, in the format "host1: port1, host2: port2, ...". 
+* **Endpoint URL:** Refers to the URL configured on the platform to receive Data Streaming data.
 
-  The list should have just a few servers that will be used for the initial connection. There is no need to include all the servers in your cluster.  
+  Use the format *scheme://domain/path*.
 
-  We recommend that you use more than one server to increase redundancy and availability.
+* **Custom Headers:**  You can enter one or more custom headers for your HTTP / HTTPS request. 
 
-* **Kafka Topic:**  You have to define a Topic where you want Data Streaming to post messages to your cluster.
+  For the headers configuration, you have to inform the *Name* and *Value* for each header.
+
+------
 
 ## 6. Activating your Settings{#Activatingyoursettings}
 
@@ -192,11 +209,7 @@ You will find the following buttons at the bottom of the screen:
 
 * **Save:** Once your selections are complete, save your settings by clicking the *Save* button. 
 
-> Attention! **Save** your changes before leaving the page. 
->
-> The system does not automatically save your changes. 
 
-Harness all of your potential through the resources designed by Azion for your business.
 
 ---
 
