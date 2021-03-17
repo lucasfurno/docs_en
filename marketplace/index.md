@@ -13,8 +13,6 @@ Also, you can create your ACP or SaaS, publish your solution at Azion Marketplac
 3. [Using a purchased product](#3-use-a-purchased-product)
 4. [Becoming an Independent Software Vendor](#4-become-an-independent-software-vendor)
 
-
-
 ## 1. How it works {#1-how-it-works}
 
 The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/) or [Edge Application](../edge-application/) at the Azion Platform. 
@@ -24,8 +22,6 @@ After you had launched a product, you will find it at your account in the Azion 
 At this stage, you will find Free and Bring Your Own License products, products that you buy a license directly with an Independent Software Vendor (ISV) and instantiate in your Edge Application. 
 
 Once you have launched a product, you can create an instance of this product in your Edge Application and you're ready to use it.
-
-
 
 ## 2. Launching a new product {#2-launch-a-new-product}
 
@@ -43,8 +39,6 @@ Follow the steps below to get started:
 4. Click the *Launch* Button.
 5. The selected product will be launched in your account and will be available to be instantiated at your *edge application*.
 
-
-
 ## 3. Using a purchased product {#3-use-a-purchased-product}
 
 Each product has its features and purposes, and you can get more information at the Usage Information and Support tabs.
@@ -57,8 +51,6 @@ If you purchased an *Azion Cell Package*, you will find it the purchased product
 
 You can get more information about *Edge Application* [here](../edge-application/). 
 
-
-
 ## 4. Becoming an Independent Software Vendor {#4-become-an-independent-software-vendor}
 
 You can plug your SaaS or develop your own product at Azion Platform, publish it at Azion Marketplace and start making sales with your product.
@@ -66,8 +58,6 @@ You can plug your SaaS or develop your own product at Azion Platform, publish it
 To do so, you need to become an Independent Software Vendor by following the process [here](./isv-signup/) or reach us at integration@azion.com.
 
 We will evaluate your request and get in touch to guide you through the ISV process.
-
-
 
 ---
 
