@@ -12,7 +12,7 @@ You can generate credentials to use and authenticate our services by following t
 
 5. Describe how or by whom the credential will be used in the *Description* field in *Settings*;
 
-   > For example: Credential used for XYZ customers.
+   > Credential used for Edge Nodes registration, for example.
 
 6. Click the *Save* button;
 
