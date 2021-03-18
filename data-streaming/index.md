@@ -24,6 +24,8 @@ Configure your Data Streaming settings according to the following possibilities.
 
 > Fields marked with an asterisk are mandatory. 
 
+---
+
 ## 2. Selecting Data Sources {#selecting-data-sources}
 
 The first step is choosing the Data Source, which represents the application at Azion that generated the event logs. By doing so, you must select where your data will be collected from. You have the following options:
@@ -104,7 +106,7 @@ The template represents a selection of variables to be collected and a format fo
 
 * **Custom Template:** Choose the *Custom Template* option to create your own customized *Data Set*, in JSON format, and select the variables that best suit your needs. 
 
-  > On the [Data Sources](#SelectingDataSources) list you'll find a description of all the available variables. Give it a try.
+> On the [Data Sources](#SelectingDataSources) list you'll find a description of all the available variables. Give it a try.
 
 Your events will be grouped in blocks of up to 2,000 registrations separated by the character \ n, and sent in the payload to your endpoint. Data Streaming will send your events when the block reaches 2000 records or every 60 seconds, whichever occurs first.
 
@@ -208,7 +210,6 @@ You will find the following buttons at the bottom of the screen:
 * **Cancel:** With this option, you return to the Data Streaming home page, also discard your edits. 
 
 * **Save:** Once your selections are complete, save your settings by clicking the *Save* button. 
-
 
 
 ---

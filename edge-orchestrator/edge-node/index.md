@@ -2,9 +2,9 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/edge-orchestrator/edge-nodes/index.md)
 
-Azion Edge Node enables you to create your own edge infrastructure, allowing you to install services and resources in real time.
+Azion **Edge Node** enables you to create your own edge infrastructure, allowing you to install services and resources in real time.
 
-It is an open software and can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
+It is an open software which can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
 
 > 1. [Installing](#install)
 > 2. [Viewing your nodes](#Viewing-nodes)
@@ -18,21 +18,19 @@ It is an open software and can be run on different types of microprocessor archi
 ## 1. Installing {#install}
 
 Edge Node is installed in 3 stages: 
-1- Generate a credential to carry out the actions; 
-2- Install the Edge Orchestrator agent on the devices; 
-3- Authenticate the device after installation.
+
+1. Generate a credential to run the actions; 
+2. Install the Edge Orchestrator agent on the devices;
+3. Authenticate the device after installation.
 
 ### 1.1 Generating a credential {#credential-generation}
 
 You can generate the credential needed to authenticate your edge nodes following these steps:	
 
-1- Go to [Real-Time Manager](https://manager.azion.com/);
-
-2- Open the *Credentials* page on the top right menu;
-
-3- Click on the "Add Credential" button;
-
-4- Fill in the required fields and click the "Save” button.
+1. Go to [Real-Time Manager](https://manager.azion.com/);
+2. Open the *Credentials* page on the top right menu;
+3. Click on the *Add Credential* button;
+4. Fill in the required fields and click the *Save* button.
 
 ​	**Description:** describe, for example, how or who will use the credential;
 
@@ -42,7 +40,7 @@ You can generate the credential needed to authenticate your edge nodes following
 
 ### 1.2 Installation {#installation}
 
-To install Edge Node, you must download the Edge Orchestrator installation binary.
+To begin the Edge Node installation process, you must download the Edge Orchestrator installation binary of your choice.
 
 Check the list of compatible platforms for Azion Edge Node and download the one of your preference:
 
@@ -62,18 +60,20 @@ Alternatively, you can download it using the Command line. In the example, the d
 
 After downloading, you must follow the steps below, in order to install the Edge Orchestrator agent to your device:
 
-1- Install the Edge Orchestrator agent:<br />
-`chmod +x edge-orchestrator`<br />
-`./edge-orchestrator install`
+1. Install the Edge Orchestrator agent:<br />
+   `chmod +x edge-orchestrator`<br />
+   `./edge-orchestrator install`
+   
+2. Enter the token for the Edge Orchestrator agent;
 
-2- Enter the token for the Edge Orchestrator agent;
+3. Confirm the next steps;
 
-3- Confirm the next steps and;
-
-4- When you have finished installing it, you will need to start the Edge Orchestrator agent:<br />
-`edge-orchestrator start`<br />
-**Note:** If your operating system does not have a service manager (systemd, for example), you must run it in the foreground.<br />
-`edge-orchestrator start --foreground`
+4. Start the Edge Orchestrator agent after installing it:<br />
+   `edge-orchestrator start`<br />
+   **Note:** If your operating system does not have a service manager (systemd, for example), you must run it in the foreground.<br />
+   `edge-orchestrator start --foreground`
+   
+   > The logs to run the Edge Orchestrator agent are stored in:  <br>`/var/log/azion/edge-orchestrator.log`
 
 ---
 
@@ -83,11 +83,10 @@ Whenever the installation code is run for any device and it has been authenticat
 
 To view the list of edge nodes created for your account, follow the steps below:
 
-1- Go to [Real-Time Manager](https://manager.azion.com/);
+1. Go to [Real-Time Manager](https://manager.azion.com/);
+2. Open the *Edge Orchestration* item on the top left menu and select the *Edge Node* page;
 
-2- On the top left menu, open the *Edge Orchestration* item and select the *Edge Node* page;
-
-**Note:** You can verify the listed items can be verified by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
+> You can verify the listed items by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
 
 ---
 
@@ -95,41 +94,35 @@ To view the list of edge nodes created for your account, follow the steps below:
 
 You must authorize your edge nodes to begin orchestrating them. To authorize an edge node, follow the steps below:
 
-1- Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+1. Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+2. Click on the icon (key) and accept the confirmation window.
 
-2- Click on the icon (key) and accept the confirmation window.
-
-After the authorization, the Edge Node can take up to 10 seconds before services can be orchestrated.
+> After the authorization, the Edge Node can take up to 10 seconds before services can be orchestrated.
 
 You can also authorize all the edge nodes you want at once. To start using  this option, follow the steps below:
 
-1 - Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
-
-2 - Select the items you want to authorize or, if you prefer, select all items by checking the first check box on the left;
-
-3 - On the top right corner, click on the Actions button and select Authorize.
-
-4 - A message to confirm your action will be shown, click on the Confirm button to save your selection.
-
-5 - You will see the following confirmation message:  "X nodes were successfully authorized!"
+1. Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+2. Select the items you want to authorize or, if you prefer, select all items by checking the first check box on the left;
+3. On the top right corner, click the *Actions* button and select *Authorize*;
+4. A message to confirm your action will be shown, click the *Confirm* button to save your selection;
+5. You will see the following confirmation message:  "*X nodes were successfully authorized!*"
 
 ---
 
 ## 4. Services {#services}
 
-You can provision the services registered in your library, carry out the following steps:
+You can provision the services registered in your library by following steps:
 
-1- Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+1. Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
+2. Select the Edge Node that you want to configure;
+3. Open the *Services* tab and click the *Add Service* button;
+4. Link it to the service you want and, if necessary, you can configure the variables required by the service.
 
-2- Select the Edge Node that you want to configure;
-
-3- Open the *"Services"* tab and click on the *"Add Service”* button;
-
-4- Link it to the service you want and, if necessary, cou can configure the variables required by the service.
-
-Services that are due to be orchestrated via Edge Node, must be registered in *Edge Libraries> Edge Services* and marked as active.
+> Services that are due to be orchestrated via Edge Node, must be registered in *Edge Libraries> Edge Services* and marked as active.
 
 Once the service is provided, Edge Node can begin orchestrating it based on resource priorities. You can monitor the service installation process via logs in the Edge Orchestrator agent.
+
+> The service installation logs are stored in <br/>`/var/log/azion/edge-services.log`
 
 ---
 
