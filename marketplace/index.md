@@ -8,13 +8,12 @@ You can quickly launch software with just a few clicks choosing software solutio
 
 Also, you can create your ACP or SaaS, publish your solution at Azion Marketplace, and have a new revenue stream. 
 
-1. [How it works](#how-works)
-2. [Launching a new product](#launch-a-new-product)
-3. [Using a purchased product](#use-a-purchased-product)
-4. [Becoming an Independent Software Vendor](#become-an-independent-software-vendor)
+1. [How it works](#how-it-works)
+2. [Launching a new product](#launching-a-new-product)
+3. [Using a purchased product](#using-a-purchased-product)
+4. [Becoming an Independent Software Vendor](#becomig-an-independent-software-vendor)
 
-## 1. How it works {#how-works}
-
+## 1. How it works {#how-it-works}
 The Azion Marketplace offers you products that can be launched to your edge resources, that could be [Edge Firewall](../edge-firewall/) or [Edge Application](../edge-application/) at the Azion Platform. 
 
 After you had launched a product, you will find it at your account in the Azion Platform so you can start using it right away.
@@ -23,8 +22,7 @@ At this stage, you will find Free and Bring Your Own License products, products 
 
 Once you have launched a product, you can create an instance of this product in your Edge Application and you're ready to use it.
 
-## 2. Launching a new product {#launch-a-new-product}
-
+## 2. Launching a new product {#launching-a-new-product}
 To launch a new product you can browse through Azion Marketplace's several categories available to find the right product for you.
 
 To be able to use a product you might need to fulfill the product requirement. You can find a product requirement at the Overview tab.
@@ -39,8 +37,7 @@ Follow the steps below to get started:
 4. Click the *Launch* Button.
 5. The selected product will be launched in your account and will be available to be instantiated at your *edge application*.
 
-## 3. Using a purchased product {#use-a-purchased-product}
-
+## 3. Using a purchased product {#using-a-purchased-product}
 Each product has its features and purposes, and you can get more information at the Usage Information and Support tabs.
 
 If you purchased a Software as a Service product you will find it available as an Edge Function to be instantiated in your existing Edge Application. 
@@ -51,8 +48,7 @@ If you purchased an *Azion Cell Package*, you will find it the purchased product
 
 You can get more information about *Edge Application* [here](../edge-application/). 
 
-## 4. Becoming an Independent Software Vendor {#become-an-independent-software-vendor}
-
+## 4. Becoming an Independent Software Vendor {#becomig-an-independent-software-vendor}
 You can plug your SaaS or develop your own product at Azion Platform, publish it at Azion Marketplace and start making sales with your product.
 
 To do so, you need to become an Independent Software Vendor by following the process [here](./isv-signup/) or reach us at integration@azion.com
