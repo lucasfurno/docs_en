@@ -4,7 +4,7 @@
 
 Azion **Edge Node** enables you to create your own edge infrastructure, allowing you to install services and resources in real time.
 
-It is an open software and can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
+It is an open software which can be run on different types of microprocessor architecture: x86 and ARM, and different sizes of equipment, including Raspberry PI, network equipment such as network switches and SD-WAN routers as well as corporate servers.
 
 > 1. [Installing](#install)
 > 2. [Viewing your nodes](#Viewing-nodes)
@@ -63,12 +63,17 @@ After downloading, you must follow the steps below, in order to install the Edge
 1. Install the Edge Orchestrator agent:<br />
    `chmod +x edge-orchestrator`<br />
    `./edge-orchestrator install`
+   
 2. Enter the token for the Edge Orchestrator agent;
-3. Confirm the next steps and;
-4. When you have finished installing it, you will need to start the Edge Orchestrator agent:<br />
+
+3. Confirm the next steps;
+
+4. Start the Edge Orchestrator agent after installing it:<br />
    `edge-orchestrator start`<br />
    **Note:** If your operating system does not have a service manager (systemd, for example), you must run it in the foreground.<br />
    `edge-orchestrator start --foreground`
+   
+   > The logs to run the Edge Orchestrator agent are stored in:  <br>`/var/log/azion/edge-orchestrator.log`
 
 ---
 
@@ -81,7 +86,7 @@ To view the list of edge nodes created for your account, follow the steps below:
 1. Go to [Real-Time Manager](https://manager.azion.com/);
 2. Open the *Edge Orchestration* item on the top left menu and select the *Edge Node* page;
 
-**Note:** You can verify the listed items can be verified by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
+> You can verify the listed items by checking the HashId column, as it contains the hash used to create and authenticate the edge node.
 
 ---
 
@@ -98,15 +103,15 @@ You can also authorize all the edge nodes you want at once. To start using  this
 
 1. Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
 2. Select the items you want to authorize or, if you prefer, select all items by checking the first check box on the left;
-3. On the top right corner, click the *Actions* button and select *Authorize*.
-4. A message to confirm your action will be shown, click the *Confirm* button to save your selection.
+3. On the top right corner, click the *Actions* button and select *Authorize*;
+4. A message to confirm your action will be shown, click the *Confirm* button to save your selection;
 5. You will see the following confirmation message:  "*X nodes were successfully authorized!*"
 
 ---
 
 ## 4. Services {#services}
 
-You can provision the services registered in your library, carry out the following steps:
+You can provision the services registered in your library by following steps:
 
 1. Open the list of Edge Nodes in [Real-Time Manager](https://manager.azion.com/);
 2. Select the Edge Node that you want to configure;
@@ -116,6 +121,8 @@ You can provision the services registered in your library, carry out the followi
 > Services that are due to be orchestrated via Edge Node, must be registered in *Edge Libraries> Edge Services* and marked as active.
 
 Once the service is provided, Edge Node can begin orchestrating it based on resource priorities. You can monitor the service installation process via logs in the Edge Orchestrator agent.
+
+> The service installation logs are stored in <br/>`/var/log/azion/edge-services.log`
 
 ---
 
