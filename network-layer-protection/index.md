@@ -41,7 +41,7 @@ Origin Shield is an Azion Network Layer Protection add-on. You will be able to c
 
 Our IP list may change frequently, but after updating it, we will only put the new servers into production for those using the Origin Shield add-on 7 days after the list is published. You can also track and trace the changes made to the list through the *History* of the Real-Time Manager. There you can find which IP's have been added or deleted from the list.
 
-Our "quarantine" process allows you to add new addresses one week in advance, that means, meaning that whenever a new address is added to the list, it will be on standby for 7 days before being activated, giving you that time to update your firewall rules. 
+Our "quarantine" process allows you to add new addresses one week in advance, that means, whenever a new address is added to the list, it will be on standby for 7 days before being activated, giving you that time to update your firewall rules. 
 
 >You can also be updated by email, whenever the *Origin Shield* addresses are changed.
 
