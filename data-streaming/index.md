@@ -22,7 +22,7 @@ Enter [Real-Time Manager](https://manager.azion.com/). Click on *Data Streaming*
 
 Configure your Data Streaming settings according to the following possibilities. 
 
-> Fields marked with an asterisk are mandatory. 
+> Fields marked with an asterisk are required. 
 
 ---
 
@@ -120,12 +120,12 @@ When associating a domain with Data Streaming, the events associated with that d
 
 You can also set the percentage of data you want to receive from your Data Streaming through the Sampling option. In addition to filtering by sampling, it can also reduce costs of data collection and analysis.
 
-* **Sampling:** 
+* **Sampling:**
 
-  1. Select the *All Domains* option to enable  *Sampling*.
-  2. Enter the number for the percentage of data you want to receive. This percentage will return the total data related to all your domains.
-  
-  > When the Sampling option is enabled, you are allowed to add only one Data Streaming. If this Data Streaming is disabled, the Add Data Streaming option will be enabled again.
+1. Select the *All Domains* option to enable  *Sampling*.
+2. Enter the number for the percentage of data you want to receive. This percentage will return the total data related to all your domains.
+
+> When the Sampling option is enabled, you are allowed to add only one Data Streaming. If this Data Streaming is disabled, the Add Data Streaming option will be enabled again.
 
 ---
 
