@@ -69,7 +69,7 @@ The message is then collected and made available to be accessed on the [Data Str
 **Domains:** in case you wish to specify which domains, select them on the displayed boxes.
 **Sampling:** the definition of % of data that will be transmitted. You can only change this value when selecting All Domains in the Options field. *
 
-**This option will appear if you have more than one domain set up.*
+**This option will appear only if you have more than one domain set up.*
 
 **Destination**
 
