@@ -6,19 +6,19 @@
 
 Use the Intelligent DNS API to create, query, update and delete your Hosted Zones and Records.
 
-> 1. [Retrieve the list of Hosted Zones](#retrieve-list-hosted-zone)
-> 2. [Retrieve data of a Hosted Zone](#retrieve-hosted-zone)
-> 3. [Create a new Hosted Zone](#create-hosted-zone)
-> 4. [Edit a Hosted Zone](#edit-hosted-zone)
-> 5. [Delete a Hosted Zone](#delete-hosted-zone)
-> 6. [Retrieve list of Records per Hosted Zones](#retrieve-list-record)
-> 7. [Create a new Record](#create-record)
-> 8. [Edit a Record](#edit-record)
-> 9. [Delete a Record](#delete-record)
+> 1. [Retrieving the list of Hosted Zones](#retrieve-list-hosted-zone)
+> 2. [Retrieving data of a Hosted Zone](#retrieve-hosted-zone)
+> 3. [Creating a new Hosted Zone](#create-hosted-zone)
+> 4. [Editing a Hosted Zone](#edit-hosted-zone)
+> 5. [Deleting a Hosted Zone](#delete-hosted-zone)
+> 6. [Retrieving list of Records per Hosted Zones](#retrieve-list-record)
+> 7. [Creating a new Record](#create-record)
+> 8. [Editing a Record](#edit-record)
+> 9. [Deleting a Record](#delete-record)
 
 ---
 
-## 1. Retrieve the list of Hosted Zones {#retrieve-list-hosted-zone}
+## 1. Retrieving the list of Hosted Zones {#retrieve-list-hosted-zone}
 
 It returns the list of Hosted Zones.
 
@@ -71,7 +71,7 @@ Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f22
 
 ---
 
-## 2. Retrieve data of a Hosted Zone {#retrieve-hosted-zone}
+## 2. Retrieving data of a Hosted Zone {#retrieve-hosted-zone}
 
 It returns the details of a Hosted Zone.
 
@@ -120,7 +120,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 
 ---
 
-## 3. Create a new Hosted Zone {#create-hosted-zone}
+## 3. Creating a new Hosted Zone {#create-hosted-zone}
 
 It enables you to create a new Hosted Zone.
 
@@ -176,7 +176,7 @@ Content-Type: application/json
 
 ---
 
-## 4. Edit a Hosted Zone {#edit-hosted-zone}
+## 4. Editing a Hosted Zone {#edit-hosted-zone}
 
 It enables you to modify a Hosted Zone that has already been created.
 
@@ -231,7 +231,7 @@ Content-Type: application/json
 }
 ```
 
-## 5. Delete a Hosted Zone {#delete-hosted-zone}
+## 5. Deleting a Hosted Zone {#delete-hosted-zone}
 
 It enables you to delete a Hosted Zone that has already been created.
 
@@ -259,7 +259,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 HTTP/2 204
 ```
 
-## 6. Retrieve list of Records per Hosted Zones {#retrieve-list-record} 
+## 6. Retrieving list of Records per Hosted Zones {#retrieve-list-record} 
 
 It returns the Records’ list of Hosted Zones.
 
@@ -313,7 +313,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 
 ---
 
-## 7. Create a new Record {#create-record}
+## 7. Creating a new Record {#create-record}
 
 It enables the creation of a Record linked to a Hosted Zone.
 
@@ -363,7 +363,7 @@ Content-Type: application/json
 }
 ```
 
-## 8 - Edit a Record {#edit-record}
+## 8 - Editing a Record {#edit-record}
 
 It enables you to modify a Record that has already been created.
 
@@ -417,7 +417,7 @@ Content-Type: application/json
 }
 ```
 
-## 9. Delete a Record {#delete-record}
+## 9. Deleting a Record {#delete-record}
 
 It enables you to delete a Record linked to a Hosted Zone already created.
 
