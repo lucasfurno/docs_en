@@ -5,7 +5,7 @@
 With the API of Rules Engine, you can check, remove or update existing settings, besides creating new ones.
 
 > 1. [Retrieving a list of rules in Rules Engine](#retrieving-a-list-of-rules-engine)
-> 2. [Retrieving details of a rule in Rules Engine](#retrieving-details-of-rules-engine)
+> 2. [Retrieving details from a rule in Rules Engine](#retrieving-details-from-rules-engine)
 > 3. [Deleting a rule in Rules Engine](#deleting-rules-engine)
 > 4. [Creating a new rule in Rules Engine](#creating-new-rules-engine)
 > 5. [Overwriting a rule in Rules Engine](#overwriting-rules-engine)
@@ -114,7 +114,7 @@ Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5941
 
 ---
 
-## 2. Retrieving details of a rule in Rules Engine {#retrieving-details-of-rules-engine}
+## 2. Retrieving details from a rule in Rules Engine {#retrieving-details-from-rules-engine}
 
 Results in details of a rule in Rules Engine. The information originated by this return refers to the Rules Engine of an Edge Firewall.
 
