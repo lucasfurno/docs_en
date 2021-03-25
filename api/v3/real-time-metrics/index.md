@@ -6,15 +6,15 @@ Real-time Metrics API enables you to consult monitoring data taken from the traf
 
 The data is grouped by Product, Domain, Metrics and Dimension.
 
-> 1. [Looking up the list of domains by product](#Lookingupthelistofdomainsbyproduct)
-> 2. [Looking up the aggregate data for a metric by domain](#Lookinguptheaggregatedataforametricbydomain)
-> 3. [Looking up the aggregate data for a specific dimension of a metric](#Lookinguptheaggregatedataforaspecificdimensionofametric)
+> 1. [Retrieving the list of domains by product](#retrievingthelistofdomainsbyproduct)
+> 2. [Retrieving the aggregate data for a metric by domain](#retrievingtheaggregatedataforametricbydomain)
+> 3. [Retrieving the aggregate data for a specific dimension of a metric](#retrievingtheaggregatedataforaspecificdimensionofametric)
 > 
 >    
 
 ---
 
-## 1. Looking up the list of domains by product {#Lookingupthelistofdomainsbyproduct}
+## 1. Retrieving the list of domains by product {#retrievingthelistofdomainsbyproduct}
 
 It returns the list of all domains related to the selected product.
 
@@ -73,7 +73,7 @@ HTTP/2 200
 
 ---
 
-## 2. Looking up the aggregate data for a metric by domain {#Lookinguptheaggregatedataforametricbydomain}
+## 2. Retrieving the aggregate data for a metric by domain {#retrievingtheaggregatedataforametricbydomain}
 
 It returns the aggregate data of a metric by domain related to the selected product.
 
@@ -128,7 +128,7 @@ HTTP/2 200
 
 ---
 
-## 3. Looking up the aggregate data for a specific dimension of a metric {#Lookinguptheaggregatedataforaspecificdimensionofametric}
+## 3. Retrieving the aggregate data for a specific dimension of a metric {#retrievingtheaggregatedataforaspecificdimensionofametric}
 
 It returns the aggregate data for a specific dimension of a metric related to the selected product.
 
@@ -185,8 +185,6 @@ HTTP/2 200
   ],
              
 ~~~
-
-
 
 ---
 
