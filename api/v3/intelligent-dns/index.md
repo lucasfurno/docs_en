@@ -7,7 +7,7 @@
 Use the Intelligent DNS API to create, query, update and delete your Hosted Zones and Records.
 
 > 1. [Retrieving the list of Hosted Zones](#retrieve-list-hosted-zone)
-> 2. [Retrieving data of a Hosted Zone](#retrieve-hosted-zone)
+> 2. [Retrieving data from a Hosted Zone](#retrieve-hosted-zone)
 > 3. [Creating a new Hosted Zone](#create-hosted-zone)
 > 4. [Editing a Hosted Zone](#edit-hosted-zone)
 > 5. [Deleting a Hosted Zone](#delete-hosted-zone)
@@ -71,7 +71,7 @@ Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f22
 
 ---
 
-## 2. Retrieving data of a Hosted Zone {#retrieve-hosted-zone}
+## 2. Retrieving data from a Hosted Zone {#retrieve-hosted-zone}
 
 It returns the details of a Hosted Zone.
 
