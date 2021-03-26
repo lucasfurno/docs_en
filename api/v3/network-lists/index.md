@@ -2,20 +2,20 @@
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/api/v3/network-lists/index.md)
 
-Through the Network Lists API you can create, consult or update Network Lists used in the Rules Engine of the New Edge Firewall.
+Through the Network Lists API you can create, query or update Network Lists used in the Edge Firewall's Rules Engine.
 
-> 1. [Check the list of Network Lists](#check-list-network-lists)
-> 2. [Consult data of a Network List](#consult-data-network-lists)
-> 3. [Consult data of a Origin Shield - Network List](#consult-data-origin-shield)
-> 4. [Consult data of a Tor Exit Nodes - Network List](#consult-data-tor)
-> 5. [Create a new Network List](#create-network-lists)
-> 6. [Overwrite a Network List](#overwrite-network-lists)
+> 1. [Retrieving the list of Network Lists](#retrieving-list-network-lists)
+> 2. [Retrieving data from a Network List](#retrieving-data-network-lists)
+> 3. [Retrieving data from an Origin Shield - Network List](#retrieving-data-origin-shield)
+> 4. [Retrieving data from Tor Exit Nodes - Network List](#retrieving-data-tor)
+> 5. [Creating a new Network List](#creating-network-lists)
+> 6. [Overwriting a Network List](#overwriting-network-lists)
 
 ---
 
-1. ## Check the list of Network Lists {#check-list-network-lists}
+## 1. Retrieving the list of Network Lists {#retrieving-list-network-lists}
 
-Returns the list of Network Lists.
+It returns the list of Network Lists.
 
 #### **GET** */network_lists*
 
@@ -25,8 +25,8 @@ Required permission: **View Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br> *application/json;version=3* |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept <br> **required* | Information about the return type and version | header | string; <br> *application/json;version=3* |
 
 **Request Example**
 
@@ -37,7 +37,7 @@ Authorization: token ec6aabdc0b6bbeed826a36d8731630e36b6e3f22
 Content-Type: application/json
 ~~~
 
-**Answer Example**
+**Response Example**
 
 ~~~
 
@@ -77,9 +77,9 @@ Content-Type: application/json
 
 ---
 
-## 2. Consult data of a Network List {#consult-data-network-lists}
+## 2. Retrieving data from a Network List {#retrieving-data-network-lists}
 
-Returns the details of a Network List The information that is returned in this call refers to Network Lists that can be linked to one or more Rule Sets from the New Edge Firewall.
+It returns the details of a Network List. The information that is returned in this call refers to Network Lists that can be linked to one or more Rule Sets from Edge Firewall.
 
 #### **GET** */network_lists/:id*
 
@@ -89,9 +89,9 @@ Required permission: **View Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br> *application/json;version=3* |
-| :id *(required)* | The id of the network list to be consulted. | path | number |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept **required* | Information about the return type and version | header | string;<br> *application/json;version=3* |
+| :id <br>**required* | ID of the network list to be queried. | path | number |
 
 **Request Example**
 
@@ -101,7 +101,7 @@ Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 ~~~
 
-**Answer Example**
+**Response Example**
 
 Response for IP/CIDR type list:
 
@@ -160,9 +160,9 @@ Response for a Countries type list:
 
 ---
 
-## 3. Consult data of a Origin Shield - Network List {#consult-data-origin-shield}
+## 3. Retrieving data from an Origin Shield - Network List {#retrieving-data-origin-shield}
 
-Returns the details of an Origin Shield Network List. The information that is returned in this call refers to Origin Shield Network Lists, which contains the list of all IPs in the security perimeter for your origin infrastructure.
+It returns the details of an Origin Shield Network List. The information that is returned in this call refers to Origin Shield Network Lists, which contains the list of all IPs in the security perimeter for your origin infrastructure.
 
 #### **GET** */network_lists/187*
 
@@ -172,9 +172,9 @@ Required permission: **View Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br> *application/json;version=3* |
-| :id *(required)* | The id of the Origin Shield Network List to be consulted. | path | number |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept **required* | Information about the return type and version | header | string;<br> *application/json;version=3* |
+| :id <br> **required* | ID of the Origin Shield Network List to be queried. | path | number |
 
 **Request Example**
 
@@ -184,7 +184,7 @@ Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 ~~~
 
-**Answer Example**
+**Response Example**
 
 Response for IP/CIDR type list:
 
@@ -210,9 +210,9 @@ Response for IP/CIDR type list:
 
 ---
 
-## 4. Consult data of a Tor Exit Nodes - Network List {#consult-data-origin-shield}
+## 4. Retrieving data from Tor Exit Nodes - Network List {#retrieving-data-tor}
 
-Returns details of the Tor Exit Nodes Network List. The information that is returned in this call refers to the Tor Exit Nodes Network List which contains the list of all IPs that can be used in the Rules Engine in Edge Firewall, to prevent requests from these addresses from the list.
+It returns details of the Tor Exit Nodes Network List. The information that is returned in this call refers to the Tor Exit Nodes Network List which contains the list of all IP's that can be used in the Rules Engine in Edge Firewall, in order to prevent requests for these addresses from the list.
 
 #### **GET** */network_lists/2*
 
@@ -222,9 +222,9 @@ Required permission: **View Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br> *application/json;version=3* |
-| :id *(required)* | The id of the Tor Exit Nodes Network List to be consulted. | path | number |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept **required* | Information about the return type and version | header | string;<br> *application/json;version=3* |
+| :id <br> **required* | ID of the Tor Exit Nodes Network List to be queried. | path | number |
 
 **Request Example**
 
@@ -234,7 +234,7 @@ Accept: application/json; version=3
 Authorization: token cf2078926f91a6e638af3f4a6977b505edfe5942
 ~~~
 
-**Answer Example**
+**Response Example**
 
 Response for IP/CIDR type list:
 
@@ -260,9 +260,9 @@ Response for IP/CIDR type list:
 
 ---
 
-## 5. Create a new Network List {#create-network-lists}
+## 5. Creating a new Network List {#creating-network-lists}
 
-Allows for the creation of a new Network List.
+It enables you to create a new Network List.
 
 #### **POST** */network_lists*
 
@@ -270,9 +270,9 @@ Required permission: **Edit Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br>*application/json;version=3* |
-| Content-Type *(required)* | The type of encoding used in Body (application/json). <br><br>e.g.:<br><br>Content-Type: application/json | header | string |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept **required* | Information about the return type and version | header | string;<br>*application/json;version=3* |
+| Content-Type **required* | The type of encoding used in Body (application/json). <br><br>Example: <br>Content-Type: application/json | header | string |
 
 **Request Example**
 
@@ -295,7 +295,7 @@ Content-Type: application/json
 }
 ~~~
 
-**Answer Example**
+**Response Example**
 
 ~~~
 {
@@ -317,9 +317,9 @@ Content-Type: application/json
 
 ---
 
-## 6. Overwrite a Network List {#overwrite-network-lists}
+## 6. Overwriting a Network List {#overwriting-network-lists}
 
-Overwrite all fields of a Network List, while preserving the id. 
+It overwrites all fields of a Network List, while preserving the id. 
 
 #### **PUT** */network_lists/:id*
 
@@ -327,10 +327,10 @@ Required permission: **Edit Network Lists**
 
 | Parameter | Description | Type | Type of Data |
 |-----------|-------------|------|----------------|
-| Authorization *(required)* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
-| Accept *(required)* | Information about the return type and version | header | string;<br>*application/json;version=3* |
-| Content-Type *(required)* | The type of encoding used in Body (application/json). <br><br>e.g.:<br><br>Content-Type: application/json | header | string |
-| :id *(required)* | Id of the Network List to be overwritten. | path | number |
+| Authorization **required* | Token authentication previously created through the [Token Creation]({% tl api_v3_authentication %}#criacao-de-token) endpoint | header | string |
+| Accept **required* | Information about the return type and version | header | string;<br>*application/json;version=3* |
+| Content-Type **required* | The type of encoding used in Body (application/json). <br><br>Example: <br>Content-Type: application/json | header | string |
+| :id <br> **required* | ID of the Network List to be overwritten. | path | number |
 
 **Request Example**
 
@@ -382,7 +382,7 @@ Request for a Countries type list:
 }
 ~~~
 
-**Answer Example**
+**Response Example**
 
 Response for IP/CIDR type list:
 
@@ -443,6 +443,5 @@ Response for a Countries type list:
 }
 ~~~
 
----
-
 Didn't find what you were looking for? [Open a ticket.](https://tickets.azion.com/)
+
