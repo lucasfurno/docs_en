@@ -14,7 +14,7 @@
 
 ---
 
-## 1. How it works{#how-it-works}
+## 1. How it works {#how-it-works}
 
 With *Azion Network Lists*, you can create and manage lists that are loaded on all *Azion Edge Nodes*. Whenever a Network List is associated with a rule, it is compared with the IP address of the client performing the HTTP request, taking into account the comparison operators configured in the *Rules Engine* Rule.
 
@@ -34,7 +34,7 @@ To provide even more agility to your processes, Azion provides and maintains som
 
 > The content of the Network Lists provided by Azion cannot be modified.
 
-## 2. Creating a Network List{#create-a-new-list}
+## 2. Creating a Network List {#create-a-new-list}
 
 1. Go to  [Real-Time Manager](https://manager.azion.com/) , access *Libraries > Network Lists* in the products menu;
 
