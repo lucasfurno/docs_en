@@ -18,7 +18,9 @@ The debugging process in Edge Functions has the purpose of promoting better cont
 
 ## 2. How it works {#how-it-works}
 
-To debug codes, you must use ``console_from_event.log``. This function prints to a local file a message that was previously sent by a parameter to the function.Check the use of the ``console_from_event.log`` function below:
+To debug codes, you must create a new function that will use the **log** method. This function prints to a local file a message that was previously sent by a parameter to the function.
+
+Check the use of the ``console_from_event.log`` function below:
 
 ```
    async function handleRequest(request, console_from_event) {
@@ -60,7 +62,7 @@ The message is then collected and made available to be accessed on the [Data Str
 | $edge_function_id | Edge Function identifier.                                   |
 | $request_id       | Request identifier.                                         |
 | $log_level        | Level of the log created (ERROR, WARN, INFO, DEBUG, TRACE). |
-| $log_message      | Mensagem usada para o log na chamada da função. ?????       |
+| $log_message      | Message used on the log when the function is requested.     |
 
 **Options:** where data will be collected. It is possible to filter the domains (**Filter Domains**) or select all (**All Domains**) by choosing one option. *
 
