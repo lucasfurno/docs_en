@@ -1,3 +1,16 @@
+```
+layout: page-documentation-md
+title: Data Streaming
+description: Veja toda a documentação completa do Azion Data Streaming.
+meta_tags: edge computing, data, analytics
+
+namespace:     documentation_products_data_streaming
+
+permalink:      /documentation/products/data-streaming/
+permalink_en:   /documentation/products/data-streaming/
+permalink_pt-br:   /documentacao/produtos/data-streaming/
+```
+
 # Data **Streaming**
 
 [Edit on GitHub <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#F3652B"><path d="M4.81.71H.672v11.43H12.1V8.001" stroke-width=".8"/><path d="M6.87.786h5.155V5.94M6.31 6.5L12.026.786"/></g></svg>](https://github.com/aziontech/docs_en/edit/master/data-streaming/index.md)
@@ -161,7 +174,7 @@ By using this type of endpoint, the Data Streaming service sends data in an HTTP
 
 ### **Simple Storage Service (S3)**
 
-By using this type of endpoint, the Data Streaming service sends data directly to any storage that works with the S3 protocol, such as Amazon S3, Cloud Storage, among others.
+By using this type of endpoint, the Data Streaming service sends data directly to any storage that works with the S3 protocol, such as Amazon S3, among others.
 
 * **Host URL:** Refers to the URL of the Host S3.
 
