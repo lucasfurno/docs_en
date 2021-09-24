@@ -8,6 +8,8 @@ DENY_LIST=(
     "docker-compose.yml"
 )
 JEKYLL_DEST=".forestry/jekyll/_i18n/en/_posts/documentation/products/"
+echo "LISTING .forestry folder"
+ls -la .forestry
 
 for item in *
 do
