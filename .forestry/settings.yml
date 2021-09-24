@@ -1,24 +1,24 @@
 ---
-new_page_extension: md
+new_page_extension: 'md'
 auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
+- type: 'directory'
   path: ''
-  label: Products
-  create: all
-  match: "**/*"
+  label: 'Products'
+  create: 'all'
+  match: '**/*'
   templates:
   - products-documentation
-upload_dir: static/images/uploads/doc
-public_path: "/static/images/uploads/doc"
+upload_dir: 'static/images/uploads/doc'
+public_path: '/static/images/uploads/doc'
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ':filename:'
 build:
-  install_dependencies_command: npm install
-  preview_docker_image: forestryio/node:12
-  mount_path: "/srv"
-  working_dir: "/srv"
-  instant_preview_command: npm run develop
+  install_dependencies_command: 'bash jekyll-aliases.sh'
+  preview_docker_image: 'jekyll/jekyll'
+  mount_path: '/srv'
+  working_dir: '/srv'
+  instant_preview_command: 'cd .forestry/jekyll && jekyll serve --trace --verbose --watch'

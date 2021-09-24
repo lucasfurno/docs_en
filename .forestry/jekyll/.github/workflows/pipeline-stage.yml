@@ -1,0 +1,79 @@
+name: https://52082s.ha.azioncdn.net/ Deploy
+
+on:
+  repository_dispatch:
+    branches: [ stage ]
+    types: [repository_dispatch_stage]
+  push:
+    branches: [stage]
+  pull_request:
+    types: [closed]
+    branches: [stage]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+      image: robsongajunior/aztech_jekyllawscli:latest
+      options: --privileged
+    steps:
+      - name: CHECKOUT Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/azion-site
+          ref: 'stage'
+          token: ${{ secrets.PAT_TOKEN  }}
+          persist-credentials: 'true'
+          path: '.'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: CHECKOUT aziontech/docs_pt Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/docs_pt
+          ref: 'stage'
+          token: ${{ secrets.PAT_TOKEN  }}
+          persist-credentials: 'true'
+          path: '_i18n/pt-br/_posts/documentation/products/'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: CHECKOUT aziontech/docs_en Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/docs_en
+          ref: 'stage'
+          token: ${{ secrets.PAT_TOKEN }}
+          persist-credentials: 'true'
+          path: '_i18n/en/_posts/documentation/products/'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: BUILDING Jekyll
+        run: |
+            chmod a+w Gemfile.lock
+            mkdir _site
+            jekyll build --trace --future
+
+      - name: AWS CREDENTIALS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AZION_SITE_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AZION_SITE_KEY }}
+          aws-region: us-east-1
+
+        # BLOG POST WILL BE EXCLUDED, BE CAREFUL
+      - name: CLEAN BUCKET to >> s3://azion-site >> https://52082s.ha.azioncdn.net/
+        shell: bash {0}
+        run: |
+            aws s3 rm s3://azion-site --recursive
+
+      - name: DEPLOY to >> s3://azion-site >> https://52082s.ha.azioncdn.net/
+        shell: bash {0}
+        run: |
+            aws s3 cp --recursive --exclude "*.svg" _site/ s3://azion-site
+            aws s3 cp --recursive --exclude "*" --include "*.svg" _site/ s3://azion-site --content-type 'image/svg+xml'

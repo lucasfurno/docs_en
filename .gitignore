@@ -1,3 +1,4 @@
 /**/*.html
 *.DS_Store
 !/index.html
+.forestry/jekyll/node_modules

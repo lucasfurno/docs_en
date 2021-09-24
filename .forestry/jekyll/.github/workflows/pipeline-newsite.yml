@@ -1,0 +1,69 @@
+name: https://272082s.ha.azioncdn.net Deploy
+
+on:
+  push:
+    branches: [new-site]
+  pull_request:
+    types: [closed]
+    branches: [new-site]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+      image: robsongajunior/aztech_jekyllawscli:latest
+      options: --privileged
+    steps:
+      - name: CHECKOUT Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/azion-site
+          ref: 'new-site'
+          token: ${{ secrets.PAT_TOKEN  }}
+          persist-credentials: 'true'
+          path: '.'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: CHECKOUT aziontech/docs_pt-br Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/docs_pt
+          ref: 'master'
+          token: ${{ secrets.PAT_TOKEN  }}
+          path: '_i18n/pt-br/pages/docs/documentation/products/'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: CHECKOUT aziontech/docs_en Repositorie
+        uses: actions/checkout@v2
+        with:
+          repository: aziontech/docs_en
+          ref: 'master'
+          token: ${{ secrets.PAT_TOKEN }}
+          path: '_i18n/en/pages/docs/documentation/products/'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: BUILDING Jekyll
+        run: |
+            chmod a+w Gemfile.lock
+            mkdir _site
+            jekyll build --trace --future
+
+      - name: AWS CREDENTIALS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AZION_SITE_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AZION_SITE_KEY }}
+          aws-region: us-east-1
+
+      - name: DEPLOY to >> s3://az-novo-site >> https://272082s.ha.azioncdn.net/
+        shell: bash {0}
+        run: |
+            aws s3 rm s3://az-novo-site/ --recursive
+            aws s3 cp --recursive --exclude "*.svg" _site/ s3://az-novo-site/
+            aws s3 cp --recursive --exclude "*" --include "*.svg" _site/ s3://az-novo-site/ --content-type 'image/svg+xml'

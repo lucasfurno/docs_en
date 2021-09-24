@@ -1,0 +1,25 @@
+a{
+    &.link{
+        &-primary,
+        &-secondary{
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        &-primary{
+            color: $color-primary;
+            &:hover{
+                color: $color-dark-theme;
+            }
+        }
+        &-secondary{
+            color: $color-dark-theme;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+        
+        
+    }
+}

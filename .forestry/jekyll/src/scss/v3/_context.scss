@@ -1,0 +1,53 @@
+@charset 'utf-8';
+@import "normalize";
+@at-root {
+    @-ms-viewport {
+        width: device-width;
+    } // stylelint-disable-line at-rule-no-vendor-prefix
+}
+@import "functions";
+@import "variables";
+@import "mixins/breakpoints";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "grid";
+@import "typography";
+@import "helpers";
+
+html {
+    -ms-overflow-style: scrollbar;
+    width: 100%;
+    height: 100%;
+}
+body {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus {
+    outline: none;
+}
+::selection {
+    color: $text-dark;
+    background: $color-primary;
+}
+#content {
+    position: relative;
+    min-height: 100%;
+}
+@import "template/style-guide";
+@import "form";
+@import "components/buttons";
+@import "components/links";
+
+// COMMON COMPONENTS FOR ALL PAGES //
+@import "../v3/components/header";
+@import "../v3/components/footer";
