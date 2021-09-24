@@ -7,7 +7,7 @@ DENY_LIST=(
     "Dockerfile"
     "docker-compose.yml"
 )
-JEKYLL_DEST=".forestry/jekyll/_i18n/en/_posts/documentation/products/"
+JEKYLL_DEST=".jekyll/_i18n/en/_posts/documentation/products/"
 
 for item in *
 do
