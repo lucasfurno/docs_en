@@ -18,7 +18,7 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: _site
-  install_dependencies_command: ls; bash jekyll-aliases.sh; cd .forestry/jekyll
+  install_dependencies_command: bash jekyll-aliases.sh
   preview_docker_image: jekyll/jekyll
   mount_path: "/srv"
   working_dir: "/srv"
