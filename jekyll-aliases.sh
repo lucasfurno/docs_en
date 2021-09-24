@@ -9,12 +9,6 @@ DENY_LIST=(
 )
 JEKYLL_DEST=".forestry/jekyll/_i18n/en/_posts/documentation/products/"
 
-echo "LISTING ROOT"
-ls -la .
-
-echo "LISTING .forestry folder"
-ls -la .forestry
-
 for item in *
 do
     is_denied=0
