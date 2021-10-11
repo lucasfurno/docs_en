@@ -1,0 +1,977 @@
+introduction:
+    title: "All products and features, no commitment required."
+    description: "Our usage-based pricing model gives you the freedom to pay for exactly what you need and nothing more."
+    card:
+        dark:
+            title: "Start for free"
+            description: "From prototype to enterprise-scale with NoOps, just code."
+            destak:
+                value: "300"
+                description: "in credit to use within 12 months."
+            button:
+                label: "No credit card required."
+        light:
+            title: "After that, pay as you go. The more you <span>use</span>, the more you <span>save</span>."
+            list:
+                title: "Rates as low as:"
+                itens:
+                    - title: "Edge Functions"
+                      description: "0.60 USD/Mi. invocations"
+                    - title: "Application Acceleration"
+                      description: "0.01 USD/GB transferred"
+                    - title: "Edge Caching"
+                      description: "0.02 USD/GB transferred"
+                    - title: "Web Application Firewall"
+                      description: "0.018 USD/10k request"
+
+            button:
+                text: "go to our full pricing table"
+text_image:
+    label: "Save when you commit"
+    title: "Savings plans help you lock in even better rates"
+    description: "With a Savings Plan, you qualify for even greater discounts by committing to a consistent amount of usage for a 1-, 2-, or 3-year term. Savings Plans provide you the flexibility to use the Azion products that best suit your needs while reducing your costs by up to 78%."
+    button:
+        text: "talk to an expert"
+sidebar:
+    - title: 'Build'
+      id: 'build'
+      links:
+        - text: "Edge Application"
+          class: "disabled"
+        - text: "Application Acceleration"
+          class: "active"
+        - text: "Edge Caching"
+        - text: "Edge Functions"
+        - text: "Image Processor"
+        - text: "Load Balancer"
+    - title: 'Secure'
+      id: 'secure'
+      links:
+        - text: "Edge Firewall"
+          class: "disabled"
+        - text: "DDoS Protection"
+        - text: "Network Layer Protection"
+        - text: "Web Application Firewall"
+        - text: "Intelligent DNS"
+          class: "bold margin-adjust"
+    - title: 'Deliver'
+      id: 'deliver'
+      links:
+        - text: "Edge Orchestrator"
+          class: "bold"
+    - title: 'Observe'
+      id: 'observe'
+      links:
+        - text: "Data Streaming"
+          class: "bold"
+        - text: "Edge Pulse"
+          class: "bold margin-adjust"
+        - text: "Real-Time Metrics"
+          class: "bold margin-adjust"
+        - text: "Real-Time Events"
+          class: "bold margin-adjust"
+product_content:
+  - title: Application Acceleration
+    description: Speed ​​up the performance of your applications and APIs with protocol optimizations and advanced request and response rules. <a href="/en/products/application-acceleration/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-application-acceleration.svg
+        alt: Application Acceleration
+    tables:
+      - head:
+          - text: Data Transferred
+            description: per GB
+            tooltip: This refers to the total volume of GB transferred by Azion for all edge applications with the Application Acceleration module enabled. It is the sum of (a) the traffic between users and Azion, and (b) the traffic between Azion and point of origin.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+            - 0.025 USD
+            - 0.025 USD
+            - 0.025 USD
+            - 0.040 USD
+            - 0.072 USD
+            - 0.072 USD
+          - condition: Next 40
+            cond_desc: TB/month
+            prices:
+            - 0.020 USD
+            - 0.020 USD
+            - 0.020 USD
+            - 0.035 USD
+            - 0.063 USD
+            - 0.063 USD
+          - condition: Next 100
+            cond_desc: TB/month
+            prices:
+            - 0.017 USD
+            - 0.017 USD
+            - 0.017 USD
+            - 0.032 USD
+            - 0.058 USD
+            - 0.058 USD
+          - condition: Next 350
+            cond_desc: TB/month
+            prices:
+            - 0.015 USD
+            - 0.015 USD
+            - 0.015 USD
+            - 0.030 USD
+            - 0.054 USD
+            - 0.054 USD
+          - condition: Next 500
+            cond_desc: TB/month
+            prices:
+            - 0.013 USD
+            - 0.013 USD
+            - 0.013 USD
+            - 0.026 USD
+            - 0.047 USD
+            - 0.047 USD
+          - condition: Next 4
+            cond_desc: PB/month
+            prices:
+            - 0.011 USD
+            - 0.011 USD
+            - 0.011 USD
+            - 0.024 USD
+            - 0.043 USD
+            - 0.043 USD
+          - condition: Over 5
+            cond_desc: PB/month
+            prices:
+            - 0.010 USD
+            - 0.010 USD
+            - 0.010 USD
+            - 0.022 USD
+            - 0.040 USD
+            - 0.040 USD
+    dropdown:
+      description:
+        - "If your Application Acceleration enabled application generated 30 TB of data transferred in Brazil in 1 month, the price will be calculated as follows:"
+      pricing_details:
+        - title:
+          details:
+              - text: The first 10 TB of traffic is priced at 0.040 USD per GB, so 10,000 x 0.040 USD
+                price: 400 USD
+              - text: The next 20 TB of traffic is priced at 0.035 USD per GB, so 20,000 x 0.035 USD
+                price: 700 USD
+      summary:
+        title:
+        text: In this example, the price for this month will be
+        price: 1,100 USD
+        bold: true
+  - title: Edge Caching
+    description: Accelerate delivery by caching content at the edge of the network, closer to your users. <a href="/en/products/edge-caching/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-edge-caching.svg
+        alt: Edge Caching
+    tables:
+      - head:
+          - text: Total Data Transferred
+            description: per GB
+            tooltip: It refers to the total volume of GB transferred by Azion for all customer domains, regardless of the modules enabled in each edge application. It is the sum of (a) the traffic between users and Azion, and (b) the traffic between Azion and point of origin, even when the point of origin is an Azion service, such as Live Ingest; or L2 Caching, among others.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+              - 0.085 USD
+              - 0.085 USD
+              - 0.085 USD
+              - 0.110 USD
+              - 0.198 USD
+              - 0.198 USD
+          - condition: Next 40
+            cond_desc: TB/month
+            prices:
+              - 0.080 USD
+              - 0.080 USD
+              - 0.080 USD
+              - 0.105 USD
+              - 0.189 USD
+              - 0.189 USD
+          - condition: Next 100
+            cond_desc: TB/month
+            prices:
+              - 0.060 USD
+              - 0.060 USD
+              - 0.060 USD
+              - 0.090 USD
+              - 0.162 USD
+              - 0.162 USD
+          - condition: Next 350
+            cond_desc: TB/month
+            prices:
+              - 0.040 USD
+              - 0.040 USD
+              - 0.040 USD
+              - 0.080 USD
+              - 0.0144 USD
+              - 0.0144 USD
+          - condition: Next 500
+            cond_desc: TB/month
+            prices:
+              - 0.030 USD
+              - 0.030 USD
+              - 0.030 USD
+              - 0.060 USD
+              - 0.0108 USD
+              - 0.0108 USD
+          - condition: Next 4
+            cond_desc: PB/month
+            prices:
+              - 0.025 USD
+              - 0.025 USD
+              - 0.025 USD
+              - 0.050 USD
+              - 0.090 USD
+              - 0.090 USD
+          - condition: Over 5
+            cond_desc: PB/month
+            prices:
+              - 0.020 USD
+              - 0.020 USD
+              - 0.020 USD
+              - 0.040 USD
+              - 0.072 USD
+              - 0.072 USD
+      - head:
+          - text: HTTP/HTTPS
+            description: Requests, all methods
+            tooltip: It is the total sum of HTTP and HTTPS user requests to your edge applications, regardless of the method used.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+              - 0.009 USD
+              - 0.009 USD
+              - 0.009 USD
+              - 0.016 USD
+              - 0.029 USD
+              - 0.029 USD
+    dropdown:
+      description:
+        - "If your applications received 750 million requests from the United States in 1 month, consuming a total traffic of 30 TB, and you were within the limit of 1,000 purges in that month, the price will be calculated as follows:"
+      pricing_details:
+        - title: Total Data Transferred
+          details:
+              - text: The first 10 TB of traffic is priced at 0.085 USD per GB, so 10,000 x 0.085 USD
+                price: 850 USD
+              - text: The next 20 TB of traffic is priced at 0.080 USD per GB, so 20,000 x 0.080 USD
+                price: 1,600 USD
+              - text: In this example, the price for this month will be
+                price: 2,450 USD
+              - text: We charge for every 10,000 requests, at a unit price of 0.009 USD, so (750,000,000 / 10,000) x 0.009 USD
+                price: 675 USD
+      summary:
+        title: Total Charges
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 3,125 USD
+    cards:
+      - title: Real-Time Purge Operations
+        description:
+          - p: This is the number of operations to purge objects from the cache, whether by URLs, Wildcard URLs or Cache Keys.
+          - p: The first 1,000 purge operations each month are included for all customers. When exceeding this volume, you will pay 5 USD per 1,000 additional purges.
+      - title: L2 Caching
+        description:
+          - p: An additional cache layer that reduces traffic to your point of origin while improving performance and availability.
+          - p: L2 Caching is an optional item. When used, Total Data Transferred will be calculated as the sum of Edge Caching traffic and L2 Caching traffic plus the monthly average of net used space on L2 Caching as storage at a monthly cost of 0.07 USD per GB.
+  - title: Edge Functions
+    description: Run event-driven serverless applications at the edge of the network, closer to your users. <a href="/en/products/edge-functions/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-edge-functions.svg
+        alt: Edge Functions
+    tables:
+      - head:
+          - text: Metrics
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: Compute Time
+            cond_desc: per 1,000 seconds
+            prices:
+              - 0.049 USD
+              - 0.049 USD
+              - 0.049 USD
+              - 0.147 USD
+              - 0.265 USD
+              - 0.265 USD
+          - condition: Invocations
+            cond_desc: per million
+            prices:
+              - 0.60 USD
+              - 0.60 USD
+              - 0.60 USD
+              - 1.80 USD
+              - 3.24 USD
+              - 3.24 USD
+    dropdown:
+      description:
+        - "If your applications invoke an Edge Function in the United States 5 million times in a month, and each invocation runs within 30 milliseconds, you will be billed as follows:"
+      pricing_details:
+        - title: Compute Time
+          details:
+              - text: (5,000,000 invocations x 0.030 seconds / 1,000) x 0.049 USD
+                price: 7.35 USD
+        - title: Invocations
+          details:
+              - text: (5,000,000 / 1,000,000) x 0.60 USD
+                price: 3 USD
+      summary:
+        title:
+        text: The total that will be charged, in this example, is
+        price: 10.35 USD
+  - title: Image Processor
+    description: Just-in-time image optimization and manipulation to enhance the user experience. <a href="/en/products/image-processor/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-image-processor.svg
+        alt: Image Processor
+    tables:
+      - head:
+          - text: Images Processed
+            description: per 10,000
+          - text: USA
+          - text: Brazil
+        rows:
+          - condition: First 10
+            cond_desc: million images processed/month
+            prices:
+              - 1.60 USD
+              - 2.12 USD
+          - condition: Next 40
+            cond_desc: million images processed/month
+            prices:
+              - 1.28 USD
+              - 2.12 USD
+          - condition: Next 100
+            cond_desc: million images processed/month
+            prices:
+              - 1.10 USD
+              - 1.35 USD
+          - condition: Next 350
+            cond_desc: million images processed/month
+            prices:
+              - 1.00 USD
+              - 1.25 USD
+          - condition: Next 500
+            cond_desc: million images processed/month
+            prices:
+              - 0.90 USD
+              - 1.20 USD
+          - condition: Next 500
+            cond_desc: million images processed/month
+            prices:
+              - 0.90 USD
+              - 1.20 USD
+          - condition: Next 4,000
+            cond_desc: million images processed/month
+            prices:
+              - 0.70 USD
+              - 1.10 USD
+          - condition: Next 5,000
+            cond_desc: million images processed/month
+            prices:
+              - 0.64 USD
+              - 1.05 USD
+    dropdown:
+      description:
+        - "If your applications deliver 600 million images in the United States in a month, and the content offload is 95%, i.e. 95% of your content is delivered from the cache without fetching it from your point of origin, this means that 30 million images will be processed by Image Processor."
+      pricing_details:
+        - title:
+          details:
+              - text: The first 10 million images processed will be priced at 1.60 USD for every 10,000 images, i.e. (10,000,000 / 10,000) x 1.60 USD
+                price: 1,600 USD
+              - text: The next 20 million images processed will be priced at 1.28 USD for every 10,000 images, i.e. (20,000,000 / 10,000) x 1.28 USD
+                price: 2,560 USD
+      summary:
+        title:
+        text: The total amount to be paid according to this simulation will be
+        price: 4,160 USD
+  - title: Load Balancer
+    description: Balance the load on your origin and improve the reliability and availability of your content, applications and APIs. <a href="/en/products/load-balancer/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-load-balancer.svg
+        alt: Load Balancer
+    tables:
+      - head:
+          - text: Data Transferred
+            description: per GB
+            tooltip: It refers to the total volume of GB transferred by Azion for all edge applications with the Load Balancer module enabled. It is the sum of (a) the traffic between users and Azion, and (b) the traffic between Azion and point of origin.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+              - 0.025 USD
+              - 0.025 USD
+              - 0.025 USD
+              - 0.040 USD
+              - 0.072 USD
+              - 0.072 USD
+          - condition: Next 40
+            cond_desc: TB/month
+            prices:
+              - 0.020 USD
+              - 0.020 USD
+              - 0.020 USD
+              - 0.035 USD
+              - 0.063 USD
+              - 0.063 USD
+          - condition: Next 100
+            cond_desc: TB/month
+            prices:
+              - 0.017 USD
+              - 0.017 USD
+              - 0.017 USD
+              - 0.032 USD
+              - 0.058 USD
+              - 0.058 USD
+          - condition: Next 350
+            cond_desc: TB/month
+            prices:
+              - 0.015 USD
+              - 0.015 USD
+              - 0.015 USD
+              - 0.030 USD
+              - 0.054 USD
+              - 0.054 USD
+          - condition: Next 500
+            cond_desc: TB/month
+            prices:
+              - 0.013 USD
+              - 0.013 USD
+              - 0.013 USD
+              - 0.026 USD
+              - 0.047 USD
+              - 0.047 USD
+          - condition: Next 4
+            cond_desc: PB/month
+            prices:
+              - 0.011 USD
+              - 0.011 USD
+              - 0.011 USD
+              - 0.024 USD
+              - 0.043 USD
+              - 0.043 USD
+          - condition: Over 5
+            cond_desc: PB/month
+            prices:
+              - 0.010 USD
+              - 0.010 USD
+              - 0.010 USD
+              - 0.022 USD
+              - 0.040 USD
+              - 0.040 USD
+    dropdown:
+      description:
+        - "If your Load Balancer enabled application generated 30 TB of data transferred in Brazil in 1 month, the price will be calculated as follows:"
+      pricing_details:
+        - title:
+          details:
+              - text: The first 10 TB of traffic is priced at 0.040 USD per GB, so 10,000 x 0.040 USD
+                price: 400 USD
+              - text: The next 20 TB of traffic is priced at 0.035 USD per GB, so 20,000 x 0.035 USD
+                price: 700 USD
+      summary:
+        title:
+        text: In this example, the price for this month will be
+        price: 1,100 USD
+  - title: DDoS Protection
+    description: Mitigate the largest and most complex network and application-layer DDoS attacks. <a href="/en/products/ddos-protection/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-ddos-protection.svg
+        alt: DDoS Protection
+    tables:
+      - head:
+          - text: DDoS Protection Fee
+            tooltip: This is a monthly fee calculated to the DDoS protection level subscribed. DDoS attack protection is included for all Azion customer, with no additional costs, up to 5 Gbps.
+          - text: Price
+        rows:
+          - condition: DDoS attack protection
+            cond_desc: up to 5 Gbps
+            prices:
+              - Included
+          - condition: DDoS attack protection
+            cond_desc: up to 20 Gbps
+            prices:
+              - 3,000 USD
+          - condition: DDoS attack protection
+            cond_desc: up to 50 Gbps
+            prices:
+              - 5,000 USD
+          - condition: Unlimited DDoS attack protection
+            prices:
+              - 7,500 USD
+      - head:
+          - text: Total Data Transferred
+            description: per GB
+            tooltip: If refers to the total volume of GB transferred by Azion for all customer domains, regardless of the modules enabled on each edge application. It is the sum of (a) the traffic between users and Azion, and (b) the traffic between Azion and point of origin, even when the point of origin is an Azion service, such as Live Ingest or; L2 Caching, among others.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+              - 0.015 USD
+              - 0.015 USD
+              - 0.015 USD
+              - 0.025 USD
+              - 0.045 USD
+              - 0.045 USD
+          - condition: Next 40
+            cond_desc: TB/month
+            prices:
+              - 0.015 USD
+              - 0.015 USD
+              - 0.015 USD
+              - 0.023 USD
+              - 0.041 USD
+              - 0.041 USD
+          - condition: Next 100
+            cond_desc: TB/month
+            prices:
+              - 0.015 USD
+              - 0.015 USD
+              - 0.015 USD
+              - 0.020 USD
+              - 0.036 USD
+              - 0.036 USD
+          - condition: Next 350
+            cond_desc: TB/month
+            prices:
+              - 0.015 USD
+              - 0.015 USD
+              - 0.015 USD
+              - 0.017 USD
+              - 0.031 USD
+              - 0.031 USD
+          - condition: Next 500
+            cond_desc: TB/month
+            prices:
+              - 0.010 USD
+              - 0.010 USD
+              - 0.010 USD
+              - 0.015 USD
+              - 0.027 USD
+              - 0.027 USD
+          - condition: Next 4
+            cond_desc: PB/month
+            prices:
+              - 0.005 USD
+              - 0.005 USD
+              - 0.005 USD
+              - 0.010 USD
+              - 0.018 USD
+              - 0.018 USD
+          - condition: Over 5
+            cond_desc: PB/month
+            prices:
+              - 0.005 USD
+              - 0.005 USD
+              - 0.005 USD
+              - 0.007 USD
+              - 0.013 USD
+              - 0.013 USD
+    dropdown:
+      description:
+        - "If your traffic using Azion in a month is 30 TB, and the protection level for DDoS Protection is 20 Gbps, the price will be calculated as follows:"
+      pricing_details:
+        - title: DDoS Protection Fee
+          details:
+              - text: The DDoS Protection Fee for 20 Gbps per month is priced at
+                price: 3000 USD
+        - title: Total Data Transferred
+          details:
+              - text: The first 10 TB of traffic is priced at 0.015 USD per GB, so 10,000 x 0.015 USD
+                price: 150 USD
+              - text: The next 20 TB of traffic is priced at 0.15 USD per GB, so 20,000 x 0,015 USD
+                price: 300 USD
+              - text: In this case, you will be charged for traffic an additional amount of
+                price: 450 USD
+      summary:
+        title: Total
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 3,450 USD
+  - title: Network Layer Protection
+    description: A programmable security perimeter at the edge of the network for inbound and outbound traffic. <a href="/en/products/network-layer-protection/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-network-layer-protection.svg
+        alt: Network Layer Protection
+    tables:
+      - head:
+          - text: Requests
+            description: per 10,000
+            tooltip: This is the total sum of requests for your domains with the Network Layer Protection module enabled.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 1
+            cond_desc: billion requests/month
+            prices:
+              - 0.005 USD
+              - 0.005 USD
+              - 0.005 USD
+              - 0.010 USD
+              - 0.010 USD
+              - 0.018 USD
+          - condition: Next 4
+            cond_desc: billion requests/month
+            prices:
+              - 0.004 USD
+              - 0.004 USD
+              - 0.004 USD
+              - 0.009 USD
+              - 0.016 USD
+              - 0.016 USD
+          - condition: Next 15
+            cond_desc: billion requests/month
+            prices:
+              - 0.004 USD
+              - 0.004 USD
+              - 0.004 USD
+              - 0.007 USD
+              - 0.016 USD
+              - 0.016 USD
+          - condition: Over 20
+            cond_desc: billion requests/month
+            prices:
+              - 0.003 USD
+              - 0.003 USD
+              - 0.003 USD
+              - 0.005 USD
+              - 0.009 USD
+              - 0.009 USD
+    dropdown:
+      description:
+        - "If your applications received 3 billion requests from the United States in 1 month, the price will be calculated as follows:"
+      pricing_details:
+        - title:
+          details:
+              - text: The first billion requests will be priced at 0.005 USD for every 10,000 requests. Thus, (1,000,000,000 / 10,000) x 0.005 USD
+                price: 500 USD
+              - text: The next 2 billion requests will be priced at 0.004 USD. Thus, (2,000,000,000 / 10,000) x 0.004 USD
+                price: 800 USD
+      summary:
+        title:
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 1,300 USD
+    cards:
+      - title: Origin Shield
+        description:
+          - p: This is an additional level of protection that lets you hide your point of origin from the public Internet, preventing direct attacks.
+          - p: It is an optional item, available to Network Layer Protection subscribers at a monthly cost of 2,500 USD.
+  - title: Web Application Firewall
+    description: Secure your web applications from numerous dangers, ranging from OWASP Top 10 threats to sophisticated zero-day attacks. <a href="/en/products/web-application-firewall/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-waf.svg
+        alt: Web Application Firewall
+    tables:
+      - head:
+          - text: Requests
+            description: per 10,000
+            tooltip: It is the total sum of requests analyzed by WAF.
+          - text: USA
+          - text: Canada
+          - text: Europe
+          - text: Brazil
+          - text: Latam
+          - text: Other regions
+        rows:
+          - condition: First 1
+            cond_desc: billion requests/month
+            prices:
+              - 0.025 USD
+              - 0.025 USD
+              - 0.025 USD
+              - 0.060 USD
+              - 0.108 USD
+              - 0.108 USD
+          - condition: Next 4
+            cond_desc: billion requests/month
+            prices:
+              - 0.024 USD
+              - 0.024 USD
+              - 0.024 USD
+              - 0.045 USD
+              - 0.081 USD
+              - 0.081 USD
+          - condition: Next 15
+            cond_desc: billion requests/month
+            prices:
+              - 0.022 USD
+              - 0.022 USD
+              - 0.022 USD
+              - 0.035 USD
+              - 0.063 USD
+              - 0.063 USD
+          - condition: Over 20
+            cond_desc: billion requests/month
+            prices:
+              - 0.018 USD
+              - 0.018 USD
+              - 0.018 USD
+              - 0.030 USD
+              - 0.054 USD
+              - 0.054 USD
+    dropdown:
+      description:
+        - "If your applications received 3 billion requests from the United States in 1 month and their WAF settings are within the limits of rule sets and rules, the price will be calculated as follows:"
+      pricing_details:
+        - title:
+          details:
+              - text: The first billion requests will be priced at 0.025 USD for each 10,000 requests. Thus, (1,000,000,000 / 10,000) x 0.025 USD
+                price: 2,500 USD
+              - text: The next 2 billion requests will be priced at 0.024 USD. Thus, (2,000,000,000 / 10,000) x 0.024 USD
+                price: 4,800 USD
+      summary:
+        title:
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 7,300 USD
+    cards:
+      - title: Rule Sets
+        description:
+          - p: This is the number of WAF settings or rule sets that can be shared between different domains.
+          - p: The first 50 rule sets are included for all customers. Above this limit, an additional 200 USD fee will be charged per rule set.
+      - title: Rules
+        description:
+          - p: Rules are the number of rules created by the client to allow (whitelist rules) or block (blacklist rules) access.
+          - p: The first 200 rules are included for all customers. Above this limit, an additional 5 USD will fee will be charged per rule.
+  - title: Intelligent DNS
+    description: Improve the security and availability of your applications using Azion's resilient Authoritative DNS service. <a href="/en/products/intelligent-dns/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-intelligent-dns.svg
+        alt: Intelligent DNS
+    tables:
+      - head:
+          - text: Hosted Zones
+            tooltip: It is the total number of hosted zones at Azion. Your amount of hosted zones may vary in a month. You will be charged for the average amount of zones with more than 12 hours.
+          - text: Price
+            description: per Hosted Zone
+        rows:
+          - condition: First 25
+            prices:
+              - USD 25
+          - condition: 26 to 10,000
+            prices:
+              - USD 15
+          - condition: Over 10,000
+            prices:
+              - USD 10
+      - head:
+          - text: Standard Queries
+            tooltip: It is the total volume of DNS queries.
+          - text: Price
+            description: per Hosted Zone
+        rows:
+          - condition: First billion
+            cond_description: queries / month
+            prices:
+              - USD 0.85
+          - condition: Over 1 billion
+            cond_description: queries / month
+            prices:
+              - USD 0.40
+    dropdown:
+      description:
+        - "If you have hosted 30 zones in Intelligent DNS and received 1.5 billion queries in a month, the value will be calculated as follows:"
+      pricing_details:
+        - title: Hosted Zones
+          details:
+              - text: The first 25 zones are priced at a unit price of 25 USD, thus
+                price: 625 USD
+              - text: The remaining 5 zones are priced at a unit price of 15 USD, thus
+                price: 75 USD
+              - text: In this example, the 30 zones will cost
+                price: 700 USD
+        - title: Standard Zones
+          details:
+              - text: The first billion queries will be priced at 0.85 USD per million. Therefore (1,000,000,000 / 1,000,000) x 0.85 USD
+                price: 850 USD
+              - text: The remaining 500 million will be priced at 0.40 USD per million. So 500 x 0.40 USD
+                price: 200 USD
+              - text: In this example, the calculated value will be
+                price: 1,050 USD
+      summary:
+        title: Total charges
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 1,750 USD
+        bold: true
+  - title: Edge Orchestrator
+    description: Deploy, control, automate, and monitor features on the edge, in real time with Azion's Edge Orchestrator. <a href="/en/contact-sales/" class="link-secondary">Talk to an expert.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-edge-orchestrator.svg
+        alt: Edge Orchestrator
+  - title: Data Streaming
+    description: Get real-time data access to power your big data, stream processing, SIEM and serverless application platforms. <a href="/en/products/data-streaming/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-data-streaming.svg
+        alt: Data Streaming
+    tables:
+      - head:
+          - text: Data Streaming Requests
+            description: per 10,000
+            tooltip: This is the total number of events sent by the Data Streaming product to your endpoints, calculated as below, per 10,000 requests
+          - text: Price per 10,000 requests
+        rows:
+          - condition: First 1 billion
+            cond_desc: requests / month
+            prices:
+              - 0.024 USD
+          - condition: Next 4 billion
+            cond_desc: requests / month
+            prices:
+              - 0.010 USD
+          - condition: Next 15 billion
+            cond_desc: requests / month
+            prices:
+              - 0.004 USD
+          - condition: Next 20 billion
+            cond_desc: requests / month
+            prices:
+              - 0.002 USD
+      - head:
+          - text: Data Streamed
+            description: per GB
+            tooltip: This is the total volume of data transferred by the Data Streaming product, calculated as below, per GB
+          - text: Price per GB
+        rows:
+          - condition: First 10
+            cond_desc: TB/month
+            prices:
+              - 0.085 USD
+          - condition: Next 40
+            cond_desc: TB/month
+            prices:
+              - 0.080 USD
+          - condition: Next 100
+            cond_desc: TB/month
+            prices:
+              - 0.060 USD
+          - condition: Next 350
+            cond_desc: TB/month
+            prices:
+              - 0.040 USD
+          - condition: Next 500
+            cond_desc: TB/month
+            prices:
+              - 0.030 USD
+          - condition: Next 4
+            cond_desc: PB/month
+            prices:
+              - 0.025 USD
+          - condition: Over 5
+            cond_desc: PB/month
+            prices:
+              - 0.020 USD
+    dropdown:
+      description:
+        - "If you had 3 billion Data Streaming requests and streamed 25 TB of data, the value would be calculated as follows:"
+      pricing_details:
+        - title: Data Streaming Requests
+          details:
+              - text: The first 1 billion requests are priced at 0.024 USD per 10,000 requests, so (1,000,000,000 / 10,000) x 0.024 USD
+                price: 2,400 USD
+              - text: The next 2 billion requests are priced at 0.010 USD per 10,000 requests, so (2,000,000,000/ 10,000) x 0.010 USD
+                price: 2,00 USD
+              - text: In this example, the price for this month will be
+                price: 4,400 USD
+        - title: Data Streamed
+          details:
+              - text: The first 10 TB will be priced at 0.085 USD per GB, so 10,000 x 0.085 USD
+                price: 850 USD
+              - text: The next 15 TB will be priced at 0.080 USD per GB, so 15,000 x 0.080 USD
+                price: 1,200 USD
+              - text: In this example, the price for this month will be
+                price: 2,050 USD
+      summary:
+        title: Total charges
+        text: According to this simulation, the total amount to be paid in this month will be
+        price: 6,450 USD
+  - title: Edge Pulse
+    description: Monitor the user experience when accessing your applications and improve network availability and performance. <a href="/en/products/edge-pulse/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-edge-pulse.svg
+        alt: Edge Pulse
+  - title: Real-Time Metrics
+    description: Powerful insight into your applications’ performance, availability and security in real time. <a href="/en/products/real-time-metrics/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-rtm.svg
+        alt: Real-Time Metrics
+  - title: Real-Time Events
+    description: Explore the data generated by your applications on Azion’s platform and perform complex queries to track what is happening in your applications in real time. <a href="/en/products/real-time-events/" class="link-secondary">Access product details.</a>
+    icon:
+        url: /static/images/v3/pricing/icon-rte.svg
+        alt: Real-Time Events
+    tables:
+      - head:
+          - text: Data Gathered
+            tooltip: It refers to the volume (in GB) of data collected and made available for your Real-Time Events queries, according to the products you are using and the access to your applications.
+          - text: Price per GB
+        rows:
+          - condition: First 400
+            cond_desc: GB/month
+            prices:
+            - 1.50 USD
+          - condition: Next 600
+            cond_desc: GB/month
+            prices:
+            - 1.20 USD
+          - condition: First 3
+            cond_desc: GB/month
+            prices:
+            - 0.60 USD
+    cards:
+      - title: Queries
+        description:
+          - p: This is the total number of Real-Time Events queries. The first 1,000 queries in a month are included for all clients. When exceeding this volume, you will be charged 0.10 USD per query.
+    dropdown:
+      description:
+        - "If your applications have 300 TB of traffic in a month, most of that volume is data, such as payload, while other traffic is metadata, such as HTTP headers, the request made, status, or user information."
+        - "Real-Time Events collects some of the metadata, which are made available for your query. The metadata collected represents on average 0.2% of your traffic."
+      pricing_details:
+        - title:
+          details:
+              - text: In this simulation, 600 GB (300 TB x 0.2%) will be gathered.
+                price:
+              - text: The first 400 GB will be charged at a unit price of 1.50 USD, so 400 x 1.50 USD
+                price: 600 USD
+              - text: The remaining 200 GB will be charged at a unit price of 1.20 USD, so 200 x 1.20 USD
+                price: 240 USD
+      summary:
+        title:
+        text: Considering that the limit of 1,000 queries is not exceeded, the total price calculated in this simulation will be
+        price: 840 USD

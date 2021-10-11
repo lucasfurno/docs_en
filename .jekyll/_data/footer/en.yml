@@ -1,0 +1,10 @@
+---
+copyright: Copyright © 2021, Azion Technologies, Inc. or its affiliates. All rights
+  reserved.
+lang: 'Language: '
+p: For support and sales, please call <span class="highlight">+1 (833) 332-9466</span>
+links:
+- text: Work at Azion
+  href: "/en/careers/"
+- text: Privacy policy
+  href: "/en/documentation/agreements/privacy-policy/"

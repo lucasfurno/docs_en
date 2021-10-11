@@ -34,5 +34,8 @@ fields:
   config:
     required: true
 - type: text
+  name: permalink_es
+  label: permalink_es
+- type: text
   name: permalink_pt-br
   label: permalink_pt-br
