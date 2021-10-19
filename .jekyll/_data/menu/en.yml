@@ -11,6 +11,7 @@ head:
       icon: "/static/images/v3/icons/icon-build.svg"
       links:
       - text: Edge Application
+        href: "/en/products/edge-application/"
       - text: Application Acceleration
         href: "/en/products/application-acceleration/"
       - text: Edge Caching
@@ -26,6 +27,7 @@ head:
       icon: "/static/images/v3/icons/icon-secure.svg"
       links:
       - text: Edge Firewall
+        href: "/en/products/edge-firewall/"
       - text: DDoS Protection
         href: "/en/products/ddos-protection/"
       - text: Network Layer Protection
