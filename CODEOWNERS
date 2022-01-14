@@ -1,5 +1,5 @@
 *.yml @aziontech/marketing
 CODEOWNERS @aziontech/marketing
 
-*.html @aziontech/product-marketing-documentation @aziontech/product-management 
-*.md @aziontech/product-marketing-documentation @aziontech/product-management 
+*.html @aziontech/product-marketing-documentation @aziontech/product-management @aziontech/product-marketing-copywriters
+*.md @aziontech/product-marketing-documentation @aziontech/product-management @aziontech/product-marketing-copywriters
